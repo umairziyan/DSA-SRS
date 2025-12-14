@@ -160,14 +160,15 @@ def cmd_add(args):
     url = args[1] if len(args) > 1 else ""
 
     data = load_data()
-    today = datetime.now().strftime("%Y-%m-%d")
+    today = datetime.now()
+    tomorrow = (today + timedelta(days=1)).strftime("%Y-%m-%d")
 
     problem = {
         "id": str(uuid.uuid4())[:8],
         "name": name,
         "url": url,
-        "added_date": today,
-        "next_review": today,  # Review immediately (today)
+        "added_date": today.strftime("%Y-%m-%d"),
+        "next_review": tomorrow,  # First review tomorrow (after sleep consolidation)
         "interval": 1,
         "ease_factor": 2.5,
         "review_count": 0,
@@ -178,7 +179,7 @@ def cmd_add(args):
     data["problems"].append(problem)
     save_data(data)
     print(f"{Colors.GREEN}Added:{Colors.RESET} {name}")
-    print(f"  First review: {Colors.GREEN}Today{Colors.RESET}")
+    print(f"  First review: {Colors.YELLOW}Tomorrow{Colors.RESET}")
 
 
 def cmd_today(args):
