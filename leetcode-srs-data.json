@@ -23,6 +23,18 @@
       "review_count": 0,
       "last_difficulty": null,
       "history": []
+    },
+    {
+      "id": "f3c1e7df",
+      "name": "3Sum",
+      "url": "https://leetcode.com/problems/3sum/description/",
+      "added_date": "2025-12-14",
+      "next_review": "2025-12-15",
+      "interval": 1,
+      "ease_factor": 2.5,
+      "review_count": 0,
+      "last_difficulty": null,
+      "history": []
     }
   ]
 }
