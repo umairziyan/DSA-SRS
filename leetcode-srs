@@ -1,0 +1,507 @@
+#!/usr/bin/env python3
+"""
+LeetCode Spaced Repetition System (SRS) CLI Tool
+
+A simple CLI to track LeetCode problems using spaced repetition
+with difficulty-adjusted intervals based on the SM-2 algorithm.
+"""
+
+import json
+import os
+import subprocess
+import sys
+import uuid
+from datetime import datetime, timedelta
+from pathlib import Path
+
+# Store data in the same folder as the script
+SCRIPT_DIR = Path(__file__).resolve().parent
+DATA_FILE = SCRIPT_DIR / "leetcode-srs-data.json"
+
+# Git sync settings
+GIT_SYNC_ENABLED = True  # Set to False to disable auto-sync
+
+# Colors for terminal output
+class Colors:
+    RED = "\033[91m"
+    GREEN = "\033[92m"
+    YELLOW = "\033[93m"
+    BLUE = "\033[94m"
+    MAGENTA = "\033[95m"
+    CYAN = "\033[96m"
+    BOLD = "\033[1m"
+    DIM = "\033[2m"
+    RESET = "\033[0m"
+
+
+def load_data():
+    """Load problems from JSON file."""
+    if DATA_FILE.exists():
+        with open(DATA_FILE, "r") as f:
+            return json.load(f)
+    return {"problems": []}
+
+
+def save_data(data):
+    """Save problems to JSON file and sync to git if enabled."""
+    with open(DATA_FILE, "w") as f:
+        json.dump(data, f, indent=2)
+
+    if GIT_SYNC_ENABLED:
+        git_sync()
+
+
+def git_sync():
+    """Auto-commit and push changes to git if in a git repo."""
+    try:
+        # Check if we're in a git repo
+        result = subprocess.run(
+            ["git", "rev-parse", "--is-inside-work-tree"],
+            cwd=SCRIPT_DIR,
+            capture_output=True,
+            text=True
+        )
+        if result.returncode != 0:
+            return  # Not a git repo, skip silently
+
+        # Check if there are changes to commit
+        result = subprocess.run(
+            ["git", "status", "--porcelain", DATA_FILE.name],
+            cwd=SCRIPT_DIR,
+            capture_output=True,
+            text=True
+        )
+        if not result.stdout.strip():
+            return  # No changes to commit
+
+        # Stage the data file
+        subprocess.run(
+            ["git", "add", DATA_FILE.name],
+            cwd=SCRIPT_DIR,
+            capture_output=True
+        )
+
+        # Commit with timestamp
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
+        subprocess.run(
+            ["git", "commit", "-m", f"leetcode-srs: auto-sync {timestamp}"],
+            cwd=SCRIPT_DIR,
+            capture_output=True
+        )
+
+        # Try to push (silently fail if no remote or offline)
+        subprocess.run(
+            ["git", "push"],
+            cwd=SCRIPT_DIR,
+            capture_output=True
+        )
+
+        print(f"{Colors.DIM}  [git synced]{Colors.RESET}")
+
+    except FileNotFoundError:
+        pass  # git not installed, skip silently
+    except Exception:
+        pass  # Any other error, skip silently
+
+
+def calculate_next_interval(current_interval, ease_factor, difficulty):
+    """
+    Calculate the next review interval based on difficulty.
+
+    difficulty: 1=Easy, 2=Medium, 3=Hard
+    """
+    if difficulty == 1:  # Easy - jump ahead
+        new_interval = current_interval * ease_factor
+        new_ease = min(ease_factor + 0.15, 3.0)
+    elif difficulty == 2:  # Medium - normal progression
+        new_interval = current_interval * 2
+        new_ease = ease_factor
+    else:  # Hard - slower progression
+        new_interval = current_interval * 1.2
+        new_ease = max(ease_factor - 0.20, 1.3)
+
+    # Round to whole days, minimum 1 day
+    return max(1, round(new_interval)), new_ease
+
+
+def format_date(date_str):
+    """Format date string for display."""
+    date = datetime.strptime(date_str, "%Y-%m-%d")
+    today = datetime.now().date()
+    delta = (date.date() - today).days
+
+    if delta < 0:
+        return f"{Colors.RED}Overdue by {-delta}d{Colors.RESET}"
+    elif delta == 0:
+        return f"{Colors.GREEN}Today{Colors.RESET}"
+    elif delta == 1:
+        return f"{Colors.YELLOW}Tomorrow{Colors.RESET}"
+    else:
+        return f"{Colors.BLUE}In {delta}d{Colors.RESET}"
+
+
+def difficulty_emoji(difficulty):
+    """Get display for difficulty."""
+    if difficulty == 1:
+        return f"{Colors.GREEN}Easy{Colors.RESET}"
+    elif difficulty == 2:
+        return f"{Colors.YELLOW}Medium{Colors.RESET}"
+    else:
+        return f"{Colors.RED}Hard{Colors.RESET}"
+
+
+def cmd_add(args):
+    """Add a new problem to track."""
+    if not args:
+        print(f"{Colors.RED}Usage: leetcode-srs add <problem-name> [url]{Colors.RESET}")
+        return
+
+    name = args[0]
+    url = args[1] if len(args) > 1 else ""
+
+    data = load_data()
+    today = datetime.now().strftime("%Y-%m-%d")
+
+    problem = {
+        "id": str(uuid.uuid4())[:8],
+        "name": name,
+        "url": url,
+        "added_date": today,
+        "next_review": today,  # Review immediately (today)
+        "interval": 1,
+        "ease_factor": 2.5,
+        "review_count": 0,
+        "last_difficulty": None,
+        "history": []
+    }
+
+    data["problems"].append(problem)
+    save_data(data)
+    print(f"{Colors.GREEN}Added:{Colors.RESET} {name}")
+    print(f"  First review: {Colors.GREEN}Today{Colors.RESET}")
+
+
+def cmd_today(args):
+    """Show problems due for review today."""
+    data = load_data()
+    today = datetime.now().strftime("%Y-%m-%d")
+
+    due = [p for p in data["problems"] if p["next_review"] <= today]
+    due.sort(key=lambda p: p["next_review"])
+
+    if not due:
+        print(f"{Colors.GREEN}No reviews due today! You're all caught up.{Colors.RESET}")
+        return
+
+    print(f"\n{Colors.BOLD}=== Due Today ({len(due)} problems) ==={Colors.RESET}\n")
+
+    for p in due:
+        status = format_date(p["next_review"])
+        review_info = f"Review #{p['review_count'] + 1}"
+        if p["last_difficulty"]:
+            review_info += f" (Last: {difficulty_emoji(p['last_difficulty'])})"
+
+        print(f"  {Colors.CYAN}{p['name']}{Colors.RESET}")
+        print(f"    {status} | {review_info}")
+        if p["url"]:
+            print(f"    {Colors.DIM}{p['url']}{Colors.RESET}")
+        print()
+
+
+def cmd_review(args):
+    """Interactive review session."""
+    data = load_data()
+    today = datetime.now().strftime("%Y-%m-%d")
+
+    due = [p for p in data["problems"] if p["next_review"] <= today]
+    due.sort(key=lambda p: p["next_review"])
+
+    if not due:
+        print(f"{Colors.GREEN}No reviews due! Use 'leetcode-srs today' to check schedule.{Colors.RESET}")
+        return
+
+    print(f"\n{Colors.BOLD}=== Review Session ({len(due)} problems) ==={Colors.RESET}\n")
+
+    for i, p in enumerate(due):
+        print(f"{Colors.BOLD}[{i+1}/{len(due)}] {p['name']}{Colors.RESET}")
+        if p["url"]:
+            print(f"  {Colors.DIM}{p['url']}{Colors.RESET}")
+        print(f"  Review #{p['review_count'] + 1} | Current interval: {p['interval']}d")
+        print()
+
+        while True:
+            print(f"  How did it go?")
+            print(f"    {Colors.GREEN}1{Colors.RESET} - Easy (knew it quickly)")
+            print(f"    {Colors.YELLOW}2{Colors.RESET} - Medium (some effort)")
+            print(f"    {Colors.RED}3{Colors.RESET} - Hard (struggled)")
+            print(f"    {Colors.DIM}s{Colors.RESET} - Skip for now")
+            print(f"    {Colors.DIM}q{Colors.RESET} - Quit review session")
+
+            choice = input(f"\n  Your choice: ").strip().lower()
+
+            if choice == 'q':
+                print(f"\n{Colors.YELLOW}Review session ended.{Colors.RESET}")
+                save_data(data)
+                return
+            elif choice == 's':
+                print(f"{Colors.DIM}Skipped.{Colors.RESET}\n")
+                break
+            elif choice in ['1', '2', '3']:
+                difficulty = int(choice)
+                new_interval, new_ease = calculate_next_interval(
+                    p["interval"], p["ease_factor"], difficulty
+                )
+
+                next_date = (datetime.now() + timedelta(days=new_interval)).strftime("%Y-%m-%d")
+
+                # Update problem
+                p["next_review"] = next_date
+                p["interval"] = new_interval
+                p["ease_factor"] = new_ease
+                p["review_count"] += 1
+                p["last_difficulty"] = difficulty
+                p["history"].append({
+                    "date": today,
+                    "difficulty": difficulty,
+                    "interval": new_interval
+                })
+
+                print(f"\n  {Colors.GREEN}Recorded!{Colors.RESET} Next review in {Colors.CYAN}{new_interval} days{Colors.RESET} ({next_date})")
+                print()
+                break
+            else:
+                print(f"  {Colors.RED}Invalid choice. Enter 1, 2, 3, s, or q.{Colors.RESET}\n")
+
+    save_data(data)
+    print(f"{Colors.GREEN}Review session complete!{Colors.RESET}")
+
+
+def cmd_list(args):
+    """List all problems with their status."""
+    data = load_data()
+
+    if not data["problems"]:
+        print(f"{Colors.YELLOW}No problems tracked yet. Use 'leetcode-srs add <name>' to add one.{Colors.RESET}")
+        return
+
+    # Sort by next review date
+    problems = sorted(data["problems"], key=lambda p: p["next_review"])
+
+    print(f"\n{Colors.BOLD}=== All Problems ({len(problems)}) ==={Colors.RESET}\n")
+
+    for p in problems:
+        status = format_date(p["next_review"])
+        ease_display = f"EF:{p['ease_factor']:.1f}"
+
+        print(f"  {Colors.CYAN}{p['name']}{Colors.RESET}")
+        print(f"    {status} | Interval: {p['interval']}d | Reviews: {p['review_count']} | {ease_display}")
+        if p["url"]:
+            print(f"    {Colors.DIM}{p['url']}{Colors.RESET}")
+        print()
+
+
+def cmd_stats(args):
+    """Show learning statistics."""
+    data = load_data()
+
+    if not data["problems"]:
+        print(f"{Colors.YELLOW}No problems tracked yet.{Colors.RESET}")
+        return
+
+    problems = data["problems"]
+    today = datetime.now().strftime("%Y-%m-%d")
+
+    total = len(problems)
+    due_today = len([p for p in problems if p["next_review"] <= today])
+    total_reviews = sum(p["review_count"] for p in problems)
+
+    # Problems by interval ranges
+    learning = len([p for p in problems if p["interval"] <= 4])
+    young = len([p for p in problems if 4 < p["interval"] <= 21])
+    mature = len([p for p in problems if p["interval"] > 21])
+
+    print(f"\n{Colors.BOLD}=== Statistics ==={Colors.RESET}\n")
+    print(f"  Total problems:    {Colors.CYAN}{total}{Colors.RESET}")
+    print(f"  Due today:         {Colors.YELLOW if due_today else Colors.GREEN}{due_today}{Colors.RESET}")
+    print(f"  Total reviews:     {Colors.CYAN}{total_reviews}{Colors.RESET}")
+    print()
+    print(f"  {Colors.BOLD}Problem Maturity:{Colors.RESET}")
+    print(f"    Learning (1-4d):  {Colors.RED}{learning}{Colors.RESET}")
+    print(f"    Young (5-21d):    {Colors.YELLOW}{young}{Colors.RESET}")
+    print(f"    Mature (21d+):    {Colors.GREEN}{mature}{Colors.RESET}")
+    print()
+
+    # Upcoming reviews
+    upcoming = {}
+    for p in problems:
+        next_date = p["next_review"]
+        delta = (datetime.strptime(next_date, "%Y-%m-%d").date() - datetime.now().date()).days
+        if delta <= 7:
+            key = max(0, delta)
+            upcoming[key] = upcoming.get(key, 0) + 1
+
+    if upcoming:
+        print(f"  {Colors.BOLD}Next 7 Days:{Colors.RESET}")
+        days = ["Today", "Tomorrow"] + [f"Day {i}" for i in range(2, 8)]
+        for i in range(8):
+            if i in upcoming:
+                bar = "=" * upcoming[i]
+                print(f"    {days[i]:10} {Colors.BLUE}{bar}{Colors.RESET} {upcoming[i]}")
+    print()
+
+
+def cmd_delete(args):
+    """Delete a problem."""
+    if not args:
+        print(f"{Colors.RED}Usage: leetcode-srs delete <problem-name-or-id>{Colors.RESET}")
+        return
+
+    search = args[0].lower()
+    data = load_data()
+
+    # Find matching problems
+    matches = [p for p in data["problems"]
+               if search in p["name"].lower() or search == p["id"]]
+
+    if not matches:
+        print(f"{Colors.RED}No problem found matching '{args[0]}'{Colors.RESET}")
+        return
+
+    if len(matches) > 1:
+        print(f"{Colors.YELLOW}Multiple matches found:{Colors.RESET}")
+        for p in matches:
+            print(f"  [{p['id']}] {p['name']}")
+        print(f"\nUse the ID to delete a specific problem.")
+        return
+
+    problem = matches[0]
+    confirm = input(f"Delete '{problem['name']}'? (y/N): ").strip().lower()
+
+    if confirm == 'y':
+        data["problems"] = [p for p in data["problems"] if p["id"] != problem["id"]]
+        save_data(data)
+        print(f"{Colors.GREEN}Deleted: {problem['name']}{Colors.RESET}")
+    else:
+        print(f"{Colors.DIM}Cancelled.{Colors.RESET}")
+
+
+def cmd_sync(args):
+    """Manually sync to git."""
+    # Check if we're in a git repo
+    result = subprocess.run(
+        ["git", "rev-parse", "--is-inside-work-tree"],
+        cwd=SCRIPT_DIR,
+        capture_output=True,
+        text=True
+    )
+    if result.returncode != 0:
+        print(f"{Colors.YELLOW}Not a git repository. Initialize with 'git init' first.{Colors.RESET}")
+        return
+
+    # Check if data file exists
+    if not DATA_FILE.exists():
+        print(f"{Colors.YELLOW}No data file yet. Add some problems first.{Colors.RESET}")
+        return
+
+    # Stage and commit
+    subprocess.run(["git", "add", DATA_FILE.name], cwd=SCRIPT_DIR, capture_output=True)
+
+    result = subprocess.run(
+        ["git", "status", "--porcelain", DATA_FILE.name],
+        cwd=SCRIPT_DIR,
+        capture_output=True,
+        text=True
+    )
+
+    if not result.stdout.strip():
+        print(f"{Colors.GREEN}Already in sync, no changes to commit.{Colors.RESET}")
+    else:
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
+        subprocess.run(
+            ["git", "commit", "-m", f"leetcode-srs: manual sync {timestamp}"],
+            cwd=SCRIPT_DIR,
+            capture_output=True
+        )
+        print(f"{Colors.GREEN}Committed changes.{Colors.RESET}")
+
+    # Try to push
+    result = subprocess.run(
+        ["git", "push"],
+        cwd=SCRIPT_DIR,
+        capture_output=True,
+        text=True
+    )
+    if result.returncode == 0:
+        print(f"{Colors.GREEN}Pushed to remote.{Colors.RESET}")
+    else:
+        print(f"{Colors.YELLOW}Could not push (no remote or offline).{Colors.RESET}")
+
+
+def cmd_help(args):
+    """Show help message."""
+    sync_status = f"{Colors.GREEN}ON{Colors.RESET}" if GIT_SYNC_ENABLED else f"{Colors.RED}OFF{Colors.RESET}"
+    print(f"""
+{Colors.BOLD}LeetCode Spaced Repetition System{Colors.RESET}
+
+{Colors.BOLD}Usage:{Colors.RESET}
+  leetcode-srs <command> [arguments]
+
+{Colors.BOLD}Commands:{Colors.RESET}
+  {Colors.CYAN}add{Colors.RESET} <name> [url]   Add a new problem to track
+  {Colors.CYAN}today{Colors.RESET}              Show problems due for review today
+  {Colors.CYAN}review{Colors.RESET}             Start interactive review session
+  {Colors.CYAN}list{Colors.RESET}               List all problems with status
+  {Colors.CYAN}stats{Colors.RESET}              Show learning statistics
+  {Colors.CYAN}delete{Colors.RESET} <name|id>   Delete a problem
+  {Colors.CYAN}sync{Colors.RESET}               Manually sync to git
+  {Colors.CYAN}help{Colors.RESET}               Show this help message
+
+{Colors.BOLD}Algorithm:{Colors.RESET}
+  Based on SM-2 spaced repetition with difficulty adjustments:
+  - {Colors.GREEN}Easy{Colors.RESET}:   Interval x 2.5 (you knew it quickly)
+  - {Colors.YELLOW}Medium{Colors.RESET}: Interval x 2   (normal progression)
+  - {Colors.RED}Hard{Colors.RESET}:   Interval x 1.2 (slower, needs more practice)
+
+{Colors.BOLD}Git Sync:{Colors.RESET}
+  Auto-sync: {sync_status} (edit GIT_SYNC_ENABLED in script to change)
+  Data auto-commits and pushes after each change when in a git repo.
+
+{Colors.BOLD}Example Workflow:{Colors.RESET}
+  leetcode-srs add "Two Sum" "https://leetcode.com/problems/two-sum"
+  leetcode-srs add "Valid Parentheses"
+  leetcode-srs today
+  leetcode-srs review
+
+{Colors.DIM}Data stored at: {DATA_FILE}{Colors.RESET}
+""")
+
+
+def main():
+    """Main entry point."""
+    commands = {
+        "add": cmd_add,
+        "today": cmd_today,
+        "review": cmd_review,
+        "list": cmd_list,
+        "stats": cmd_stats,
+        "delete": cmd_delete,
+        "sync": cmd_sync,
+        "help": cmd_help,
+    }
+
+    if len(sys.argv) < 2:
+        cmd_today([])
+        return
+
+    cmd = sys.argv[1].lower()
+    args = sys.argv[2:]
+
+    if cmd in commands:
+        commands[cmd](args)
+    else:
+        print(f"{Colors.RED}Unknown command: {cmd}{Colors.RESET}")
+        print(f"Use 'leetcode-srs help' for available commands.")
+
+
+if __name__ == "__main__":
+    main()
