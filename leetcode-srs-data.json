@@ -2,7 +2,7 @@
   "problems": [
     {
       "id": "cecfdce6",
-      "name": "Two Sum",
+      "name": "1. Two Sum",
       "url": "https://leetcode.com/problems/two-sum",
       "added_date": "2025-12-14",
       "next_review": "2025-12-14",
@@ -26,7 +26,7 @@
     },
     {
       "id": "f3c1e7df",
-      "name": "3Sum",
+      "name": "15. 3Sum",
       "url": "https://leetcode.com/problems/3sum/description/",
       "added_date": "2025-12-14",
       "next_review": "2025-12-15",
@@ -40,6 +40,18 @@
       "id": "c1876035",
       "name": "3. Longest Substring Without Repeating Characters",
       "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/description/",
+      "added_date": "2025-12-14",
+      "next_review": "2025-12-15",
+      "interval": 1,
+      "ease_factor": 2.5,
+      "review_count": 0,
+      "last_difficulty": null,
+      "history": []
+    },
+    {
+      "id": "17b4d0ae",
+      "name": "4. Median of Two Sorted Arrays",
+      "url": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
       "added_date": "2025-12-14",
       "next_review": "2025-12-15",
       "interval": 1,
