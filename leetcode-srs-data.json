@@ -11,18 +11,6 @@
       "review_count": 0,
       "last_difficulty": null,
       "history": []
-    },
-    {
-      "id": "a6ed9d59",
-      "name": "Test Problem",
-      "url": "",
-      "added_date": "2025-12-14",
-      "next_review": "2025-12-15",
-      "interval": 1,
-      "ease_factor": 2.5,
-      "review_count": 0,
-      "last_difficulty": null,
-      "history": []
     }
   ]
 }
