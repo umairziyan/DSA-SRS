@@ -77,12 +77,18 @@
       "name": "4. Median of Two Sorted Arrays",
       "url": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
       "added_date": "2025-12-14",
-      "next_review": "2025-12-15",
-      "interval": 1,
-      "ease_factor": 2.5,
-      "review_count": 0,
-      "last_difficulty": null,
-      "history": []
+      "next_review": "2025-12-18",
+      "interval": 2,
+      "ease_factor": 2.65,
+      "review_count": 1,
+      "last_difficulty": 1,
+      "history": [
+        {
+          "date": "2025-12-16",
+          "difficulty": 1,
+          "interval": 2
+        }
+      ]
     },
     {
       "id": "f70a0f3a",
@@ -107,4 +113,3 @@
     "2025-12-16": 0
   }
 }
-
