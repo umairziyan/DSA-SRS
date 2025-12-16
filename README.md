@@ -45,7 +45,7 @@ Requires Python 3.6+
 
 | Command | Description |
 |---------|-------------|
-| `add <name> [url]` | Add a new problem (first review tomorrow) |
+| `add <name> [url]` | Add a new problem (auto-scheduled to balance load) |
 | `today` | Show problems due for review today |
 | `review` | Interactive review session |
 | `list` | List all problems with status |
@@ -53,6 +53,17 @@ Requires Python 3.6+
 | `delete <name\|id>` | Remove a problem |
 | `sync` | Manually sync to git |
 | `help` | Show help message |
+
+## Daily Goals & Load Management
+
+The tool helps you maintain consistent practice:
+
+- **Daily add goal**: Reminder to add at least 2 new problems per day
+- **Priority system**: Top 4 most urgent problems are marked as `[!]` priority
+- **Smart scheduling**: New problems are auto-spread across days to prevent clustering
+- **Overdue first**: Most overdue problems appear first in reviews
+
+This prevents the common problem of review debt piling up while ensuring steady progress.
 
 ## The Algorithm
 
@@ -103,7 +114,10 @@ Data is stored in `leetcode-srs-data.json` in the same directory as the script. 
       "last_difficulty": null,
       "history": []
     }
-  ]
+  ],
+  "daily_adds": {
+    "2025-01-01": 2
+  }
 }
 ```
 

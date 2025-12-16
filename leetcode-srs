@@ -21,6 +21,10 @@ DATA_FILE = SCRIPT_DIR / "leetcode-srs-data.json"
 # Git sync settings
 GIT_SYNC_ENABLED = True  # Set to False to disable auto-sync
 
+# Daily limits
+MAX_PRIORITY_PER_DAY = 4  # Number of problems to highlight as priority
+MIN_ADDS_PER_DAY = 2      # Minimum new problems to add daily
+
 # Colors for terminal output
 class Colors:
     RED = "\033[91m"
@@ -38,8 +42,49 @@ def load_data():
     """Load problems from JSON file."""
     if DATA_FILE.exists():
         with open(DATA_FILE, "r") as f:
-            return json.load(f)
-    return {"problems": []}
+            data = json.load(f)
+            # Ensure daily_adds exists (migration for old data)
+            if "daily_adds" not in data:
+                data["daily_adds"] = {}
+            return data
+    return {"problems": [], "daily_adds": {}}
+
+
+def get_today_adds(data):
+    """Get number of problems added today."""
+    today = datetime.now().strftime("%Y-%m-%d")
+    return data.get("daily_adds", {}).get(today, 0)
+
+
+def increment_today_adds(data):
+    """Increment the count of problems added today."""
+    today = datetime.now().strftime("%Y-%m-%d")
+    if "daily_adds" not in data:
+        data["daily_adds"] = {}
+    data["daily_adds"][today] = data["daily_adds"].get(today, 0) + 1
+
+
+def get_due_count_by_date(data, date_str):
+    """Get number of problems due on a specific date."""
+    return len([p for p in data["problems"] if p["next_review"] == date_str])
+
+
+def find_next_available_slot(data, start_days=1, max_days=7):
+    """Find the next day with fewer than MAX_PRIORITY_PER_DAY problems due."""
+    for days_ahead in range(start_days, start_days + max_days):
+        check_date = (datetime.now() + timedelta(days=days_ahead)).strftime("%Y-%m-%d")
+        if get_due_count_by_date(data, check_date) < MAX_PRIORITY_PER_DAY:
+            return check_date, days_ahead
+    # If all days are full, just use start_days
+    return (datetime.now() + timedelta(days=start_days)).strftime("%Y-%m-%d"), start_days
+
+
+def show_add_reminder(data):
+    """Show reminder if fewer than MIN_ADDS_PER_DAY problems added today."""
+    adds_today = get_today_adds(data)
+    if adds_today < MIN_ADDS_PER_DAY:
+        remaining = MIN_ADDS_PER_DAY - adds_today
+        print(f"{Colors.YELLOW}Reminder: Add {remaining} more problem{'s' if remaining > 1 else ''} today (goal: {MIN_ADDS_PER_DAY}/day){Colors.RESET}\n")
 
 
 def save_data(data):
@@ -166,14 +211,16 @@ def cmd_add(args):
 
     data = load_data()
     today = datetime.now()
-    tomorrow = (today + timedelta(days=1)).strftime("%Y-%m-%d")
+
+    # Smart scheduling: find next day with available slot
+    next_review, days_ahead = find_next_available_slot(data, start_days=1)
 
     problem = {
         "id": str(uuid.uuid4())[:8],
         "name": name,
         "url": url,
         "added_date": today.strftime("%Y-%m-%d"),
-        "next_review": tomorrow,  # First review tomorrow (after sleep consolidation)
+        "next_review": next_review,
         "interval": 1,
         "ease_factor": 2.5,
         "review_count": 0,
@@ -182,9 +229,21 @@ def cmd_add(args):
     }
 
     data["problems"].append(problem)
+    increment_today_adds(data)
     save_data(data)
+
     print(f"{Colors.GREEN}Added:{Colors.RESET} {name}")
-    print(f"  First review: {Colors.YELLOW}Tomorrow{Colors.RESET}")
+    if days_ahead == 1:
+        print(f"  First review: {Colors.YELLOW}Tomorrow{Colors.RESET}")
+    else:
+        print(f"  First review: {Colors.BLUE}In {days_ahead} days{Colors.RESET} ({next_review})")
+
+    # Show progress toward daily goal
+    adds_today = get_today_adds(data)
+    if adds_today >= MIN_ADDS_PER_DAY:
+        print(f"  {Colors.GREEN}Daily goal reached! ({adds_today}/{MIN_ADDS_PER_DAY}){Colors.RESET}")
+    else:
+        print(f"  {Colors.DIM}Progress: {adds_today}/{MIN_ADDS_PER_DAY} problems added today{Colors.RESET}")
 
 
 def cmd_today(args):
@@ -192,25 +251,41 @@ def cmd_today(args):
     data = load_data()
     today = datetime.now().strftime("%Y-%m-%d")
 
+    # Show add reminder first
+    show_add_reminder(data)
+
     due = [p for p in data["problems"] if p["next_review"] <= today]
+    # Sort by most overdue first (priority order)
     due.sort(key=lambda p: p["next_review"])
 
     if not due:
         print(f"{Colors.GREEN}No reviews due today! You're all caught up.{Colors.RESET}")
         return
 
-    print(f"\n{Colors.BOLD}=== Due Today ({len(due)} problems) ==={Colors.RESET}\n")
+    priority_count = min(len(due), MAX_PRIORITY_PER_DAY)
+    extra_count = len(due) - priority_count
 
-    for p in due:
+    if extra_count > 0:
+        print(f"\n{Colors.BOLD}=== Due Today ({priority_count} priority + {extra_count} more) ==={Colors.RESET}\n")
+    else:
+        print(f"\n{Colors.BOLD}=== Due Today ({len(due)} problems) ==={Colors.RESET}\n")
+
+    for i, p in enumerate(due):
         status = format_date(p["next_review"])
         review_info = f"Review #{p['review_count'] + 1}"
-        if p["last_difficulty"]:
+        if p["last_difficulty"] is not None:
             review_info += f" (Last: {difficulty_emoji(p['last_difficulty'])})"
 
-        print(f"  {Colors.CYAN}{p['name']}{Colors.RESET}")
-        print(f"    {status} | {review_info}")
+        # Priority indicator for top MAX_PRIORITY_PER_DAY
+        if i < MAX_PRIORITY_PER_DAY:
+            priority_marker = f"{Colors.RED}[!]{Colors.RESET} "
+        else:
+            priority_marker = f"{Colors.DIM}[ ]{Colors.RESET} "
+
+        print(f"  {priority_marker}{Colors.CYAN}{p['name']}{Colors.RESET}")
+        print(f"      {status} | {review_info}")
         if p["url"]:
-            print(f"    {Colors.DIM}{p['url']}{Colors.RESET}")
+            print(f"      {Colors.DIM}{p['url']}{Colors.RESET}")
         print()
 
 
@@ -219,20 +294,36 @@ def cmd_review(args):
     data = load_data()
     today = datetime.now().strftime("%Y-%m-%d")
 
+    # Show add reminder at start
+    show_add_reminder(data)
+
     due = [p for p in data["problems"] if p["next_review"] <= today]
+    # Sort by most overdue first (priority order)
     due.sort(key=lambda p: p["next_review"])
 
     if not due:
         print(f"{Colors.GREEN}No reviews due! Use 'leetcode-srs today' to check schedule.{Colors.RESET}")
         return
 
-    print(f"\n{Colors.BOLD}=== Review Session ({len(due)} problems) ==={Colors.RESET}\n")
+    priority_count = min(len(due), MAX_PRIORITY_PER_DAY)
+    extra_count = len(due) - priority_count
+
+    if extra_count > 0:
+        print(f"{Colors.BOLD}=== Review Session ({priority_count} priority + {extra_count} more) ==={Colors.RESET}\n")
+    else:
+        print(f"{Colors.BOLD}=== Review Session ({len(due)} problems) ==={Colors.RESET}\n")
 
     for i, p in enumerate(due):
-        print(f"{Colors.BOLD}[{i+1}/{len(due)}] {p['name']}{Colors.RESET}")
+        # Priority indicator
+        if i < MAX_PRIORITY_PER_DAY:
+            priority_tag = f"{Colors.RED}[PRIORITY]{Colors.RESET} "
+        else:
+            priority_tag = ""
+
+        print(f"{Colors.BOLD}[{i+1}/{len(due)}] {priority_tag}{p['name']}{Colors.RESET}")
         if p["url"]:
             print(f"  {Colors.DIM}{p['url']}{Colors.RESET}")
-        print(f"  Review #{p['review_count'] + 1} | Current interval: {p['interval']}d")
+        print(f"  Review #{p['review_count'] + 1} | Current interval: {p['interval']}d | {format_date(p['next_review'])}")
         print()
 
         while True:
@@ -472,6 +563,11 @@ def cmd_help(args):
   - {Colors.YELLOW}2 Medium{Colors.RESET}: Interval x 2   (normal progression)
   - {Colors.RED}3 Hard{Colors.RESET}:   Interval x 1.2 (slower, needs more practice)
   - {Colors.MAGENTA}0 Failed{Colors.RESET}: Reset to 1 day (couldn't solve it)
+
+{Colors.BOLD}Daily Goals:{Colors.RESET}
+  - Add at least {MIN_ADDS_PER_DAY} new problems per day
+  - Top {MAX_PRIORITY_PER_DAY} most urgent problems marked as [!] priority
+  - Smart scheduling spreads new problems to prevent clustering
 
 {Colors.BOLD}Git Sync:{Colors.RESET}
   Auto-sync: {sync_status} (edit GIT_SYNC_ENABLED in script to change)
