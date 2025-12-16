@@ -41,16 +41,21 @@
       "name": "15. 3Sum",
       "url": "https://leetcode.com/problems/3sum/description/",
       "added_date": "2025-12-14",
-      "next_review": "2025-12-16",
-      "interval": 1,
+      "next_review": "2025-12-18",
+      "interval": 2,
       "ease_factor": 2.3,
-      "review_count": 1,
-      "last_difficulty": 3,
+      "review_count": 2,
+      "last_difficulty": 2,
       "history": [
         {
           "date": "2025-12-15",
           "difficulty": 3,
           "interval": 1
+        },
+        {
+          "date": "2025-12-16",
+          "difficulty": 2,
+          "interval": 2
         }
       ]
     },
@@ -85,7 +90,7 @@
       "history": [
         {
           "date": "2025-12-16",
-          "difficulty": 1,
+          "difficulty": 3,
           "interval": 2
         }
       ]
