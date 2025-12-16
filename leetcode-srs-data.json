@@ -101,18 +101,6 @@
           "interval": 2
         }
       ]
-    },
-    {
-      "id": "a294e6ce",
-      "name": "Test Problem",
-      "url": "",
-      "added_date": "2025-12-16",
-      "next_review": "2025-12-18",
-      "interval": 1,
-      "ease_factor": 2.5,
-      "review_count": 0,
-      "last_difficulty": null,
-      "history": []
     }
   ],
   "daily_adds": {
