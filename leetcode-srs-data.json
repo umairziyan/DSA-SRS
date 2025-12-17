@@ -5,16 +5,21 @@
       "name": "1. Two Sum",
       "url": "https://leetcode.com/problems/two-sum",
       "added_date": "2025-12-14",
-      "next_review": "2025-12-17",
-      "interval": 2,
-      "ease_factor": 2.65,
-      "review_count": 1,
+      "next_review": "2025-12-22",
+      "interval": 5,
+      "ease_factor": 2.8,
+      "review_count": 2,
       "last_difficulty": 1,
       "history": [
         {
           "date": "2025-12-15",
           "difficulty": 1,
           "interval": 2
+        },
+        {
+          "date": "2025-12-17",
+          "difficulty": 1,
+          "interval": 5
         }
       ]
     },
@@ -23,16 +28,21 @@
       "name": "7. Reverse Integer",
       "url": "https://leetcode.com/problems/reverse-integer/description/?envType=company&envId=google&favoriteSlug=google-thirty-days",
       "added_date": "2025-12-14",
-      "next_review": "2025-12-17",
-      "interval": 2,
-      "ease_factor": 2.5,
-      "review_count": 1,
-      "last_difficulty": 2,
+      "next_review": "2025-12-22",
+      "interval": 5,
+      "ease_factor": 2.65,
+      "review_count": 2,
+      "last_difficulty": 1,
       "history": [
         {
           "date": "2025-12-15",
           "difficulty": 2,
           "interval": 2
+        },
+        {
+          "date": "2025-12-17",
+          "difficulty": 1,
+          "interval": 5
         }
       ]
     },
@@ -64,16 +74,21 @@
       "name": "3. Longest Substring Without Repeating Characters",
       "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/description/",
       "added_date": "2025-12-14",
-      "next_review": "2025-12-17",
-      "interval": 2,
+      "next_review": "2025-12-21",
+      "interval": 4,
       "ease_factor": 2.5,
-      "review_count": 1,
+      "review_count": 2,
       "last_difficulty": 2,
       "history": [
         {
           "date": "2025-12-15",
           "difficulty": 2,
           "interval": 2
+        },
+        {
+          "date": "2025-12-17",
+          "difficulty": 2,
+          "interval": 4
         }
       ]
     },
@@ -100,16 +115,21 @@
       "name": "88. Merge Sorted Array",
       "url": "https://leetcode.com/problems/merge-sorted-array/description/",
       "added_date": "2025-12-14",
-      "next_review": "2025-12-17",
-      "interval": 2,
+      "next_review": "2025-12-21",
+      "interval": 4,
       "ease_factor": 2.5,
-      "review_count": 1,
+      "review_count": 2,
       "last_difficulty": 2,
       "history": [
         {
           "date": "2025-12-15",
           "difficulty": 2,
           "interval": 2
+        },
+        {
+          "date": "2025-12-17",
+          "difficulty": 2,
+          "interval": 4
         }
       ]
     },
