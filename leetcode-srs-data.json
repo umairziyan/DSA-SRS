@@ -226,11 +226,23 @@
       "review_count": 0,
       "last_difficulty": null,
       "history": []
+    },
+    {
+      "id": "4f5c2bb3",
+      "name": "253. Meeting Rooms II",
+      "url": "https://leetcode.com/problems/meeting-rooms-ii/",
+      "added_date": "2025-12-18",
+      "next_review": "2025-12-20",
+      "interval": 1,
+      "ease_factor": 2.5,
+      "review_count": 0,
+      "last_difficulty": null,
+      "history": []
     }
   ],
   "daily_adds": {
     "2025-12-16": 2,
     "2025-12-17": 3,
-    "2025-12-18": 1
+    "2025-12-18": 2
   }
 }
