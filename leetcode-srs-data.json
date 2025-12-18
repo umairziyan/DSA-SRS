@@ -214,10 +214,23 @@
       "review_count": 0,
       "last_difficulty": null,
       "history": []
+    },
+    {
+      "id": "87e946b4",
+      "name": "2. Add Two Numbers",
+      "url": "https://leetcode.com/problems/add-two-numbers/",
+      "added_date": "2025-12-18",
+      "next_review": "2025-12-19",
+      "interval": 1,
+      "ease_factor": 2.5,
+      "review_count": 0,
+      "last_difficulty": null,
+      "history": []
     }
   ],
   "daily_adds": {
     "2025-12-16": 2,
-    "2025-12-17": 3
+    "2025-12-17": 3,
+    "2025-12-18": 1
   }
 }
