@@ -184,48 +184,72 @@
       "name": "20. Valid Parantheses",
       "url": "https://leetcode.com/problems/valid-parentheses/",
       "added_date": "2025-12-17",
-      "next_review": "2025-12-19",
-      "interval": 1,
+      "next_review": "2025-12-21",
+      "interval": 2,
       "ease_factor": 2.5,
-      "review_count": 0,
-      "last_difficulty": null,
-      "history": []
+      "review_count": 1,
+      "last_difficulty": 2,
+      "history": [
+        {
+          "date": "2025-12-19",
+          "difficulty": 2,
+          "interval": 2
+        }
+      ]
     },
     {
       "id": "fd89c7ce",
       "name": "11. Container With Most Water",
       "url": "https://leetcode.com/problems/container-with-most-water/description/",
       "added_date": "2025-12-17",
-      "next_review": "2025-12-19",
-      "interval": 1,
-      "ease_factor": 2.5,
-      "review_count": 0,
-      "last_difficulty": null,
-      "history": []
+      "next_review": "2025-12-21",
+      "interval": 2,
+      "ease_factor": 2.65,
+      "review_count": 1,
+      "last_difficulty": 1,
+      "history": [
+        {
+          "date": "2025-12-19",
+          "difficulty": 1,
+          "interval": 2
+        }
+      ]
     },
     {
       "id": "e5407fd4",
       "name": "252. Meeting Rooms",
       "url": "https://leetcode.com/problems/meeting-rooms/",
       "added_date": "2025-12-17",
-      "next_review": "2025-12-19",
-      "interval": 1,
+      "next_review": "2025-12-21",
+      "interval": 2,
       "ease_factor": 2.5,
-      "review_count": 0,
-      "last_difficulty": null,
-      "history": []
+      "review_count": 1,
+      "last_difficulty": 2,
+      "history": [
+        {
+          "date": "2025-12-19",
+          "difficulty": 2,
+          "interval": 2
+        }
+      ]
     },
     {
       "id": "87e946b4",
       "name": "2. Add Two Numbers",
       "url": "https://leetcode.com/problems/add-two-numbers/",
       "added_date": "2025-12-18",
-      "next_review": "2025-12-19",
-      "interval": 1,
+      "next_review": "2025-12-21",
+      "interval": 2,
       "ease_factor": 2.5,
-      "review_count": 0,
-      "last_difficulty": null,
-      "history": []
+      "review_count": 1,
+      "last_difficulty": 2,
+      "history": [
+        {
+          "date": "2025-12-19",
+          "difficulty": 2,
+          "interval": 2
+        }
+      ]
     },
     {
       "id": "4f5c2bb3",
