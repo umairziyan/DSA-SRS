@@ -171,16 +171,21 @@
       "name": "14. Longest Common Prefix",
       "url": "https://leetcode.com/problems/longest-common-prefix/",
       "added_date": "2025-12-16",
-      "next_review": "2025-12-20",
-      "interval": 2,
+      "next_review": "2025-12-24",
+      "interval": 4,
       "ease_factor": 2.5,
-      "review_count": 1,
+      "review_count": 2,
       "last_difficulty": 2,
       "history": [
         {
           "date": "2025-12-18",
           "difficulty": 2,
           "interval": 2
+        },
+        {
+          "date": "2025-12-20",
+          "difficulty": 2,
+          "interval": 4
         }
       ]
     },
@@ -261,12 +266,18 @@
       "name": "253. Meeting Rooms II",
       "url": "https://leetcode.com/problems/meeting-rooms-ii/",
       "added_date": "2025-12-18",
-      "next_review": "2025-12-20",
+      "next_review": "2025-12-21",
       "interval": 1,
-      "ease_factor": 2.5,
-      "review_count": 0,
-      "last_difficulty": null,
-      "history": []
+      "ease_factor": 2.3,
+      "review_count": 1,
+      "last_difficulty": 3,
+      "history": [
+        {
+          "date": "2025-12-20",
+          "difficulty": 3,
+          "interval": 1
+        }
+      ]
     }
   ],
   "daily_adds": {
