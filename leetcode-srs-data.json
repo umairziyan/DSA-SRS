@@ -148,16 +148,21 @@
       "name": "13. Roman to Integer",
       "url": "https://leetcode.com/problems/roman-to-integer/?envType=company&envId=google&favoriteSlug=google-thirty-days",
       "added_date": "2025-12-16",
-      "next_review": "2025-12-20",
-      "interval": 2,
-      "ease_factor": 2.5,
-      "review_count": 1,
-      "last_difficulty": 2,
+      "next_review": "2025-12-25",
+      "interval": 5,
+      "ease_factor": 2.65,
+      "review_count": 2,
+      "last_difficulty": 1,
       "history": [
         {
           "date": "2025-12-18",
           "difficulty": 2,
           "interval": 2
+        },
+        {
+          "date": "2025-12-20",
+          "difficulty": 1,
+          "interval": 5
         }
       ]
     },
