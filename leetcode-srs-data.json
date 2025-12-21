@@ -497,13 +497,29 @@
       "last_rating": null,
       "history": [],
       "fsrs_version": 6
+    },
+    {
+      "id": "5573701f",
+      "name": "300. Longest Increasing Subsequence",
+      "url": "https://leetcode.com/problems/longest-increasing-subsequence/",
+      "added_date": "2025-12-21",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2025-12-23",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
     "2025-12-16": 2,
     "2025-12-17": 3,
     "2025-12-18": 2,
-    "2025-12-21": 2
+    "2025-12-21": 3
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
