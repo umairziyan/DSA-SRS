@@ -115,16 +115,16 @@
       "name": "3. Longest Substring Without Repeating Characters",
       "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/description/",
       "added_date": "2025-12-14",
-      "next_review": "2025-12-21",
-      "review_count": 2,
+      "next_review": "2026-01-07",
+      "review_count": 3,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
-      "difficulty": 3.6470588235294112,
-      "stability": 4.0,
+      "difficulty": 3.6444117647058816,
+      "stability": 16.578146714150076,
       "state": "review",
       "last_rating": 3,
-      "last_review_date": "2025-12-17",
-      "reps": 2,
+      "last_review_date": "2025-12-21",
+      "reps": 3,
       "history": [
         {
           "date": "2025-12-15",
@@ -140,6 +140,14 @@
           "interval": 4,
           "stability": 4.0,
           "difficulty": 3.6470588235294112,
+          "retrievability": 0.9
+        },
+        {
+          "date": "2025-12-21",
+          "rating": 3,
+          "stability": 16.578146714150076,
+          "difficulty": 3.6444117647058816,
+          "interval": 17,
           "retrievability": 0.9
         }
       ]
@@ -183,16 +191,16 @@
       "name": "88. Merge Sorted Array",
       "url": "https://leetcode.com/problems/merge-sorted-array/description/",
       "added_date": "2025-12-14",
-      "next_review": "2025-12-21",
-      "review_count": 2,
+      "next_review": "2026-01-18",
+      "review_count": 3,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
-      "difficulty": 3.6470588235294112,
-      "stability": 4.0,
+      "difficulty": 1.515201929411764,
+      "stability": 27.557610980931678,
       "state": "review",
-      "last_rating": 3,
-      "last_review_date": "2025-12-17",
-      "reps": 2,
+      "last_rating": 4,
+      "last_review_date": "2025-12-21",
+      "reps": 3,
       "history": [
         {
           "date": "2025-12-15",
@@ -208,6 +216,14 @@
           "interval": 4,
           "stability": 4.0,
           "difficulty": 3.6470588235294112,
+          "retrievability": 0.9
+        },
+        {
+          "date": "2025-12-21",
+          "rating": 4,
+          "stability": 27.557610980931678,
+          "difficulty": 1.515201929411764,
+          "interval": 28,
           "retrievability": 0.9
         }
       ]
@@ -285,16 +301,16 @@
       "name": "20. Valid Parantheses",
       "url": "https://leetcode.com/problems/valid-parentheses/",
       "added_date": "2025-12-17",
-      "next_review": "2025-12-21",
-      "review_count": 1,
+      "next_review": "2025-12-30",
+      "review_count": 2,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
-      "difficulty": 3.6470588235294112,
-      "stability": 2.0,
+      "difficulty": 3.6444117647058816,
+      "stability": 9.058919963448915,
       "state": "review",
       "last_rating": 3,
-      "last_review_date": "2025-12-19",
-      "reps": 1,
+      "last_review_date": "2025-12-21",
+      "reps": 2,
       "history": [
         {
           "date": "2025-12-19",
@@ -302,6 +318,14 @@
           "interval": 2,
           "stability": 2.0,
           "difficulty": 3.6470588235294112,
+          "retrievability": 0.9
+        },
+        {
+          "date": "2025-12-21",
+          "rating": 3,
+          "stability": 9.058919963448915,
+          "difficulty": 3.6444117647058816,
+          "interval": 9,
           "retrievability": 0.9
         }
       ]
@@ -311,16 +335,16 @@
       "name": "11. Container With Most Water",
       "url": "https://leetcode.com/problems/container-with-most-water/description/",
       "added_date": "2025-12-17",
-      "next_review": "2025-12-21",
-      "review_count": 1,
+      "next_review": "2026-01-07",
+      "review_count": 2,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
-      "difficulty": 2.8529411764705888,
-      "stability": 2.0,
+      "difficulty": 1.0,
+      "stability": 16.64848152909417,
       "state": "review",
       "last_rating": 4,
-      "last_review_date": "2025-12-19",
-      "reps": 1,
+      "last_review_date": "2025-12-21",
+      "reps": 2,
       "history": [
         {
           "date": "2025-12-19",
@@ -328,6 +352,14 @@
           "interval": 2,
           "stability": 2.0,
           "difficulty": 2.8529411764705888,
+          "retrievability": 0.9
+        },
+        {
+          "date": "2025-12-21",
+          "rating": 4,
+          "stability": 16.64848152909417,
+          "difficulty": 1.0,
+          "interval": 17,
           "retrievability": 0.9
         }
       ]
@@ -337,16 +369,16 @@
       "name": "252. Meeting Rooms",
       "url": "https://leetcode.com/problems/meeting-rooms/",
       "added_date": "2025-12-17",
-      "next_review": "2025-12-21",
-      "review_count": 1,
+      "next_review": "2026-01-05",
+      "review_count": 2,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
-      "difficulty": 3.6470588235294112,
-      "stability": 2.0,
+      "difficulty": 1.515201929411764,
+      "stability": 15.220651199543473,
       "state": "review",
-      "last_rating": 3,
-      "last_review_date": "2025-12-19",
-      "reps": 1,
+      "last_rating": 4,
+      "last_review_date": "2025-12-21",
+      "reps": 2,
       "history": [
         {
           "date": "2025-12-19",
@@ -354,6 +386,14 @@
           "interval": 2,
           "stability": 2.0,
           "difficulty": 3.6470588235294112,
+          "retrievability": 0.9
+        },
+        {
+          "date": "2025-12-21",
+          "rating": 4,
+          "stability": 15.220651199543473,
+          "difficulty": 1.515201929411764,
+          "interval": 15,
           "retrievability": 0.9
         }
       ]
@@ -363,16 +403,16 @@
       "name": "2. Add Two Numbers",
       "url": "https://leetcode.com/problems/add-two-numbers/",
       "added_date": "2025-12-18",
-      "next_review": "2025-12-21",
-      "review_count": 1,
+      "next_review": "2026-01-05",
+      "review_count": 2,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
-      "difficulty": 3.6470588235294112,
-      "stability": 2.0,
+      "difficulty": 1.515201929411764,
+      "stability": 15.220651199543473,
       "state": "review",
-      "last_rating": 3,
-      "last_review_date": "2025-12-19",
-      "reps": 1,
+      "last_rating": 4,
+      "last_review_date": "2025-12-21",
+      "reps": 2,
       "history": [
         {
           "date": "2025-12-19",
@@ -380,6 +420,14 @@
           "interval": 2,
           "stability": 2.0,
           "difficulty": 3.6470588235294112,
+          "retrievability": 0.9
+        },
+        {
+          "date": "2025-12-21",
+          "rating": 4,
+          "stability": 15.220651199543473,
+          "difficulty": 1.515201929411764,
+          "interval": 15,
           "retrievability": 0.9
         }
       ]
