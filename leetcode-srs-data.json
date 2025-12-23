@@ -602,6 +602,22 @@
       "last_rating": null,
       "history": [],
       "fsrs_version": 6
+    },
+    {
+      "id": "8094bda2",
+      "name": "74. Search a 2D Matrix",
+      "url": "https://leetcode.com/problems/search-a-2d-matrix/",
+      "added_date": "2025-12-23",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2025-12-24",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -610,7 +626,7 @@
     "2025-12-18": 2,
     "2025-12-21": 3,
     "2025-12-22": 2,
-    "2025-12-23": 1
+    "2025-12-23": 2
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
