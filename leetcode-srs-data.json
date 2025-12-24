@@ -181,16 +181,16 @@
       "name": "4. Median of Two Sorted Arrays",
       "url": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
       "added_date": "2025-12-14",
-      "next_review": "2025-12-23",
-      "review_count": 3,
+      "next_review": "2025-12-27",
+      "review_count": 4,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
-      "difficulty": 7.641810364705884,
-      "stability": 0.8639659295641122,
-      "state": "relearning",
-      "last_rating": 1,
-      "last_review_date": "2025-12-22",
-      "reps": 0,
+      "difficulty": 8.425523828454761,
+      "stability": 2.8157312031382933,
+      "state": "review",
+      "last_rating": 2,
+      "last_review_date": "2025-12-24",
+      "reps": 1,
       "history": [
         {
           "date": "2025-12-16",
@@ -215,6 +215,14 @@
           "difficulty": 7.641810364705884,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2025-12-24",
+          "rating": 2,
+          "stability": 2.8157312031382933,
+          "difficulty": 8.425523828454761,
+          "interval": 3,
+          "retrievability": 0.8050385211407433
         }
       ]
     },
