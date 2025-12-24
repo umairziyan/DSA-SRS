@@ -696,6 +696,22 @@
         }
       ],
       "fsrs_version": 6
+    },
+    {
+      "id": "622b27dc",
+      "name": "153. Find Minimum in Rotated Sorted Array",
+      "url": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
+      "added_date": "2025-12-24",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2025-12-25",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -704,7 +720,8 @@
     "2025-12-18": 2,
     "2025-12-21": 3,
     "2025-12-22": 2,
-    "2025-12-23": 2
+    "2025-12-23": 2,
+    "2025-12-24": 1
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
