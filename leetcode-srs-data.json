@@ -712,6 +712,22 @@
       "last_rating": null,
       "history": [],
       "fsrs_version": 6
+    },
+    {
+      "id": "df9086da",
+      "name": "33. Search in Rotated Sorted Array",
+      "url": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+      "added_date": "2025-12-24",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2025-12-25",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -721,7 +737,7 @@
     "2025-12-21": 3,
     "2025-12-22": 2,
     "2025-12-23": 2,
-    "2025-12-24": 1
+    "2025-12-24": 2
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
