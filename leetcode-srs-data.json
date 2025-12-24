@@ -299,16 +299,16 @@
       "name": "14. Longest Common Prefix",
       "url": "https://leetcode.com/problems/longest-common-prefix/",
       "added_date": "2025-12-16",
-      "next_review": "2025-12-24",
-      "review_count": 2,
+      "next_review": "2026-01-10",
+      "review_count": 3,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
-      "difficulty": 3.6470588235294112,
-      "stability": 4.0,
+      "difficulty": 3.6444117647058816,
+      "stability": 16.578146714150076,
       "state": "review",
       "last_rating": 3,
-      "last_review_date": "2025-12-20",
-      "reps": 2,
+      "last_review_date": "2025-12-24",
+      "reps": 3,
       "history": [
         {
           "date": "2025-12-18",
@@ -324,6 +324,14 @@
           "interval": 4,
           "stability": 4.0,
           "difficulty": 3.6470588235294112,
+          "retrievability": 0.9
+        },
+        {
+          "date": "2025-12-24",
+          "rating": 3,
+          "stability": 16.578146714150076,
+          "difficulty": 3.6444117647058816,
+          "interval": 17,
           "retrievability": 0.9
         }
       ]
@@ -503,17 +511,50 @@
       "name": "121. Best Time to Buy and Sell Stock",
       "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
       "added_date": "2025-12-21",
+      "stability": 18.134311672846923,
+      "difficulty": 1.0,
+      "state": "review",
+      "last_review_date": "2025-12-24",
+      "next_review": "2026-01-11",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 4,
+      "history": [
+        {
+          "date": "2025-12-22",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
+        },
+        {
+          "date": "2025-12-24",
+          "rating": 4,
+          "stability": 18.134311672846923,
+          "difficulty": 1.0,
+          "interval": 18,
+          "retrievability": 0.9115814711321364
+        }
+      ],
+      "fsrs_version": 6
+    },
+    {
+      "id": "203ed919",
+      "name": "206. Reverse Linked List",
+      "url": "https://leetcode.com/problems/reverse-linked-list/",
+      "added_date": "2025-12-21",
       "stability": 2.3065,
       "difficulty": 2.118103970459015,
       "state": "review",
-      "last_review_date": "2025-12-22",
-      "next_review": "2025-12-24",
+      "last_review_date": "2025-12-24",
+      "next_review": "2025-12-26",
       "reps": 1,
       "review_count": 1,
       "last_rating": 3,
       "history": [
         {
-          "date": "2025-12-22",
+          "date": "2025-12-24",
           "rating": 3,
           "stability": 2.3065,
           "difficulty": 2.118103970459015,
@@ -524,35 +565,28 @@
       "fsrs_version": 6
     },
     {
-      "id": "203ed919",
-      "name": "206. Reverse Linked List",
-      "url": "https://leetcode.com/problems/reverse-linked-list/",
-      "added_date": "2025-12-21",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2025-12-23",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
-      "fsrs_version": 6
-    },
-    {
       "id": "5573701f",
       "name": "300. Longest Increasing Subsequence",
       "url": "https://leetcode.com/problems/longest-increasing-subsequence/",
       "added_date": "2025-12-21",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2025-12-23",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2025-12-24",
+      "next_review": "2025-12-26",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
+      "history": [
+        {
+          "date": "2025-12-24",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     },
     {
@@ -560,15 +594,24 @@
       "name": "1929. Concatenation of Array",
       "url": "https://leetcode.com/problems/concatenation-of-array/",
       "added_date": "2025-12-22",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2025-12-23",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 8.2956,
+      "difficulty": 1.0,
+      "state": "review",
+      "last_review_date": "2025-12-24",
+      "next_review": "2026-01-01",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 4,
+      "history": [
+        {
+          "date": "2025-12-24",
+          "rating": 4,
+          "stability": 8.2956,
+          "difficulty": 1.0,
+          "interval": 8,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     },
     {
@@ -576,15 +619,24 @@
       "name": "26. Remove Duplicates from Sorted Array",
       "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/",
       "added_date": "2025-12-22",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2025-12-23",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 8.2956,
+      "difficulty": 1.0,
+      "state": "review",
+      "last_review_date": "2025-12-24",
+      "next_review": "2026-01-01",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 4,
+      "history": [
+        {
+          "date": "2025-12-24",
+          "rating": 4,
+          "stability": 8.2956,
+          "difficulty": 1.0,
+          "interval": 8,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     },
     {
@@ -592,15 +644,24 @@
       "name": "704. Binary Search",
       "url": "https://leetcode.com/problems/binary-search/",
       "added_date": "2025-12-23",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2025-12-24",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 8.2956,
+      "difficulty": 1.0,
+      "state": "review",
+      "last_review_date": "2025-12-24",
+      "next_review": "2026-01-01",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 4,
+      "history": [
+        {
+          "date": "2025-12-24",
+          "rating": 4,
+          "stability": 8.2956,
+          "difficulty": 1.0,
+          "interval": 8,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     },
     {
@@ -608,15 +669,24 @@
       "name": "74. Search a 2D Matrix",
       "url": "https://leetcode.com/problems/search-a-2d-matrix/",
       "added_date": "2025-12-23",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2025-12-24",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 8.2956,
+      "difficulty": 1.0,
+      "state": "review",
+      "last_review_date": "2025-12-24",
+      "next_review": "2026-01-01",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 4,
+      "history": [
+        {
+          "date": "2025-12-24",
+          "rating": 4,
+          "stability": 8.2956,
+          "difficulty": 1.0,
+          "interval": 8,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     }
   ],
