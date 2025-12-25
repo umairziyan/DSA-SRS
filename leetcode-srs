@@ -3,11 +3,19 @@
 LeetCode Spaced Repetition System (SRS) CLI Tool
 
 A simple CLI to track LeetCode problems using spaced repetition
-with difficulty-adjusted intervals based on the SM-2 algorithm.
+with the FSRS-6 (Free Spaced Repetition Scheduler) algorithm.
+
+FSRS is a modern spaced repetition algorithm that models memory with:
+- Stability (S): Time in days for retrievability to drop to 90%
+- Difficulty (D): Inherent complexity of the material [1-10]
+- Retrievability (R): Current probability of recall [0-1]
+
+See: https://github.com/open-spaced-repetition/fsrs4anki
 """
 
 import json
 import os
+import re
 import subprocess
 import sys
 import uuid
@@ -22,8 +30,45 @@ DATA_FILE = SCRIPT_DIR / "leetcode-srs-data.json"
 GIT_SYNC_ENABLED = True  # Set to False to disable auto-sync
 
 # Daily limits
-MAX_PRIORITY_PER_DAY = 4  # Number of problems to highlight as priority
-MIN_ADDS_PER_DAY = 2      # Minimum new problems to add daily
+MAX_PRIORITY_PER_DAY = 5  # Number of problems to highlight as priority
+MIN_ADDS_PER_DAY = 3      # Minimum new problems to add daily
+
+# FSRS-6 Algorithm Parameters (21 total)
+# See: https://github.com/open-spaced-repetition/fsrs4anki/wiki/The-Algorithm
+FSRS_PARAMS = [
+    0.212,    # w0:  S0(1) - initial stability for Again
+    1.2931,   # w1:  S0(2) - initial stability for Hard
+    2.3065,   # w2:  S0(3) - initial stability for Good
+    8.2956,   # w3:  S0(4) - initial stability for Easy
+    6.4133,   # w4:  D0 base - initial difficulty calculation
+    0.8334,   # w5:  D0 scale - initial difficulty calculation
+    3.0194,   # w6:  Difficulty delta factor
+    0.001,    # w7:  Mean reversion weight
+    1.8722,   # w8:  Stability recall factor
+    0.1666,   # w9:  Stability recall exponent
+    0.796,    # w10: Stability recall retrievability factor
+    1.4835,   # w11: Stability forget factor
+    0.0614,   # w12: Stability forget difficulty exponent
+    0.2629,   # w13: Stability forget stability exponent
+    1.6483,   # w14: Stability forget retrievability factor
+    0.6014,   # w15: Hard penalty
+    1.8729,   # w16: Easy bonus
+    0.5425,   # w17: Same-day stability factor
+    0.0912,   # w18: Same-day rating offset
+    0.0658,   # w19: Same-day stability exponent
+    0.1542    # w20: Reserved for future use
+]
+
+# FSRS Constants
+FSRS_FACTOR = 19 / 81  # F constant for retrievability formula
+FSRS_DECAY = -0.5      # C constant for retrievability formula
+DESIRED_RETENTION = 0.9  # Target recall probability (90%)
+
+# Rating constants (FSRS uses 1-4, not 0-3)
+RATING_AGAIN = 1
+RATING_HARD = 2
+RATING_GOOD = 3
+RATING_EASY = 4
 
 # Colors for terminal output
 class Colors:
@@ -38,16 +83,350 @@ class Colors:
     RESET = "\033[0m"
 
 
+# ============================================================================
+# FSRS-6 Algorithm Functions
+# ============================================================================
+
+import math
+
+def clamp(value, min_val, max_val):
+    """Clamp value to range [min_val, max_val]."""
+    return max(min_val, min(max_val, value))
+
+
+def calculate_retrievability(elapsed_days, stability):
+    """
+    Calculate retrievability (probability of recall).
+
+    Formula: R(t, S) = (1 + F * (t/S))^C
+    Where: F = 19/81, C = -0.5
+
+    Returns: Retrievability R in range [0, 1]
+    """
+    if stability <= 0:
+        return 0.0
+    return math.pow(1 + FSRS_FACTOR * (elapsed_days / stability), FSRS_DECAY)
+
+
+def calculate_interval(stability, desired_retention=DESIRED_RETENTION):
+    """
+    Calculate optimal review interval from stability.
+
+    Formula: I = S * ln(desired_retention) / ln(0.9)
+    Note: When desired_retention = 0.9, interval equals stability.
+
+    Returns: Interval in whole days (minimum 1)
+    """
+    if stability <= 0:
+        return 1
+    interval = stability * math.log(desired_retention) / math.log(0.9)
+    return max(1, round(interval))
+
+
+def get_initial_stability(rating):
+    """
+    Get initial stability for first review.
+
+    Formula: S0(G) = w[G-1] for G in {1, 2, 3, 4}
+    """
+    if rating < 1 or rating > 4:
+        rating = 3  # Default to Good
+    return FSRS_PARAMS[rating - 1]
+
+
+def get_initial_difficulty(rating):
+    """
+    Calculate initial difficulty.
+
+    Formula: D0(G) = w4 - e^(w5 * (G-1)) + 1
+    Clamped to range [1, 10]
+    """
+    w4, w5 = FSRS_PARAMS[4], FSRS_PARAMS[5]
+    d0 = w4 - math.exp(w5 * (rating - 1)) + 1
+    return clamp(d0, 1.0, 10.0)
+
+
+def update_difficulty(difficulty, rating):
+    """
+    Update difficulty after a review.
+
+    Step 1: delta_D = -w6 * (G - 3)
+    Step 2: D' = D + delta_D * (10 - D) / 9
+    Step 3: Mean reversion: D'' = w7 * D0(4) + (1 - w7) * D'
+
+    Returns: Updated difficulty D'' in range [1, 10]
+    """
+    w6, w7 = FSRS_PARAMS[6], FSRS_PARAMS[7]
+
+    # Step 1: Calculate delta
+    delta_d = -w6 * (rating - 3)
+
+    # Step 2: Apply delta with scaling factor
+    d_prime = difficulty + delta_d * (10 - difficulty) / 9
+
+    # Step 3: Mean reversion toward D0(4)
+    d0_4 = get_initial_difficulty(4)
+    d_new = w7 * d0_4 + (1 - w7) * d_prime
+
+    return clamp(d_new, 1.0, 10.0)
+
+
+def update_stability_success(difficulty, stability, retrievability, rating):
+    """
+    Update stability after successful recall (rating >= 2).
+
+    Formula:
+    S'_r(D,S,R,G) = S * (e^w8 * (11-D) * S^(-w9) * (e^(w10*(1-R))-1)
+                        * hard_penalty * easy_bonus + 1)
+    """
+    w8, w9, w10 = FSRS_PARAMS[8], FSRS_PARAMS[9], FSRS_PARAMS[10]
+    w15, w16 = FSRS_PARAMS[15], FSRS_PARAMS[16]
+
+    hard_penalty = w15 if rating == RATING_HARD else 1.0
+    easy_bonus = w16 if rating == RATING_EASY else 1.0
+
+    factor = (
+        math.exp(w8) *
+        (11 - difficulty) *
+        math.pow(stability, -w9) *
+        (math.exp(w10 * (1 - retrievability)) - 1) *
+        hard_penalty *
+        easy_bonus +
+        1
+    )
+
+    return stability * factor
+
+
+def update_stability_forget(difficulty, stability, retrievability):
+    """
+    Update stability after forgetting (rating == 1 / Again).
+
+    Formula:
+    S'_f(D,S,R) = w11 * D^(-w12) * ((S+1)^w13 - 1) * e^(w14 * (1-R))
+    """
+    w11, w12, w13, w14 = FSRS_PARAMS[11], FSRS_PARAMS[12], FSRS_PARAMS[13], FSRS_PARAMS[14]
+
+    new_stability = (
+        w11 *
+        math.pow(difficulty, -w12) *
+        (math.pow(stability + 1, w13) - 1) *
+        math.exp(w14 * (1 - retrievability))
+    )
+
+    # Ensure stability doesn't exceed pre-lapse stability
+    return min(max(0.1, new_stability), stability)
+
+
+def update_stability_same_day(stability, rating):
+    """
+    Update stability for same-day reviews (FSRS-6 short-term scheduler).
+
+    Formula: S'(S,G) = S * e^(w17 * (G - 3 + w18)) * S^(-w19)
+    """
+    w17, w18, w19 = FSRS_PARAMS[17], FSRS_PARAMS[18], FSRS_PARAMS[19]
+
+    new_stability = stability * math.exp(w17 * (rating - 3 + w18)) * math.pow(stability, -w19)
+
+    return max(0.1, new_stability)
+
+
+def process_review(problem, rating, review_date):
+    """
+    Process a review and return updated FSRS state.
+
+    Args:
+        problem: Problem dict with current FSRS state
+        rating: User rating (1=Again, 2=Hard, 3=Good, 4=Easy)
+        review_date: Date of review in YYYY-MM-DD format
+
+    Returns:
+        Tuple of (new_stability, new_difficulty, new_interval, new_state, retrievability)
+    """
+    state = problem.get("state", "new")
+    stability = problem.get("stability", 0)
+    difficulty = problem.get("difficulty", 5.0)
+    last_review = problem.get("last_review_date")
+
+    # Calculate elapsed days
+    if last_review:
+        last_date = datetime.strptime(last_review, "%Y-%m-%d")
+        current_date = datetime.strptime(review_date, "%Y-%m-%d")
+        elapsed_days = max(0, (current_date - last_date).days)
+    else:
+        elapsed_days = 0
+
+    is_same_day = elapsed_days == 0 and last_review is not None
+
+    # Calculate retrievability for this review
+    if stability > 0 and elapsed_days > 0:
+        retrievability = calculate_retrievability(elapsed_days, stability)
+    else:
+        retrievability = 0.9  # Default for new cards
+
+    # Handle first review (new card)
+    if state == "new" or stability <= 0:
+        new_stability = get_initial_stability(rating)
+        new_difficulty = get_initial_difficulty(rating)
+        new_state = "learning" if rating == RATING_AGAIN else "review"
+
+    # Handle same-day review
+    elif is_same_day:
+        new_stability = update_stability_same_day(stability, rating)
+        new_difficulty = update_difficulty(difficulty, rating)
+        new_state = "relearning" if rating == RATING_AGAIN else "review"
+
+    # Handle regular review
+    else:
+        new_difficulty = update_difficulty(difficulty, rating)
+
+        if rating == RATING_AGAIN:
+            new_stability = update_stability_forget(difficulty, stability, retrievability)
+            new_state = "relearning"
+        else:
+            new_stability = update_stability_success(
+                difficulty, stability, retrievability, rating
+            )
+            new_state = "review"
+
+    new_interval = calculate_interval(new_stability)
+
+    return new_stability, new_difficulty, new_interval, new_state, retrievability
+
+
+def rating_display(rating):
+    """Get display string for FSRS rating."""
+    if rating == RATING_AGAIN:
+        return f"{Colors.MAGENTA}Again{Colors.RESET}"
+    elif rating == RATING_HARD:
+        return f"{Colors.RED}Hard{Colors.RESET}"
+    elif rating == RATING_GOOD:
+        return f"{Colors.YELLOW}Good{Colors.RESET}"
+    elif rating == RATING_EASY:
+        return f"{Colors.GREEN}Easy{Colors.RESET}"
+    return f"{Colors.DIM}N/A{Colors.RESET}"
+
+
+# ============================================================================
+# Migration Functions (SM-2 to FSRS)
+# ============================================================================
+
+def migrate_problem_to_fsrs(old_problem):
+    """Migrate a single problem from SM-2 to FSRS format."""
+
+    # Rating conversion map: old (0-3) -> new (1-4)
+    # Old: 0=Failed, 1=Easy, 2=Medium, 3=Hard
+    # New: 1=Again, 2=Hard, 3=Good, 4=Easy
+    rating_map = {0: 1, 1: 4, 2: 3, 3: 2}
+
+    # Base fields (unchanged)
+    new_problem = {
+        "id": old_problem["id"],
+        "name": old_problem["name"],
+        "url": old_problem.get("url", ""),
+        "added_date": old_problem["added_date"],
+        "next_review": old_problem["next_review"],
+        "review_count": old_problem["review_count"],
+        "fsrs_version": 6,
+        "migrated_from_sm2": True,
+    }
+
+    # Convert ease_factor [1.3, 3.0] to difficulty [1, 10]
+    # Higher ease = easier = lower difficulty
+    ease = old_problem.get("ease_factor", 2.5)
+    new_problem["difficulty"] = clamp(10 - (ease - 1.3) / 1.7 * 9, 1.0, 10.0)
+
+    # Stability = interval (approximation)
+    interval = old_problem.get("interval", 1)
+    new_problem["stability"] = max(0.5, float(interval))
+
+    # Determine state
+    if old_problem["review_count"] == 0:
+        new_problem["state"] = "new"
+    elif interval <= 1:
+        new_problem["state"] = "learning"
+    else:
+        new_problem["state"] = "review"
+
+    # Convert last_difficulty to last_rating
+    old_diff = old_problem.get("last_difficulty")
+    new_problem["last_rating"] = rating_map.get(old_diff) if old_diff is not None else None
+
+    # Get last_review_date from history
+    history = old_problem.get("history", [])
+    new_problem["last_review_date"] = history[-1]["date"] if history else None
+
+    # Count successful reviews for reps
+    new_problem["reps"] = len([h for h in history if h.get("difficulty", 2) != 0])
+
+    # Convert history entries
+    new_history = []
+    for entry in history:
+        old_rating = entry.get("difficulty", 2)
+        new_entry = {
+            "date": entry["date"],
+            "rating": rating_map.get(old_rating, 3),
+            "interval": entry["interval"],
+            "stability": float(entry["interval"]),
+            "difficulty": new_problem["difficulty"],
+            "retrievability": 0.9  # Assumed for migrated data
+        }
+        new_history.append(new_entry)
+    new_problem["history"] = new_history
+
+    return new_problem
+
+
+def migrate_data_file(data):
+    """Migrate entire data file from SM-2 to FSRS format."""
+    new_data = {
+        "problems": [],
+        "daily_adds": data.get("daily_adds", {}),
+        "fsrs_version": 6,
+        "desired_retention": DESIRED_RETENTION,
+    }
+
+    for old_problem in data.get("problems", []):
+        # Check if already migrated
+        if old_problem.get("fsrs_version"):
+            new_data["problems"].append(old_problem)
+        else:
+            new_problem = migrate_problem_to_fsrs(old_problem)
+            new_data["problems"].append(new_problem)
+
+    return new_data
+
+
+# ============================================================================
+# Data Management Functions
+# ============================================================================
+
 def load_data():
-    """Load problems from JSON file."""
+    """Load problems from JSON file with auto-migration to FSRS."""
     if DATA_FILE.exists():
         with open(DATA_FILE, "r") as f:
             data = json.load(f)
-            # Ensure daily_adds exists (migration for old data)
-            if "daily_adds" not in data:
-                data["daily_adds"] = {}
-            return data
-    return {"problems": [], "daily_adds": {}}
+
+        # Check if migration to FSRS is needed
+        if "fsrs_version" not in data:
+            print(f"{Colors.YELLOW}Migrating data to FSRS-6 format...{Colors.RESET}")
+            data = migrate_data_file(data)
+            # Save migrated data immediately
+            with open(DATA_FILE, "w") as f:
+                json.dump(data, f, indent=2)
+            print(f"{Colors.GREEN}Migration complete! {len(data['problems'])} problems migrated.{Colors.RESET}\n")
+
+        # Ensure daily_adds exists
+        if "daily_adds" not in data:
+            data["daily_adds"] = {}
+        return data
+
+    return {
+        "problems": [],
+        "daily_adds": {},
+        "fsrs_version": 6,
+        "desired_retention": DESIRED_RETENTION
+    }
 
 
 def get_today_adds(data):
@@ -149,29 +528,6 @@ def git_sync():
         pass  # Any other error, skip silently
 
 
-def calculate_next_interval(current_interval, ease_factor, difficulty):
-    """
-    Calculate the next review interval based on difficulty.
-
-    difficulty: 0=Failed, 1=Easy, 2=Medium, 3=Hard
-    """
-    if difficulty == 0:  # Failed - reset to 1 day, big ease penalty
-        new_interval = 1
-        new_ease = max(ease_factor - 0.30, 1.3)
-    elif difficulty == 1:  # Easy - jump ahead
-        new_interval = current_interval * ease_factor
-        new_ease = min(ease_factor + 0.15, 3.0)
-    elif difficulty == 2:  # Medium - normal progression
-        new_interval = current_interval * 2
-        new_ease = ease_factor
-    else:  # Hard - slower progression
-        new_interval = current_interval * 1.2
-        new_ease = max(ease_factor - 0.20, 1.3)
-
-    # Round to whole days, minimum 1 day
-    return max(1, round(new_interval)), new_ease
-
-
 def format_date(date_str):
     """Format date string for display."""
     date = datetime.strptime(date_str, "%Y-%m-%d")
@@ -188,16 +544,10 @@ def format_date(date_str):
         return f"{Colors.BLUE}In {delta}d{Colors.RESET}"
 
 
-def difficulty_emoji(difficulty):
-    """Get display for difficulty."""
-    if difficulty == 0:
-        return f"{Colors.MAGENTA}Failed{Colors.RESET}"
-    elif difficulty == 1:
-        return f"{Colors.GREEN}Easy{Colors.RESET}"
-    elif difficulty == 2:
-        return f"{Colors.YELLOW}Medium{Colors.RESET}"
-    else:
-        return f"{Colors.RED}Hard{Colors.RESET}"
+def extract_problem_number(name):
+    """Extract problem number from name like '171. Problem Name'."""
+    match = re.match(r'^(\d+)\.', name)
+    return int(match.group(1)) if match else None
 
 
 def cmd_add(args):
@@ -209,23 +559,50 @@ def cmd_add(args):
     name = args[0]
     url = args[1] if len(args) > 1 else ""
 
+    # Validate problem name format
+    problem_num = extract_problem_number(name)
+    if problem_num is None:
+        print(f"{Colors.RED}Error: Problem name must start with a number and dot (e.g., '171. Problem Name'){Colors.RESET}")
+        return
+
     data = load_data()
+
+    # Check for duplicate by problem number
+    for existing in data["problems"]:
+        existing_num = extract_problem_number(existing["name"])
+        if existing_num == problem_num:
+            print(f"{Colors.RED}Duplicate found:{Colors.RESET} '{existing['name']}' (#{existing_num})")
+            print(f"  Next review: {format_date(existing['next_review'])}")
+            print(f"  Reviews: {existing['review_count']}")
+            return
+
     today = datetime.now()
 
     # Smart scheduling: find next day with available slot
     next_review, days_ahead = find_next_available_slot(data, start_days=1)
 
+    # FSRS problem structure
     problem = {
         "id": str(uuid.uuid4())[:8],
         "name": name,
         "url": url,
         "added_date": today.strftime("%Y-%m-%d"),
+
+        # FSRS fields
+        "stability": 0,           # Will be set on first review
+        "difficulty": 5.0,        # Default mid-range difficulty
+        "state": "new",
+        "last_review_date": None,
         "next_review": next_review,
-        "interval": 1,
-        "ease_factor": 2.5,
+        "reps": 0,
+
+        # Tracking
         "review_count": 0,
-        "last_difficulty": None,
-        "history": []
+        "last_rating": None,
+        "history": [],
+
+        # Metadata
+        "fsrs_version": 6,
     }
 
     data["problems"].append(problem)
@@ -272,9 +649,21 @@ def cmd_today(args):
 
     for i, p in enumerate(due):
         status = format_date(p["next_review"])
-        review_info = f"Review #{p['review_count'] + 1}"
-        if p["last_difficulty"] is not None:
-            review_info += f" (Last: {difficulty_emoji(p['last_difficulty'])})"
+
+        # Calculate retrievability
+        stability = p.get("stability", 0)
+        last_review = p.get("last_review_date")
+        if last_review and stability > 0:
+            last_date = datetime.strptime(last_review, "%Y-%m-%d")
+            elapsed = (datetime.now() - last_date).days
+            r = calculate_retrievability(elapsed, stability)
+            r_display = f"R:{r*100:.0f}%"
+        else:
+            r_display = "New"
+
+        review_info = f"Review #{p['review_count'] + 1} | {r_display}"
+        if p.get("last_rating") is not None:
+            review_info += f" | Last: {rating_display(p['last_rating'])}"
 
         # Priority indicator for top MAX_PRIORITY_PER_DAY
         if i < MAX_PRIORITY_PER_DAY:
@@ -290,7 +679,7 @@ def cmd_today(args):
 
 
 def cmd_review(args):
-    """Interactive review session."""
+    """Interactive review session using FSRS algorithm."""
     data = load_data()
     today = datetime.now().strftime("%Y-%m-%d")
 
@@ -320,18 +709,29 @@ def cmd_review(args):
         else:
             priority_tag = ""
 
+        # Calculate current retrievability
+        stability = p.get("stability", 0)
+        last_review = p.get("last_review_date")
+        if last_review and stability > 0:
+            last_date = datetime.strptime(last_review, "%Y-%m-%d")
+            elapsed = (datetime.now() - last_date).days
+            r = calculate_retrievability(elapsed, stability)
+            r_display = f"R:{r*100:.0f}%"
+        else:
+            r_display = "New"
+
         print(f"{Colors.BOLD}[{i+1}/{len(due)}] {priority_tag}{p['name']}{Colors.RESET}")
         if p["url"]:
             print(f"  {Colors.DIM}{p['url']}{Colors.RESET}")
-        print(f"  Review #{p['review_count'] + 1} | Current interval: {p['interval']}d | {format_date(p['next_review'])}")
+        print(f"  Review #{p['review_count'] + 1} | S:{stability:.1f}d | {r_display} | {format_date(p['next_review'])}")
         print()
 
         while True:
             print(f"  How did it go?")
-            print(f"    {Colors.GREEN}1{Colors.RESET} - Easy (knew it quickly)")
-            print(f"    {Colors.YELLOW}2{Colors.RESET} - Medium (some effort)")
-            print(f"    {Colors.RED}3{Colors.RESET} - Hard (struggled)")
-            print(f"    {Colors.MAGENTA}0{Colors.RESET} - Failed (couldn't solve, reset)")
+            print(f"    {Colors.MAGENTA}1{Colors.RESET} - Again (forgot/couldn't solve)")
+            print(f"    {Colors.RED}2{Colors.RESET} - Hard (struggled significantly)")
+            print(f"    {Colors.YELLOW}3{Colors.RESET} - Good (some effort)")
+            print(f"    {Colors.GREEN}4{Colors.RESET} - Easy (knew it quickly)")
             print(f"    {Colors.DIM}s{Colors.RESET} - Skip for now")
             print(f"    {Colors.DIM}q{Colors.RESET} - Quit review session")
 
@@ -344,34 +744,39 @@ def cmd_review(args):
             elif choice == 's':
                 print(f"{Colors.DIM}Skipped.{Colors.RESET}\n")
                 break
-            elif choice in ['0', '1', '2', '3']:
-                difficulty = int(choice)
-                new_interval, new_ease = calculate_next_interval(
-                    p["interval"], p["ease_factor"], difficulty
-                )
+            elif choice in ['1', '2', '3', '4']:
+                rating = int(choice)
 
+                # Process review with FSRS algorithm
+                new_s, new_d, new_interval, new_state, retrievability = process_review(p, rating, today)
                 next_date = (datetime.now() + timedelta(days=new_interval)).strftime("%Y-%m-%d")
 
-                # Update problem
+                # Update problem with FSRS fields
+                p["stability"] = new_s
+                p["difficulty"] = new_d
+                p["state"] = new_state
                 p["next_review"] = next_date
-                p["interval"] = new_interval
-                p["ease_factor"] = new_ease
+                p["last_review_date"] = today
                 p["review_count"] += 1
-                p["last_difficulty"] = difficulty
+                p["last_rating"] = rating
+                p["reps"] = p.get("reps", 0) + 1 if rating > RATING_AGAIN else 0
                 p["history"].append({
                     "date": today,
-                    "difficulty": difficulty,
-                    "interval": new_interval
+                    "rating": rating,
+                    "stability": new_s,
+                    "difficulty": new_d,
+                    "interval": new_interval,
+                    "retrievability": retrievability
                 })
 
-                if difficulty == 0:
-                    print(f"\n  {Colors.MAGENTA}Reset!{Colors.RESET} Back to {Colors.CYAN}1 day{Colors.RESET} ({next_date})")
+                if rating == RATING_AGAIN:
+                    print(f"\n  {Colors.MAGENTA}Again!{Colors.RESET} Stability: {Colors.CYAN}{new_s:.1f}d{Colors.RESET} | Next: {next_date}")
                 else:
-                    print(f"\n  {Colors.GREEN}Recorded!{Colors.RESET} Next review in {Colors.CYAN}{new_interval} days{Colors.RESET} ({next_date})")
+                    print(f"\n  {Colors.GREEN}Recorded!{Colors.RESET} Next review in {Colors.CYAN}{new_interval} days{Colors.RESET} (S:{new_s:.1f}d)")
                 print()
                 break
             else:
-                print(f"  {Colors.RED}Invalid choice. Enter 0, 1, 2, 3, s, or q.{Colors.RESET}\n")
+                print(f"  {Colors.RED}Invalid choice. Enter 1, 2, 3, 4, s, or q.{Colors.RESET}\n")
 
     save_data(data)
     print(f"{Colors.GREEN}Review session complete!{Colors.RESET}")
@@ -392,10 +797,23 @@ def cmd_list(args):
 
     for p in problems:
         status = format_date(p["next_review"])
-        ease_display = f"EF:{p['ease_factor']:.1f}"
+
+        # Get FSRS fields
+        s = p.get("stability", 0)
+        d = p.get("difficulty", 5)
+        last_review = p.get("last_review_date")
+
+        # Calculate current retrievability
+        if last_review and s > 0:
+            last_date = datetime.strptime(last_review, "%Y-%m-%d")
+            elapsed = (datetime.now() - last_date).days
+            r = calculate_retrievability(elapsed, s)
+            r_display = f"R:{r*100:.0f}%"
+        else:
+            r_display = "New"
 
         print(f"  {Colors.CYAN}{p['name']}{Colors.RESET}")
-        print(f"    {status} | Interval: {p['interval']}d | Reviews: {p['review_count']} | {ease_display}")
+        print(f"    {status} | S:{s:.1f}d | D:{d:.1f} | {r_display} | Reviews: {p['review_count']}")
         if p["url"]:
             print(f"    {Colors.DIM}{p['url']}{Colors.RESET}")
         print()
@@ -416,20 +834,30 @@ def cmd_stats(args):
     due_today = len([p for p in problems if p["next_review"] <= today])
     total_reviews = sum(p["review_count"] for p in problems)
 
-    # Problems by interval ranges
-    learning = len([p for p in problems if p["interval"] <= 4])
-    young = len([p for p in problems if 4 < p["interval"] <= 21])
-    mature = len([p for p in problems if p["interval"] > 21])
+    # Problems by stability ranges (FSRS maturity)
+    learning = len([p for p in problems if p.get("stability", 0) <= 4])
+    young = len([p for p in problems if 4 < p.get("stability", 0) <= 21])
+    mature = len([p for p in problems if p.get("stability", 0) > 21])
 
-    print(f"\n{Colors.BOLD}=== Statistics ==={Colors.RESET}\n")
+    print(f"\n{Colors.BOLD}=== Statistics (FSRS-6) ==={Colors.RESET}\n")
     print(f"  Total problems:    {Colors.CYAN}{total}{Colors.RESET}")
     print(f"  Due today:         {Colors.YELLOW if due_today else Colors.GREEN}{due_today}{Colors.RESET}")
     print(f"  Total reviews:     {Colors.CYAN}{total_reviews}{Colors.RESET}")
     print()
-    print(f"  {Colors.BOLD}Problem Maturity:{Colors.RESET}")
-    print(f"    Learning (1-4d):  {Colors.RED}{learning}{Colors.RESET}")
-    print(f"    Young (5-21d):    {Colors.YELLOW}{young}{Colors.RESET}")
-    print(f"    Mature (21d+):    {Colors.GREEN}{mature}{Colors.RESET}")
+
+    # Averages
+    if problems:
+        avg_s = sum(p.get("stability", 0) for p in problems) / len(problems)
+        avg_d = sum(p.get("difficulty", 5) for p in problems) / len(problems)
+        print(f"  {Colors.BOLD}Averages:{Colors.RESET}")
+        print(f"    Stability:   {Colors.CYAN}{avg_s:.1f}d{Colors.RESET}")
+        print(f"    Difficulty:  {Colors.CYAN}{avg_d:.1f}{Colors.RESET}")
+        print()
+
+    print(f"  {Colors.BOLD}Problem Maturity (by Stability):{Colors.RESET}")
+    print(f"    Learning (S<=4d):  {Colors.RED}{learning}{Colors.RESET}")
+    print(f"    Young (4<S<=21d):  {Colors.YELLOW}{young}{Colors.RESET}")
+    print(f"    Mature (S>21d):    {Colors.GREEN}{mature}{Colors.RESET}")
     print()
 
     # Upcoming reviews
@@ -542,7 +970,7 @@ def cmd_help(args):
     """Show help message."""
     sync_status = f"{Colors.GREEN}ON{Colors.RESET}" if GIT_SYNC_ENABLED else f"{Colors.RED}OFF{Colors.RESET}"
     print(f"""
-{Colors.BOLD}LeetCode Spaced Repetition System{Colors.RESET}
+{Colors.BOLD}LeetCode Spaced Repetition System (FSRS-6){Colors.RESET}
 
 {Colors.BOLD}Usage:{Colors.RESET}
   leetcode-srs <command> [arguments]
@@ -557,12 +985,27 @@ def cmd_help(args):
   {Colors.CYAN}sync{Colors.RESET}               Manually sync to git
   {Colors.CYAN}help{Colors.RESET}               Show this help message
 
-{Colors.BOLD}Algorithm:{Colors.RESET}
-  Based on SM-2 spaced repetition with difficulty adjustments:
-  - {Colors.GREEN}1 Easy{Colors.RESET}:   Interval x 2.5 (you knew it quickly)
-  - {Colors.YELLOW}2 Medium{Colors.RESET}: Interval x 2   (normal progression)
-  - {Colors.RED}3 Hard{Colors.RESET}:   Interval x 1.2 (slower, needs more practice)
-  - {Colors.MAGENTA}0 Failed{Colors.RESET}: Reset to 1 day (couldn't solve it)
+{Colors.BOLD}Algorithm (FSRS-6):{Colors.RESET}
+  Uses the Free Spaced Repetition Scheduler with:
+  - {Colors.CYAN}Stability (S){Colors.RESET}: Memory strength in days (time to drop to 90% recall)
+  - {Colors.CYAN}Difficulty (D){Colors.RESET}: Problem complexity [1-10]
+  - {Colors.CYAN}Retrievability (R){Colors.RESET}: Current recall probability [0-100%]
+
+{Colors.BOLD}Rating Scale:{Colors.RESET}
+  {Colors.MAGENTA}1 - Again{Colors.RESET}:  Forgot or couldn't solve (resets learning)
+  {Colors.RED}2 - Hard{Colors.RESET}:   Struggled significantly (reduced stability gain)
+  {Colors.YELLOW}3 - Good{Colors.RESET}:   Normal recall with effort (standard progression)
+  {Colors.GREEN}4 - Easy{Colors.RESET}:   Instant recall (accelerated progression)
+
+{Colors.BOLD}Key Concepts:{Colors.RESET}
+  - Target retention: 90% (reviews scheduled before memory fades)
+  - Interval = time for retrievability to drop to target
+  - Difficulty adapts based on your performance history
+  - Same-day reviews use short-term memory model
+
+{Colors.BOLD}Interval Progression Example (Good ratings):{Colors.RESET}
+  1d -> 2d -> 5d -> 12d -> 28d -> 65d -> 150d ...
+  (actual intervals depend on difficulty and consistency)
 
 {Colors.BOLD}Daily Goals:{Colors.RESET}
   - Add at least {MIN_ADDS_PER_DAY} new problems per day
@@ -575,11 +1018,11 @@ def cmd_help(args):
 
 {Colors.BOLD}Example Workflow:{Colors.RESET}
   leetcode-srs add "Two Sum" "https://leetcode.com/problems/two-sum"
-  leetcode-srs add "Valid Parentheses"
   leetcode-srs today
   leetcode-srs review
 
 {Colors.DIM}Data stored at: {DATA_FILE}{Colors.RESET}
+{Colors.DIM}Algorithm: FSRS-6 (https://github.com/open-spaced-repetition){Colors.RESET}
 """)
 
 
