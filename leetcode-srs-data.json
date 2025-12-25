@@ -794,6 +794,22 @@
       "last_rating": null,
       "history": [],
       "fsrs_version": 6
+    },
+    {
+      "id": "fd5efb00",
+      "name": "21. Merge Two Sorted Lists",
+      "url": "https://leetcode.com/problems/merge-two-sorted-lists/",
+      "added_date": "2025-12-25",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2025-12-27",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -804,7 +820,7 @@
     "2025-12-22": 2,
     "2025-12-23": 2,
     "2025-12-24": 2,
-    "2025-12-25": 3
+    "2025-12-25": 4
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
