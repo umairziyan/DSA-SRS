@@ -810,6 +810,22 @@
       "last_rating": null,
       "history": [],
       "fsrs_version": 6
+    },
+    {
+      "id": "fe6c1363",
+      "name": "141. Linked List Cycle",
+      "url": "https://leetcode.com/problems/linked-list-cycle/",
+      "added_date": "2025-12-25",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2025-12-27",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -820,7 +836,7 @@
     "2025-12-22": 2,
     "2025-12-23": 2,
     "2025-12-24": 2,
-    "2025-12-25": 4
+    "2025-12-25": 5
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
