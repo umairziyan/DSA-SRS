@@ -867,6 +867,22 @@
       "last_rating": null,
       "history": [],
       "fsrs_version": 6
+    },
+    {
+      "id": "195ae503",
+      "name": "143. Reorder List",
+      "url": "https://leetcode.com/problems/reorder-list/",
+      "added_date": "2025-12-26",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2025-12-28",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -877,7 +893,8 @@
     "2025-12-22": 2,
     "2025-12-23": 2,
     "2025-12-24": 2,
-    "2025-12-25": 5
+    "2025-12-25": 5,
+    "2025-12-26": 1
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
