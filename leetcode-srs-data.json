@@ -915,6 +915,22 @@
       "last_rating": null,
       "history": [],
       "fsrs_version": 6
+    },
+    {
+      "id": "12bc7373",
+      "name": "287. Find the Duplicate Number",
+      "url": "https://leetcode.com/problems/find-the-duplicate-number/",
+      "added_date": "2025-12-26",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2025-12-28",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -926,7 +942,7 @@
     "2025-12-23": 2,
     "2025-12-24": 2,
     "2025-12-25": 5,
-    "2025-12-26": 3
+    "2025-12-26": 4
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
