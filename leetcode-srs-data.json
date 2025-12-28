@@ -841,13 +841,13 @@
       "name": "408. Valid Word Abbreviation",
       "url": "https://leetcode.com/problems/valid-word-abbreviation/",
       "added_date": "2025-12-25",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 3.168008457377537,
+      "difficulty": 6.746231141532862,
       "state": "review",
-      "last_review_date": "2025-12-27",
-      "next_review": "2025-12-28",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2025-12-28",
+      "next_review": "2025-12-31",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 2,
       "history": [
         {
@@ -857,6 +857,14 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2025-12-28",
+          "rating": 2,
+          "stability": 3.168008457377537,
+          "difficulty": 6.746231141532862,
+          "interval": 3,
+          "retrievability": 0.920029131893056
         }
       ],
       "fsrs_version": 6
@@ -916,15 +924,24 @@
       "name": "143. Reorder List",
       "url": "https://leetcode.com/problems/reorder-list/",
       "added_date": "2025-12-26",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2025-12-28",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2025-12-28",
+      "next_review": "2025-12-30",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
+      "history": [
+        {
+          "date": "2025-12-28",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     },
     {
@@ -932,15 +949,24 @@
       "name": "19. Remove Nth Node From End of List",
       "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
       "added_date": "2025-12-26",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2025-12-28",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2025-12-28",
+      "next_review": "2025-12-30",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
+      "history": [
+        {
+          "date": "2025-12-28",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     },
     {
@@ -948,15 +974,24 @@
       "name": "138. Copy List with Random Pointer",
       "url": "https://leetcode.com/problems/copy-list-with-random-pointer/",
       "added_date": "2025-12-26",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2025-12-28",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2025-12-28",
+      "next_review": "2025-12-30",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
+      "history": [
+        {
+          "date": "2025-12-28",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     },
     {
@@ -964,15 +999,24 @@
       "name": "287. Find the Duplicate Number",
       "url": "https://leetcode.com/problems/find-the-duplicate-number/",
       "added_date": "2025-12-26",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2025-12-28",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2025-12-28",
+      "next_review": "2025-12-30",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
+      "history": [
+        {
+          "date": "2025-12-28",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     },
     {
