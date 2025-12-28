@@ -1066,6 +1066,22 @@
       "last_rating": null,
       "history": [],
       "fsrs_version": 6
+    },
+    {
+      "id": "ac2995b1",
+      "name": "215. Kth Largest Element in an Array",
+      "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+      "added_date": "2025-12-28",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2025-12-29",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -1079,7 +1095,7 @@
     "2025-12-25": 5,
     "2025-12-26": 4,
     "2025-12-27": 1,
-    "2025-12-28": 2
+    "2025-12-28": 3
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
