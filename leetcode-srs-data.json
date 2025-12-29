@@ -5,16 +5,16 @@
       "name": "1. Two Sum",
       "url": "https://leetcode.com/problems/two-sum",
       "added_date": "2025-12-14",
-      "next_review": "2026-01-31",
-      "review_count": 3,
+      "next_review": "2026-03-21",
+      "review_count": 4,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
       "difficulty": 1.0,
-      "stability": 39.500836542866914,
+      "stability": 81.67596808035836,
       "state": "review",
       "last_rating": 4,
-      "last_review_date": "2025-12-22",
-      "reps": 3,
+      "last_review_date": "2025-12-29",
+      "reps": 4,
       "history": [
         {
           "date": "2025-12-15",
@@ -39,6 +39,14 @@
           "difficulty": 1.0,
           "interval": 40,
           "retrievability": 0.9
+        },
+        {
+          "date": "2025-12-29",
+          "rating": 4,
+          "stability": 81.67596808035836,
+          "difficulty": 1.0,
+          "interval": 82,
+          "retrievability": 0.9798422495390213
         }
       ]
     },
