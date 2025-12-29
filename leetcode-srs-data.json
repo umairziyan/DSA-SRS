@@ -1174,6 +1174,22 @@
       "last_rating": null,
       "history": [],
       "fsrs_version": 6
+    },
+    {
+      "id": "87f5e2ac",
+      "name": "543. Diameter of Binary Tree",
+      "url": "https://leetcode.com/problems/diameter-of-binary-tree/",
+      "added_date": "2025-12-29",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-01-01",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -1188,7 +1204,7 @@
     "2025-12-26": 4,
     "2025-12-27": 1,
     "2025-12-28": 3,
-    "2025-12-29": 2
+    "2025-12-29": 3
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
