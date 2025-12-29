@@ -307,6 +307,62 @@ def rating_display(rating):
     return f"{Colors.DIM}N/A{Colors.RESET}"
 
 
+def calculate_current_retrievability(problem, today):
+    """Calculate current retrievability for a problem."""
+    # Handle new problems
+    if problem.get('review_count', 0) == 0:
+        return 0.9  # Default for unreviewed
+
+    # Calculate elapsed days
+    last_review = datetime.strptime(problem['last_review_date'], "%Y-%m-%d").date()
+    elapsed = (today - last_review).days
+
+    # Use FSRS-6 retrievability formula
+    return calculate_retrievability(elapsed, problem['stability'])
+
+
+def calculate_problem_weight(problem, today):
+    """Calculate selection weight (higher = more likely to select)."""
+    # Get current retrievability
+    r = calculate_current_retrievability(problem, today)
+
+    # Base weight
+    weight = 1.0
+
+    # Retrievability penalty (squared to heavily favor weak memories)
+    weight += (1 - r) ** 2 * 10
+
+    # Overdue bonus
+    next_review = datetime.strptime(problem['next_review'], "%Y-%m-%d").date()
+    overdue_days = (today - next_review).days
+    if overdue_days > 0:
+        weight += overdue_days * 0.5
+
+    # Instability bonus (favor lower stability)
+    weight += 1 / (problem['stability'] + 1)
+
+    return weight, r
+
+
+def get_selection_reason(problem, today, r):
+    """Generate human-readable reason for selection."""
+    # Check retrievability first (primary factor)
+    if r < 0.8:
+        return f"Low retrievability ({r*100:.1f}%)"
+
+    # Check if overdue
+    next_review = datetime.strptime(problem['next_review'], "%Y-%m-%d").date()
+    overdue_days = (today - next_review).days
+    if overdue_days > 0:
+        return f"Overdue by {overdue_days} day{'s' if overdue_days > 1 else ''}"
+
+    # Check low stability
+    if problem['stability'] < 7:
+        return f"Low stability ({problem['stability']:.1f}d)"
+
+    return "Weighted random selection"
+
+
 # ============================================================================
 # Migration Functions (SM-2 to FSRS)
 # ============================================================================
@@ -966,6 +1022,155 @@ def cmd_sync(args):
         print(f"{Colors.YELLOW}Could not push (no remote or offline).{Colors.RESET}")
 
 
+def cmd_random(args):
+    """Select random problem(s) weighted by memory weakness."""
+    import random
+
+    data = load_data()
+
+    if not data["problems"]:
+        print(f"{Colors.YELLOW}No problems yet. Add some with 'leetcode-srs add'.{Colors.RESET}")
+        return
+
+    # Parse arguments
+    count = 1
+    include_new = False
+    start_review = False
+
+    i = 0
+    while i < len(args):
+        arg = args[i]
+        if arg == "--include-new":
+            include_new = True
+        elif arg == "--review":
+            start_review = True
+        elif arg.isdigit():
+            count = int(arg)
+        else:
+            print(f"{Colors.RED}Unknown argument: {arg}{Colors.RESET}")
+            print(f"Usage: leetcode-srs random [count] [--review] [--include-new]")
+            return
+        i += 1
+
+    # Filter eligible problems
+    today = datetime.now().date()
+    eligible = []
+
+    for p in data["problems"]:
+        # Exclude new problems unless flag set
+        if not include_new and p.get('state') == 'new':
+            continue
+        eligible.append(p)
+
+    if not eligible:
+        print(f"{Colors.YELLOW}No eligible problems for random selection.{Colors.RESET}")
+        if not include_new:
+            print(f"{Colors.DIM}Tip: Use --include-new to include unreviewed problems.{Colors.RESET}")
+        return
+
+    # Cap count at available
+    count = min(count, len(eligible))
+
+    # Calculate weights for all eligible problems
+    weights = []
+    retrievabilities = []
+    for p in eligible:
+        weight, r = calculate_problem_weight(p, today)
+        weights.append(weight)
+        retrievabilities.append(r)
+
+    # Weighted random selection
+    selected_indices = random.choices(range(len(eligible)), weights=weights, k=count)
+    selected_problems = [eligible[i] for i in selected_indices]
+    selected_retrievabilities = [retrievabilities[i] for i in selected_indices]
+
+    # Display
+    if count == 1:
+        problem = selected_problems[0]
+        r = selected_retrievabilities[0]
+
+        print(f"\n{Colors.BOLD}=== Random Problem Selected ==={Colors.RESET}\n")
+        print(f"  {Colors.CYAN}{problem['name']}{Colors.RESET}")
+        print(f"  {Colors.DIM}{problem['url']}{Colors.RESET}")
+        print()
+        print(f"  Selection Reason: {get_selection_reason(problem, today, r)}")
+        print()
+
+        # Prompt for review if not auto-starting
+        if not start_review:
+            response = input("Would you like to review this now? (y/N): ").strip().lower()
+            if response == 'y':
+                start_review = True
+
+        # Review the selected problem
+        if start_review:
+            today_str = datetime.now().strftime("%Y-%m-%d")
+
+            # Show problem info
+            stability = problem.get("stability", 0)
+            print(f"{Colors.BOLD}Reviewing: {problem['name']}{Colors.RESET}")
+            print(f"  Review #{problem['review_count'] + 1} | S:{stability:.1f}d | R:{r*100:.0f}%")
+            print()
+
+            while True:
+                print(f"  How did it go?")
+                print(f"    {Colors.MAGENTA}1{Colors.RESET} - Again (forgot/couldn't solve)")
+                print(f"    {Colors.RED}2{Colors.RESET} - Hard (struggled significantly)")
+                print(f"    {Colors.YELLOW}3{Colors.RESET} - Good (some effort)")
+                print(f"    {Colors.GREEN}4{Colors.RESET} - Easy (knew it quickly)")
+                print(f"    {Colors.DIM}s{Colors.RESET} - Skip this review")
+
+                choice = input(f"\n  Your choice: ").strip().lower()
+
+                if choice == 's':
+                    print(f"{Colors.DIM}Skipped.{Colors.RESET}\n")
+                    break
+                elif choice in ['1', '2', '3', '4']:
+                    rating = int(choice)
+
+                    # Process review with FSRS algorithm
+                    new_s, new_d, new_interval, new_state, retrievability = process_review(problem, rating, today_str)
+                    next_date = (datetime.now() + timedelta(days=new_interval)).strftime("%Y-%m-%d")
+
+                    # Update problem with FSRS fields
+                    problem["stability"] = new_s
+                    problem["difficulty"] = new_d
+                    problem["state"] = new_state
+                    problem["next_review"] = next_date
+                    problem["last_review_date"] = today_str
+                    problem["review_count"] += 1
+                    problem["last_rating"] = rating
+                    problem["reps"] = problem.get("reps", 0) + 1 if rating > RATING_AGAIN else 0
+                    problem["history"].append({
+                        "date": today_str,
+                        "rating": rating,
+                        "stability": new_s,
+                        "difficulty": new_d,
+                        "interval": new_interval,
+                        "retrievability": retrievability
+                    })
+
+                    # Save data
+                    save_data(data)
+
+                    if rating == RATING_AGAIN:
+                        print(f"\n  {Colors.MAGENTA}Again!{Colors.RESET} Stability: {Colors.CYAN}{new_s:.1f}d{Colors.RESET} | Next: {next_date}")
+                    else:
+                        print(f"\n  {Colors.GREEN}Recorded!{Colors.RESET} Next review in {Colors.CYAN}{new_interval} days{Colors.RESET} (S:{new_s:.1f}d)")
+                    print()
+                    break
+                else:
+                    print(f"  {Colors.RED}Invalid choice. Enter 1, 2, 3, 4, or s.{Colors.RESET}\n")
+    else:
+        print(f"\n{Colors.BOLD}=== {count} Random Problems Selected ==={Colors.RESET}\n")
+        for i, (problem, r) in enumerate(zip(selected_problems, selected_retrievabilities), 1):
+            reason = get_selection_reason(problem, today, r)
+            print(f"{i}. {Colors.CYAN}{problem['name']}{Colors.RESET}")
+            print(f"   {Colors.DIM}{problem['url']}{Colors.RESET}")
+            print(f"   {reason}")
+            print()
+
+
 def cmd_help(args):
     """Show help message."""
     sync_status = f"{Colors.GREEN}ON{Colors.RESET}" if GIT_SYNC_ENABLED else f"{Colors.RED}OFF{Colors.RESET}"
@@ -982,6 +1187,7 @@ def cmd_help(args):
   {Colors.CYAN}list{Colors.RESET}               List all problems with status
   {Colors.CYAN}stats{Colors.RESET}              Show learning statistics
   {Colors.CYAN}delete{Colors.RESET} <name|id>   Delete a problem
+  {Colors.CYAN}random{Colors.RESET} [count]     Select problem(s) by memory weakness
   {Colors.CYAN}sync{Colors.RESET}               Manually sync to git
   {Colors.CYAN}help{Colors.RESET}               Show this help message
 
@@ -1035,6 +1241,7 @@ def main():
         "list": cmd_list,
         "stats": cmd_stats,
         "delete": cmd_delete,
+        "random": cmd_random,
         "sync": cmd_sync,
         "help": cmd_help,
     }
