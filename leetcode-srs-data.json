@@ -89,16 +89,16 @@
       "name": "15. 3Sum",
       "url": "https://leetcode.com/problems/3sum/description/",
       "added_date": "2025-12-14",
-      "next_review": "2026-01-06",
-      "review_count": 4,
+      "next_review": "2026-02-12",
+      "review_count": 5,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
-      "difficulty": 4.7021764705882365,
-      "stability": 14.766893587312463,
+      "difficulty": 2.9228907256352956,
+      "stability": 44.94212999422171,
       "state": "review",
-      "last_rating": 3,
-      "last_review_date": "2025-12-22",
-      "reps": 4,
+      "last_rating": 4,
+      "last_review_date": "2025-12-29",
+      "reps": 5,
       "history": [
         {
           "date": "2025-12-15",
@@ -131,6 +131,14 @@
           "difficulty": 4.7021764705882365,
           "interval": 15,
           "retrievability": 0.9
+        },
+        {
+          "date": "2025-12-29",
+          "rating": 4,
+          "stability": 44.94212999422171,
+          "difficulty": 2.9228907256352956,
+          "interval": 45,
+          "retrievability": 0.9486483378238452
         }
       ]
     },
