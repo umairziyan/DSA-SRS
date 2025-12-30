@@ -1270,6 +1270,22 @@
       "last_rating": null,
       "history": [],
       "fsrs_version": 6
+    },
+    {
+      "id": "2bbca5e7",
+      "name": "110. Balanced Binary Tree",
+      "url": "https://leetcode.com/problems/balanced-binary-tree/",
+      "added_date": "2025-12-30",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-01-02",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -1284,7 +1300,8 @@
     "2025-12-26": 4,
     "2025-12-27": 1,
     "2025-12-28": 3,
-    "2025-12-29": 4
+    "2025-12-29": 4,
+    "2025-12-30": 1
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
