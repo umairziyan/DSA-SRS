@@ -889,14 +889,14 @@
       "name": "408. Valid Word Abbreviation",
       "url": "https://leetcode.com/problems/valid-word-abbreviation/",
       "added_date": "2025-12-25",
-      "stability": 3.168008457377537,
-      "difficulty": 6.746231141532862,
+      "stability": 8.875143085856246,
+      "difficulty": 6.740484910391329,
       "state": "review",
-      "last_review_date": "2025-12-28",
-      "next_review": "2025-12-31",
-      "reps": 2,
-      "review_count": 2,
-      "last_rating": 2,
+      "last_review_date": "2025-12-31",
+      "next_review": "2026-01-09",
+      "reps": 3,
+      "review_count": 3,
+      "last_rating": 3,
       "history": [
         {
           "date": "2025-12-27",
@@ -913,6 +913,14 @@
           "difficulty": 6.746231141532862,
           "interval": 3,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2025-12-31",
+          "rating": 3,
+          "stability": 8.875143085856246,
+          "difficulty": 6.740484910391329,
+          "interval": 9,
+          "retrievability": 0.9045688639165586
         }
       ],
       "fsrs_version": 6
@@ -1104,14 +1112,14 @@
       "name": "146. LRU Cache",
       "url": "https://leetcode.com/problems/lru-cache/",
       "added_date": "2025-12-27",
-      "stability": 2.3065,
-      "difficulty": 2.118103970459015,
+      "stability": 7.388910134043537,
+      "difficulty": 4.758630119235718,
       "state": "review",
-      "last_review_date": "2025-12-29",
-      "next_review": "2025-12-31",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 3,
+      "last_review_date": "2025-12-31",
+      "next_review": "2026-01-07",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 2,
       "history": [
         {
           "date": "2025-12-29",
@@ -1120,6 +1128,14 @@
           "difficulty": 2.118103970459015,
           "interval": 2,
           "retrievability": 0.9
+        },
+        {
+          "date": "2025-12-31",
+          "rating": 2,
+          "stability": 7.388910134043537,
+          "difficulty": 4.758630119235718,
+          "interval": 7,
+          "retrievability": 0.9115814711321364
         }
       ],
       "fsrs_version": 6
@@ -1129,13 +1145,13 @@
       "name": "23. Merge k Sorted Lists",
       "url": "https://leetcode.com/problems/merge-k-sorted-lists/",
       "added_date": "2025-12-28",
-      "stability": 2.3065,
-      "difficulty": 2.118103970459015,
+      "stability": 10.757464639247651,
+      "difficulty": 2.1169858664885557,
       "state": "review",
-      "last_review_date": "2025-12-29",
-      "next_review": "2025-12-31",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2025-12-31",
+      "next_review": "2026-01-11",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 3,
       "history": [
         {
@@ -1145,6 +1161,14 @@
           "difficulty": 2.118103970459015,
           "interval": 2,
           "retrievability": 0.9
+        },
+        {
+          "date": "2025-12-31",
+          "rating": 3,
+          "stability": 10.757464639247651,
+          "difficulty": 2.1169858664885557,
+          "interval": 11,
+          "retrievability": 0.9115814711321364
         }
       ],
       "fsrs_version": 6
@@ -1154,13 +1178,13 @@
       "name": "680. Valid Palindrome II",
       "url": "https://leetcode.com/problems/valid-palindrome-ii/",
       "added_date": "2025-12-28",
-      "stability": 2.3065,
-      "difficulty": 2.118103970459015,
+      "stability": 10.757464639247651,
+      "difficulty": 2.1169858664885557,
       "state": "review",
-      "last_review_date": "2025-12-29",
-      "next_review": "2025-12-31",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2025-12-31",
+      "next_review": "2026-01-11",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 3,
       "history": [
         {
@@ -1170,6 +1194,14 @@
           "difficulty": 2.118103970459015,
           "interval": 2,
           "retrievability": 0.9
+        },
+        {
+          "date": "2025-12-31",
+          "rating": 3,
+          "stability": 10.757464639247651,
+          "difficulty": 2.1169858664885557,
+          "interval": 11,
+          "retrievability": 0.9115814711321364
         }
       ],
       "fsrs_version": 6
@@ -1212,15 +1244,24 @@
       "name": "226. Invert Binary Tree",
       "url": "https://leetcode.com/problems/invert-binary-tree/",
       "added_date": "2025-12-29",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2025-12-31",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2025-12-31",
+      "next_review": "2026-01-01",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
+      "history": [
+        {
+          "date": "2025-12-31",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     },
     {
