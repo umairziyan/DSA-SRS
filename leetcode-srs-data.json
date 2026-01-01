@@ -699,14 +699,14 @@
       "name": "26. Remove Duplicates from Sorted Array",
       "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/",
       "added_date": "2025-12-22",
-      "stability": 8.2956,
+      "stability": 38.71309396206148,
       "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2025-12-24",
-      "next_review": "2026-01-01",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 4,
+      "last_review_date": "2026-01-01",
+      "next_review": "2026-02-09",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 3,
       "history": [
         {
           "date": "2025-12-24",
@@ -715,6 +715,14 @@
           "difficulty": 1.0,
           "interval": 8,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-01",
+          "rating": 3,
+          "stability": 38.71309396206148,
+          "difficulty": 1.0,
+          "interval": 39,
+          "retrievability": 0.9030622091783326
         }
       ],
       "fsrs_version": 6
@@ -724,14 +732,14 @@
       "name": "704. Binary Search",
       "url": "https://leetcode.com/problems/binary-search/",
       "added_date": "2025-12-23",
-      "stability": 8.2956,
+      "stability": 38.71309396206148,
       "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2025-12-24",
-      "next_review": "2026-01-01",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 4,
+      "last_review_date": "2026-01-01",
+      "next_review": "2026-02-09",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 3,
       "history": [
         {
           "date": "2025-12-24",
@@ -740,6 +748,14 @@
           "difficulty": 1.0,
           "interval": 8,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-01",
+          "rating": 3,
+          "stability": 38.71309396206148,
+          "difficulty": 1.0,
+          "interval": 39,
+          "retrievability": 0.9030622091783326
         }
       ],
       "fsrs_version": 6
@@ -749,13 +765,13 @@
       "name": "74. Search a 2D Matrix",
       "url": "https://leetcode.com/problems/search-a-2d-matrix/",
       "added_date": "2025-12-23",
-      "stability": 8.2956,
+      "stability": 65.26452444154494,
       "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2025-12-24",
-      "next_review": "2026-01-01",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-01-01",
+      "next_review": "2026-03-07",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 4,
       "history": [
         {
@@ -765,6 +781,14 @@
           "difficulty": 1.0,
           "interval": 8,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-01",
+          "rating": 4,
+          "stability": 65.26452444154494,
+          "difficulty": 1.0,
+          "interval": 65,
+          "retrievability": 0.9030622091783326
         }
       ],
       "fsrs_version": 6
@@ -1244,14 +1268,14 @@
       "name": "226. Invert Binary Tree",
       "url": "https://leetcode.com/problems/invert-binary-tree/",
       "added_date": "2025-12-29",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 7.132002643535731,
+      "difficulty": 3.4698859282580456,
       "state": "review",
-      "last_review_date": "2025-12-31",
-      "next_review": "2026-01-01",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 2,
+      "last_review_date": "2026-01-01",
+      "next_review": "2026-01-08",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 4,
       "history": [
         {
           "date": "2025-12-31",
@@ -1260,6 +1284,14 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-01",
+          "rating": 4,
+          "stability": 7.132002643535731,
+          "difficulty": 3.4698859282580456,
+          "interval": 7,
+          "retrievability": 0.920029131893056
         }
       ],
       "fsrs_version": 6
@@ -1269,15 +1301,24 @@
       "name": "104. Maximum Depth of Binary Tree",
       "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
       "added_date": "2025-12-29",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-01-01",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 8.2956,
+      "difficulty": 1.0,
+      "state": "review",
+      "last_review_date": "2026-01-01",
+      "next_review": "2026-01-09",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 4,
+      "history": [
+        {
+          "date": "2026-01-01",
+          "rating": 4,
+          "stability": 8.2956,
+          "difficulty": 1.0,
+          "interval": 8,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     },
     {
@@ -1285,15 +1326,24 @@
       "name": "543. Diameter of Binary Tree",
       "url": "https://leetcode.com/problems/diameter-of-binary-tree/",
       "added_date": "2025-12-29",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-01-01",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-01-01",
+      "next_review": "2026-01-02",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
+      "history": [
+        {
+          "date": "2026-01-01",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     },
     {
