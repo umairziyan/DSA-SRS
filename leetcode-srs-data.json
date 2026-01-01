@@ -1425,6 +1425,22 @@
       "last_rating": null,
       "history": [],
       "fsrs_version": 6
+    },
+    {
+      "id": "cefca07d",
+      "name": "235. Lowest Common Ancestor of a Binary Search Tree",
+      "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
+      "added_date": "2026-01-01",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-01-03",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -1441,7 +1457,7 @@
     "2025-12-28": 3,
     "2025-12-29": 4,
     "2025-12-30": 4,
-    "2026-01-01": 1
+    "2026-01-01": 2
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
