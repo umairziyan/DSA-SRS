@@ -1587,6 +1587,22 @@
       "last_rating": null,
       "history": [],
       "fsrs_version": 6
+    },
+    {
+      "id": "1339181c",
+      "name": "297. Serialize and Deserialize Binary Tree",
+      "url": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/",
+      "added_date": "2026-01-02",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-01-06",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -1604,7 +1620,7 @@
     "2025-12-29": 4,
     "2025-12-30": 4,
     "2026-01-01": 5,
-    "2026-01-02": 3
+    "2026-01-02": 4
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
