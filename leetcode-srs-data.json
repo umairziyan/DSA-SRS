@@ -1408,17 +1408,75 @@
       "name": "110. Balanced Binary Tree",
       "url": "https://leetcode.com/problems/balanced-binary-tree/",
       "added_date": "2025-12-30",
+      "stability": 3.168008457377537,
+      "difficulty": 6.746231141532862,
+      "state": "review",
+      "last_review_date": "2026-01-03",
+      "next_review": "2026-01-06",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 2,
+      "history": [
+        {
+          "date": "2026-01-02",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-03",
+          "rating": 2,
+          "stability": 3.168008457377537,
+          "difficulty": 6.746231141532862,
+          "interval": 3,
+          "retrievability": 0.920029131893056
+        }
+      ],
+      "fsrs_version": 6
+    },
+    {
+      "id": "23890af0",
+      "name": "100. Same Binary Tree",
+      "url": "https://leetcode.com/problems/same-tree/",
+      "added_date": "2025-12-30",
+      "stability": 8.2956,
+      "difficulty": 1.0,
+      "state": "review",
+      "last_review_date": "2026-01-03",
+      "next_review": "2026-01-11",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 4,
+      "history": [
+        {
+          "date": "2026-01-03",
+          "rating": 4,
+          "stability": 8.2956,
+          "difficulty": 1.0,
+          "interval": 8,
+          "retrievability": 0.9
+        }
+      ],
+      "fsrs_version": 6
+    },
+    {
+      "id": "e08bd47f",
+      "name": "236. Lowest Common Ancestor of a Binary Tree",
+      "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
+      "added_date": "2025-12-30",
       "stability": 1.2931,
       "difficulty": 5.112170705601055,
       "state": "review",
-      "last_review_date": "2026-01-02",
-      "next_review": "2026-01-03",
+      "last_review_date": "2026-01-03",
+      "next_review": "2026-01-04",
       "reps": 1,
       "review_count": 1,
       "last_rating": 2,
       "history": [
         {
-          "date": "2026-01-02",
+          "date": "2026-01-03",
           "rating": 2,
           "stability": 1.2931,
           "difficulty": 5.112170705601055,
@@ -1429,51 +1487,28 @@
       "fsrs_version": 6
     },
     {
-      "id": "23890af0",
-      "name": "100. Same Binary Tree",
-      "url": "https://leetcode.com/problems/same-tree/",
-      "added_date": "2025-12-30",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-01-03",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
-      "fsrs_version": 6
-    },
-    {
-      "id": "e08bd47f",
-      "name": "236. Lowest Common Ancestor of a Binary Tree",
-      "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
-      "added_date": "2025-12-30",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-01-03",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
-      "fsrs_version": 6
-    },
-    {
       "id": "6ad60806",
       "name": "572. Subtree of Another Tree",
       "url": "https://leetcode.com/problems/subtree-of-another-tree/",
       "added_date": "2026-01-01",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-01-03",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-01-03",
+      "next_review": "2026-01-05",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
+      "history": [
+        {
+          "date": "2026-01-03",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     },
     {
@@ -1481,15 +1516,24 @@
       "name": "235. Lowest Common Ancestor of a Binary Search Tree",
       "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
       "added_date": "2026-01-01",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-01-03",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-01-03",
+      "next_review": "2026-01-05",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
+      "history": [
+        {
+          "date": "2026-01-03",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     },
     {
@@ -1497,15 +1541,24 @@
       "name": "102. Binary Tree Level Order Traversal",
       "url": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
       "added_date": "2026-01-01",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-01-03",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 8.2956,
+      "difficulty": 1.0,
+      "state": "review",
+      "last_review_date": "2026-01-03",
+      "next_review": "2026-01-11",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 4,
+      "history": [
+        {
+          "date": "2026-01-03",
+          "rating": 4,
+          "stability": 8.2956,
+          "difficulty": 1.0,
+          "interval": 8,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     },
     {
