@@ -1779,6 +1779,22 @@
       "last_rating": null,
       "history": [],
       "fsrs_version": 6
+    },
+    {
+      "id": "e5e027e3",
+      "name": "39. Combination Sum",
+      "url": "https://leetcode.com/problems/combination-sum/",
+      "added_date": "2026-01-04",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-01-05",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -1798,7 +1814,7 @@
     "2026-01-01": 5,
     "2026-01-02": 4,
     "2026-01-03": 3,
-    "2026-01-04": 3
+    "2026-01-04": 4
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
