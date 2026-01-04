@@ -634,8 +634,10 @@ def cmd_add(args):
 
     today = datetime.now()
 
-    # Smart scheduling: find next day with available slot
-    next_review, days_ahead = find_next_available_slot(data, start_days=1)
+    # New problems always review tomorrow (1 day) for optimal FSRS learning
+    # FSRS research shows first review should happen 1-2 days after learning
+    next_review = (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%d")
+    days_ahead = 1
 
     # FSRS problem structure
     problem = {
