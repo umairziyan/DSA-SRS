@@ -1747,6 +1747,22 @@
         }
       ],
       "fsrs_version": 6
+    },
+    {
+      "id": "def6e189",
+      "name": "212. Word Search II",
+      "url": "https://leetcode.com/problems/word-search-ii/",
+      "added_date": "2026-01-04",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-01-08",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -1765,7 +1781,8 @@
     "2025-12-30": 4,
     "2026-01-01": 5,
     "2026-01-02": 4,
-    "2026-01-03": 3
+    "2026-01-03": 3,
+    "2026-01-04": 1
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
