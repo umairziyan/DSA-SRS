@@ -970,13 +970,13 @@
       "name": "21. Merge Two Sorted Lists",
       "url": "https://leetcode.com/problems/merge-two-sorted-lists/",
       "added_date": "2025-12-25",
-      "stability": 8.2956,
+      "stability": 65.26452444154494,
       "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2025-12-27",
-      "next_review": "2026-01-04",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-01-04",
+      "next_review": "2026-03-10",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 4,
       "history": [
         {
@@ -986,6 +986,14 @@
           "difficulty": 1.0,
           "interval": 8,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-04",
+          "rating": 4,
+          "stability": 65.26452444154494,
+          "difficulty": 1.0,
+          "interval": 65,
+          "retrievability": 0.9030622091783326
         }
       ],
       "fsrs_version": 6
