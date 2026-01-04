@@ -1779,22 +1779,6 @@
       "last_rating": null,
       "history": [],
       "fsrs_version": 6
-    },
-    {
-      "id": "a5be8087",
-      "name": "777. Test Fix",
-      "url": "https://test.com",
-      "added_date": "2026-01-04",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-01-05",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
-      "fsrs_version": 6
     }
   ],
   "daily_adds": {
