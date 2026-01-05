@@ -465,16 +465,16 @@
       "name": "252. Meeting Rooms",
       "url": "https://leetcode.com/problems/meeting-rooms/",
       "added_date": "2025-12-17",
-      "next_review": "2026-01-05",
-      "review_count": 2,
+      "next_review": "2026-04-22",
+      "review_count": 3,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
-      "difficulty": 1.515201929411764,
-      "stability": 15.220651199543473,
+      "difficulty": 1.0,
+      "stability": 106.57639825666419,
       "state": "review",
       "last_rating": 4,
-      "last_review_date": "2025-12-21",
-      "reps": 2,
+      "last_review_date": "2026-01-05",
+      "reps": 3,
       "history": [
         {
           "date": "2025-12-19",
@@ -491,6 +491,14 @@
           "difficulty": 1.515201929411764,
           "interval": 15,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-05",
+          "rating": 4,
+          "stability": 106.57639825666419,
+          "difficulty": 1.0,
+          "interval": 107,
+          "retrievability": 0.9012420454072443
         }
       ]
     },
