@@ -155,16 +155,16 @@
       "name": "3. Longest Substring Without Repeating Characters",
       "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/description/",
       "added_date": "2025-12-14",
-      "next_review": "2026-01-09",
-      "review_count": 4,
+      "next_review": "2026-01-14",
+      "review_count": 5,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
-      "difficulty": 7.901961365058823,
-      "stability": 1.8238447485005767,
-      "state": "relearning",
-      "last_rating": 1,
-      "last_review_date": "2026-01-07",
-      "reps": 0,
+      "difficulty": 7.8950594036937645,
+      "stability": 4.812191274460786,
+      "state": "review",
+      "last_rating": 3,
+      "last_review_date": "2026-01-09",
+      "reps": 1,
       "history": [
         {
           "date": "2025-12-15",
@@ -197,6 +197,14 @@
           "difficulty": 7.901961365058823,
           "interval": 2,
           "retrievability": 0.8978321947987581
+        },
+        {
+          "date": "2026-01-09",
+          "rating": 3,
+          "stability": 4.812191274460786,
+          "difficulty": 7.8950594036937645,
+          "interval": 5,
+          "retrievability": 0.8918539661132338
         }
       ]
     },
@@ -985,13 +993,13 @@
       "name": "408. Valid Word Abbreviation",
       "url": "https://leetcode.com/problems/valid-word-abbreviation/",
       "added_date": "2025-12-25",
-      "stability": 8.875143085856246,
-      "difficulty": 6.740484910391329,
+      "stability": 23.208927199903556,
+      "difficulty": 6.734744425480938,
       "state": "review",
-      "last_review_date": "2025-12-31",
-      "next_review": "2026-01-09",
-      "reps": 3,
-      "review_count": 3,
+      "last_review_date": "2026-01-09",
+      "next_review": "2026-02-01",
+      "reps": 4,
+      "review_count": 4,
       "last_rating": 3,
       "history": [
         {
@@ -1017,6 +1025,14 @@
           "difficulty": 6.740484910391329,
           "interval": 9,
           "retrievability": 0.9045688639165586
+        },
+        {
+          "date": "2026-01-09",
+          "rating": 3,
+          "stability": 23.208927199903556,
+          "difficulty": 6.734744425480938,
+          "interval": 23,
+          "retrievability": 0.8987995784659477
         }
       ],
       "fsrs_version": 6
