@@ -2273,6 +2273,22 @@
         }
       ],
       "fsrs_version": 6
+    },
+    {
+      "id": "40bc661e",
+      "name": "51. N-Queens",
+      "url": "https://leetcode.com/problems/n-queens/",
+      "added_date": "2026-01-09",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-01-10",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -2295,7 +2311,8 @@
     "2026-01-04": 4,
     "2026-01-06": 2,
     "2026-01-07": 1,
-    "2026-01-08": 3
+    "2026-01-08": 3,
+    "2026-01-09": 1
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
