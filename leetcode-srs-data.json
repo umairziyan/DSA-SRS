@@ -363,16 +363,16 @@
       "name": "14. Longest Common Prefix",
       "url": "https://leetcode.com/problems/longest-common-prefix/",
       "added_date": "2025-12-16",
-      "next_review": "2026-01-10",
-      "review_count": 3,
+      "next_review": "2026-02-21",
+      "review_count": 4,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
-      "difficulty": 3.6444117647058816,
-      "stability": 16.578146714150076,
+      "difficulty": 5.771864359,
+      "stability": 41.88479780153095,
       "state": "review",
-      "last_rating": 3,
-      "last_review_date": "2025-12-24",
-      "reps": 3,
+      "last_rating": 2,
+      "last_review_date": "2026-01-10",
+      "reps": 4,
       "history": [
         {
           "date": "2025-12-18",
@@ -397,6 +397,14 @@
           "difficulty": 3.6444117647058816,
           "interval": 17,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-10",
+          "rating": 2,
+          "stability": 41.88479780153095,
+          "difficulty": 5.771864359,
+          "interval": 42,
+          "retrievability": 0.8978321947987581
         }
       ]
     },
@@ -1141,13 +1149,13 @@
       "name": "19. Remove Nth Node From End of List",
       "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
       "added_date": "2025-12-26",
-      "stability": 10.757464639247651,
-      "difficulty": 2.1169858664885557,
+      "stability": 46.10739197561708,
+      "difficulty": 2.115868880622067,
       "state": "review",
-      "last_review_date": "2025-12-30",
-      "next_review": "2026-01-10",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-01-10",
+      "next_review": "2026-02-25",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 3,
       "history": [
         {
@@ -1165,6 +1173,14 @@
           "difficulty": 2.1169858664885557,
           "interval": 11,
           "retrievability": 0.9115814711321364
+        },
+        {
+          "date": "2026-01-10",
+          "rating": 3,
+          "stability": 46.10739197561708,
+          "difficulty": 2.115868880622067,
+          "interval": 46,
+          "retrievability": 0.8980785074889401
         }
       ],
       "fsrs_version": 6
@@ -1174,14 +1190,14 @@
       "name": "138. Copy List with Random Pointer",
       "url": "https://leetcode.com/problems/copy-list-with-random-pointer/",
       "added_date": "2025-12-26",
-      "stability": 10.757464639247651,
-      "difficulty": 2.1169858664885557,
+      "stability": 76.96434354753396,
+      "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2025-12-30",
-      "next_review": "2026-01-10",
-      "reps": 2,
-      "review_count": 2,
-      "last_rating": 3,
+      "last_review_date": "2026-01-10",
+      "next_review": "2026-03-28",
+      "reps": 3,
+      "review_count": 3,
+      "last_rating": 4,
       "history": [
         {
           "date": "2025-12-28",
@@ -1198,6 +1214,14 @@
           "difficulty": 2.1169858664885557,
           "interval": 11,
           "retrievability": 0.9115814711321364
+        },
+        {
+          "date": "2026-01-10",
+          "rating": 4,
+          "stability": 76.96434354753396,
+          "difficulty": 1.0,
+          "interval": 77,
+          "retrievability": 0.8980785074889401
         }
       ],
       "fsrs_version": 6
@@ -1783,14 +1807,14 @@
       "name": "98. Validate Binary Search Tree",
       "url": "https://leetcode.com/problems/validate-binary-search-tree/",
       "added_date": "2026-01-01",
-      "stability": 0.8725982720547176,
-      "difficulty": 8.383052105622097,
-      "state": "relearning",
-      "last_review_date": "2026-01-09",
-      "next_review": "2026-01-10",
-      "reps": 0,
-      "review_count": 3,
-      "last_rating": 1,
+      "stability": 2.292043582190582,
+      "difficulty": 8.375669053516475,
+      "state": "review",
+      "last_review_date": "2026-01-10",
+      "next_review": "2026-01-12",
+      "reps": 1,
+      "review_count": 4,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-04",
@@ -1815,6 +1839,14 @@
           "difficulty": 8.383052105622097,
           "interval": 1,
           "retrievability": 0.908068020188883
+        },
+        {
+          "date": "2026-01-10",
+          "rating": 3,
+          "stability": 2.292043582190582,
+          "difficulty": 8.375669053516475,
+          "interval": 2,
+          "retrievability": 0.8877706235437579
         }
       ],
       "fsrs_version": 6
@@ -1824,14 +1856,14 @@
       "name": "230. Kth Smallest Element in a BST",
       "url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
       "added_date": "2026-01-02",
-      "stability": 4.410673091748482,
-      "difficulty": 5.108058534895454,
+      "stability": 23.17601358045745,
+      "difficulty": 3.4643996617297885,
       "state": "review",
-      "last_review_date": "2026-01-06",
-      "next_review": "2026-01-10",
-      "reps": 2,
-      "review_count": 2,
-      "last_rating": 3,
+      "last_review_date": "2026-01-10",
+      "next_review": "2026-02-02",
+      "reps": 3,
+      "review_count": 3,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-05",
@@ -1848,6 +1880,14 @@
           "difficulty": 5.108058534895454,
           "interval": 4,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-01-10",
+          "rating": 4,
+          "stability": 23.17601358045745,
+          "difficulty": 3.4643996617297885,
+          "interval": 23,
+          "retrievability": 0.908068020188883
         }
       ],
       "fsrs_version": 6
@@ -1890,14 +1930,14 @@
       "name": "124. Binary Tree Maximum Path Sum",
       "url": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
       "added_date": "2026-01-02",
-      "stability": 3.168008457377537,
-      "difficulty": 6.746231141532862,
+      "stability": 13.856900903055308,
+      "difficulty": 5.64997321466195,
       "state": "review",
-      "last_review_date": "2026-01-07",
-      "next_review": "2026-01-10",
-      "reps": 2,
-      "review_count": 2,
-      "last_rating": 2,
+      "last_review_date": "2026-01-10",
+      "next_review": "2026-01-24",
+      "reps": 3,
+      "review_count": 3,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-06",
@@ -1914,6 +1954,14 @@
           "difficulty": 6.746231141532862,
           "interval": 3,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-01-10",
+          "rating": 4,
+          "stability": 13.856900903055308,
+          "difficulty": 5.64997321466195,
+          "interval": 14,
+          "retrievability": 0.9045688639165586
         }
       ],
       "fsrs_version": 6
@@ -1923,14 +1971,14 @@
       "name": "297. Serialize and Deserialize Binary Tree",
       "url": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/",
       "added_date": "2026-01-02",
-      "stability": 3.168008457377537,
-      "difficulty": 6.746231141532862,
+      "stability": 8.875143085856246,
+      "difficulty": 6.740484910391329,
       "state": "review",
-      "last_review_date": "2026-01-07",
-      "next_review": "2026-01-10",
-      "reps": 2,
-      "review_count": 2,
-      "last_rating": 2,
+      "last_review_date": "2026-01-10",
+      "next_review": "2026-01-19",
+      "reps": 3,
+      "review_count": 3,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-06",
@@ -1947,6 +1995,14 @@
           "difficulty": 6.746231141532862,
           "interval": 3,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-01-10",
+          "rating": 3,
+          "stability": 8.875143085856246,
+          "difficulty": 6.740484910391329,
+          "interval": 9,
+          "retrievability": 0.9045688639165586
         }
       ],
       "fsrs_version": 6
@@ -2055,13 +2111,13 @@
       "name": "78. Subsets",
       "url": "https://leetcode.com/problems/subsets/",
       "added_date": "2026-01-04",
-      "stability": 2.3065,
-      "difficulty": 2.118103970459015,
+      "stability": 10.757464639247651,
+      "difficulty": 2.1169858664885557,
       "state": "review",
-      "last_review_date": "2026-01-08",
-      "next_review": "2026-01-10",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-01-10",
+      "next_review": "2026-01-21",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 3,
       "history": [
         {
@@ -2071,6 +2127,14 @@
           "difficulty": 2.118103970459015,
           "interval": 2,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-10",
+          "rating": 3,
+          "stability": 10.757464639247651,
+          "difficulty": 2.1169858664885557,
+          "interval": 11,
+          "retrievability": 0.9115814711321364
         }
       ],
       "fsrs_version": 6
@@ -2179,14 +2243,14 @@
       "name": "90. Subsets II",
       "url": "https://leetcode.com/problems/subsets-ii/",
       "added_date": "2026-01-07",
-      "stability": 2.3065,
-      "difficulty": 2.118103970459015,
+      "stability": 18.134311672846923,
+      "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-01-08",
-      "next_review": "2026-01-10",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 3,
+      "last_review_date": "2026-01-10",
+      "next_review": "2026-01-28",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-08",
@@ -2195,6 +2259,14 @@
           "difficulty": 2.118103970459015,
           "interval": 2,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-10",
+          "rating": 4,
+          "stability": 18.134311672846923,
+          "difficulty": 1.0,
+          "interval": 18,
+          "retrievability": 0.9115814711321364
         }
       ],
       "fsrs_version": 6
@@ -2229,14 +2301,14 @@
       "name": "131. Palindrome Partitioning",
       "url": "https://leetcode.com/problems/palindrome-partitioning/",
       "added_date": "2026-01-08",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 4.410673091748482,
+      "difficulty": 5.108058534895454,
       "state": "review",
-      "last_review_date": "2026-01-09",
-      "next_review": "2026-01-10",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 2,
+      "last_review_date": "2026-01-10",
+      "next_review": "2026-01-14",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-09",
@@ -2245,6 +2317,14 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-10",
+          "rating": 3,
+          "stability": 4.410673091748482,
+          "difficulty": 5.108058534895454,
+          "interval": 4,
+          "retrievability": 0.920029131893056
         }
       ],
       "fsrs_version": 6
