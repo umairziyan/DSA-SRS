@@ -2706,6 +2706,22 @@
         }
       ],
       "fsrs_version": 6
+    },
+    {
+      "id": "4d72a103",
+      "name": "286. Walls and Gates",
+      "url": "https://leetcode.com/problems/walls-and-gates",
+      "added_date": "2026-01-12",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-01-13",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -2731,7 +2747,8 @@
     "2026-01-08": 3,
     "2026-01-09": 1,
     "2026-01-10": 4,
-    "2026-01-11": 4
+    "2026-01-11": 4,
+    "2026-01-12": 1
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
