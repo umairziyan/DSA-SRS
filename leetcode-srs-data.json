@@ -213,16 +213,16 @@
       "name": "4. Median of Two Sorted Arrays",
       "url": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
       "added_date": "2025-12-14",
-      "next_review": "2026-01-12",
-      "review_count": 6,
+      "next_review": "2026-01-26",
+      "review_count": 7,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
-      "difficulty": 8.937843557391938,
-      "stability": 9.707744774175769,
+      "difficulty": 9.285891056906541,
+      "stability": 14.267987890250245,
       "state": "review",
-      "last_rating": 3,
-      "last_review_date": "2026-01-02",
-      "reps": 3,
+      "last_rating": 2,
+      "last_review_date": "2026-01-12",
+      "reps": 4,
       "history": [
         {
           "date": "2025-12-16",
@@ -271,6 +271,14 @@
           "difficulty": 8.937843557391938,
           "interval": 10,
           "retrievability": 0.9078730984448652
+        },
+        {
+          "date": "2026-01-12",
+          "rating": 2,
+          "stability": 14.267987890250245,
+          "difficulty": 9.285891056906541,
+          "interval": 14,
+          "retrievability": 0.8974369812253864
         }
       ]
     },
@@ -1518,14 +1526,14 @@
       "name": "543. Diameter of Binary Tree",
       "url": "https://leetcode.com/problems/diameter-of-binary-tree/",
       "added_date": "2025-12-29",
-      "stability": 6.600279222944633,
-      "difficulty": 7.830996606120709,
+      "stability": 15.269621812053249,
+      "difficulty": 7.824165609514589,
       "state": "review",
-      "last_review_date": "2026-01-05",
-      "next_review": "2026-01-12",
-      "reps": 3,
-      "review_count": 3,
-      "last_rating": 2,
+      "last_review_date": "2026-01-12",
+      "next_review": "2026-01-27",
+      "reps": 4,
+      "review_count": 4,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-01",
@@ -1550,6 +1558,14 @@
           "difficulty": 7.830996606120709,
           "interval": 7,
           "retrievability": 0.9045688639165586
+        },
+        {
+          "date": "2026-01-12",
+          "rating": 3,
+          "stability": 15.269621812053249,
+          "difficulty": 7.824165609514589,
+          "interval": 15,
+          "retrievability": 0.894866279698631
         }
       ],
       "fsrs_version": 6
@@ -1707,14 +1723,14 @@
       "name": "572. Subtree of Another Tree",
       "url": "https://leetcode.com/problems/subtree-of-another-tree/",
       "added_date": "2026-01-01",
-      "stability": 7.388910134043537,
-      "difficulty": 4.758630119235718,
+      "stability": 24.355992660392033,
+      "difficulty": 4.754871489116483,
       "state": "review",
-      "last_review_date": "2026-01-05",
-      "next_review": "2026-01-12",
-      "reps": 2,
-      "review_count": 2,
-      "last_rating": 2,
+      "last_review_date": "2026-01-12",
+      "next_review": "2026-02-05",
+      "reps": 3,
+      "review_count": 3,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-03",
@@ -1731,6 +1747,14 @@
           "difficulty": 4.758630119235718,
           "interval": 7,
           "retrievability": 0.9115814711321364
+        },
+        {
+          "date": "2026-01-12",
+          "rating": 3,
+          "stability": 24.355992660392033,
+          "difficulty": 4.754871489116483,
+          "interval": 24,
+          "retrievability": 0.9045342701683687
         }
       ],
       "fsrs_version": 6
@@ -1847,14 +1871,14 @@
       "name": "98. Validate Binary Search Tree",
       "url": "https://leetcode.com/problems/validate-binary-search-tree/",
       "added_date": "2026-01-01",
-      "stability": 2.292043582190582,
-      "difficulty": 8.375669053516475,
+      "stability": 6.970700497167916,
+      "difficulty": 7.823893345023787,
       "state": "review",
-      "last_review_date": "2026-01-10",
-      "next_review": "2026-01-12",
-      "reps": 1,
-      "review_count": 4,
-      "last_rating": 3,
+      "last_review_date": "2026-01-12",
+      "next_review": "2026-01-19",
+      "reps": 2,
+      "review_count": 5,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-04",
@@ -1887,6 +1911,14 @@
           "difficulty": 8.375669053516475,
           "interval": 2,
           "retrievability": 0.8877706235437579
+        },
+        {
+          "date": "2026-01-12",
+          "rating": 4,
+          "stability": 6.970700497167916,
+          "difficulty": 7.823893345023787,
+          "interval": 7,
+          "retrievability": 0.9110959676509143
         }
       ],
       "fsrs_version": 6
@@ -2266,14 +2298,14 @@
       "name": "46. Permutations",
       "url": "https://leetcode.com/problems/permutations/",
       "added_date": "2026-01-06",
-      "stability": 4.410673091748482,
-      "difficulty": 5.108058534895454,
-      "state": "review",
-      "last_review_date": "2026-01-08",
-      "next_review": "2026-01-12",
-      "reps": 2,
-      "review_count": 2,
-      "last_rating": 3,
+      "stability": 0.8725982720547176,
+      "difficulty": 8.383052105622097,
+      "state": "relearning",
+      "last_review_date": "2026-01-12",
+      "next_review": "2026-01-13",
+      "reps": 0,
+      "review_count": 3,
+      "last_rating": 1,
       "history": [
         {
           "date": "2026-01-07",
@@ -2290,6 +2322,14 @@
           "difficulty": 5.108058534895454,
           "interval": 4,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-01-12",
+          "rating": 1,
+          "stability": 0.8725982720547176,
+          "difficulty": 8.383052105622097,
+          "interval": 1,
+          "retrievability": 0.908068020188883
         }
       ],
       "fsrs_version": 6
@@ -2539,14 +2579,14 @@
       "name": "621. Task Scheduler",
       "url": "https://leetcode.com/problems/task-scheduler/",
       "added_date": "2026-01-10",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 4.410673091748482,
+      "difficulty": 5.108058534895454,
       "state": "review",
-      "last_review_date": "2026-01-11",
-      "next_review": "2026-01-12",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 2,
+      "last_review_date": "2026-01-12",
+      "next_review": "2026-01-16",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-11",
@@ -2555,6 +2595,14 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-12",
+          "rating": 3,
+          "stability": 4.410673091748482,
+          "difficulty": 5.108058534895454,
+          "interval": 4,
+          "retrievability": 0.920029131893056
         }
       ],
       "fsrs_version": 6
@@ -2564,15 +2612,24 @@
       "name": "295. Find Median from Data Stream",
       "url": "https://leetcode.com/problems/find-median-from-data-stream/",
       "added_date": "2026-01-11",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-01-12",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-01-12",
+      "next_review": "2026-01-14",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
+      "history": [
+        {
+          "date": "2026-01-12",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     },
     {
@@ -2580,15 +2637,24 @@
       "name": "200. Number of Islands",
       "url": "https://leetcode.com/problems/number-of-islands/",
       "added_date": "2026-01-11",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-01-12",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-01-12",
+      "next_review": "2026-01-14",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
+      "history": [
+        {
+          "date": "2026-01-12",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     },
     {
