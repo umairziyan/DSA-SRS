@@ -570,13 +570,16 @@ def git_sync():
         )
 
         # Try to push (silently fail if no remote or offline)
-        subprocess.run(
+        push_result = subprocess.run(
             ["git", "push"],
             cwd=SCRIPT_DIR,
             capture_output=True
         )
 
-        print(f"{Colors.DIM}  [git synced]{Colors.RESET}")
+        if push_result.returncode == 0:
+            print(f"{Colors.DIM}  [git synced]{Colors.RESET}")
+        else:
+            print(f"{Colors.DIM}  [git committed, push failed]{Colors.RESET}")
 
     except FileNotFoundError:
         pass  # git not installed, skip silently
