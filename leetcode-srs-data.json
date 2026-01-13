@@ -1345,14 +1345,14 @@
       "name": "23. Merge k Sorted Lists",
       "url": "https://leetcode.com/problems/merge-k-sorted-lists/",
       "added_date": "2025-12-28",
-      "stability": 1.527667392225149,
-      "difficulty": 7.399906858810896,
-      "state": "relearning",
-      "last_review_date": "2026-01-11",
-      "next_review": "2026-01-13",
-      "reps": 0,
-      "review_count": 3,
-      "last_rating": 1,
+      "stability": 5.023593275895783,
+      "difficulty": 7.3935069519520855,
+      "state": "review",
+      "last_review_date": "2026-01-13",
+      "next_review": "2026-01-18",
+      "reps": 1,
+      "review_count": 4,
+      "last_rating": 3,
       "history": [
         {
           "date": "2025-12-29",
@@ -1377,6 +1377,14 @@
           "difficulty": 7.399906858810896,
           "interval": 2,
           "retrievability": 0.8980785074889401
+        },
+        {
+          "date": "2026-01-13",
+          "rating": 3,
+          "stability": 5.023593275895783,
+          "difficulty": 7.3935069519520855,
+          "interval": 5,
+          "retrievability": 0.8746751194328928
         }
       ],
       "fsrs_version": 6
@@ -1386,14 +1394,14 @@
       "name": "680. Valid Palindrome II",
       "url": "https://leetcode.com/problems/valid-palindrome-ii/",
       "added_date": "2025-12-28",
-      "stability": 1.527667392225149,
-      "difficulty": 7.399906858810896,
-      "state": "relearning",
-      "last_review_date": "2026-01-11",
-      "next_review": "2026-01-13",
-      "reps": 0,
-      "review_count": 3,
-      "last_rating": 1,
+      "stability": 8.075186979751878,
+      "difficulty": 6.522076895365877,
+      "state": "review",
+      "last_review_date": "2026-01-13",
+      "next_review": "2026-01-21",
+      "reps": 1,
+      "review_count": 4,
+      "last_rating": 4,
       "history": [
         {
           "date": "2025-12-29",
@@ -1418,6 +1426,14 @@
           "difficulty": 7.399906858810896,
           "interval": 2,
           "retrievability": 0.8980785074889401
+        },
+        {
+          "date": "2026-01-13",
+          "rating": 4,
+          "stability": 8.075186979751878,
+          "difficulty": 6.522076895365877,
+          "interval": 8,
+          "retrievability": 0.8746751194328928
         }
       ],
       "fsrs_version": 6
@@ -1632,14 +1648,14 @@
       "name": "110. Balanced Binary Tree",
       "url": "https://leetcode.com/problems/balanced-binary-tree/",
       "added_date": "2025-12-30",
-      "stability": 6.600279222944633,
-      "difficulty": 7.830996606120709,
+      "stability": 15.269621812053249,
+      "difficulty": 7.824165609514589,
       "state": "review",
-      "last_review_date": "2026-01-06",
-      "next_review": "2026-01-13",
-      "reps": 3,
-      "review_count": 3,
-      "last_rating": 2,
+      "last_review_date": "2026-01-13",
+      "next_review": "2026-01-28",
+      "reps": 4,
+      "review_count": 4,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-02",
@@ -1664,6 +1680,14 @@
           "difficulty": 7.830996606120709,
           "interval": 7,
           "retrievability": 0.9045688639165586
+        },
+        {
+          "date": "2026-01-13",
+          "rating": 3,
+          "stability": 15.269621812053249,
+          "difficulty": 7.824165609514589,
+          "interval": 15,
+          "retrievability": 0.894866279698631
         }
       ],
       "fsrs_version": 6
@@ -2182,13 +2206,13 @@
       "name": "212. Word Search II",
       "url": "https://leetcode.com/problems/word-search-ii/",
       "added_date": "2026-01-04",
-      "stability": 4.410673091748482,
-      "difficulty": 5.108058534895454,
+      "stability": 14.430076417451385,
+      "difficulty": 5.103950476360559,
       "state": "review",
-      "last_review_date": "2026-01-09",
-      "next_review": "2026-01-13",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-01-13",
+      "next_review": "2026-01-27",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 3,
       "history": [
         {
@@ -2206,6 +2230,14 @@
           "difficulty": 5.108058534895454,
           "interval": 4,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-01-13",
+          "rating": 3,
+          "stability": 14.430076417451385,
+          "difficulty": 5.103950476360559,
+          "interval": 14,
+          "retrievability": 0.908068020188883
         }
       ],
       "fsrs_version": 6
