@@ -639,14 +639,14 @@
       "name": "121. Best Time to Buy and Sell Stock",
       "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
       "added_date": "2025-12-21",
-      "stability": 2.049201905085048,
-      "difficulty": 7.0327612,
-      "state": "relearning",
-      "last_review_date": "2026-01-11",
-      "next_review": "2026-01-13",
-      "reps": 0,
-      "review_count": 3,
-      "last_rating": 1,
+      "stability": 4.336511474959277,
+      "difficulty": 8.02120861123192,
+      "state": "review",
+      "last_review_date": "2026-01-13",
+      "next_review": "2026-01-17",
+      "reps": 1,
+      "review_count": 4,
+      "last_rating": 2,
       "history": [
         {
           "date": "2025-12-22",
@@ -671,6 +671,14 @@
           "difficulty": 7.0327612,
           "interval": 2,
           "retrievability": 0.9006339243860205
+        },
+        {
+          "date": "2026-01-13",
+          "rating": 2,
+          "stability": 4.336511474959277,
+          "difficulty": 8.02120861123192,
+          "interval": 4,
+          "retrievability": 0.9020599293321011
         }
       ],
       "fsrs_version": 6
@@ -680,13 +688,13 @@
       "name": "206. Reverse Linked List",
       "url": "https://leetcode.com/problems/reverse-linked-list/",
       "added_date": "2025-12-21",
-      "stability": 18.134311672846923,
+      "stability": 130.30393709732957,
       "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2025-12-26",
-      "next_review": "2026-01-13",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-01-13",
+      "next_review": "2026-05-23",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 4,
       "history": [
         {
@@ -704,6 +712,14 @@
           "difficulty": 1.0,
           "interval": 18,
           "retrievability": 0.9115814711321364
+        },
+        {
+          "date": "2026-01-13",
+          "rating": 4,
+          "stability": 130.30393709732957,
+          "difficulty": 1.0,
+          "interval": 130,
+          "retrievability": 0.9006339243860205
         }
       ],
       "fsrs_version": 6
@@ -927,13 +943,13 @@
       "name": "33. Search in Rotated Sorted Array",
       "url": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
       "added_date": "2025-12-24",
-      "stability": 14.430076417451385,
-      "difficulty": 5.103950476360559,
+      "stability": 43.03148238969244,
+      "difficulty": 5.099846525884199,
       "state": "review",
-      "last_review_date": "2025-12-30",
-      "next_review": "2026-01-13",
-      "reps": 3,
-      "review_count": 3,
+      "last_review_date": "2026-01-13",
+      "next_review": "2026-02-25",
+      "reps": 4,
+      "review_count": 4,
       "last_rating": 3,
       "history": [
         {
@@ -959,6 +975,14 @@
           "difficulty": 5.103950476360559,
           "interval": 14,
           "retrievability": 0.908068020188883
+        },
+        {
+          "date": "2026-01-13",
+          "rating": 3,
+          "stability": 43.03148238969244,
+          "difficulty": 5.099846525884199,
+          "interval": 43,
+          "retrievability": 0.9025591303487132
         }
       ],
       "fsrs_version": 6
