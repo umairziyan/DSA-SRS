@@ -2808,15 +2808,24 @@
       "name": "286. Walls and Gates",
       "url": "https://leetcode.com/problems/walls-and-gates",
       "added_date": "2026-01-12",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-01-13",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-01-13",
+      "next_review": "2026-01-15",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
+      "history": [
+        {
+          "date": "2026-01-13",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     },
     {
@@ -2824,15 +2833,24 @@
       "name": "994. Rotting Oranges",
       "url": "https://leetcode.com/problems/rotting-oranges/description/",
       "added_date": "2026-01-12",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-01-13",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-01-13",
+      "next_review": "2026-01-15",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
+      "history": [
+        {
+          "date": "2026-01-13",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     },
     {
@@ -2840,15 +2858,24 @@
       "name": "417. Pacific Atlantic Water Flow",
       "url": "https://leetcode.com/problems/pacific-atlantic-water-flow/",
       "added_date": "2026-01-12",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-01-13",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-01-13",
+      "next_review": "2026-01-15",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
+      "history": [
+        {
+          "date": "2026-01-13",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     }
   ],
