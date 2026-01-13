@@ -2354,14 +2354,14 @@
       "name": "46. Permutations",
       "url": "https://leetcode.com/problems/permutations/",
       "added_date": "2026-01-06",
-      "stability": 0.8725982720547176,
-      "difficulty": 8.383052105622097,
-      "state": "relearning",
-      "last_review_date": "2026-01-12",
-      "next_review": "2026-01-13",
-      "reps": 0,
-      "review_count": 3,
-      "last_rating": 1,
+      "stability": 2.292043582190582,
+      "difficulty": 8.375669053516475,
+      "state": "review",
+      "last_review_date": "2026-01-13",
+      "next_review": "2026-01-15",
+      "reps": 1,
+      "review_count": 4,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-07",
@@ -2386,6 +2386,14 @@
           "difficulty": 8.383052105622097,
           "interval": 1,
           "retrievability": 0.908068020188883
+        },
+        {
+          "date": "2026-01-13",
+          "rating": 3,
+          "stability": 2.292043582190582,
+          "difficulty": 8.375669053516475,
+          "interval": 2,
+          "retrievability": 0.8877706235437579
         }
       ],
       "fsrs_version": 6
@@ -2494,14 +2502,14 @@
       "name": "17. Letter Combinations of a Phone Number",
       "url": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
       "added_date": "2026-01-08",
-      "stability": 3.168008457377537,
-      "difficulty": 6.746231141532862,
+      "stability": 8.875143085856246,
+      "difficulty": 6.740484910391329,
       "state": "review",
-      "last_review_date": "2026-01-10",
-      "next_review": "2026-01-13",
-      "reps": 2,
-      "review_count": 2,
-      "last_rating": 2,
+      "last_review_date": "2026-01-13",
+      "next_review": "2026-01-22",
+      "reps": 3,
+      "review_count": 3,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-09",
@@ -2518,6 +2526,14 @@
           "difficulty": 6.746231141532862,
           "interval": 3,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-01-13",
+          "rating": 3,
+          "stability": 8.875143085856246,
+          "difficulty": 6.740484910391329,
+          "interval": 9,
+          "retrievability": 0.9045688639165586
         }
       ],
       "fsrs_version": 6
@@ -2560,14 +2576,14 @@
       "name": "703. Kth Largest Element in a Stream",
       "url": "https://leetcode.com/problems/kth-largest-element-in-a-stream/",
       "added_date": "2026-01-10",
-      "stability": 2.3065,
-      "difficulty": 2.118103970459015,
+      "stability": 18.134311672846923,
+      "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-01-11",
-      "next_review": "2026-01-13",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 3,
+      "last_review_date": "2026-01-13",
+      "next_review": "2026-01-31",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-11",
@@ -2576,6 +2592,14 @@
           "difficulty": 2.118103970459015,
           "interval": 2,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-13",
+          "rating": 4,
+          "stability": 18.134311672846923,
+          "difficulty": 1.0,
+          "interval": 18,
+          "retrievability": 0.9115814711321364
         }
       ],
       "fsrs_version": 6
@@ -2585,14 +2609,14 @@
       "name": "1046. Last Stone Weight",
       "url": "https://leetcode.com/problems/last-stone-weight/description/",
       "added_date": "2026-01-10",
-      "stability": 2.3065,
-      "difficulty": 2.118103970459015,
+      "stability": 18.134311672846923,
+      "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-01-11",
-      "next_review": "2026-01-13",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 3,
+      "last_review_date": "2026-01-13",
+      "next_review": "2026-01-31",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-11",
@@ -2601,6 +2625,14 @@
           "difficulty": 2.118103970459015,
           "interval": 2,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-13",
+          "rating": 4,
+          "stability": 18.134311672846923,
+          "difficulty": 1.0,
+          "interval": 18,
+          "retrievability": 0.9115814711321364
         }
       ],
       "fsrs_version": 6
@@ -2610,13 +2642,13 @@
       "name": "973. K Closest Points to Origin",
       "url": "https://leetcode.com/problems/k-closest-points-to-origin/",
       "added_date": "2026-01-10",
-      "stability": 2.3065,
-      "difficulty": 2.118103970459015,
+      "stability": 10.757464639247651,
+      "difficulty": 2.1169858664885557,
       "state": "review",
-      "last_review_date": "2026-01-11",
-      "next_review": "2026-01-13",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-01-13",
+      "next_review": "2026-01-24",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 3,
       "history": [
         {
@@ -2626,6 +2658,14 @@
           "difficulty": 2.118103970459015,
           "interval": 2,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-13",
+          "rating": 3,
+          "stability": 10.757464639247651,
+          "difficulty": 2.1169858664885557,
+          "interval": 11,
+          "retrievability": 0.9115814711321364
         }
       ],
       "fsrs_version": 6
