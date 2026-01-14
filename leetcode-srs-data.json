@@ -155,16 +155,16 @@
       "name": "3. Longest Substring Without Repeating Characters",
       "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/description/",
       "added_date": "2025-12-14",
-      "next_review": "2026-01-14",
-      "review_count": 5,
+      "next_review": "2026-01-25",
+      "review_count": 6,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
-      "difficulty": 7.8950594036937645,
-      "stability": 4.812191274460786,
+      "difficulty": 7.888164344290071,
+      "stability": 11.222452311787098,
       "state": "review",
       "last_rating": 3,
-      "last_review_date": "2026-01-09",
-      "reps": 1,
+      "last_review_date": "2026-01-14",
+      "reps": 2,
       "history": [
         {
           "date": "2025-12-15",
@@ -205,6 +205,14 @@
           "difficulty": 7.8950594036937645,
           "interval": 5,
           "retrievability": 0.8918539661132338
+        },
+        {
+          "date": "2026-01-14",
+          "rating": 3,
+          "stability": 11.222452311787098,
+          "difficulty": 7.888164344290071,
+          "interval": 11,
+          "retrievability": 0.8966815760904051
         }
       ]
     },
@@ -1730,14 +1738,14 @@
       "name": "236. Lowest Common Ancestor of a Binary Tree",
       "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
       "added_date": "2025-12-30",
-      "stability": 6.600279222944633,
-      "difficulty": 7.830996606120709,
-      "state": "review",
-      "last_review_date": "2026-01-07",
-      "next_review": "2026-01-14",
-      "reps": 3,
-      "review_count": 3,
-      "last_rating": 2,
+      "stability": 1.095173117120918,
+      "difficulty": 9.278063333654956,
+      "state": "relearning",
+      "last_review_date": "2026-01-14",
+      "next_review": "2026-01-15",
+      "reps": 0,
+      "review_count": 4,
+      "last_rating": 1,
       "history": [
         {
           "date": "2026-01-03",
@@ -1762,6 +1770,14 @@
           "difficulty": 7.830996606120709,
           "interval": 7,
           "retrievability": 0.9045688639165586
+        },
+        {
+          "date": "2026-01-14",
+          "rating": 1,
+          "stability": 1.095173117120918,
+          "difficulty": 9.278063333654956,
+          "interval": 1,
+          "retrievability": 0.894866279698631
         }
       ],
       "fsrs_version": 6
@@ -2469,14 +2485,14 @@
       "name": "131. Palindrome Partitioning",
       "url": "https://leetcode.com/problems/palindrome-partitioning/",
       "added_date": "2026-01-08",
-      "stability": 4.410673091748482,
-      "difficulty": 5.108058534895454,
+      "stability": 10.43634225182621,
+      "difficulty": 6.743501290991329,
       "state": "review",
-      "last_review_date": "2026-01-10",
-      "next_review": "2026-01-14",
-      "reps": 2,
-      "review_count": 2,
-      "last_rating": 3,
+      "last_review_date": "2026-01-14",
+      "next_review": "2026-01-24",
+      "reps": 3,
+      "review_count": 3,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-01-09",
@@ -2493,6 +2509,14 @@
           "difficulty": 5.108058534895454,
           "interval": 4,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-01-14",
+          "rating": 2,
+          "stability": 10.43634225182621,
+          "difficulty": 6.743501290991329,
+          "interval": 10,
+          "retrievability": 0.908068020188883
         }
       ],
       "fsrs_version": 6
@@ -2543,13 +2567,13 @@
       "name": "51. N-Queens",
       "url": "https://leetcode.com/problems/n-queens/",
       "added_date": "2026-01-09",
-      "stability": 3.168008457377537,
-      "difficulty": 6.746231141532862,
+      "stability": 6.600279222944633,
+      "difficulty": 7.830996606120709,
       "state": "review",
-      "last_review_date": "2026-01-11",
-      "next_review": "2026-01-14",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-01-14",
+      "next_review": "2026-01-21",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 2,
       "history": [
         {
@@ -2567,6 +2591,14 @@
           "difficulty": 6.746231141532862,
           "interval": 3,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-01-14",
+          "rating": 2,
+          "stability": 6.600279222944633,
+          "difficulty": 7.830996606120709,
+          "interval": 7,
+          "retrievability": 0.9045688639165586
         }
       ],
       "fsrs_version": 6
