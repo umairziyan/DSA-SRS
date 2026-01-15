@@ -3120,6 +3120,22 @@
       "last_rating": null,
       "history": [],
       "fsrs_version": 6
+    },
+    {
+      "id": "2de98827",
+      "name": "127. Word Ladder",
+      "url": "https://leetcode.com/problems/word-ladder/",
+      "added_date": "2026-01-15",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-01-16",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -3148,7 +3164,7 @@
     "2026-01-11": 4,
     "2026-01-12": 3,
     "2026-01-14": 3,
-    "2026-01-15": 3
+    "2026-01-15": 4
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
