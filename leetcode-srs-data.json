@@ -2164,13 +2164,13 @@
       "name": "208. Implement Trie (Prefix Tree)",
       "url": "https://leetcode.com/problems/implement-trie-prefix-tree/",
       "added_date": "2026-01-03",
-      "stability": 8.2956,
+      "stability": 65.26452444154494,
       "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-01-07",
-      "next_review": "2026-01-15",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-01-15",
+      "next_review": "2026-03-21",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 4,
       "history": [
         {
@@ -2180,6 +2180,14 @@
           "difficulty": 1.0,
           "interval": 8,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-15",
+          "rating": 4,
+          "stability": 65.26452444154494,
+          "difficulty": 1.0,
+          "interval": 65,
+          "retrievability": 0.9030622091783326
         }
       ],
       "fsrs_version": 6
@@ -2189,13 +2197,13 @@
       "name": "211. Design Add and Search Words Data Structure",
       "url": "https://leetcode.com/problems/design-add-and-search-words-data-structure/",
       "added_date": "2026-01-03",
-      "stability": 6.600279222944633,
-      "difficulty": 7.830996606120709,
+      "stability": 11.814021856034556,
+      "difficulty": 8.551114471584771,
       "state": "review",
-      "last_review_date": "2026-01-08",
-      "next_review": "2026-01-15",
-      "reps": 3,
-      "review_count": 3,
+      "last_review_date": "2026-01-15",
+      "next_review": "2026-01-27",
+      "reps": 4,
+      "review_count": 4,
       "last_rating": 2,
       "history": [
         {
@@ -2221,6 +2229,14 @@
           "difficulty": 7.830996606120709,
           "interval": 7,
           "retrievability": 0.9045688639165586
+        },
+        {
+          "date": "2026-01-15",
+          "rating": 2,
+          "stability": 11.814021856034556,
+          "difficulty": 8.551114471584771,
+          "interval": 12,
+          "retrievability": 0.894866279698631
         }
       ],
       "fsrs_version": 6
@@ -2378,14 +2394,14 @@
       "name": "46. Permutations",
       "url": "https://leetcode.com/problems/permutations/",
       "added_date": "2026-01-06",
-      "stability": 2.292043582190582,
-      "difficulty": 8.375669053516475,
+      "stability": 6.970700497167916,
+      "difficulty": 7.823893345023787,
       "state": "review",
-      "last_review_date": "2026-01-13",
-      "next_review": "2026-01-15",
-      "reps": 1,
-      "review_count": 4,
-      "last_rating": 3,
+      "last_review_date": "2026-01-15",
+      "next_review": "2026-01-22",
+      "reps": 2,
+      "review_count": 5,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-07",
@@ -2418,6 +2434,14 @@
           "difficulty": 8.375669053516475,
           "interval": 2,
           "retrievability": 0.8877706235437579
+        },
+        {
+          "date": "2026-01-15",
+          "rating": 4,
+          "stability": 6.970700497167916,
+          "difficulty": 7.823893345023787,
+          "interval": 7,
+          "retrievability": 0.9110959676509143
         }
       ],
       "fsrs_version": 6
