@@ -2904,13 +2904,13 @@
       "name": "286. Walls and Gates",
       "url": "https://leetcode.com/problems/walls-and-gates",
       "added_date": "2026-01-12",
-      "stability": 2.3065,
-      "difficulty": 2.118103970459015,
+      "stability": 10.757464639247651,
+      "difficulty": 2.1169858664885557,
       "state": "review",
-      "last_review_date": "2026-01-13",
-      "next_review": "2026-01-15",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-01-15",
+      "next_review": "2026-01-26",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 3,
       "history": [
         {
@@ -2920,6 +2920,14 @@
           "difficulty": 2.118103970459015,
           "interval": 2,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-15",
+          "rating": 3,
+          "stability": 10.757464639247651,
+          "difficulty": 2.1169858664885557,
+          "interval": 11,
+          "retrievability": 0.9115814711321364
         }
       ],
       "fsrs_version": 6
@@ -2929,13 +2937,13 @@
       "name": "994. Rotting Oranges",
       "url": "https://leetcode.com/problems/rotting-oranges/description/",
       "added_date": "2026-01-12",
-      "stability": 2.3065,
-      "difficulty": 2.118103970459015,
+      "stability": 10.757464639247651,
+      "difficulty": 2.1169858664885557,
       "state": "review",
-      "last_review_date": "2026-01-13",
-      "next_review": "2026-01-15",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-01-15",
+      "next_review": "2026-01-26",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 3,
       "history": [
         {
@@ -2945,6 +2953,14 @@
           "difficulty": 2.118103970459015,
           "interval": 2,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-15",
+          "rating": 3,
+          "stability": 10.757464639247651,
+          "difficulty": 2.1169858664885557,
+          "interval": 11,
+          "retrievability": 0.9115814711321364
         }
       ],
       "fsrs_version": 6
