@@ -3088,6 +3088,22 @@
       "last_rating": null,
       "history": [],
       "fsrs_version": 6
+    },
+    {
+      "id": "4d7a9b15",
+      "name": "323. Number of Connected Components in an Undirected Graph",
+      "url": "https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/",
+      "added_date": "2026-01-15",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-01-16",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -3116,7 +3132,7 @@
     "2026-01-11": 4,
     "2026-01-12": 3,
     "2026-01-14": 3,
-    "2026-01-15": 1
+    "2026-01-15": 2
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
