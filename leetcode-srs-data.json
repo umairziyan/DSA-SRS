@@ -1738,14 +1738,14 @@
       "name": "236. Lowest Common Ancestor of a Binary Tree",
       "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
       "added_date": "2025-12-30",
-      "stability": 1.095173117120918,
-      "difficulty": 9.278063333654956,
-      "state": "relearning",
-      "last_review_date": "2026-01-14",
-      "next_review": "2026-01-15",
-      "reps": 0,
-      "review_count": 4,
-      "last_rating": 1,
+      "stability": 2.0178199471493548,
+      "difficulty": 9.2697852703213,
+      "state": "review",
+      "last_review_date": "2026-01-15",
+      "next_review": "2026-01-17",
+      "reps": 1,
+      "review_count": 5,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-03",
@@ -1778,6 +1778,14 @@
           "difficulty": 9.278063333654956,
           "interval": 1,
           "retrievability": 0.894866279698631
+        },
+        {
+          "date": "2026-01-15",
+          "rating": 3,
+          "stability": 2.0178199471493548,
+          "difficulty": 9.2697852703213,
+          "interval": 2,
+          "retrievability": 0.907523447405008
         }
       ],
       "fsrs_version": 6
