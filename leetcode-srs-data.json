@@ -3350,6 +3350,22 @@
       "last_rating": null,
       "history": [],
       "fsrs_version": 6
+    },
+    {
+      "id": "4e8d3b4f",
+      "name": "1851. Minimum Interval to Include Each Query",
+      "url": "https://leetcode.com/problems/minimum-interval-to-include-each-query/",
+      "added_date": "2026-01-17",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-01-18",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -3380,7 +3396,7 @@
     "2026-01-14": 3,
     "2026-01-15": 4,
     "2026-01-16": 2,
-    "2026-01-17": 1
+    "2026-01-17": 2
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
