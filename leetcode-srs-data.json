@@ -295,16 +295,16 @@
       "name": "88. Merge Sorted Array",
       "url": "https://leetcode.com/problems/merge-sorted-array/description/",
       "added_date": "2025-12-14",
-      "next_review": "2026-01-18",
-      "review_count": 3,
+      "next_review": "2026-04-05",
+      "review_count": 4,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
-      "difficulty": 1.515201929411764,
-      "stability": 27.557610980931678,
+      "difficulty": 4.358395649153439,
+      "stability": 76.99259852104426,
       "state": "review",
-      "last_rating": 4,
-      "last_review_date": "2025-12-21",
-      "reps": 3,
+      "last_rating": 2,
+      "last_review_date": "2026-01-18",
+      "reps": 4,
       "history": [
         {
           "date": "2025-12-15",
@@ -329,6 +329,14 @@
           "difficulty": 1.515201929411764,
           "interval": 28,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-18",
+          "rating": 2,
+          "stability": 76.99259852104426,
+          "difficulty": 4.358395649153439,
+          "interval": 77,
+          "retrievability": 0.8986305796170477
         }
       ]
     },
@@ -1385,13 +1393,13 @@
       "name": "23. Merge k Sorted Lists",
       "url": "https://leetcode.com/problems/merge-k-sorted-lists/",
       "added_date": "2025-12-28",
-      "stability": 5.023593275895783,
-      "difficulty": 7.3935069519520855,
+      "stability": 12.451909085866607,
+      "difficulty": 7.387113445000134,
       "state": "review",
-      "last_review_date": "2026-01-13",
-      "next_review": "2026-01-18",
-      "reps": 1,
-      "review_count": 4,
+      "last_review_date": "2026-01-18",
+      "next_review": "2026-01-30",
+      "reps": 2,
+      "review_count": 5,
       "last_rating": 3,
       "history": [
         {
@@ -1425,6 +1433,14 @@
           "difficulty": 7.3935069519520855,
           "interval": 5,
           "retrievability": 0.8746751194328928
+        },
+        {
+          "date": "2026-01-18",
+          "rating": 3,
+          "stability": 12.451909085866607,
+          "difficulty": 7.387113445000134,
+          "interval": 12,
+          "retrievability": 0.9004018191783473
         }
       ],
       "fsrs_version": 6
@@ -2532,13 +2548,13 @@
       "name": "79. Word Search",
       "url": "https://leetcode.com/problems/word-search/",
       "added_date": "2026-01-08",
-      "stability": 7.388910134043537,
-      "difficulty": 4.758630119235718,
+      "stability": 17.592913565389527,
+      "difficulty": 6.511534425312227,
       "state": "review",
-      "last_review_date": "2026-01-11",
-      "next_review": "2026-01-18",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-01-18",
+      "next_review": "2026-02-05",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 2,
       "history": [
         {
@@ -2556,6 +2572,14 @@
           "difficulty": 4.758630119235718,
           "interval": 7,
           "retrievability": 0.9115814711321364
+        },
+        {
+          "date": "2026-01-18",
+          "rating": 2,
+          "stability": 17.592913565389527,
+          "difficulty": 6.511534425312227,
+          "interval": 18,
+          "retrievability": 0.9045342701683687
         }
       ],
       "fsrs_version": 6
@@ -3315,13 +3339,13 @@
       "name": "56. Merge Intervals",
       "url": "https://leetcode.com/problems/merge-intervals/",
       "added_date": "2026-01-16",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 3.168008457377537,
+      "difficulty": 6.746231141532862,
       "state": "review",
-      "last_review_date": "2026-01-17",
-      "next_review": "2026-01-18",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-01-18",
+      "next_review": "2026-01-21",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 2,
       "history": [
         {
@@ -3331,6 +3355,14 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-18",
+          "rating": 2,
+          "stability": 3.168008457377537,
+          "difficulty": 6.746231141532862,
+          "interval": 3,
+          "retrievability": 0.920029131893056
         }
       ],
       "fsrs_version": 6
@@ -3340,15 +3372,24 @@
       "name": "435. Non-overlapping Intervals",
       "url": "https://leetcode.com/problems/non-overlapping-intervals/",
       "added_date": "2026-01-17",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-01-18",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-01-18",
+      "next_review": "2026-01-19",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
+      "history": [
+        {
+          "date": "2026-01-18",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     },
     {
@@ -3372,15 +3413,24 @@
       "name": "53. Maximum Subarray",
       "url": "https://leetcode.com/problems/maximum-subarray/",
       "added_date": "2026-01-17",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-01-18",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-01-18",
+      "next_review": "2026-01-19",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
+      "history": [
+        {
+          "date": "2026-01-18",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     },
     {
@@ -3388,15 +3438,24 @@
       "name": "55. Jump Game",
       "url": "https://leetcode.com/problems/jump-game/",
       "added_date": "2026-01-17",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-01-18",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 8.2956,
+      "difficulty": 1.0,
+      "state": "review",
+      "last_review_date": "2026-01-18",
+      "next_review": "2026-01-26",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 4,
+      "history": [
+        {
+          "date": "2026-01-18",
+          "rating": 4,
+          "stability": 8.2956,
+          "difficulty": 1.0,
+          "interval": 8,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     }
   ],
