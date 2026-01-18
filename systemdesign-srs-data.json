@@ -24,10 +24,27 @@
         }
       ],
       "fsrs_version": 6
+    },
+    {
+      "id": "431c13b5",
+      "name": "Design Dropbox",
+      "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/dropbox",
+      "added_date": "2026-01-18",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-01-19",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
-    "2026-01-17": 1
+    "2026-01-17": 1,
+    "2026-01-18": 1
   },
   "daily_reviews": {
     "2026-01-18": 1
