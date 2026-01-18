@@ -5,22 +5,33 @@
       "name": "Design Bit.ly",
       "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/bitly",
       "added_date": "2026-01-17",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-01-18",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-01-18",
+      "next_review": "2026-01-20",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
+      "history": [
+        {
+          "date": "2026-01-18",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     }
   ],
   "daily_adds": {
     "2026-01-17": 1
   },
-  "daily_reviews": {},
+  "daily_reviews": {
+    "2026-01-18": 1
+  },
   "fsrs_version": 6,
   "desired_retention": 0.9
 }
