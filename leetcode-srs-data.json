@@ -1188,14 +1188,14 @@
       "name": "143. Reorder List",
       "url": "https://leetcode.com/problems/reorder-list/",
       "added_date": "2025-12-26",
-      "stability": 2.049201905085048,
-      "difficulty": 7.0327612,
-      "state": "relearning",
-      "last_review_date": "2026-01-17",
-      "next_review": "2026-01-19",
-      "reps": 0,
-      "review_count": 3,
-      "last_rating": 1,
+      "stability": 5.8525101356707285,
+      "difficulty": 7.026728438800001,
+      "state": "review",
+      "last_review_date": "2026-01-19",
+      "next_review": "2026-01-25",
+      "reps": 1,
+      "review_count": 4,
+      "last_rating": 3,
       "history": [
         {
           "date": "2025-12-28",
@@ -1220,6 +1220,14 @@
           "difficulty": 7.0327612,
           "interval": 2,
           "retrievability": 0.9006339243860205
+        },
+        {
+          "date": "2026-01-19",
+          "rating": 3,
+          "stability": 5.8525101356707285,
+          "difficulty": 7.026728438800001,
+          "interval": 6,
+          "retrievability": 0.9020599293321011
         }
       ],
       "fsrs_version": 6
