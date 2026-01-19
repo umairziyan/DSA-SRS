@@ -3346,14 +3346,14 @@
       "name": "57. Insert Interval",
       "url": "https://leetcode.com/problems/insert-interval/",
       "added_date": "2026-01-16",
-      "stability": 2.3065,
-      "difficulty": 2.118103970459015,
+      "stability": 7.388910134043537,
+      "difficulty": 4.758630119235718,
       "state": "review",
-      "last_review_date": "2026-01-17",
-      "next_review": "2026-01-19",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 3,
+      "last_review_date": "2026-01-19",
+      "next_review": "2026-01-26",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-01-17",
@@ -3362,6 +3362,14 @@
           "difficulty": 2.118103970459015,
           "interval": 2,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-19",
+          "rating": 2,
+          "stability": 7.388910134043537,
+          "difficulty": 4.758630119235718,
+          "interval": 7,
+          "retrievability": 0.9115814711321364
         }
       ],
       "fsrs_version": 6
@@ -3404,13 +3412,13 @@
       "name": "435. Non-overlapping Intervals",
       "url": "https://leetcode.com/problems/non-overlapping-intervals/",
       "added_date": "2026-01-17",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 3.168008457377537,
+      "difficulty": 6.746231141532862,
       "state": "review",
-      "last_review_date": "2026-01-18",
-      "next_review": "2026-01-19",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-01-19",
+      "next_review": "2026-01-22",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 2,
       "history": [
         {
@@ -3420,6 +3428,14 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-19",
+          "rating": 2,
+          "stability": 3.168008457377537,
+          "difficulty": 6.746231141532862,
+          "interval": 3,
+          "retrievability": 0.920029131893056
         }
       ],
       "fsrs_version": 6
@@ -3429,13 +3445,13 @@
       "name": "1851. Minimum Interval to Include Each Query",
       "url": "https://leetcode.com/problems/minimum-interval-to-include-each-query/",
       "added_date": "2026-01-17",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 3.168008457377537,
+      "difficulty": 6.746231141532862,
       "state": "review",
-      "last_review_date": "2026-01-18",
-      "next_review": "2026-01-19",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-01-19",
+      "next_review": "2026-01-22",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 2,
       "history": [
         {
@@ -3445,6 +3461,14 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-19",
+          "rating": 2,
+          "stability": 3.168008457377537,
+          "difficulty": 6.746231141532862,
+          "interval": 3,
+          "retrievability": 0.920029131893056
         }
       ],
       "fsrs_version": 6
