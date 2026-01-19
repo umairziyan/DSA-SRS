@@ -2015,13 +2015,13 @@
       "name": "98. Validate Binary Search Tree",
       "url": "https://leetcode.com/problems/validate-binary-search-tree/",
       "added_date": "2026-01-01",
-      "stability": 6.970700497167916,
-      "difficulty": 7.823893345023787,
+      "stability": 23.19682995890544,
+      "difficulty": 7.0877399075008585,
       "state": "review",
-      "last_review_date": "2026-01-12",
-      "next_review": "2026-01-19",
-      "reps": 2,
-      "review_count": 5,
+      "last_review_date": "2026-01-19",
+      "next_review": "2026-02-11",
+      "reps": 3,
+      "review_count": 6,
       "last_rating": 4,
       "history": [
         {
@@ -2063,6 +2063,14 @@
           "difficulty": 7.823893345023787,
           "interval": 7,
           "retrievability": 0.9110959676509143
+        },
+        {
+          "date": "2026-01-19",
+          "rating": 4,
+          "stability": 23.19682995890544,
+          "difficulty": 7.0877399075008585,
+          "interval": 23,
+          "retrievability": 0.8996408383879292
         }
       ],
       "fsrs_version": 6
@@ -2195,14 +2203,14 @@
       "name": "297. Serialize and Deserialize Binary Tree",
       "url": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/",
       "added_date": "2026-01-02",
-      "stability": 8.875143085856246,
-      "difficulty": 6.740484910391329,
+      "stability": 17.495480852044302,
+      "difficulty": 7.827181990114589,
       "state": "review",
-      "last_review_date": "2026-01-10",
-      "next_review": "2026-01-19",
-      "reps": 3,
-      "review_count": 3,
-      "last_rating": 3,
+      "last_review_date": "2026-01-19",
+      "next_review": "2026-02-05",
+      "reps": 4,
+      "review_count": 4,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-01-06",
@@ -2227,6 +2235,14 @@
           "difficulty": 6.740484910391329,
           "interval": 9,
           "retrievability": 0.9045688639165586
+        },
+        {
+          "date": "2026-01-19",
+          "rating": 2,
+          "stability": 17.495480852044302,
+          "difficulty": 7.827181990114589,
+          "interval": 17,
+          "retrievability": 0.8987995784659477
         }
       ],
       "fsrs_version": 6
@@ -3157,14 +3173,14 @@
       "name": "210. Course Schedule II",
       "url": "https://leetcode.com/problems/course-schedule-ii/",
       "added_date": "2026-01-14",
-      "stability": 3.168008457377537,
-      "difficulty": 6.746231141532862,
+      "stability": 8.875143085856246,
+      "difficulty": 6.740484910391329,
       "state": "review",
-      "last_review_date": "2026-01-16",
-      "next_review": "2026-01-19",
-      "reps": 2,
-      "review_count": 2,
-      "last_rating": 2,
+      "last_review_date": "2026-01-19",
+      "next_review": "2026-01-28",
+      "reps": 3,
+      "review_count": 3,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-15",
@@ -3181,6 +3197,14 @@
           "difficulty": 6.746231141532862,
           "interval": 3,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-01-19",
+          "rating": 3,
+          "stability": 8.875143085856246,
+          "difficulty": 6.740484910391329,
+          "interval": 9,
+          "retrievability": 0.9045688639165586
         }
       ],
       "fsrs_version": 6
