@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-LeetCode Spaced Repetition System (SRS) CLI Tool
+System Design Spaced Repetition System (SRS) CLI Tool
 
-A simple CLI to track LeetCode problems using spaced repetition
+A simple CLI to track System Design questions using spaced repetition
 with the FSRS-6 (Free Spaced Repetition Scheduler) algorithm.
 
 FSRS is a modern spaced repetition algorithm that models memory with:
@@ -24,17 +24,15 @@ from pathlib import Path
 
 # Store data in the same folder as the script
 SCRIPT_DIR = Path(__file__).resolve().parent
-DATA_FILE = SCRIPT_DIR / "leetcode-srs-data.json"
+DATA_FILE = SCRIPT_DIR / "systemdesign-srs-data.json"
 
 # Git sync settings
 GIT_SYNC_ENABLED = True  # Set to False to disable auto-sync
 
-# Daily limits
-MAX_PRIORITY_PER_DAY = 5  # Number of problems to highlight as priority
-MIN_ADDS_PER_DAY = 3      # Minimum new problems to add daily
-
-# Warning threshold for "Hard" rating resulting in long intervals
-HARD_LONG_INTERVAL_WARNING = 30  # Warn if Hard results in > 30 days
+# Daily limits (conservative for longer study sessions)
+MAX_NEW_PER_DAY = 1       # Maximum new questions to add daily
+MAX_REVIEWS_PER_DAY = 1   # Maximum reviews per day
+MAX_DUE_PER_DAY = 1       # Maximum questions due on any single day
 
 # FSRS-6 Algorithm Parameters (21 total)
 # See: https://github.com/open-spaced-repetition/fsrs4anki/wiki/The-Algorithm
@@ -234,22 +232,22 @@ def update_stability_same_day(stability, rating):
     return max(0.1, new_stability)
 
 
-def process_review(problem, rating, review_date):
+def process_review(question, rating, review_date):
     """
     Process a review and return updated FSRS state.
 
     Args:
-        problem: Problem dict with current FSRS state
+        question: Question dict with current FSRS state
         rating: User rating (1=Again, 2=Hard, 3=Good, 4=Easy)
         review_date: Date of review in YYYY-MM-DD format
 
     Returns:
         Tuple of (new_stability, new_difficulty, new_interval, new_state, retrievability)
     """
-    state = problem.get("state", "new")
-    stability = problem.get("stability", 0)
-    difficulty = problem.get("difficulty", 5.0)
-    last_review = problem.get("last_review_date")
+    state = question.get("state", "new")
+    stability = question.get("stability", 0)
+    difficulty = question.get("difficulty", 5.0)
+    last_review = question.get("last_review_date")
 
     # Calculate elapsed days
     if last_review:
@@ -310,24 +308,24 @@ def rating_display(rating):
     return f"{Colors.DIM}N/A{Colors.RESET}"
 
 
-def calculate_current_retrievability(problem, today):
-    """Calculate current retrievability for a problem."""
-    # Handle new problems
-    if problem.get('review_count', 0) == 0:
+def calculate_current_retrievability(question, today):
+    """Calculate current retrievability for a question."""
+    # Handle new questions
+    if question.get('review_count', 0) == 0:
         return 0.9  # Default for unreviewed
 
     # Calculate elapsed days
-    last_review = datetime.strptime(problem['last_review_date'], "%Y-%m-%d").date()
+    last_review = datetime.strptime(question['last_review_date'], "%Y-%m-%d").date()
     elapsed = (today - last_review).days
 
     # Use FSRS-6 retrievability formula
-    return calculate_retrievability(elapsed, problem['stability'])
+    return calculate_retrievability(elapsed, question['stability'])
 
 
-def calculate_problem_weight(problem, today):
+def calculate_question_weight(question, today):
     """Calculate selection weight (higher = more likely to select)."""
     # Get current retrievability
-    r = calculate_current_retrievability(problem, today)
+    r = calculate_current_retrievability(question, today)
 
     # Base weight
     weight = 1.0
@@ -336,124 +334,34 @@ def calculate_problem_weight(problem, today):
     weight += (1 - r) ** 2 * 10
 
     # Overdue bonus
-    next_review = datetime.strptime(problem['next_review'], "%Y-%m-%d").date()
+    next_review = datetime.strptime(question['next_review'], "%Y-%m-%d").date()
     overdue_days = (today - next_review).days
     if overdue_days > 0:
         weight += overdue_days * 0.5
 
     # Instability bonus (favor lower stability)
-    weight += 1 / (problem['stability'] + 1)
+    weight += 1 / (question['stability'] + 1)
 
     return weight, r
 
 
-def get_selection_reason(problem, today, r):
+def get_selection_reason(question, today, r):
     """Generate human-readable reason for selection."""
     # Check retrievability first (primary factor)
     if r < 0.8:
         return f"Low retrievability ({r*100:.1f}%)"
 
     # Check if overdue
-    next_review = datetime.strptime(problem['next_review'], "%Y-%m-%d").date()
+    next_review = datetime.strptime(question['next_review'], "%Y-%m-%d").date()
     overdue_days = (today - next_review).days
     if overdue_days > 0:
         return f"Overdue by {overdue_days} day{'s' if overdue_days > 1 else ''}"
 
     # Check low stability
-    if problem['stability'] < 7:
-        return f"Low stability ({problem['stability']:.1f}d)"
+    if question['stability'] < 7:
+        return f"Low stability ({question['stability']:.1f}d)"
 
     return "Weighted random selection"
-
-
-# ============================================================================
-# Migration Functions (SM-2 to FSRS)
-# ============================================================================
-
-def migrate_problem_to_fsrs(old_problem):
-    """Migrate a single problem from SM-2 to FSRS format."""
-
-    # Rating conversion map: old (0-3) -> new (1-4)
-    # Old: 0=Failed, 1=Easy, 2=Medium, 3=Hard
-    # New: 1=Again, 2=Hard, 3=Good, 4=Easy
-    rating_map = {0: 1, 1: 4, 2: 3, 3: 2}
-
-    # Base fields (unchanged)
-    new_problem = {
-        "id": old_problem["id"],
-        "name": old_problem["name"],
-        "url": old_problem.get("url", ""),
-        "added_date": old_problem["added_date"],
-        "next_review": old_problem["next_review"],
-        "review_count": old_problem["review_count"],
-        "fsrs_version": 6,
-        "migrated_from_sm2": True,
-    }
-
-    # Convert ease_factor [1.3, 3.0] to difficulty [1, 10]
-    # Higher ease = easier = lower difficulty
-    ease = old_problem.get("ease_factor", 2.5)
-    new_problem["difficulty"] = clamp(10 - (ease - 1.3) / 1.7 * 9, 1.0, 10.0)
-
-    # Stability = interval (approximation)
-    interval = old_problem.get("interval", 1)
-    new_problem["stability"] = max(0.5, float(interval))
-
-    # Determine state
-    if old_problem["review_count"] == 0:
-        new_problem["state"] = "new"
-    elif interval <= 1:
-        new_problem["state"] = "learning"
-    else:
-        new_problem["state"] = "review"
-
-    # Convert last_difficulty to last_rating
-    old_diff = old_problem.get("last_difficulty")
-    new_problem["last_rating"] = rating_map.get(old_diff) if old_diff is not None else None
-
-    # Get last_review_date from history
-    history = old_problem.get("history", [])
-    new_problem["last_review_date"] = history[-1]["date"] if history else None
-
-    # Count successful reviews for reps
-    new_problem["reps"] = len([h for h in history if h.get("difficulty", 2) != 0])
-
-    # Convert history entries
-    new_history = []
-    for entry in history:
-        old_rating = entry.get("difficulty", 2)
-        new_entry = {
-            "date": entry["date"],
-            "rating": rating_map.get(old_rating, 3),
-            "interval": entry["interval"],
-            "stability": float(entry["interval"]),
-            "difficulty": new_problem["difficulty"],
-            "retrievability": 0.9  # Assumed for migrated data
-        }
-        new_history.append(new_entry)
-    new_problem["history"] = new_history
-
-    return new_problem
-
-
-def migrate_data_file(data):
-    """Migrate entire data file from SM-2 to FSRS format."""
-    new_data = {
-        "problems": [],
-        "daily_adds": data.get("daily_adds", {}),
-        "fsrs_version": 6,
-        "desired_retention": DESIRED_RETENTION,
-    }
-
-    for old_problem in data.get("problems", []):
-        # Check if already migrated
-        if old_problem.get("fsrs_version"):
-            new_data["problems"].append(old_problem)
-        else:
-            new_problem = migrate_problem_to_fsrs(old_problem)
-            new_data["problems"].append(new_problem)
-
-    return new_data
 
 
 # ============================================================================
@@ -461,72 +369,92 @@ def migrate_data_file(data):
 # ============================================================================
 
 def load_data():
-    """Load problems from JSON file with auto-migration to FSRS."""
+    """Load questions from JSON file."""
     if DATA_FILE.exists():
         with open(DATA_FILE, "r") as f:
             data = json.load(f)
 
-        # Check if migration to FSRS is needed
-        if "fsrs_version" not in data:
-            print(f"{Colors.YELLOW}Migrating data to FSRS-6 format...{Colors.RESET}")
-            data = migrate_data_file(data)
-            # Save migrated data immediately
-            with open(DATA_FILE, "w") as f:
-                json.dump(data, f, indent=2)
-            print(f"{Colors.GREEN}Migration complete! {len(data['problems'])} problems migrated.{Colors.RESET}\n")
-
-        # Ensure daily_adds exists
+        # Ensure required fields exist
         if "daily_adds" not in data:
             data["daily_adds"] = {}
+        if "daily_reviews" not in data:
+            data["daily_reviews"] = {}
         return data
 
     return {
-        "problems": [],
+        "questions": [],
         "daily_adds": {},
+        "daily_reviews": {},
         "fsrs_version": 6,
         "desired_retention": DESIRED_RETENTION
     }
 
 
 def get_today_adds(data):
-    """Get number of problems added today."""
+    """Get number of questions added today."""
     today = datetime.now().strftime("%Y-%m-%d")
     return data.get("daily_adds", {}).get(today, 0)
 
 
 def increment_today_adds(data):
-    """Increment the count of problems added today."""
+    """Increment the count of questions added today."""
     today = datetime.now().strftime("%Y-%m-%d")
     if "daily_adds" not in data:
         data["daily_adds"] = {}
     data["daily_adds"][today] = data["daily_adds"].get(today, 0) + 1
 
 
+def get_today_reviews(data):
+    """Get number of reviews completed today."""
+    today = datetime.now().strftime("%Y-%m-%d")
+    return data.get("daily_reviews", {}).get(today, 0)
+
+
+def increment_today_reviews(data):
+    """Increment the count of reviews completed today."""
+    today = datetime.now().strftime("%Y-%m-%d")
+    if "daily_reviews" not in data:
+        data["daily_reviews"] = {}
+    data["daily_reviews"][today] = data["daily_reviews"].get(today, 0) + 1
+
+
 def get_due_count_by_date(data, date_str):
-    """Get number of problems due on a specific date."""
-    return len([p for p in data["problems"] if p["next_review"] == date_str])
+    """Get number of questions due on a specific date."""
+    return len([q for q in data["questions"] if q["next_review"] == date_str])
 
 
-def find_next_available_slot(data, start_days=1, max_days=7):
-    """Find the next day with fewer than MAX_PRIORITY_PER_DAY problems due."""
-    for days_ahead in range(start_days, start_days + max_days):
-        check_date = (datetime.now() + timedelta(days=days_ahead)).strftime("%Y-%m-%d")
-        if get_due_count_by_date(data, check_date) < MAX_PRIORITY_PER_DAY:
-            return check_date, days_ahead
-    # If all days are full, just use start_days
-    return (datetime.now() + timedelta(days=start_days)).strftime("%Y-%m-%d"), start_days
+def schedule_next_review(data, calculated_interval):
+    """
+    Schedule review on next available day (max MAX_DUE_PER_DAY per day).
+
+    FSRS handles delayed reviews gracefully - the algorithm adapts based on
+    actual elapsed time, and the spacing effect can even increase stability
+    for delayed successful reviews.
+    """
+    target_date = datetime.now() + timedelta(days=calculated_interval)
+
+    # Find the next day with < MAX_DUE_PER_DAY questions
+    for offset in range(0, 30):  # Search up to 30 days ahead
+        check_date = (target_date + timedelta(days=offset)).strftime("%Y-%m-%d")
+        if get_due_count_by_date(data, check_date) < MAX_DUE_PER_DAY:
+            return check_date
+
+    # If all days are full, use the original target date
+    return target_date.strftime("%Y-%m-%d")
 
 
-def show_add_reminder(data):
-    """Show reminder if fewer than MIN_ADDS_PER_DAY problems added today."""
+def show_add_status(data):
+    """Show status of daily add limit."""
     adds_today = get_today_adds(data)
-    if adds_today < MIN_ADDS_PER_DAY:
-        remaining = MIN_ADDS_PER_DAY - adds_today
-        print(f"{Colors.YELLOW}Reminder: Add {remaining} more problem{'s' if remaining > 1 else ''} today (goal: {MIN_ADDS_PER_DAY}/day){Colors.RESET}\n")
+    if adds_today >= MAX_NEW_PER_DAY:
+        print(f"{Colors.GREEN}Daily add limit reached ({adds_today}/{MAX_NEW_PER_DAY}){Colors.RESET}\n")
+    else:
+        remaining = MAX_NEW_PER_DAY - adds_today
+        print(f"{Colors.DIM}You can add {remaining} more question{'s' if remaining > 1 else ''} today ({adds_today}/{MAX_NEW_PER_DAY}){Colors.RESET}\n")
 
 
 def save_data(data):
-    """Save problems to JSON file and sync to git if enabled."""
+    """Save questions to JSON file and sync to git if enabled."""
     with open(DATA_FILE, "w") as f:
         json.dump(data, f, indent=2)
 
@@ -567,7 +495,7 @@ def git_sync():
         # Commit with timestamp
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
         subprocess.run(
-            ["git", "commit", "-m", f"leetcode-srs: auto-sync {timestamp}"],
+            ["git", "commit", "-m", f"systemdesign-srs: auto-sync {timestamp}"],
             cwd=SCRIPT_DIR,
             capture_output=True
         )
@@ -622,47 +550,44 @@ def format_last_review(date_str):
         return f"{Colors.DIM}{delta}d ago{Colors.RESET}"
 
 
-def extract_problem_number(name):
-    """Extract problem number from name like '171. Problem Name'."""
-    match = re.match(r'^(\d+)\.', name)
-    return int(match.group(1)) if match else None
-
-
 def cmd_add(args):
-    """Add a new problem to track."""
+    """Add a new system design question to track."""
     if not args:
-        print(f"{Colors.RED}Usage: leetcode-srs add <problem-name> [url]{Colors.RESET}")
+        print(f"{Colors.RED}Usage: systemdesign-srs add <question-name> [url]{Colors.RESET}")
         return
 
     name = args[0]
     url = args[1] if len(args) > 1 else ""
 
-    # Validate problem name format
-    problem_num = extract_problem_number(name)
-    if problem_num is None:
-        print(f"{Colors.RED}Error: Problem name must start with a number and dot (e.g., '171. Problem Name'){Colors.RESET}")
-        return
-
     data = load_data()
 
-    # Check for duplicate by problem number
-    for existing in data["problems"]:
-        existing_num = extract_problem_number(existing["name"])
-        if existing_num == problem_num:
-            print(f"{Colors.RED}Duplicate found:{Colors.RESET} '{existing['name']}' (#{existing_num})")
+    # Check for duplicate by name
+    for existing in data["questions"]:
+        if existing["name"].lower() == name.lower():
+            print(f"{Colors.RED}Duplicate found:{Colors.RESET} '{existing['name']}'")
             print(f"  Next review: {format_date(existing['next_review'])}")
             print(f"  Reviews: {existing['review_count']}")
             return
 
+    # Warn if daily add limit reached
+    adds_today = get_today_adds(data)
+    if adds_today >= MAX_NEW_PER_DAY:
+        print(f"{Colors.YELLOW}Warning: You've already added {adds_today} question(s) today (limit: {MAX_NEW_PER_DAY}/day).{Colors.RESET}")
+        print(f"{Colors.YELLOW}System design topics require deep focus - consider waiting until tomorrow.{Colors.RESET}")
+        confirm = input(f"Add anyway? (y/N): ").strip().lower()
+        if confirm != 'y':
+            print(f"{Colors.DIM}Cancelled.{Colors.RESET}")
+            return
+
     today = datetime.now()
 
-    # New problems always review tomorrow (1 day) for optimal FSRS learning
-    # FSRS research shows first review should happen 1-2 days after learning
-    next_review = (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%d")
-    days_ahead = 1
+    # Use smart scheduling to find next available slot
+    next_review = schedule_next_review(data, 1)  # First review after 1 day
+    next_date = datetime.strptime(next_review, "%Y-%m-%d")
+    days_ahead = (next_date.date() - today.date()).days
 
-    # FSRS problem structure
-    problem = {
+    # FSRS question structure
+    question = {
         "id": str(uuid.uuid4())[:8],
         "name": name,
         "url": url,
@@ -685,7 +610,7 @@ def cmd_add(args):
         "fsrs_version": 6,
     }
 
-    data["problems"].append(problem)
+    data["questions"].append(question)
     increment_today_adds(data)
     save_data(data)
 
@@ -695,44 +620,53 @@ def cmd_add(args):
     else:
         print(f"  First review: {Colors.BLUE}In {days_ahead} days{Colors.RESET} ({next_review})")
 
-    # Show progress toward daily goal
+    # Show daily add status
     adds_today = get_today_adds(data)
-    if adds_today >= MIN_ADDS_PER_DAY:
-        print(f"  {Colors.GREEN}Daily goal reached! ({adds_today}/{MIN_ADDS_PER_DAY}){Colors.RESET}")
+    if adds_today >= MAX_NEW_PER_DAY:
+        print(f"  {Colors.GREEN}Daily limit reached ({adds_today}/{MAX_NEW_PER_DAY}){Colors.RESET}")
     else:
-        print(f"  {Colors.DIM}Progress: {adds_today}/{MIN_ADDS_PER_DAY} problems added today{Colors.RESET}")
+        print(f"  {Colors.DIM}Added: {adds_today}/{MAX_NEW_PER_DAY} today{Colors.RESET}")
 
 
 def cmd_today(args):
-    """Show problems due for review today."""
+    """Show questions due for review today."""
     data = load_data()
     today = datetime.now().strftime("%Y-%m-%d")
 
-    # Show add reminder first
-    show_add_reminder(data)
+    # Show daily capacity info
+    reviews_today = get_today_reviews(data)
+    reviews_remaining = MAX_REVIEWS_PER_DAY - reviews_today
 
-    due = [p for p in data["problems"] if p["next_review"] <= today]
+    due = [q for q in data["questions"] if q["next_review"] <= today]
     # Sort by most overdue first (priority order)
-    due.sort(key=lambda p: p["next_review"])
+    due.sort(key=lambda q: q["next_review"])
 
     if not due:
         print(f"{Colors.GREEN}No reviews due today! You're all caught up.{Colors.RESET}")
+        show_add_status(data)
         return
 
-    priority_count = min(len(due), MAX_PRIORITY_PER_DAY)
+    # Show review capacity
+    if reviews_remaining <= 0:
+        print(f"{Colors.GREEN}Daily review limit reached ({reviews_today}/{MAX_REVIEWS_PER_DAY}).{Colors.RESET}")
+        print(f"{Colors.DIM}Focus on understanding today's topic deeply. More reviews tomorrow.{Colors.RESET}\n")
+    else:
+        print(f"{Colors.DIM}Reviews remaining today: {reviews_remaining}/{MAX_REVIEWS_PER_DAY}{Colors.RESET}\n")
+
+    priority_count = min(len(due), MAX_DUE_PER_DAY)
     extra_count = len(due) - priority_count
 
     if extra_count > 0:
-        print(f"\n{Colors.BOLD}=== Due Today ({priority_count} priority + {extra_count} more) ==={Colors.RESET}\n")
+        print(f"{Colors.BOLD}=== Due Today ({priority_count} priority + {extra_count} queued) ==={Colors.RESET}\n")
     else:
-        print(f"\n{Colors.BOLD}=== Due Today ({len(due)} problems) ==={Colors.RESET}\n")
+        print(f"{Colors.BOLD}=== Due Today ({len(due)} question{'s' if len(due) > 1 else ''}) ==={Colors.RESET}\n")
 
-    for i, p in enumerate(due):
-        status = format_date(p["next_review"])
+    for i, q in enumerate(due):
+        status = format_date(q["next_review"])
 
         # Calculate retrievability
-        stability = p.get("stability", 0)
-        last_review = p.get("last_review_date")
+        stability = q.get("stability", 0)
+        last_review = q.get("last_review_date")
         if last_review and stability > 0:
             last_date = datetime.strptime(last_review, "%Y-%m-%d")
             elapsed = (datetime.now() - last_date).days
@@ -741,20 +675,20 @@ def cmd_today(args):
         else:
             r_display = "New"
 
-        review_info = f"Review #{p['review_count'] + 1} | {r_display}"
-        if p.get("last_rating") is not None:
-            review_info += f" | Last: {rating_display(p['last_rating'])}"
+        review_info = f"Review #{q['review_count'] + 1} | {r_display}"
+        if q.get("last_rating") is not None:
+            review_info += f" | Last: {rating_display(q['last_rating'])}"
 
-        # Priority indicator for top MAX_PRIORITY_PER_DAY
-        if i < MAX_PRIORITY_PER_DAY:
+        # Priority indicator for top MAX_DUE_PER_DAY
+        if i < MAX_DUE_PER_DAY:
             priority_marker = f"{Colors.RED}[!]{Colors.RESET} "
         else:
             priority_marker = f"{Colors.DIM}[ ]{Colors.RESET} "
 
-        print(f"  {priority_marker}{Colors.CYAN}{p['name']}{Colors.RESET}")
-        print(f"      {status} | {review_info} | Last: {format_last_review(p.get('last_review_date'))}")
-        if p["url"]:
-            print(f"      {Colors.DIM}{p['url']}{Colors.RESET}")
+        print(f"  {priority_marker}{Colors.CYAN}{q['name']}{Colors.RESET}")
+        print(f"      {status} | {review_info} | Last: {format_last_review(q.get('last_review_date'))}")
+        if q["url"]:
+            print(f"      {Colors.DIM}{q['url']}{Colors.RESET}")
         print()
 
 
@@ -763,35 +697,36 @@ def cmd_review(args):
     data = load_data()
     today = datetime.now().strftime("%Y-%m-%d")
 
-    # Show add reminder at start
-    show_add_reminder(data)
-
-    due = [p for p in data["problems"] if p["next_review"] <= today]
-    # Sort by most overdue first (priority order)
-    due.sort(key=lambda p: p["next_review"])
-
-    if not due:
-        print(f"{Colors.GREEN}No reviews due! Use 'leetcode-srs today' to check schedule.{Colors.RESET}")
+    # Check daily review limit
+    reviews_today = get_today_reviews(data)
+    if reviews_today >= MAX_REVIEWS_PER_DAY:
+        print(f"{Colors.GREEN}Daily review limit reached ({reviews_today}/{MAX_REVIEWS_PER_DAY}).{Colors.RESET}")
+        print(f"{Colors.DIM}System design requires deep focus. Take time to internalize today's concepts.{Colors.RESET}")
+        print(f"{Colors.DIM}Tip: Focus on trade-offs, scalability, and failure scenarios.{Colors.RESET}")
         return
 
-    priority_count = min(len(due), MAX_PRIORITY_PER_DAY)
-    extra_count = len(due) - priority_count
+    due = [q for q in data["questions"] if q["next_review"] <= today]
+    # Sort by most overdue first (priority order)
+    due.sort(key=lambda q: q["next_review"])
 
-    if extra_count > 0:
-        print(f"{Colors.BOLD}=== Review Session ({priority_count} priority + {extra_count} more) ==={Colors.RESET}\n")
-    else:
-        print(f"{Colors.BOLD}=== Review Session ({len(due)} problems) ==={Colors.RESET}\n")
+    if not due:
+        print(f"{Colors.GREEN}No reviews due! Use 'systemdesign-srs today' to check schedule.{Colors.RESET}")
+        return
 
-    for i, p in enumerate(due):
-        # Priority indicator
-        if i < MAX_PRIORITY_PER_DAY:
-            priority_tag = f"{Colors.RED}[PRIORITY]{Colors.RESET} "
-        else:
-            priority_tag = ""
+    reviews_remaining = MAX_REVIEWS_PER_DAY - reviews_today
+    print(f"{Colors.BOLD}=== Review Session (max {reviews_remaining} review{'s' if reviews_remaining > 1 else ''} today) ==={Colors.RESET}\n")
+
+    reviews_done = 0
+    for i, q in enumerate(due):
+        # Check if we've reached the daily limit
+        if reviews_done >= reviews_remaining:
+            print(f"\n{Colors.GREEN}Daily review limit reached!{Colors.RESET}")
+            print(f"{Colors.DIM}Focus on understanding this topic deeply. More reviews tomorrow.{Colors.RESET}")
+            break
 
         # Calculate current retrievability
-        stability = p.get("stability", 0)
-        last_review = p.get("last_review_date")
+        stability = q.get("stability", 0)
+        last_review = q.get("last_review_date")
         if last_review and stability > 0:
             last_date = datetime.strptime(last_review, "%Y-%m-%d")
             elapsed = (datetime.now() - last_date).days
@@ -800,18 +735,18 @@ def cmd_review(args):
         else:
             r_display = "New"
 
-        print(f"{Colors.BOLD}[{i+1}/{len(due)}] {priority_tag}{p['name']}{Colors.RESET}")
-        if p["url"]:
-            print(f"  {Colors.DIM}{p['url']}{Colors.RESET}")
-        print(f"  Review #{p['review_count'] + 1} | S:{stability:.1f}d | {r_display} | {format_date(p['next_review'])} | Last: {format_last_review(last_review)}")
+        print(f"{Colors.BOLD}[{i+1}/{len(due)}] {q['name']}{Colors.RESET}")
+        if q["url"]:
+            print(f"  {Colors.DIM}{q['url']}{Colors.RESET}")
+        print(f"  Review #{q['review_count'] + 1} | S:{stability:.1f}d | {r_display} | {format_date(q['next_review'])} | Last: {format_last_review(last_review)}")
         print()
 
         while True:
             print(f"  How did it go?")
-            print(f"    {Colors.MAGENTA}1{Colors.RESET} - Again (forgot/couldn't solve)")
-            print(f"    {Colors.RED}2{Colors.RESET} - Hard (struggled significantly)")
-            print(f"    {Colors.YELLOW}3{Colors.RESET} - Good (some effort)")
-            print(f"    {Colors.GREEN}4{Colors.RESET} - Easy (knew it quickly)")
+            print(f"    {Colors.MAGENTA}1{Colors.RESET} - Again (forgot key concepts)")
+            print(f"    {Colors.RED}2{Colors.RESET} - Hard (struggled with trade-offs)")
+            print(f"    {Colors.YELLOW}3{Colors.RESET} - Good (explained with some effort)")
+            print(f"    {Colors.GREEN}4{Colors.RESET} - Easy (clear mental model)")
             print(f"    {Colors.DIM}s{Colors.RESET} - Skip for now")
             print(f"    {Colors.DIM}q{Colors.RESET} - Quit review session")
 
@@ -828,33 +763,21 @@ def cmd_review(args):
                 rating = int(choice)
 
                 # Process review with FSRS algorithm
-                new_s, new_d, new_interval, new_state, retrievability = process_review(p, rating, today)
+                new_s, new_d, new_interval, new_state, retrievability = process_review(q, rating, today)
 
-                # Warn if Hard rating results in a long interval
-                if rating == RATING_HARD and new_interval > HARD_LONG_INTERVAL_WARNING:
-                    print(f"\n  {Colors.YELLOW}Warning:{Colors.RESET} Hard rating will schedule next review in {Colors.CYAN}{new_interval} days{Colors.RESET}.")
-                    print(f"  This is because your memory stability is already high ({p.get('stability', 0):.1f}d).")
-                    print(f"  If you actually forgot/couldn't solve it, use {Colors.MAGENTA}Again (1){Colors.RESET} instead.")
-                    confirm = input(f"\n  {Colors.YELLOW}(c){Colors.RESET}onfirm Hard, switch to {Colors.MAGENTA}(1){Colors.RESET} Again, or {Colors.DIM}(n){Colors.RESET} cancel: ").strip().lower()
-                    if confirm == '1':
-                        rating = RATING_AGAIN
-                        new_s, new_d, new_interval, new_state, retrievability = process_review(p, rating, today)
-                    elif confirm != 'c':
-                        print(f"  {Colors.DIM}Cancelled. Please re-enter your rating.{Colors.RESET}\n")
-                        continue
+                # Use smart scheduling to find next available slot
+                next_date = schedule_next_review(data, new_interval)
 
-                next_date = (datetime.now() + timedelta(days=new_interval)).strftime("%Y-%m-%d")
-
-                # Update problem with FSRS fields
-                p["stability"] = new_s
-                p["difficulty"] = new_d
-                p["state"] = new_state
-                p["next_review"] = next_date
-                p["last_review_date"] = today
-                p["review_count"] += 1
-                p["last_rating"] = rating
-                p["reps"] = p.get("reps", 0) + 1 if rating > RATING_AGAIN else 0
-                p["history"].append({
+                # Update question with FSRS fields
+                q["stability"] = new_s
+                q["difficulty"] = new_d
+                q["state"] = new_state
+                q["next_review"] = next_date
+                q["last_review_date"] = today
+                q["review_count"] += 1
+                q["last_rating"] = rating
+                q["reps"] = q.get("reps", 0) + 1 if rating > RATING_AGAIN else 0
+                q["history"].append({
                     "date": today,
                     "rating": rating,
                     "stability": new_s,
@@ -863,39 +786,45 @@ def cmd_review(args):
                     "retrievability": retrievability
                 })
 
+                # Increment daily review count
+                increment_today_reviews(data)
+                reviews_done += 1
+
                 if rating == RATING_AGAIN:
                     print(f"\n  {Colors.MAGENTA}Again!{Colors.RESET} Stability: {Colors.CYAN}{new_s:.1f}d{Colors.RESET} | Next: {next_date}")
                 else:
-                    print(f"\n  {Colors.GREEN}Recorded!{Colors.RESET} Next review in {Colors.CYAN}{new_interval} days{Colors.RESET} (S:{new_s:.1f}d)")
+                    actual_interval = (datetime.strptime(next_date, "%Y-%m-%d") - datetime.now()).days + 1
+                    print(f"\n  {Colors.GREEN}Recorded!{Colors.RESET} Next review in {Colors.CYAN}{actual_interval} days{Colors.RESET} (S:{new_s:.1f}d)")
                 print()
                 break
             else:
                 print(f"  {Colors.RED}Invalid choice. Enter 1, 2, 3, 4, s, or q.{Colors.RESET}\n")
 
     save_data(data)
-    print(f"{Colors.GREEN}Review session complete!{Colors.RESET}")
+    if reviews_done > 0:
+        print(f"{Colors.GREEN}Review session complete! ({reviews_done} review{'s' if reviews_done > 1 else ''} today){Colors.RESET}")
 
 
 def cmd_list(args):
-    """List all problems with their status."""
+    """List all questions with their status."""
     data = load_data()
 
-    if not data["problems"]:
-        print(f"{Colors.YELLOW}No problems tracked yet. Use 'leetcode-srs add <name>' to add one.{Colors.RESET}")
+    if not data["questions"]:
+        print(f"{Colors.YELLOW}No questions tracked yet. Use 'systemdesign-srs add <name>' to add one.{Colors.RESET}")
         return
 
     # Sort by next review date
-    problems = sorted(data["problems"], key=lambda p: p["next_review"])
+    questions = sorted(data["questions"], key=lambda q: q["next_review"])
 
-    print(f"\n{Colors.BOLD}=== All Problems ({len(problems)}) ==={Colors.RESET}\n")
+    print(f"\n{Colors.BOLD}=== All Questions ({len(questions)}) ==={Colors.RESET}\n")
 
-    for p in problems:
-        status = format_date(p["next_review"])
+    for q in questions:
+        status = format_date(q["next_review"])
 
         # Get FSRS fields
-        s = p.get("stability", 0)
-        d = p.get("difficulty", 5)
-        last_review = p.get("last_review_date")
+        s = q.get("stability", 0)
+        d = q.get("difficulty", 5)
+        last_review = q.get("last_review_date")
 
         # Calculate current retrievability
         if last_review and s > 0:
@@ -906,10 +835,10 @@ def cmd_list(args):
         else:
             r_display = "New"
 
-        print(f"  {Colors.CYAN}{p['name']}{Colors.RESET}")
-        print(f"    {status} | S:{s:.1f}d | D:{d:.1f} | {r_display} | Reviews: {p['review_count']} | Last: {format_last_review(last_review)}")
-        if p["url"]:
-            print(f"    {Colors.DIM}{p['url']}{Colors.RESET}")
+        print(f"  {Colors.CYAN}{q['name']}{Colors.RESET}")
+        print(f"    {status} | S:{s:.1f}d | D:{d:.1f} | {r_display} | Reviews: {q['review_count']} | Last: {format_last_review(last_review)}")
+        if q["url"]:
+            print(f"    {Colors.DIM}{q['url']}{Colors.RESET}")
         print()
 
 
@@ -917,38 +846,47 @@ def cmd_stats(args):
     """Show learning statistics."""
     data = load_data()
 
-    if not data["problems"]:
-        print(f"{Colors.YELLOW}No problems tracked yet.{Colors.RESET}")
+    if not data["questions"]:
+        print(f"{Colors.YELLOW}No questions tracked yet.{Colors.RESET}")
         return
 
-    problems = data["problems"]
+    questions = data["questions"]
     today = datetime.now().strftime("%Y-%m-%d")
 
-    total = len(problems)
-    due_today = len([p for p in problems if p["next_review"] <= today])
-    total_reviews = sum(p["review_count"] for p in problems)
+    total = len(questions)
+    due_today = len([q for q in questions if q["next_review"] <= today])
+    total_reviews = sum(q["review_count"] for q in questions)
 
-    # Problems by stability ranges (FSRS maturity)
-    learning = len([p for p in problems if p.get("stability", 0) <= 4])
-    young = len([p for p in problems if 4 < p.get("stability", 0) <= 21])
-    mature = len([p for p in problems if p.get("stability", 0) > 21])
+    # Questions by stability ranges (FSRS maturity)
+    learning = len([q for q in questions if q.get("stability", 0) <= 4])
+    young = len([q for q in questions if 4 < q.get("stability", 0) <= 21])
+    mature = len([q for q in questions if q.get("stability", 0) > 21])
 
-    print(f"\n{Colors.BOLD}=== Statistics (FSRS-6) ==={Colors.RESET}\n")
-    print(f"  Total problems:    {Colors.CYAN}{total}{Colors.RESET}")
+    # Daily stats
+    reviews_today = get_today_reviews(data)
+    adds_today = get_today_adds(data)
+
+    print(f"\n{Colors.BOLD}=== System Design SRS Statistics (FSRS-6) ==={Colors.RESET}\n")
+    print(f"  Total questions:   {Colors.CYAN}{total}{Colors.RESET}")
     print(f"  Due today:         {Colors.YELLOW if due_today else Colors.GREEN}{due_today}{Colors.RESET}")
     print(f"  Total reviews:     {Colors.CYAN}{total_reviews}{Colors.RESET}")
     print()
 
+    print(f"  {Colors.BOLD}Today's Activity:{Colors.RESET}")
+    print(f"    Reviews:  {reviews_today}/{MAX_REVIEWS_PER_DAY}")
+    print(f"    Added:    {adds_today}/{MAX_NEW_PER_DAY}")
+    print()
+
     # Averages
-    if problems:
-        avg_s = sum(p.get("stability", 0) for p in problems) / len(problems)
-        avg_d = sum(p.get("difficulty", 5) for p in problems) / len(problems)
+    if questions:
+        avg_s = sum(q.get("stability", 0) for q in questions) / len(questions)
+        avg_d = sum(q.get("difficulty", 5) for q in questions) / len(questions)
         print(f"  {Colors.BOLD}Averages:{Colors.RESET}")
         print(f"    Stability:   {Colors.CYAN}{avg_s:.1f}d{Colors.RESET}")
         print(f"    Difficulty:  {Colors.CYAN}{avg_d:.1f}{Colors.RESET}")
         print()
 
-    print(f"  {Colors.BOLD}Problem Maturity (by Stability):{Colors.RESET}")
+    print(f"  {Colors.BOLD}Question Maturity (by Stability):{Colors.RESET}")
     print(f"    Learning (S<=4d):  {Colors.RED}{learning}{Colors.RESET}")
     print(f"    Young (4<S<=21d):  {Colors.YELLOW}{young}{Colors.RESET}")
     print(f"    Mature (S>21d):    {Colors.GREEN}{mature}{Colors.RESET}")
@@ -956,8 +894,8 @@ def cmd_stats(args):
 
     # Upcoming reviews
     upcoming = {}
-    for p in problems:
-        next_date = p["next_review"]
+    for q in questions:
+        next_date = q["next_review"]
         delta = (datetime.strptime(next_date, "%Y-%m-%d").date() - datetime.now().date()).days
         if delta <= 7:
             key = max(0, delta)
@@ -974,36 +912,36 @@ def cmd_stats(args):
 
 
 def cmd_delete(args):
-    """Delete a problem."""
+    """Delete a question."""
     if not args:
-        print(f"{Colors.RED}Usage: leetcode-srs delete <problem-name-or-id>{Colors.RESET}")
+        print(f"{Colors.RED}Usage: systemdesign-srs delete <question-name-or-id>{Colors.RESET}")
         return
 
     search = args[0].lower()
     data = load_data()
 
-    # Find matching problems
-    matches = [p for p in data["problems"]
-               if search in p["name"].lower() or search == p["id"]]
+    # Find matching questions
+    matches = [q for q in data["questions"]
+               if search in q["name"].lower() or search == q["id"]]
 
     if not matches:
-        print(f"{Colors.RED}No problem found matching '{args[0]}'{Colors.RESET}")
+        print(f"{Colors.RED}No question found matching '{args[0]}'{Colors.RESET}")
         return
 
     if len(matches) > 1:
         print(f"{Colors.YELLOW}Multiple matches found:{Colors.RESET}")
-        for p in matches:
-            print(f"  [{p['id']}] {p['name']}")
-        print(f"\nUse the ID to delete a specific problem.")
+        for q in matches:
+            print(f"  [{q['id']}] {q['name']}")
+        print(f"\nUse the ID to delete a specific question.")
         return
 
-    problem = matches[0]
-    confirm = input(f"Delete '{problem['name']}'? (y/N): ").strip().lower()
+    question = matches[0]
+    confirm = input(f"Delete '{question['name']}'? (y/N): ").strip().lower()
 
     if confirm == 'y':
-        data["problems"] = [p for p in data["problems"] if p["id"] != problem["id"]]
+        data["questions"] = [q for q in data["questions"] if q["id"] != question["id"]]
         save_data(data)
-        print(f"{Colors.GREEN}Deleted: {problem['name']}{Colors.RESET}")
+        print(f"{Colors.GREEN}Deleted: {question['name']}{Colors.RESET}")
     else:
         print(f"{Colors.DIM}Cancelled.{Colors.RESET}")
 
@@ -1023,7 +961,7 @@ def cmd_sync(args):
 
     # Check if data file exists
     if not DATA_FILE.exists():
-        print(f"{Colors.YELLOW}No data file yet. Add some problems first.{Colors.RESET}")
+        print(f"{Colors.YELLOW}No data file yet. Add some questions first.{Colors.RESET}")
         return
 
     # Stage and commit
@@ -1041,7 +979,7 @@ def cmd_sync(args):
     else:
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
         subprocess.run(
-            ["git", "commit", "-m", f"leetcode-srs: manual sync {timestamp}"],
+            ["git", "commit", "-m", f"systemdesign-srs: manual sync {timestamp}"],
             cwd=SCRIPT_DIR,
             capture_output=True
         )
@@ -1061,13 +999,13 @@ def cmd_sync(args):
 
 
 def cmd_random(args):
-    """Select random problem(s) weighted by memory weakness."""
+    """Select random question(s) weighted by memory weakness."""
     import random
 
     data = load_data()
 
-    if not data["problems"]:
-        print(f"{Colors.YELLOW}No problems yet. Add some with 'leetcode-srs add'.{Colors.RESET}")
+    if not data["questions"]:
+        print(f"{Colors.YELLOW}No questions yet. Add some with 'systemdesign-srs add'.{Colors.RESET}")
         return
 
     # Parse arguments
@@ -1086,52 +1024,52 @@ def cmd_random(args):
             count = int(arg)
         else:
             print(f"{Colors.RED}Unknown argument: {arg}{Colors.RESET}")
-            print(f"Usage: leetcode-srs random [count] [--review] [--include-new]")
+            print(f"Usage: systemdesign-srs random [count] [--review] [--include-new]")
             return
         i += 1
 
-    # Filter eligible problems
+    # Filter eligible questions
     today = datetime.now().date()
     eligible = []
 
-    for p in data["problems"]:
-        # Exclude new problems unless flag set
-        if not include_new and p.get('state') == 'new':
+    for q in data["questions"]:
+        # Exclude new questions unless flag set
+        if not include_new and q.get('state') == 'new':
             continue
-        eligible.append(p)
+        eligible.append(q)
 
     if not eligible:
-        print(f"{Colors.YELLOW}No eligible problems for random selection.{Colors.RESET}")
+        print(f"{Colors.YELLOW}No eligible questions for random selection.{Colors.RESET}")
         if not include_new:
-            print(f"{Colors.DIM}Tip: Use --include-new to include unreviewed problems.{Colors.RESET}")
+            print(f"{Colors.DIM}Tip: Use --include-new to include unreviewed questions.{Colors.RESET}")
         return
 
     # Cap count at available
     count = min(count, len(eligible))
 
-    # Calculate weights for all eligible problems
+    # Calculate weights for all eligible questions
     weights = []
     retrievabilities = []
-    for p in eligible:
-        weight, r = calculate_problem_weight(p, today)
+    for q in eligible:
+        weight, r = calculate_question_weight(q, today)
         weights.append(weight)
         retrievabilities.append(r)
 
     # Weighted random selection
     selected_indices = random.choices(range(len(eligible)), weights=weights, k=count)
-    selected_problems = [eligible[i] for i in selected_indices]
+    selected_questions = [eligible[i] for i in selected_indices]
     selected_retrievabilities = [retrievabilities[i] for i in selected_indices]
 
     # Display
     if count == 1:
-        problem = selected_problems[0]
+        question = selected_questions[0]
         r = selected_retrievabilities[0]
 
-        print(f"\n{Colors.BOLD}=== Random Problem Selected ==={Colors.RESET}\n")
-        print(f"  {Colors.CYAN}{problem['name']}{Colors.RESET}")
-        print(f"  {Colors.DIM}{problem['url']}{Colors.RESET}")
+        print(f"\n{Colors.BOLD}=== Random Question Selected ==={Colors.RESET}\n")
+        print(f"  {Colors.CYAN}{question['name']}{Colors.RESET}")
+        print(f"  {Colors.DIM}{question['url']}{Colors.RESET}")
         print()
-        print(f"  Selection Reason: {get_selection_reason(problem, today, r)}")
+        print(f"  Selection Reason: {get_selection_reason(question, today, r)}")
         print()
 
         # Prompt for review if not auto-starting
@@ -1140,22 +1078,29 @@ def cmd_random(args):
             if response == 'y':
                 start_review = True
 
-        # Review the selected problem
+        # Review the selected question
         if start_review:
+            # Check daily review limit
+            reviews_today = get_today_reviews(data)
+            if reviews_today >= MAX_REVIEWS_PER_DAY:
+                print(f"{Colors.YELLOW}Daily review limit reached ({reviews_today}/{MAX_REVIEWS_PER_DAY}).{Colors.RESET}")
+                print(f"{Colors.DIM}System design requires deep focus. Continue tomorrow.{Colors.RESET}")
+                return
+
             today_str = datetime.now().strftime("%Y-%m-%d")
 
-            # Show problem info
-            stability = problem.get("stability", 0)
-            print(f"{Colors.BOLD}Reviewing: {problem['name']}{Colors.RESET}")
-            print(f"  Review #{problem['review_count'] + 1} | S:{stability:.1f}d | R:{r*100:.0f}%")
+            # Show question info
+            stability = question.get("stability", 0)
+            print(f"{Colors.BOLD}Reviewing: {question['name']}{Colors.RESET}")
+            print(f"  Review #{question['review_count'] + 1} | S:{stability:.1f}d | R:{r*100:.0f}%")
             print()
 
             while True:
                 print(f"  How did it go?")
-                print(f"    {Colors.MAGENTA}1{Colors.RESET} - Again (forgot/couldn't solve)")
-                print(f"    {Colors.RED}2{Colors.RESET} - Hard (struggled significantly)")
-                print(f"    {Colors.YELLOW}3{Colors.RESET} - Good (some effort)")
-                print(f"    {Colors.GREEN}4{Colors.RESET} - Easy (knew it quickly)")
+                print(f"    {Colors.MAGENTA}1{Colors.RESET} - Again (forgot key concepts)")
+                print(f"    {Colors.RED}2{Colors.RESET} - Hard (struggled with trade-offs)")
+                print(f"    {Colors.YELLOW}3{Colors.RESET} - Good (explained with some effort)")
+                print(f"    {Colors.GREEN}4{Colors.RESET} - Easy (clear mental model)")
                 print(f"    {Colors.DIM}s{Colors.RESET} - Skip this review")
 
                 choice = input(f"\n  Your choice: ").strip().lower()
@@ -1167,33 +1112,21 @@ def cmd_random(args):
                     rating = int(choice)
 
                     # Process review with FSRS algorithm
-                    new_s, new_d, new_interval, new_state, retrievability = process_review(problem, rating, today_str)
+                    new_s, new_d, new_interval, new_state, retrievability = process_review(question, rating, today_str)
 
-                    # Warn if Hard rating results in a long interval
-                    if rating == RATING_HARD and new_interval > HARD_LONG_INTERVAL_WARNING:
-                        print(f"\n  {Colors.YELLOW}Warning:{Colors.RESET} Hard rating will schedule next review in {Colors.CYAN}{new_interval} days{Colors.RESET}.")
-                        print(f"  This is because your memory stability is already high ({problem.get('stability', 0):.1f}d).")
-                        print(f"  If you actually forgot/couldn't solve it, use {Colors.MAGENTA}Again (1){Colors.RESET} instead.")
-                        confirm = input(f"\n  {Colors.YELLOW}(c){Colors.RESET}onfirm Hard, switch to {Colors.MAGENTA}(1){Colors.RESET} Again, or {Colors.DIM}(n){Colors.RESET} cancel: ").strip().lower()
-                        if confirm == '1':
-                            rating = RATING_AGAIN
-                            new_s, new_d, new_interval, new_state, retrievability = process_review(problem, rating, today_str)
-                        elif confirm != 'c':
-                            print(f"  {Colors.DIM}Cancelled. Please re-enter your rating.{Colors.RESET}\n")
-                            continue
+                    # Use smart scheduling
+                    next_date = schedule_next_review(data, new_interval)
 
-                    next_date = (datetime.now() + timedelta(days=new_interval)).strftime("%Y-%m-%d")
-
-                    # Update problem with FSRS fields
-                    problem["stability"] = new_s
-                    problem["difficulty"] = new_d
-                    problem["state"] = new_state
-                    problem["next_review"] = next_date
-                    problem["last_review_date"] = today_str
-                    problem["review_count"] += 1
-                    problem["last_rating"] = rating
-                    problem["reps"] = problem.get("reps", 0) + 1 if rating > RATING_AGAIN else 0
-                    problem["history"].append({
+                    # Update question with FSRS fields
+                    question["stability"] = new_s
+                    question["difficulty"] = new_d
+                    question["state"] = new_state
+                    question["next_review"] = next_date
+                    question["last_review_date"] = today_str
+                    question["review_count"] += 1
+                    question["last_rating"] = rating
+                    question["reps"] = question.get("reps", 0) + 1 if rating > RATING_AGAIN else 0
+                    question["history"].append({
                         "date": today_str,
                         "rating": rating,
                         "stability": new_s,
@@ -1202,23 +1135,27 @@ def cmd_random(args):
                         "retrievability": retrievability
                     })
 
+                    # Increment daily review count
+                    increment_today_reviews(data)
+
                     # Save data
                     save_data(data)
 
                     if rating == RATING_AGAIN:
                         print(f"\n  {Colors.MAGENTA}Again!{Colors.RESET} Stability: {Colors.CYAN}{new_s:.1f}d{Colors.RESET} | Next: {next_date}")
                     else:
-                        print(f"\n  {Colors.GREEN}Recorded!{Colors.RESET} Next review in {Colors.CYAN}{new_interval} days{Colors.RESET} (S:{new_s:.1f}d)")
+                        actual_interval = (datetime.strptime(next_date, "%Y-%m-%d") - datetime.now()).days + 1
+                        print(f"\n  {Colors.GREEN}Recorded!{Colors.RESET} Next review in {Colors.CYAN}{actual_interval} days{Colors.RESET} (S:{new_s:.1f}d)")
                     print()
                     break
                 else:
                     print(f"  {Colors.RED}Invalid choice. Enter 1, 2, 3, 4, or s.{Colors.RESET}\n")
     else:
-        print(f"\n{Colors.BOLD}=== {count} Random Problems Selected ==={Colors.RESET}\n")
-        for i, (problem, r) in enumerate(zip(selected_problems, selected_retrievabilities), 1):
-            reason = get_selection_reason(problem, today, r)
-            print(f"{i}. {Colors.CYAN}{problem['name']}{Colors.RESET}")
-            print(f"   {Colors.DIM}{problem['url']}{Colors.RESET}")
+        print(f"\n{Colors.BOLD}=== {count} Random Questions Selected ==={Colors.RESET}\n")
+        for i, (question, r) in enumerate(zip(selected_questions, selected_retrievabilities), 1):
+            reason = get_selection_reason(question, today, r)
+            print(f"{i}. {Colors.CYAN}{question['name']}{Colors.RESET}")
+            print(f"   {Colors.DIM}{question['url']}{Colors.RESET}")
             print(f"   {reason}")
             print()
 
@@ -1227,57 +1164,53 @@ def cmd_help(args):
     """Show help message."""
     sync_status = f"{Colors.GREEN}ON{Colors.RESET}" if GIT_SYNC_ENABLED else f"{Colors.RED}OFF{Colors.RESET}"
     print(f"""
-{Colors.BOLD}LeetCode Spaced Repetition System (FSRS-6){Colors.RESET}
+{Colors.BOLD}System Design Spaced Repetition System (FSRS-6){Colors.RESET}
 
 {Colors.BOLD}Usage:{Colors.RESET}
-  leetcode-srs <command> [arguments]
+  systemdesign-srs <command> [arguments]
 
 {Colors.BOLD}Commands:{Colors.RESET}
-  {Colors.CYAN}add{Colors.RESET} <name> [url]   Add a new problem to track
-  {Colors.CYAN}today{Colors.RESET}              Show problems due for review today
+  {Colors.CYAN}add{Colors.RESET} <name> [url]   Add a new question to track
+  {Colors.CYAN}today{Colors.RESET}              Show questions due for review today
   {Colors.CYAN}review{Colors.RESET}             Start interactive review session
-  {Colors.CYAN}list{Colors.RESET}               List all problems with status
+  {Colors.CYAN}list{Colors.RESET}               List all questions with status
   {Colors.CYAN}stats{Colors.RESET}              Show learning statistics
-  {Colors.CYAN}delete{Colors.RESET} <name|id>   Delete a problem
-  {Colors.CYAN}random{Colors.RESET} [count]     Select problem(s) by memory weakness
+  {Colors.CYAN}delete{Colors.RESET} <name|id>   Delete a question
+  {Colors.CYAN}random{Colors.RESET} [count]     Select question(s) by memory weakness
   {Colors.CYAN}sync{Colors.RESET}               Manually sync to git
   {Colors.CYAN}help{Colors.RESET}               Show this help message
 
 {Colors.BOLD}Algorithm (FSRS-6):{Colors.RESET}
   Uses the Free Spaced Repetition Scheduler with:
   - {Colors.CYAN}Stability (S){Colors.RESET}: Memory strength in days (time to drop to 90% recall)
-  - {Colors.CYAN}Difficulty (D){Colors.RESET}: Problem complexity [1-10]
+  - {Colors.CYAN}Difficulty (D){Colors.RESET}: Question complexity [1-10]
   - {Colors.CYAN}Retrievability (R){Colors.RESET}: Current recall probability [0-100%]
 
 {Colors.BOLD}Rating Scale:{Colors.RESET}
-  {Colors.MAGENTA}1 - Again{Colors.RESET}:  Forgot or couldn't solve (resets learning)
-  {Colors.RED}2 - Hard{Colors.RESET}:   Struggled significantly (reduced stability gain)
-  {Colors.YELLOW}3 - Good{Colors.RESET}:   Normal recall with effort (standard progression)
-  {Colors.GREEN}4 - Easy{Colors.RESET}:   Instant recall (accelerated progression)
+  {Colors.MAGENTA}1 - Again{Colors.RESET}:  Forgot key concepts (resets learning)
+  {Colors.RED}2 - Hard{Colors.RESET}:   Struggled with trade-offs (reduced stability gain)
+  {Colors.YELLOW}3 - Good{Colors.RESET}:   Explained with some effort (standard progression)
+  {Colors.GREEN}4 - Easy{Colors.RESET}:   Clear mental model (accelerated progression)
 
-{Colors.BOLD}Key Concepts:{Colors.RESET}
-  - Target retention: 90% (reviews scheduled before memory fades)
-  - Interval = time for retrievability to drop to target
-  - Difficulty adapts based on your performance history
-  - Same-day reviews use short-term memory model
+{Colors.BOLD}Daily Limits:{Colors.RESET}
+  - Max {MAX_NEW_PER_DAY} new question(s) per day (deep focus on each topic)
+  - Max {MAX_REVIEWS_PER_DAY} review(s) per day (quality over quantity)
+  - Smart scheduling spreads reviews to prevent clustering
 
-{Colors.BOLD}Interval Progression Example (Good ratings):{Colors.RESET}
-  1d -> 2d -> 5d -> 12d -> 28d -> 65d -> 150d ...
-  (actual intervals depend on difficulty and consistency)
-
-{Colors.BOLD}Daily Goals:{Colors.RESET}
-  - Add at least {MIN_ADDS_PER_DAY} new problems per day
-  - Top {MAX_PRIORITY_PER_DAY} most urgent problems marked as [!] priority
-  - Smart scheduling spreads new problems to prevent clustering
+{Colors.BOLD}System Design Tips:{Colors.RESET}
+  - Focus on trade-offs and scalability decisions
+  - Consider failure scenarios and recovery
+  - Practice explaining designs out loud
+  - Draw diagrams to reinforce mental models
 
 {Colors.BOLD}Git Sync:{Colors.RESET}
   Auto-sync: {sync_status} (edit GIT_SYNC_ENABLED in script to change)
   Data auto-commits and pushes after each change when in a git repo.
 
 {Colors.BOLD}Example Workflow:{Colors.RESET}
-  leetcode-srs add "Two Sum" "https://leetcode.com/problems/two-sum"
-  leetcode-srs today
-  leetcode-srs review
+  systemdesign-srs add "URL Shortener" "https://example.com/url-shortener"
+  systemdesign-srs today
+  systemdesign-srs review
 
 {Colors.DIM}Data stored at: {DATA_FILE}{Colors.RESET}
 {Colors.DIM}Algorithm: FSRS-6 (https://github.com/open-spaced-repetition){Colors.RESET}
@@ -1309,7 +1242,7 @@ def main():
         commands[cmd](args)
     else:
         print(f"{Colors.RED}Unknown command: {cmd}{Colors.RESET}")
-        print(f"Use 'leetcode-srs help' for available commands.")
+        print(f"Use 'systemdesign-srs help' for available commands.")
 
 
 if __name__ == "__main__":
