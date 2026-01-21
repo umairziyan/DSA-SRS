@@ -1458,13 +1458,13 @@
       "name": "680. Valid Palindrome II",
       "url": "https://leetcode.com/problems/valid-palindrome-ii/",
       "added_date": "2025-12-28",
-      "stability": 8.075186979751878,
-      "difficulty": 6.522076895365877,
+      "stability": 33.625460701759394,
+      "difficulty": 5.350917065013829,
       "state": "review",
-      "last_review_date": "2026-01-13",
-      "next_review": "2026-01-21",
-      "reps": 1,
-      "review_count": 4,
+      "last_review_date": "2026-01-21",
+      "next_review": "2026-02-24",
+      "reps": 2,
+      "review_count": 5,
       "last_rating": 4,
       "history": [
         {
@@ -1498,6 +1498,14 @@
           "difficulty": 6.522076895365877,
           "interval": 8,
           "retrievability": 0.8746751194328928
+        },
+        {
+          "date": "2026-01-21",
+          "rating": 4,
+          "stability": 33.625460701759394,
+          "difficulty": 5.350917065013829,
+          "interval": 34,
+          "retrievability": 0.9007971367949769
         }
       ],
       "fsrs_version": 6
@@ -2375,14 +2383,14 @@
       "name": "78. Subsets",
       "url": "https://leetcode.com/problems/subsets/",
       "added_date": "2026-01-04",
-      "stability": 10.757464639247651,
-      "difficulty": 2.1169858664885557,
-      "state": "review",
-      "last_review_date": "2026-01-10",
-      "next_review": "2026-01-21",
-      "reps": 2,
-      "review_count": 2,
-      "last_rating": 3,
+      "stability": 1.527667392225149,
+      "difficulty": 7.399906858810896,
+      "state": "relearning",
+      "last_review_date": "2026-01-21",
+      "next_review": "2026-01-23",
+      "reps": 0,
+      "review_count": 3,
+      "last_rating": 1,
       "history": [
         {
           "date": "2026-01-08",
@@ -2399,6 +2407,14 @@
           "difficulty": 2.1169858664885557,
           "interval": 11,
           "retrievability": 0.9115814711321364
+        },
+        {
+          "date": "2026-01-21",
+          "rating": 1,
+          "stability": 1.527667392225149,
+          "difficulty": 7.399906858810896,
+          "interval": 2,
+          "retrievability": 0.8980785074889401
         }
       ],
       "fsrs_version": 6
@@ -2703,14 +2719,14 @@
       "name": "51. N-Queens",
       "url": "https://leetcode.com/problems/n-queens/",
       "added_date": "2026-01-09",
-      "stability": 6.600279222944633,
-      "difficulty": 7.830996606120709,
+      "stability": 15.26962181205327,
+      "difficulty": 7.824165609514589,
       "state": "review",
-      "last_review_date": "2026-01-14",
-      "next_review": "2026-01-21",
-      "reps": 3,
-      "review_count": 3,
-      "last_rating": 2,
+      "last_review_date": "2026-01-21",
+      "next_review": "2026-02-05",
+      "reps": 4,
+      "review_count": 4,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-10",
@@ -2735,6 +2751,14 @@
           "difficulty": 7.830996606120709,
           "interval": 7,
           "retrievability": 0.9045688639165586
+        },
+        {
+          "date": "2026-01-21",
+          "rating": 3,
+          "stability": 15.26962181205327,
+          "difficulty": 7.824165609514589,
+          "interval": 15,
+          "retrievability": 0.894866279698631
         }
       ],
       "fsrs_version": 6
@@ -3230,13 +3254,13 @@
       "name": "261. Graph Valid Tree",
       "url": "https://leetcode.com/problems/graph-valid-tree/",
       "added_date": "2026-01-15",
-      "stability": 4.410673091748482,
-      "difficulty": 5.108058534895454,
+      "stability": 14.430076417451385,
+      "difficulty": 5.103950476360559,
       "state": "review",
-      "last_review_date": "2026-01-17",
-      "next_review": "2026-01-21",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-01-21",
+      "next_review": "2026-02-04",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 3,
       "history": [
         {
@@ -3254,6 +3278,14 @@
           "difficulty": 5.108058534895454,
           "interval": 4,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-01-21",
+          "rating": 3,
+          "stability": 14.430076417451385,
+          "difficulty": 5.103950476360559,
+          "interval": 14,
+          "retrievability": 0.908068020188883
         }
       ],
       "fsrs_version": 6
@@ -3263,13 +3295,13 @@
       "name": "323. Number of Connected Components in an Undirected Graph",
       "url": "https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/",
       "added_date": "2026-01-15",
-      "stability": 4.410673091748482,
-      "difficulty": 5.108058534895454,
+      "stability": 14.430076417451385,
+      "difficulty": 5.103950476360559,
       "state": "review",
-      "last_review_date": "2026-01-17",
-      "next_review": "2026-01-21",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-01-21",
+      "next_review": "2026-02-04",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 3,
       "history": [
         {
@@ -3287,6 +3319,14 @@
           "difficulty": 5.108058534895454,
           "interval": 4,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-01-21",
+          "rating": 3,
+          "stability": 14.430076417451385,
+          "difficulty": 5.103950476360559,
+          "interval": 14,
+          "retrievability": 0.908068020188883
         }
       ],
       "fsrs_version": 6
