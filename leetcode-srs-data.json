@@ -3524,13 +3524,13 @@
       "name": "435. Non-overlapping Intervals",
       "url": "https://leetcode.com/problems/non-overlapping-intervals/",
       "added_date": "2026-01-17",
-      "stability": 3.168008457377537,
-      "difficulty": 6.746231141532862,
+      "stability": 6.600279222944633,
+      "difficulty": 7.830996606120709,
       "state": "review",
-      "last_review_date": "2026-01-19",
-      "next_review": "2026-01-22",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-01-22",
+      "next_review": "2026-01-29",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 2,
       "history": [
         {
@@ -3548,6 +3548,14 @@
           "difficulty": 6.746231141532862,
           "interval": 3,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-01-22",
+          "rating": 2,
+          "stability": 6.600279222944633,
+          "difficulty": 7.830996606120709,
+          "interval": 7,
+          "retrievability": 0.9045688639165586
         }
       ],
       "fsrs_version": 6
