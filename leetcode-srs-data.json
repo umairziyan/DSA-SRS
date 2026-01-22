@@ -1810,14 +1810,14 @@
       "name": "236. Lowest Common Ancestor of a Binary Tree",
       "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
       "added_date": "2025-12-30",
-      "stability": 5.127202101553518,
-      "difficulty": 9.01678153566908,
+      "stability": 9.20725853144082,
+      "difficulty": 9.008764754133411,
       "state": "review",
-      "last_review_date": "2026-01-17",
-      "next_review": "2026-01-22",
-      "reps": 2,
-      "review_count": 6,
-      "last_rating": 4,
+      "last_review_date": "2026-01-22",
+      "next_review": "2026-01-31",
+      "reps": 3,
+      "review_count": 7,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-03",
@@ -1866,6 +1866,14 @@
           "difficulty": 9.01678153566908,
           "interval": 5,
           "retrievability": 0.9007560266031446
+        },
+        {
+          "date": "2026-01-22",
+          "rating": 3,
+          "stability": 9.20725853144082,
+          "difficulty": 9.008764754133411,
+          "interval": 9,
+          "retrievability": 0.9021287205938986
         }
       ],
       "fsrs_version": 6
@@ -2514,14 +2522,14 @@
       "name": "46. Permutations",
       "url": "https://leetcode.com/problems/permutations/",
       "added_date": "2026-01-06",
-      "stability": 6.970700497167916,
-      "difficulty": 7.823893345023787,
+      "stability": 15.634339485761819,
+      "difficulty": 7.817069451678764,
       "state": "review",
-      "last_review_date": "2026-01-15",
-      "next_review": "2026-01-22",
-      "reps": 2,
-      "review_count": 5,
-      "last_rating": 4,
+      "last_review_date": "2026-01-22",
+      "next_review": "2026-02-07",
+      "reps": 3,
+      "review_count": 6,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-07",
@@ -2562,6 +2570,14 @@
           "difficulty": 7.823893345023787,
           "interval": 7,
           "retrievability": 0.9110959676509143
+        },
+        {
+          "date": "2026-01-22",
+          "rating": 3,
+          "stability": 15.634339485761819,
+          "difficulty": 7.817069451678764,
+          "interval": 16,
+          "retrievability": 0.8996408383879292
         }
       ],
       "fsrs_version": 6
@@ -2686,13 +2702,13 @@
       "name": "17. Letter Combinations of a Phone Number",
       "url": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
       "added_date": "2026-01-08",
-      "stability": 8.875143085856246,
-      "difficulty": 6.740484910391329,
+      "stability": 23.208927199903556,
+      "difficulty": 6.734744425480938,
       "state": "review",
-      "last_review_date": "2026-01-13",
-      "next_review": "2026-01-22",
-      "reps": 3,
-      "review_count": 3,
+      "last_review_date": "2026-01-22",
+      "next_review": "2026-02-14",
+      "reps": 4,
+      "review_count": 4,
       "last_rating": 3,
       "history": [
         {
@@ -2718,6 +2734,14 @@
           "difficulty": 6.740484910391329,
           "interval": 9,
           "retrievability": 0.9045688639165586
+        },
+        {
+          "date": "2026-01-22",
+          "rating": 3,
+          "stability": 23.208927199903556,
+          "difficulty": 6.734744425480938,
+          "interval": 23,
+          "retrievability": 0.8987995784659477
         }
       ],
       "fsrs_version": 6
