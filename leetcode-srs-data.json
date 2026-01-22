@@ -1687,14 +1687,14 @@
       "name": "199. Binary Tree Right Side View",
       "url": "https://leetcode.com/problems/binary-tree-right-side-view/",
       "added_date": "2025-12-29",
-      "stability": 18.134311672846923,
+      "stability": 78.0251896826086,
       "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-01-04",
-      "next_review": "2026-01-22",
-      "reps": 2,
-      "review_count": 2,
-      "last_rating": 4,
+      "last_review_date": "2026-01-22",
+      "next_review": "2026-04-10",
+      "reps": 3,
+      "review_count": 3,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-02",
@@ -1711,6 +1711,14 @@
           "difficulty": 1.0,
           "interval": 18,
           "retrievability": 0.9115814711321364
+        },
+        {
+          "date": "2026-01-22",
+          "rating": 3,
+          "stability": 78.0251896826086,
+          "difficulty": 1.0,
+          "interval": 78,
+          "retrievability": 0.9006339243860205
         }
       ],
       "fsrs_version": 6
@@ -3682,13 +3690,13 @@
       "name": "846. Hand of Straights",
       "url": "https://leetcode.com/problems/hand-of-straights/",
       "added_date": "2026-01-18",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 4.74204076714111,
+      "difficulty": 6.746231141532862,
       "state": "review",
-      "last_review_date": "2026-01-20",
-      "next_review": "2026-01-21",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-01-22",
+      "next_review": "2026-01-27",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 2,
       "history": [
         {
@@ -3698,6 +3706,14 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-22",
+          "rating": 2,
+          "stability": 4.74204076714111,
+          "difficulty": 6.746231141532862,
+          "interval": 5,
+          "retrievability": 0.8566117863666073
         }
       ],
       "fsrs_version": 6
