@@ -1998,14 +1998,14 @@
       "name": "1448. Count Good Nodes in Binary Tree",
       "url": "https://leetcode.com/problems/count-good-nodes-in-binary-tree/",
       "added_date": "2026-01-01",
-      "stability": 14.430076417451385,
-      "difficulty": 5.103950476360559,
-      "state": "review",
-      "last_review_date": "2026-01-09",
-      "next_review": "2026-01-23",
-      "reps": 3,
-      "review_count": 3,
-      "last_rating": 3,
+      "stability": 1.6598454402564171,
+      "difficulty": 8.381701814716477,
+      "state": "relearning",
+      "last_review_date": "2026-01-23",
+      "next_review": "2026-01-25",
+      "reps": 0,
+      "review_count": 4,
+      "last_rating": 1,
       "history": [
         {
           "date": "2026-01-04",
@@ -2030,6 +2030,14 @@
           "difficulty": 5.103950476360559,
           "interval": 14,
           "retrievability": 0.908068020188883
+        },
+        {
+          "date": "2026-01-23",
+          "rating": 1,
+          "stability": 1.6598454402564171,
+          "difficulty": 8.381701814716477,
+          "interval": 2,
+          "retrievability": 0.9025591303487132
         }
       ],
       "fsrs_version": 6
@@ -2399,14 +2407,14 @@
       "name": "78. Subsets",
       "url": "https://leetcode.com/problems/subsets/",
       "added_date": "2026-01-04",
-      "stability": 1.527667392225149,
-      "difficulty": 7.399906858810896,
-      "state": "relearning",
-      "last_review_date": "2026-01-21",
-      "next_review": "2026-01-23",
-      "reps": 0,
-      "review_count": 3,
-      "last_rating": 1,
+      "stability": 8.075186979751878,
+      "difficulty": 6.522076895365877,
+      "state": "review",
+      "last_review_date": "2026-01-23",
+      "next_review": "2026-01-31",
+      "reps": 1,
+      "review_count": 4,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-08",
@@ -2431,6 +2439,14 @@
           "difficulty": 7.399906858810896,
           "interval": 2,
           "retrievability": 0.8980785074889401
+        },
+        {
+          "date": "2026-01-23",
+          "rating": 4,
+          "stability": 8.075186979751878,
+          "difficulty": 6.522076895365877,
+          "interval": 8,
+          "retrievability": 0.8746751194328928
         }
       ],
       "fsrs_version": 6
@@ -3171,13 +3187,13 @@
       "name": "130. Surrounded Regions",
       "url": "https://leetcode.com/problems/surrounded-regions/",
       "added_date": "2026-01-14",
-      "stability": 7.132002643535731,
-      "difficulty": 3.4698859282580456,
+      "stability": 45.552012431522236,
+      "difficulty": 1.2788261087976278,
       "state": "review",
-      "last_review_date": "2026-01-16",
-      "next_review": "2026-01-23",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-01-23",
+      "next_review": "2026-03-10",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 4,
       "history": [
         {
@@ -3195,6 +3211,14 @@
           "difficulty": 3.4698859282580456,
           "interval": 7,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-01-23",
+          "rating": 4,
+          "stability": 45.552012431522236,
+          "difficulty": 1.2788261087976278,
+          "interval": 46,
+          "retrievability": 0.9015866624098813
         }
       ],
       "fsrs_version": 6
@@ -3565,13 +3589,13 @@
       "name": "1851. Minimum Interval to Include Each Query",
       "url": "https://leetcode.com/problems/minimum-interval-to-include-each-query/",
       "added_date": "2026-01-17",
-      "stability": 3.168008457377537,
-      "difficulty": 6.746231141532862,
+      "stability": 7.589726479625615,
+      "difficulty": 7.830996606120709,
       "state": "review",
-      "last_review_date": "2026-01-19",
-      "next_review": "2026-01-22",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-01-23",
+      "next_review": "2026-01-31",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 2,
       "history": [
         {
@@ -3589,6 +3613,14 @@
           "difficulty": 6.746231141532862,
           "interval": 3,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-01-23",
+          "rating": 2,
+          "stability": 7.589726479625615,
+          "difficulty": 7.830996606120709,
+          "interval": 8,
+          "retrievability": 0.8783525833562931
         }
       ],
       "fsrs_version": 6
@@ -3598,13 +3630,13 @@
       "name": "53. Maximum Subarray",
       "url": "https://leetcode.com/problems/maximum-subarray/",
       "added_date": "2026-01-17",
-      "stability": 4.410673091748482,
-      "difficulty": 5.108058534895454,
+      "stability": 14.430076417451385,
+      "difficulty": 5.103950476360559,
       "state": "review",
-      "last_review_date": "2026-01-19",
-      "next_review": "2026-01-23",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-01-23",
+      "next_review": "2026-02-06",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 3,
       "history": [
         {
@@ -3622,6 +3654,14 @@
           "difficulty": 5.108058534895454,
           "interval": 4,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-01-23",
+          "rating": 3,
+          "stability": 14.430076417451385,
+          "difficulty": 5.103950476360559,
+          "interval": 14,
+          "retrievability": 0.908068020188883
         }
       ],
       "fsrs_version": 6
@@ -3656,14 +3696,14 @@
       "name": "45. Jump Game II",
       "url": "https://leetcode.com/problems/jump-game-ii/",
       "added_date": "2026-01-18",
-      "stability": 3.168008457377537,
-      "difficulty": 6.746231141532862,
+      "stability": 8.875143085856246,
+      "difficulty": 6.740484910391329,
       "state": "review",
-      "last_review_date": "2026-01-20",
-      "next_review": "2026-01-23",
-      "reps": 2,
-      "review_count": 2,
-      "last_rating": 2,
+      "last_review_date": "2026-01-23",
+      "next_review": "2026-02-01",
+      "reps": 3,
+      "review_count": 3,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-19",
@@ -3680,6 +3720,14 @@
           "difficulty": 6.746231141532862,
           "interval": 3,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-01-23",
+          "rating": 3,
+          "stability": 8.875143085856246,
+          "difficulty": 6.740484910391329,
+          "interval": 9,
+          "retrievability": 0.9045688639165586
         }
       ],
       "fsrs_version": 6
