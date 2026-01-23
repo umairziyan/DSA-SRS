@@ -3797,6 +3797,22 @@
         }
       ],
       "fsrs_version": 6
+    },
+    {
+      "id": "353e5f06",
+      "name": "1899. Merge Triplets to Form Target Triplet",
+      "url": "https://leetcode.com/problems/merge-triplets-to-form-target-triplet/description/",
+      "added_date": "2026-01-23",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-01-24",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -3828,7 +3844,8 @@
     "2026-01-15": 4,
     "2026-01-16": 2,
     "2026-01-17": 4,
-    "2026-01-18": 3
+    "2026-01-18": 3,
+    "2026-01-23": 1
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
