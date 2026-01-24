@@ -3937,6 +3937,22 @@
         }
       ],
       "fsrs_version": 6
+    },
+    {
+      "id": "5da9345d",
+      "name": "70. Climbing Stairs",
+      "url": "https://leetcode.com/problems/climbing-stairs/",
+      "added_date": "2026-01-24",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-01-25",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -3969,7 +3985,8 @@
     "2026-01-16": 2,
     "2026-01-17": 4,
     "2026-01-18": 3,
-    "2026-01-23": 4
+    "2026-01-23": 4,
+    "2026-01-24": 1
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
