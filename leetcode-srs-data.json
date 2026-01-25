@@ -155,16 +155,16 @@
       "name": "3. Longest Substring Without Repeating Characters",
       "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/description/",
       "added_date": "2025-12-14",
-      "next_review": "2026-01-25",
-      "review_count": 6,
+      "next_review": "2026-02-28",
+      "review_count": 7,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
-      "difficulty": 7.888164344290071,
-      "stability": 11.222452311787098,
+      "difficulty": 7.173487279693369,
+      "stability": 34.36072046284746,
       "state": "review",
-      "last_rating": 3,
-      "last_review_date": "2026-01-14",
-      "reps": 2,
+      "last_rating": 4,
+      "last_review_date": "2026-01-25",
+      "reps": 3,
       "history": [
         {
           "date": "2025-12-15",
@@ -213,6 +213,14 @@
           "difficulty": 7.888164344290071,
           "interval": 11,
           "retrievability": 0.8966815760904051
+        },
+        {
+          "date": "2026-01-25",
+          "rating": 4,
+          "stability": 34.36072046284746,
+          "difficulty": 7.173487279693369,
+          "interval": 34,
+          "retrievability": 0.9016995898168003
         }
       ]
     },
@@ -1188,13 +1196,13 @@
       "name": "143. Reorder List",
       "url": "https://leetcode.com/problems/reorder-list/",
       "added_date": "2025-12-26",
-      "stability": 5.8525101356707285,
-      "difficulty": 7.026728438800001,
+      "stability": 15.394778734623214,
+      "difficulty": 7.020701710361202,
       "state": "review",
-      "last_review_date": "2026-01-19",
-      "next_review": "2026-01-25",
-      "reps": 1,
-      "review_count": 4,
+      "last_review_date": "2026-01-25",
+      "next_review": "2026-02-09",
+      "reps": 2,
+      "review_count": 5,
       "last_rating": 3,
       "history": [
         {
@@ -1228,6 +1236,14 @@
           "difficulty": 7.026728438800001,
           "interval": 6,
           "retrievability": 0.9020599293321011
+        },
+        {
+          "date": "2026-01-25",
+          "rating": 3,
+          "stability": 15.394778734623214,
+          "difficulty": 7.020701710361202,
+          "interval": 15,
+          "retrievability": 0.8978530105650517
         }
       ],
       "fsrs_version": 6
@@ -1360,14 +1376,14 @@
       "name": "146. LRU Cache",
       "url": "https://leetcode.com/problems/lru-cache/",
       "added_date": "2025-12-27",
-      "stability": 17.592913565389527,
-      "difficulty": 6.511534425312227,
-      "state": "review",
-      "last_review_date": "2026-01-07",
-      "next_review": "2026-01-25",
-      "reps": 3,
-      "review_count": 3,
-      "last_rating": 2,
+      "stability": 1.808833028485551,
+      "difficulty": 8.844365087166036,
+      "state": "relearning",
+      "last_review_date": "2026-01-25",
+      "next_review": "2026-01-27",
+      "reps": 0,
+      "review_count": 4,
+      "last_rating": 1,
       "history": [
         {
           "date": "2025-12-29",
@@ -1392,6 +1408,14 @@
           "difficulty": 6.511534425312227,
           "interval": 18,
           "retrievability": 0.9045342701683687
+        },
+        {
+          "date": "2026-01-25",
+          "rating": 1,
+          "stability": 1.808833028485551,
+          "difficulty": 8.844365087166036,
+          "interval": 2,
+          "retrievability": 0.8980280956852771
         }
       ],
       "fsrs_version": 6
@@ -2006,14 +2030,14 @@
       "name": "1448. Count Good Nodes in Binary Tree",
       "url": "https://leetcode.com/problems/count-good-nodes-in-binary-tree/",
       "added_date": "2026-01-01",
-      "stability": 1.6598454402564171,
-      "difficulty": 8.381701814716477,
-      "state": "relearning",
-      "last_review_date": "2026-01-23",
-      "next_review": "2026-01-25",
-      "reps": 0,
-      "review_count": 4,
-      "last_rating": 1,
+      "stability": 4.1954993095213124,
+      "difficulty": 8.37432011290176,
+      "state": "review",
+      "last_review_date": "2026-01-25",
+      "next_review": "2026-01-29",
+      "reps": 1,
+      "review_count": 5,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-04",
@@ -2046,6 +2070,14 @@
           "difficulty": 8.381701814716477,
           "interval": 2,
           "retrievability": 0.9025591303487132
+        },
+        {
+          "date": "2026-01-25",
+          "rating": 3,
+          "stability": 4.1954993095213124,
+          "difficulty": 8.37432011290176,
+          "interval": 4,
+          "retrievability": 0.8829739832327107
         }
       ],
       "fsrs_version": 6
@@ -2472,14 +2504,14 @@
       "name": "39. Combination Sum",
       "url": "https://leetcode.com/problems/combination-sum/",
       "added_date": "2026-01-04",
-      "stability": 14.430076417451385,
-      "difficulty": 5.103950476360559,
+      "stability": 67.99764966286166,
+      "difficulty": 3.458918881468059,
       "state": "review",
-      "last_review_date": "2026-01-11",
-      "next_review": "2026-01-25",
-      "reps": 3,
-      "review_count": 3,
-      "last_rating": 3,
+      "last_review_date": "2026-01-25",
+      "next_review": "2026-04-03",
+      "reps": 4,
+      "review_count": 4,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-06",
@@ -2504,6 +2536,14 @@
           "difficulty": 5.103950476360559,
           "interval": 14,
           "retrievability": 0.908068020188883
+        },
+        {
+          "date": "2026-01-25",
+          "rating": 4,
+          "stability": 67.99764966286166,
+          "difficulty": 3.458918881468059,
+          "interval": 68,
+          "retrievability": 0.9025591303487132
         }
       ],
       "fsrs_version": 6
