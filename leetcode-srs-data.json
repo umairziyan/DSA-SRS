@@ -4091,6 +4091,22 @@
       "last_rating": null,
       "history": [],
       "fsrs_version": 6
+    },
+    {
+      "id": "2d2d4b1f",
+      "name": "213. House Robber II",
+      "url": "https://leetcode.com/problems/house-robber-ii/",
+      "added_date": "2026-01-25",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-01-26",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -4125,7 +4141,7 @@
     "2026-01-18": 3,
     "2026-01-23": 4,
     "2026-01-24": 2,
-    "2026-01-25": 1
+    "2026-01-25": 2
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
