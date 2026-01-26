@@ -15,6 +15,7 @@ See: https://github.com/open-spaced-repetition/fsrs4anki
 
 import json
 import os
+import random
 import re
 import subprocess
 import sys
@@ -712,8 +713,8 @@ def cmd_today(args):
     show_add_reminder(data)
 
     due = [p for p in data["problems"] if p["next_review"] <= today]
-    # Sort by most overdue first (priority order)
-    due.sort(key=lambda p: p["next_review"])
+    # Randomize order for varied practice
+    random.shuffle(due)
 
     if not due:
         print(f"{Colors.GREEN}No reviews due today! You're all caught up.{Colors.RESET}")
@@ -767,8 +768,8 @@ def cmd_review(args):
     show_add_reminder(data)
 
     due = [p for p in data["problems"] if p["next_review"] <= today]
-    # Sort by most overdue first (priority order)
-    due.sort(key=lambda p: p["next_review"])
+    # Randomize order for varied practice
+    random.shuffle(due)
 
     if not due:
         print(f"{Colors.GREEN}No reviews due! Use 'leetcode-srs today' to check schedule.{Colors.RESET}")
@@ -1062,8 +1063,6 @@ def cmd_sync(args):
 
 def cmd_random(args):
     """Select random problem(s) weighted by memory weakness."""
-    import random
-
     data = load_data()
 
     if not data["problems"]:
