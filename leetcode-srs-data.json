@@ -3232,13 +3232,13 @@
       "name": "286. Walls and Gates",
       "url": "https://leetcode.com/problems/walls-and-gates",
       "added_date": "2026-01-12",
-      "stability": 10.757464639247651,
-      "difficulty": 2.1169858664885557,
+      "stability": 46.10739197561708,
+      "difficulty": 2.115868880622067,
       "state": "review",
-      "last_review_date": "2026-01-15",
-      "next_review": "2026-01-26",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-01-26",
+      "next_review": "2026-03-13",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 3,
       "history": [
         {
@@ -3256,6 +3256,14 @@
           "difficulty": 2.1169858664885557,
           "interval": 11,
           "retrievability": 0.9115814711321364
+        },
+        {
+          "date": "2026-01-26",
+          "rating": 3,
+          "stability": 46.10739197561708,
+          "difficulty": 2.115868880622067,
+          "interval": 46,
+          "retrievability": 0.8980785074889401
         }
       ],
       "fsrs_version": 6
@@ -3265,14 +3273,14 @@
       "name": "994. Rotting Oranges",
       "url": "https://leetcode.com/problems/rotting-oranges/description/",
       "added_date": "2026-01-12",
-      "stability": 10.757464639247651,
-      "difficulty": 2.1169858664885557,
+      "stability": 76.96434354753396,
+      "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-01-15",
-      "next_review": "2026-01-26",
-      "reps": 2,
-      "review_count": 2,
-      "last_rating": 3,
+      "last_review_date": "2026-01-26",
+      "next_review": "2026-04-13",
+      "reps": 3,
+      "review_count": 3,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-13",
@@ -3289,6 +3297,14 @@
           "difficulty": 2.1169858664885557,
           "interval": 11,
           "retrievability": 0.9115814711321364
+        },
+        {
+          "date": "2026-01-26",
+          "rating": 4,
+          "stability": 76.96434354753396,
+          "difficulty": 1.0,
+          "interval": 77,
+          "retrievability": 0.8980785074889401
         }
       ],
       "fsrs_version": 6
@@ -3618,14 +3634,14 @@
       "name": "57. Insert Interval",
       "url": "https://leetcode.com/problems/insert-interval/",
       "added_date": "2026-01-16",
-      "stability": 7.388910134043537,
-      "difficulty": 4.758630119235718,
+      "stability": 39.16655899764164,
+      "difficulty": 2.998208552920739,
       "state": "review",
-      "last_review_date": "2026-01-19",
-      "next_review": "2026-01-26",
-      "reps": 2,
-      "review_count": 2,
-      "last_rating": 2,
+      "last_review_date": "2026-01-26",
+      "next_review": "2026-03-06",
+      "reps": 3,
+      "review_count": 3,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-17",
@@ -3642,6 +3658,14 @@
           "difficulty": 4.758630119235718,
           "interval": 7,
           "retrievability": 0.9115814711321364
+        },
+        {
+          "date": "2026-01-26",
+          "rating": 4,
+          "stability": 39.16655899764164,
+          "difficulty": 2.998208552920739,
+          "interval": 39,
+          "retrievability": 0.9045342701683687
         }
       ],
       "fsrs_version": 6
@@ -3815,14 +3839,14 @@
       "name": "55. Jump Game",
       "url": "https://leetcode.com/problems/jump-game/",
       "added_date": "2026-01-17",
-      "stability": 8.2956,
-      "difficulty": 1.0,
+      "stability": 26.588680868783776,
+      "difficulty": 4.016380600000001,
       "state": "review",
-      "last_review_date": "2026-01-18",
-      "next_review": "2026-01-26",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 4,
+      "last_review_date": "2026-01-26",
+      "next_review": "2026-02-22",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-01-18",
@@ -3831,6 +3855,14 @@
           "difficulty": 1.0,
           "interval": 8,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-26",
+          "rating": 2,
+          "stability": 26.588680868783776,
+          "difficulty": 4.016380600000001,
+          "interval": 27,
+          "retrievability": 0.9030622091783326
         }
       ],
       "fsrs_version": 6
