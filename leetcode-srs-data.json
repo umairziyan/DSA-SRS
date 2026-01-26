@@ -3987,14 +3987,14 @@
       "name": "1899. Merge Triplets to Form Target Triplet",
       "url": "https://leetcode.com/problems/merge-triplets-to-form-target-triplet/description/",
       "added_date": "2026-01-23",
-      "stability": 2.3065,
-      "difficulty": 2.118103970459015,
+      "stability": 18.134311672846923,
+      "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-01-24",
-      "next_review": "2026-01-26",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 3,
+      "last_review_date": "2026-01-26",
+      "next_review": "2026-02-13",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-24",
@@ -4003,6 +4003,14 @@
           "difficulty": 2.118103970459015,
           "interval": 2,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-26",
+          "rating": 4,
+          "stability": 18.134311672846923,
+          "difficulty": 1.0,
+          "interval": 18,
+          "retrievability": 0.9115814711321364
         }
       ],
       "fsrs_version": 6
@@ -4103,13 +4111,13 @@
       "name": "70. Climbing Stairs",
       "url": "https://leetcode.com/problems/climbing-stairs/",
       "added_date": "2026-01-24",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 3.168008457377537,
+      "difficulty": 6.746231141532862,
       "state": "review",
-      "last_review_date": "2026-01-25",
-      "next_review": "2026-01-26",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-01-26",
+      "next_review": "2026-01-29",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 2,
       "history": [
         {
@@ -4119,6 +4127,14 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-26",
+          "rating": 2,
+          "stability": 3.168008457377537,
+          "difficulty": 6.746231141532862,
+          "interval": 3,
+          "retrievability": 0.920029131893056
         }
       ],
       "fsrs_version": 6
@@ -4128,17 +4144,50 @@
       "name": "746. Min Cost Climbing Stairs",
       "url": "https://leetcode.com/problems/min-cost-climbing-stairs/",
       "added_date": "2026-01-24",
+      "stability": 3.168008457377537,
+      "difficulty": 6.746231141532862,
+      "state": "review",
+      "last_review_date": "2026-01-26",
+      "next_review": "2026-01-29",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 2,
+      "history": [
+        {
+          "date": "2026-01-25",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-26",
+          "rating": 2,
+          "stability": 3.168008457377537,
+          "difficulty": 6.746231141532862,
+          "interval": 3,
+          "retrievability": 0.920029131893056
+        }
+      ],
+      "fsrs_version": 6
+    },
+    {
+      "id": "da133440",
+      "name": "198. House Robber",
+      "url": "https://leetcode.com/problems/house-robber/",
+      "added_date": "2026-01-25",
       "stability": 1.2931,
       "difficulty": 5.112170705601055,
       "state": "review",
-      "last_review_date": "2026-01-25",
-      "next_review": "2026-01-26",
+      "last_review_date": "2026-01-26",
+      "next_review": "2026-01-27",
       "reps": 1,
       "review_count": 1,
       "last_rating": 2,
       "history": [
         {
-          "date": "2026-01-25",
+          "date": "2026-01-26",
           "rating": 2,
           "stability": 1.2931,
           "difficulty": 5.112170705601055,
@@ -4149,35 +4198,28 @@
       "fsrs_version": 6
     },
     {
-      "id": "da133440",
-      "name": "198. House Robber",
-      "url": "https://leetcode.com/problems/house-robber/",
-      "added_date": "2026-01-25",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-01-26",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
-      "fsrs_version": 6
-    },
-    {
       "id": "2d2d4b1f",
       "name": "213. House Robber II",
       "url": "https://leetcode.com/problems/house-robber-ii/",
       "added_date": "2026-01-25",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-01-26",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-01-26",
+      "next_review": "2026-01-27",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
+      "history": [
+        {
+          "date": "2026-01-26",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     }
   ],
