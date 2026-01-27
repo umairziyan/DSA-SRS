@@ -637,16 +637,16 @@
       "name": "253. Meeting Rooms II",
       "url": "https://leetcode.com/problems/meeting-rooms-ii/",
       "added_date": "2025-12-18",
-      "next_review": "2026-01-27",
-      "review_count": 4,
+      "next_review": "2026-01-29",
+      "review_count": 5,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
-      "difficulty": 7.650315300290279,
-      "stability": 21.661319612498517,
-      "state": "review",
-      "last_rating": 2,
-      "last_review_date": "2026-01-05",
-      "reps": 4,
+      "difficulty": 9.218674617061371,
+      "stability": 1.9673010800248634,
+      "state": "relearning",
+      "last_rating": 1,
+      "last_review_date": "2026-01-27",
+      "reps": 0,
       "history": [
         {
           "date": "2025-12-20",
@@ -679,6 +679,14 @@
           "difficulty": 7.650315300290279,
           "interval": 22,
           "retrievability": 0.8986901868928044
+        },
+        {
+          "date": "2026-01-27",
+          "rating": 1,
+          "stability": 1.9673010800248634,
+          "difficulty": 9.218674617061371,
+          "interval": 2,
+          "retrievability": 0.8986661562797182
         }
       ]
     },
@@ -1408,13 +1416,13 @@
       "name": "146. LRU Cache",
       "url": "https://leetcode.com/problems/lru-cache/",
       "added_date": "2025-12-27",
-      "stability": 1.808833028485551,
-      "difficulty": 8.844365087166036,
+      "stability": 0.48440138729583754,
+      "difficulty": 9.611150662468882,
       "state": "relearning",
-      "last_review_date": "2026-01-25",
-      "next_review": "2026-01-27",
+      "last_review_date": "2026-01-27",
+      "next_review": "2026-01-28",
       "reps": 0,
-      "review_count": 4,
+      "review_count": 5,
       "last_rating": 1,
       "history": [
         {
@@ -1448,6 +1456,14 @@
           "difficulty": 8.844365087166036,
           "interval": 2,
           "retrievability": 0.8980280956852771
+        },
+        {
+          "date": "2026-01-27",
+          "rating": 1,
+          "stability": 0.48440138729583754,
+          "difficulty": 9.611150662468882,
+          "interval": 1,
+          "retrievability": 0.8910977580552599
         }
       ],
       "fsrs_version": 6
@@ -2478,13 +2494,13 @@
       "name": "212. Word Search II",
       "url": "https://leetcode.com/problems/word-search-ii/",
       "added_date": "2026-01-04",
-      "stability": 14.430076417451385,
-      "difficulty": 5.103950476360559,
+      "stability": 43.03148238969244,
+      "difficulty": 5.099846525884199,
       "state": "review",
-      "last_review_date": "2026-01-13",
-      "next_review": "2026-01-27",
-      "reps": 3,
-      "review_count": 3,
+      "last_review_date": "2026-01-27",
+      "next_review": "2026-03-11",
+      "reps": 4,
+      "review_count": 4,
       "last_rating": 3,
       "history": [
         {
@@ -2510,6 +2526,14 @@
           "difficulty": 5.103950476360559,
           "interval": 14,
           "retrievability": 0.908068020188883
+        },
+        {
+          "date": "2026-01-27",
+          "rating": 3,
+          "stability": 43.03148238969244,
+          "difficulty": 5.099846525884199,
+          "interval": 43,
+          "retrievability": 0.9025591303487132
         }
       ],
       "fsrs_version": 6
@@ -3223,14 +3247,14 @@
       "name": "133. Clone Graph",
       "url": "https://leetcode.com/problems/clone-graph/",
       "added_date": "2026-01-11",
-      "stability": 1.527667392225149,
-      "difficulty": 7.399906858810896,
-      "state": "relearning",
-      "last_review_date": "2026-01-25",
-      "next_review": "2026-01-27",
-      "reps": 0,
-      "review_count": 3,
-      "last_rating": 1,
+      "stability": 8.075186979751878,
+      "difficulty": 6.522076895365877,
+      "state": "review",
+      "last_review_date": "2026-01-27",
+      "next_review": "2026-02-04",
+      "reps": 1,
+      "review_count": 4,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-12",
@@ -3255,6 +3279,14 @@
           "difficulty": 7.399906858810896,
           "interval": 2,
           "retrievability": 0.8980785074889401
+        },
+        {
+          "date": "2026-01-27",
+          "rating": 4,
+          "stability": 8.075186979751878,
+          "difficulty": 6.522076895365877,
+          "interval": 8,
+          "retrievability": 0.8746751194328928
         }
       ],
       "fsrs_version": 6
@@ -3346,13 +3378,13 @@
       "name": "417. Pacific Atlantic Water Flow",
       "url": "https://leetcode.com/problems/pacific-atlantic-water-flow/",
       "added_date": "2026-01-12",
-      "stability": 10.757464639247651,
-      "difficulty": 2.1169858664885557,
+      "stability": 48.930695119351746,
+      "difficulty": 2.115868880622067,
       "state": "review",
-      "last_review_date": "2026-01-15",
-      "next_review": "2026-01-26",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-01-27",
+      "next_review": "2026-03-17",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 3,
       "history": [
         {
@@ -3370,6 +3402,14 @@
           "difficulty": 2.1169858664885557,
           "interval": 11,
           "retrievability": 0.9115814711321364
+        },
+        {
+          "date": "2026-01-27",
+          "rating": 3,
+          "stability": 48.930695119351746,
+          "difficulty": 2.115868880622067,
+          "interval": 49,
+          "retrievability": 0.8902839971153869
         }
       ],
       "fsrs_version": 6
@@ -4217,14 +4257,14 @@
       "name": "198. House Robber",
       "url": "https://leetcode.com/problems/house-robber/",
       "added_date": "2026-01-25",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 4.410673091748482,
+      "difficulty": 5.108058534895454,
       "state": "review",
-      "last_review_date": "2026-01-26",
-      "next_review": "2026-01-27",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 2,
+      "last_review_date": "2026-01-27",
+      "next_review": "2026-01-31",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-26",
@@ -4233,6 +4273,14 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-27",
+          "rating": 3,
+          "stability": 4.410673091748482,
+          "difficulty": 5.108058534895454,
+          "interval": 4,
+          "retrievability": 0.920029131893056
         }
       ],
       "fsrs_version": 6
@@ -4242,14 +4290,14 @@
       "name": "213. House Robber II",
       "url": "https://leetcode.com/problems/house-robber-ii/",
       "added_date": "2026-01-25",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 4.410673091748482,
+      "difficulty": 5.108058534895454,
       "state": "review",
-      "last_review_date": "2026-01-26",
-      "next_review": "2026-01-27",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 2,
+      "last_review_date": "2026-01-27",
+      "next_review": "2026-01-31",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-26",
@@ -4258,6 +4306,14 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-27",
+          "rating": 3,
+          "stability": 4.410673091748482,
+          "difficulty": 5.108058534895454,
+          "interval": 4,
+          "retrievability": 0.920029131893056
         }
       ],
       "fsrs_version": 6
