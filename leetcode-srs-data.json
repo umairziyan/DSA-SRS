@@ -4464,6 +4464,22 @@
       "last_rating": null,
       "history": [],
       "fsrs_version": 6
+    },
+    {
+      "id": "180d058b",
+      "name": "152. Maximum Product Subarray",
+      "url": "https://leetcode.com/problems/maximum-product-subarray/description/",
+      "added_date": "2026-01-28",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-01-29",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -4501,7 +4517,7 @@
     "2026-01-25": 2,
     "2026-01-26": 1,
     "2026-01-27": 2,
-    "2026-01-28": 1
+    "2026-01-28": 2
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
