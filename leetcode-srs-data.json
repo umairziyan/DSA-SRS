@@ -3779,13 +3779,13 @@
       "name": "56. Merge Intervals",
       "url": "https://leetcode.com/problems/merge-intervals/",
       "added_date": "2026-01-16",
-      "stability": 6.600279222944633,
-      "difficulty": 7.830996606120709,
+      "stability": 11.814021856034556,
+      "difficulty": 8.551114471584771,
       "state": "review",
-      "last_review_date": "2026-01-21",
-      "next_review": "2026-01-28",
-      "reps": 3,
-      "review_count": 3,
+      "last_review_date": "2026-01-28",
+      "next_review": "2026-02-09",
+      "reps": 4,
+      "review_count": 4,
       "last_rating": 2,
       "history": [
         {
@@ -3811,6 +3811,14 @@
           "difficulty": 7.830996606120709,
           "interval": 7,
           "retrievability": 0.9045688639165586
+        },
+        {
+          "date": "2026-01-28",
+          "rating": 2,
+          "stability": 11.814021856034556,
+          "difficulty": 8.551114471584771,
+          "interval": 12,
+          "retrievability": 0.894866279698631
         }
       ],
       "fsrs_version": 6
@@ -4190,13 +4198,13 @@
       "name": "424. Longest Repeating Character Replacement",
       "url": "https://leetcode.com/problems/longest-repeating-character-replacement/",
       "added_date": "2026-01-23",
-      "stability": 3.168008457377537,
-      "difficulty": 6.746231141532862,
+      "stability": 6.600279222944633,
+      "difficulty": 7.830996606120709,
       "state": "review",
-      "last_review_date": "2026-01-25",
-      "next_review": "2026-01-28",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-01-28",
+      "next_review": "2026-02-04",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 2,
       "history": [
         {
@@ -4214,6 +4222,14 @@
           "difficulty": 6.746231141532862,
           "interval": 3,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-01-28",
+          "rating": 2,
+          "stability": 6.600279222944633,
+          "difficulty": 7.830996606120709,
+          "interval": 7,
+          "retrievability": 0.9045688639165586
         }
       ],
       "fsrs_version": 6
@@ -4355,13 +4371,13 @@
       "name": "5. Longest Palindromic Substring",
       "url": "https://leetcode.com/problems/longest-palindromic-substring",
       "added_date": "2026-01-26",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 3.168008457377537,
+      "difficulty": 6.746231141532862,
       "state": "review",
-      "last_review_date": "2026-01-27",
-      "next_review": "2026-01-28",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-01-28",
+      "next_review": "2026-01-31",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 2,
       "history": [
         {
@@ -4371,6 +4387,14 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-28",
+          "rating": 2,
+          "stability": 3.168008457377537,
+          "difficulty": 6.746231141532862,
+          "interval": 3,
+          "retrievability": 0.920029131893056
         }
       ],
       "fsrs_version": 6
@@ -4380,15 +4404,24 @@
       "name": "647. Palindromic Substrings",
       "url": "https://leetcode.com/problems/palindromic-substrings/description/",
       "added_date": "2026-01-27",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-01-28",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-01-28",
+      "next_review": "2026-01-30",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
+      "history": [
+        {
+          "date": "2026-01-28",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     },
     {
@@ -4396,15 +4429,24 @@
       "name": "91. Decode Ways",
       "url": "https://leetcode.com/problems/decode-ways/description/",
       "added_date": "2026-01-27",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-01-28",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-01-28",
+      "next_review": "2026-01-29",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
+      "history": [
+        {
+          "date": "2026-01-28",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     }
   ],
