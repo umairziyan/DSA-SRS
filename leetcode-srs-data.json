@@ -1416,14 +1416,14 @@
       "name": "146. LRU Cache",
       "url": "https://leetcode.com/problems/lru-cache/",
       "added_date": "2025-12-27",
-      "stability": 0.48440138729583754,
-      "difficulty": 9.611150662468882,
-      "state": "relearning",
-      "last_review_date": "2026-01-27",
-      "next_review": "2026-01-28",
-      "reps": 0,
-      "review_count": 5,
-      "last_rating": 1,
+      "stability": 1.241121388886017,
+      "difficulty": 9.602539511806413,
+      "state": "review",
+      "last_review_date": "2026-01-28",
+      "next_review": "2026-01-29",
+      "reps": 1,
+      "review_count": 6,
+      "last_rating": 3,
       "history": [
         {
           "date": "2025-12-29",
@@ -1464,6 +1464,14 @@
           "difficulty": 9.611150662468882,
           "interval": 1,
           "retrievability": 0.8910977580552599
+        },
+        {
+          "date": "2026-01-28",
+          "rating": 3,
+          "stability": 1.241121388886017,
+          "difficulty": 9.602539511806413,
+          "interval": 1,
+          "retrievability": 0.8208192242181326
         }
       ],
       "fsrs_version": 6
@@ -1824,14 +1832,14 @@
       "name": "110. Balanced Binary Tree",
       "url": "https://leetcode.com/problems/balanced-binary-tree/",
       "added_date": "2025-12-30",
-      "stability": 15.269621812053249,
-      "difficulty": 7.824165609514589,
+      "stability": 25.09013317820779,
+      "difficulty": 8.546579737713188,
       "state": "review",
-      "last_review_date": "2026-01-13",
-      "next_review": "2026-01-28",
-      "reps": 4,
-      "review_count": 4,
-      "last_rating": 3,
+      "last_review_date": "2026-01-28",
+      "next_review": "2026-02-22",
+      "reps": 5,
+      "review_count": 5,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-01-02",
@@ -1864,6 +1872,14 @@
           "difficulty": 7.824165609514589,
           "interval": 15,
           "retrievability": 0.894866279698631
+        },
+        {
+          "date": "2026-01-28",
+          "rating": 2,
+          "stability": 25.09013317820779,
+          "difficulty": 8.546579737713188,
+          "interval": 25,
+          "retrievability": 0.9015135170013006
         }
       ],
       "fsrs_version": 6
@@ -2747,13 +2763,13 @@
       "name": "90. Subsets II",
       "url": "https://leetcode.com/problems/subsets-ii/",
       "added_date": "2026-01-07",
-      "stability": 18.134311672846923,
+      "stability": 130.30393709732957,
       "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-01-10",
-      "next_review": "2026-01-28",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-01-28",
+      "next_review": "2026-06-07",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 4,
       "history": [
         {
@@ -2771,6 +2787,14 @@
           "difficulty": 1.0,
           "interval": 18,
           "retrievability": 0.9115814711321364
+        },
+        {
+          "date": "2026-01-28",
+          "rating": 4,
+          "stability": 130.30393709732957,
+          "difficulty": 1.0,
+          "interval": 130,
+          "retrievability": 0.9006339243860205
         }
       ],
       "fsrs_version": 6
@@ -3501,14 +3525,14 @@
       "name": "210. Course Schedule II",
       "url": "https://leetcode.com/problems/course-schedule-ii/",
       "added_date": "2026-01-14",
-      "stability": 8.875143085856246,
-      "difficulty": 6.740484910391329,
+      "stability": 17.495480852044302,
+      "difficulty": 7.827181990114589,
       "state": "review",
-      "last_review_date": "2026-01-19",
-      "next_review": "2026-01-28",
-      "reps": 3,
-      "review_count": 3,
-      "last_rating": 3,
+      "last_review_date": "2026-01-28",
+      "next_review": "2026-02-14",
+      "reps": 4,
+      "review_count": 4,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-01-15",
@@ -3533,6 +3557,14 @@
           "difficulty": 6.740484910391329,
           "interval": 9,
           "retrievability": 0.9045688639165586
+        },
+        {
+          "date": "2026-01-28",
+          "rating": 2,
+          "stability": 17.495480852044302,
+          "difficulty": 7.827181990114589,
+          "interval": 17,
+          "retrievability": 0.8987995784659477
         }
       ],
       "fsrs_version": 6
