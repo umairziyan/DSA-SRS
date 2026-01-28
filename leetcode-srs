@@ -759,6 +759,45 @@ def cmd_today(args):
         print()
 
 
+def cmd_tomorrow(args):
+    """Show problems due for review tomorrow."""
+    data = load_data()
+    tomorrow = (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%d")
+
+    due = [p for p in data["problems"] if p["next_review"] == tomorrow]
+    random.shuffle(due)
+
+    if not due:
+        print(f"{Colors.GREEN}No reviews due tomorrow! Enjoy your day.{Colors.RESET}")
+        return
+
+    print(f"\n{Colors.BOLD}=== Due Tomorrow ({len(due)} problems) ==={Colors.RESET}\n")
+
+    for p in due:
+        status = format_date(p["next_review"])
+
+        # Calculate retrievability
+        stability = p.get("stability", 0)
+        last_review = p.get("last_review_date")
+        if last_review and stability > 0:
+            last_date = datetime.strptime(last_review, "%Y-%m-%d")
+            elapsed = (datetime.now() - last_date).days
+            r = calculate_retrievability(elapsed, stability)
+            r_display = f"R:{r*100:.0f}%"
+        else:
+            r_display = "New"
+
+        review_info = f"Review #{p['review_count'] + 1} | {r_display}"
+        if p.get("last_rating") is not None:
+            review_info += f" | Last: {rating_display(p['last_rating'])}"
+
+        print(f"  {Colors.CYAN}{p['name']}{Colors.RESET}")
+        print(f"      {status} | {review_info} | Last: {format_last_review(p.get('last_review_date'))}")
+        if p["url"]:
+            print(f"      {Colors.DIM}{p['url']}{Colors.RESET}")
+        print()
+
+
 def cmd_review(args):
     """Interactive review session using FSRS algorithm."""
     data = load_data()
@@ -1234,6 +1273,7 @@ def cmd_help(args):
 {Colors.BOLD}Commands:{Colors.RESET}
   {Colors.CYAN}add{Colors.RESET} <name> [url]   Add a new problem to track
   {Colors.CYAN}today{Colors.RESET}              Show problems due for review today
+  {Colors.CYAN}tomorrow{Colors.RESET}           Show problems due for review tomorrow
   {Colors.CYAN}review{Colors.RESET}             Start interactive review session
   {Colors.CYAN}list{Colors.RESET}               List all problems with status
   {Colors.CYAN}stats{Colors.RESET}              Show learning statistics
@@ -1288,6 +1328,7 @@ def main():
     commands = {
         "add": cmd_add,
         "today": cmd_today,
+        "tomorrow": cmd_tomorrow,
         "review": cmd_review,
         "list": cmd_list,
         "stats": cmd_stats,
