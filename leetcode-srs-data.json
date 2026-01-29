@@ -2134,14 +2134,14 @@
       "name": "1448. Count Good Nodes in Binary Tree",
       "url": "https://leetcode.com/problems/count-good-nodes-in-binary-tree/",
       "added_date": "2026-01-01",
-      "stability": 4.1954993095213124,
-      "difficulty": 8.37432011290176,
+      "stability": 6.889218376507484,
+      "difficulty": 8.911797934261449,
       "state": "review",
-      "last_review_date": "2026-01-25",
-      "next_review": "2026-01-29",
-      "reps": 1,
-      "review_count": 5,
-      "last_rating": 3,
+      "last_review_date": "2026-01-29",
+      "next_review": "2026-02-05",
+      "reps": 2,
+      "review_count": 6,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-01-04",
@@ -2182,6 +2182,14 @@
           "difficulty": 8.37432011290176,
           "interval": 4,
           "retrievability": 0.8829739832327107
+        },
+        {
+          "date": "2026-01-29",
+          "rating": 2,
+          "stability": 6.889218376507484,
+          "difficulty": 8.911797934261449,
+          "interval": 7,
+          "retrievability": 0.904010728164711
         }
       ],
       "fsrs_version": 6
@@ -4485,17 +4493,50 @@
       "name": "91. Decode Ways",
       "url": "https://leetcode.com/problems/decode-ways/description/",
       "added_date": "2026-01-27",
+      "stability": 4.410673091748482,
+      "difficulty": 5.108058534895454,
+      "state": "review",
+      "last_review_date": "2026-01-29",
+      "next_review": "2026-02-02",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 3,
+      "history": [
+        {
+          "date": "2026-01-28",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
+        },
+        {
+          "date": "2026-01-29",
+          "rating": 3,
+          "stability": 4.410673091748482,
+          "difficulty": 5.108058534895454,
+          "interval": 4,
+          "retrievability": 0.920029131893056
+        }
+      ],
+      "fsrs_version": 6
+    },
+    {
+      "id": "4179303a",
+      "name": "322. Coin Change",
+      "url": "https://leetcode.com/problems/coin-change/",
+      "added_date": "2026-01-28",
       "stability": 1.2931,
       "difficulty": 5.112170705601055,
       "state": "review",
-      "last_review_date": "2026-01-28",
-      "next_review": "2026-01-29",
+      "last_review_date": "2026-01-29",
+      "next_review": "2026-01-30",
       "reps": 1,
       "review_count": 1,
       "last_rating": 2,
       "history": [
         {
-          "date": "2026-01-28",
+          "date": "2026-01-29",
           "rating": 2,
           "stability": 1.2931,
           "difficulty": 5.112170705601055,
@@ -4506,35 +4547,28 @@
       "fsrs_version": 6
     },
     {
-      "id": "4179303a",
-      "name": "322. Coin Change",
-      "url": "https://leetcode.com/problems/coin-change/",
-      "added_date": "2026-01-28",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-01-29",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
-      "fsrs_version": 6
-    },
-    {
       "id": "180d058b",
       "name": "152. Maximum Product Subarray",
       "url": "https://leetcode.com/problems/maximum-product-subarray/description/",
       "added_date": "2026-01-28",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-01-29",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-01-29",
+      "next_review": "2026-01-31",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
+      "history": [
+        {
+          "date": "2026-01-29",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     }
   ],
