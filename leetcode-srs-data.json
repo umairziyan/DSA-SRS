@@ -4650,6 +4650,22 @@
       "last_rating": null,
       "history": [],
       "fsrs_version": 6
+    },
+    {
+      "id": "aa2bdb5c",
+      "name": "416. Partition Equal Subset Sum",
+      "url": "https://leetcode.com/problems/partition-equal-subset-sum/description/",
+      "added_date": "2026-01-30",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-01-31",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -4688,7 +4704,7 @@
     "2026-01-26": 1,
     "2026-01-27": 2,
     "2026-01-28": 2,
-    "2026-01-30": 1
+    "2026-01-30": 2
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
