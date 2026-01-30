@@ -998,13 +998,13 @@
       "name": "153. Find Minimum in Rotated Sorted Array",
       "url": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
       "added_date": "2025-12-24",
-      "stability": 27.645649815294234,
-      "difficulty": 3.4674160423297873,
+      "stability": 92.91527236064091,
+      "difficulty": 3.4649486262874576,
       "state": "review",
-      "last_review_date": "2026-01-02",
-      "next_review": "2026-01-30",
-      "reps": 3,
-      "review_count": 3,
+      "last_review_date": "2026-01-30",
+      "next_review": "2026-05-03",
+      "reps": 4,
+      "review_count": 4,
       "last_rating": 3,
       "history": [
         {
@@ -1030,6 +1030,14 @@
           "difficulty": 3.4674160423297873,
           "interval": 28,
           "retrievability": 0.9015866624098813
+        },
+        {
+          "date": "2026-01-30",
+          "rating": 3,
+          "stability": 92.91527236064091,
+          "difficulty": 3.4649486262874576,
+          "interval": 93,
+          "retrievability": 0.8989060949710256
         }
       ],
       "fsrs_version": 6
@@ -4344,14 +4352,14 @@
       "name": "746. Min Cost Climbing Stairs",
       "url": "https://leetcode.com/problems/min-cost-climbing-stairs/",
       "added_date": "2026-01-24",
-      "stability": 0.7032023605264404,
-      "difficulty": 8.921508301850087,
-      "state": "relearning",
-      "last_review_date": "2026-01-29",
-      "next_review": "2026-01-30",
-      "reps": 0,
-      "review_count": 3,
-      "last_rating": 1,
+      "stability": 1.8380917126696699,
+      "difficulty": 8.913586793548237,
+      "state": "review",
+      "last_review_date": "2026-01-30",
+      "next_review": "2026-02-01",
+      "reps": 1,
+      "review_count": 4,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-25",
@@ -4376,6 +4384,14 @@
           "difficulty": 8.921508301850087,
           "interval": 1,
           "retrievability": 0.9045688639165586
+        },
+        {
+          "date": "2026-01-30",
+          "rating": 3,
+          "stability": 1.8380917126696699,
+          "difficulty": 8.913586793548237,
+          "interval": 2,
+          "retrievability": 0.8659482357597595
         }
       ],
       "fsrs_version": 6
