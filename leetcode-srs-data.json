@@ -3163,14 +3163,14 @@
       "name": "621. Task Scheduler",
       "url": "https://leetcode.com/problems/task-scheduler/",
       "added_date": "2026-01-10",
-      "stability": 14.430076417451385,
-      "difficulty": 5.103950476360559,
-      "state": "review",
-      "last_review_date": "2026-01-16",
-      "next_review": "2026-01-30",
-      "reps": 3,
-      "review_count": 3,
-      "last_rating": 3,
+      "stability": 1.6598454402564171,
+      "difficulty": 8.381701814716477,
+      "state": "relearning",
+      "last_review_date": "2026-01-30",
+      "next_review": "2026-02-01",
+      "reps": 0,
+      "review_count": 4,
+      "last_rating": 1,
       "history": [
         {
           "date": "2026-01-11",
@@ -3195,6 +3195,14 @@
           "difficulty": 5.103950476360559,
           "interval": 14,
           "retrievability": 0.908068020188883
+        },
+        {
+          "date": "2026-01-30",
+          "rating": 1,
+          "stability": 1.6598454402564171,
+          "difficulty": 8.381701814716477,
+          "interval": 2,
+          "retrievability": 0.9025591303487132
         }
       ],
       "fsrs_version": 6
