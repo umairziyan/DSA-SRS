@@ -1513,14 +1513,14 @@
       "name": "23. Merge k Sorted Lists",
       "url": "https://leetcode.com/problems/merge-k-sorted-lists/",
       "added_date": "2025-12-28",
-      "stability": 12.451909085866607,
-      "difficulty": 7.387113445000134,
+      "stability": 21.717603427518142,
+      "difficulty": 8.256444144277625,
       "state": "review",
-      "last_review_date": "2026-01-18",
-      "next_review": "2026-01-30",
-      "reps": 2,
-      "review_count": 5,
-      "last_rating": 3,
+      "last_review_date": "2026-01-30",
+      "next_review": "2026-02-21",
+      "reps": 3,
+      "review_count": 6,
+      "last_rating": 2,
       "history": [
         {
           "date": "2025-12-29",
@@ -1561,6 +1561,14 @@
           "difficulty": 7.387113445000134,
           "interval": 12,
           "retrievability": 0.9004018191783473
+        },
+        {
+          "date": "2026-01-30",
+          "rating": 2,
+          "stability": 21.717603427518142,
+          "difficulty": 8.256444144277625,
+          "interval": 22,
+          "retrievability": 0.9031191366381538
         }
       ],
       "fsrs_version": 6
