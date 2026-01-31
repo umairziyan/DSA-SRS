@@ -4433,13 +4433,13 @@
       "name": "198. House Robber",
       "url": "https://leetcode.com/problems/house-robber/",
       "added_date": "2026-01-25",
-      "stability": 4.410673091748482,
-      "difficulty": 5.108058534895454,
+      "stability": 14.430076417451385,
+      "difficulty": 5.103950476360559,
       "state": "review",
-      "last_review_date": "2026-01-27",
-      "next_review": "2026-01-31",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-01-31",
+      "next_review": "2026-02-14",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 3,
       "history": [
         {
@@ -4457,6 +4457,14 @@
           "difficulty": 5.108058534895454,
           "interval": 4,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-01-31",
+          "rating": 3,
+          "stability": 14.430076417451385,
+          "difficulty": 5.103950476360559,
+          "interval": 14,
+          "retrievability": 0.908068020188883
         }
       ],
       "fsrs_version": 6
@@ -4466,13 +4474,13 @@
       "name": "213. House Robber II",
       "url": "https://leetcode.com/problems/house-robber-ii/",
       "added_date": "2026-01-25",
-      "stability": 4.410673091748482,
-      "difficulty": 5.108058534895454,
+      "stability": 14.430076417451385,
+      "difficulty": 5.103950476360559,
       "state": "review",
-      "last_review_date": "2026-01-27",
-      "next_review": "2026-01-31",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-01-31",
+      "next_review": "2026-02-14",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 3,
       "history": [
         {
@@ -4490,6 +4498,14 @@
           "difficulty": 5.108058534895454,
           "interval": 4,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-01-31",
+          "rating": 3,
+          "stability": 14.430076417451385,
+          "difficulty": 5.103950476360559,
+          "interval": 14,
+          "retrievability": 0.908068020188883
         }
       ],
       "fsrs_version": 6
@@ -4680,15 +4696,24 @@
       "name": "416. Partition Equal Subset Sum",
       "url": "https://leetcode.com/problems/partition-equal-subset-sum/description/",
       "added_date": "2026-01-30",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-01-31",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-01-31",
+      "next_review": "2026-02-01",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
+      "history": [
+        {
+          "date": "2026-01-31",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     }
   ],
