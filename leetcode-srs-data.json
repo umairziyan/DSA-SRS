@@ -1970,14 +1970,14 @@
       "name": "236. Lowest Common Ancestor of a Binary Tree",
       "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
       "added_date": "2025-12-30",
-      "stability": 9.20725853144082,
-      "difficulty": 9.008764754133411,
+      "stability": 21.73107010719199,
+      "difficulty": 8.668540126527255,
       "state": "review",
-      "last_review_date": "2026-01-22",
-      "next_review": "2026-01-31",
-      "reps": 3,
-      "review_count": 7,
-      "last_rating": 3,
+      "last_review_date": "2026-01-31",
+      "next_review": "2026-02-22",
+      "reps": 4,
+      "review_count": 8,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-03",
@@ -2034,6 +2034,14 @@
           "difficulty": 9.008764754133411,
           "interval": 9,
           "retrievability": 0.9021287205938986
+        },
+        {
+          "date": "2026-01-31",
+          "rating": 4,
+          "stability": 21.73107010719199,
+          "difficulty": 8.668540126527255,
+          "interval": 22,
+          "retrievability": 0.9019308299572221
         }
       ],
       "fsrs_version": 6
@@ -3105,14 +3113,14 @@
       "name": "1046. Last Stone Weight",
       "url": "https://leetcode.com/problems/last-stone-weight/description/",
       "added_date": "2026-01-10",
-      "stability": 18.134311672846923,
+      "stability": 78.0251896826086,
       "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-01-13",
-      "next_review": "2026-01-31",
-      "reps": 2,
-      "review_count": 2,
-      "last_rating": 4,
+      "last_review_date": "2026-01-31",
+      "next_review": "2026-04-19",
+      "reps": 3,
+      "review_count": 3,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-11",
@@ -3129,6 +3137,14 @@
           "difficulty": 1.0,
           "interval": 18,
           "retrievability": 0.9115814711321364
+        },
+        {
+          "date": "2026-01-31",
+          "rating": 3,
+          "stability": 78.0251896826086,
+          "difficulty": 1.0,
+          "interval": 78,
+          "retrievability": 0.9006339243860205
         }
       ],
       "fsrs_version": 6
