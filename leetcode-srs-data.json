@@ -1448,14 +1448,14 @@
       "name": "146. LRU Cache",
       "url": "https://leetcode.com/problems/lru-cache/",
       "added_date": "2025-12-27",
-      "stability": 1.9833990230375673,
-      "difficulty": 9.593936972294605,
+      "stability": 5.578817649669506,
+      "difficulty": 9.449249630972552,
       "state": "review",
-      "last_review_date": "2026-01-29",
-      "next_review": "2026-01-31",
-      "reps": 2,
-      "review_count": 7,
-      "last_rating": 3,
+      "last_review_date": "2026-02-01",
+      "next_review": "2026-02-07",
+      "reps": 3,
+      "review_count": 8,
+      "last_rating": 4,
       "history": [
         {
           "date": "2025-12-29",
@@ -1512,6 +1512,14 @@
           "difficulty": 9.593936972294605,
           "interval": 2,
           "retrievability": 0.9170851631308171
+        },
+        {
+          "date": "2026-02-01",
+          "rating": 4,
+          "stability": 5.578817649669506,
+          "difficulty": 9.449249630972552,
+          "interval": 6,
+          "retrievability": 0.8591379687452226
         }
       ],
       "fsrs_version": 6
@@ -4563,14 +4571,14 @@
       "name": "5. Longest Palindromic Substring",
       "url": "https://leetcode.com/problems/longest-palindromic-substring",
       "added_date": "2026-01-26",
-      "stability": 3.168008457377537,
-      "difficulty": 6.746231141532862,
+      "stability": 10.520382953965628,
+      "difficulty": 6.740484910391329,
       "state": "review",
-      "last_review_date": "2026-01-28",
-      "next_review": "2026-01-31",
-      "reps": 2,
-      "review_count": 2,
-      "last_rating": 2,
+      "last_review_date": "2026-02-01",
+      "next_review": "2026-02-12",
+      "reps": 3,
+      "review_count": 3,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-27",
@@ -4587,6 +4595,14 @@
           "difficulty": 6.746231141532862,
           "interval": 3,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-02-01",
+          "rating": 3,
+          "stability": 10.520382953965628,
+          "difficulty": 6.740484910391329,
+          "interval": 11,
+          "retrievability": 0.8783525833562931
         }
       ],
       "fsrs_version": 6
