@@ -3268,14 +3268,14 @@
       "name": "295. Find Median from Data Stream",
       "url": "https://leetcode.com/problems/find-median-from-data-stream/",
       "added_date": "2026-01-11",
-      "stability": 5.023593275895783,
-      "difficulty": 7.3935069519520855,
+      "stability": 18.93608595639014,
+      "difficulty": 6.513538437870512,
       "state": "review",
-      "last_review_date": "2026-01-27",
-      "next_review": "2026-02-01",
-      "reps": 1,
-      "review_count": 4,
-      "last_rating": 3,
+      "last_review_date": "2026-02-01",
+      "next_review": "2026-02-20",
+      "reps": 2,
+      "review_count": 5,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-12",
@@ -3308,6 +3308,14 @@
           "difficulty": 7.3935069519520855,
           "interval": 5,
           "retrievability": 0.8746751194328928
+        },
+        {
+          "date": "2026-02-01",
+          "rating": 4,
+          "stability": 18.93608595639014,
+          "difficulty": 6.513538437870512,
+          "interval": 19,
+          "retrievability": 0.9004018191783473
         }
       ],
       "fsrs_version": 6
@@ -4128,14 +4136,14 @@
       "name": "45. Jump Game II",
       "url": "https://leetcode.com/problems/jump-game-ii/",
       "added_date": "2026-01-18",
-      "stability": 8.875143085856246,
-      "difficulty": 6.740484910391329,
+      "stability": 17.495480852044302,
+      "difficulty": 7.827181990114589,
       "state": "review",
-      "last_review_date": "2026-01-23",
-      "next_review": "2026-02-01",
-      "reps": 3,
-      "review_count": 3,
-      "last_rating": 3,
+      "last_review_date": "2026-02-01",
+      "next_review": "2026-02-18",
+      "reps": 4,
+      "review_count": 4,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-01-19",
@@ -4160,6 +4168,14 @@
           "difficulty": 6.740484910391329,
           "interval": 9,
           "retrievability": 0.9045688639165586
+        },
+        {
+          "date": "2026-02-01",
+          "rating": 2,
+          "stability": 17.495480852044302,
+          "difficulty": 7.827181990114589,
+          "interval": 17,
+          "retrievability": 0.8987995784659477
         }
       ],
       "fsrs_version": 6
@@ -4760,13 +4776,13 @@
       "name": "416. Partition Equal Subset Sum",
       "url": "https://leetcode.com/problems/partition-equal-subset-sum/description/",
       "added_date": "2026-01-30",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 3.168008457377537,
+      "difficulty": 6.746231141532862,
       "state": "review",
-      "last_review_date": "2026-01-31",
-      "next_review": "2026-02-01",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-02-01",
+      "next_review": "2026-02-04",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 2,
       "history": [
         {
@@ -4776,6 +4792,14 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-02-01",
+          "rating": 2,
+          "stability": 3.168008457377537,
+          "difficulty": 6.746231141532862,
+          "interval": 3,
+          "retrievability": 0.920029131893056
         }
       ],
       "fsrs_version": 6
