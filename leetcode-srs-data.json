@@ -4300,14 +4300,14 @@
       "name": "763. Partition Labels",
       "url": "https://leetcode.com/problems/partition-labels/",
       "added_date": "2026-01-23",
-      "stability": 8.2956,
-      "difficulty": 1.0,
+      "stability": 26.588680868783776,
+      "difficulty": 4.016380600000001,
       "state": "review",
-      "last_review_date": "2026-01-24",
-      "next_review": "2026-02-01",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 4,
+      "last_review_date": "2026-02-01",
+      "next_review": "2026-02-28",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-01-24",
@@ -4316,6 +4316,14 @@
           "difficulty": 1.0,
           "interval": 8,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-02-01",
+          "rating": 2,
+          "stability": 26.588680868783776,
+          "difficulty": 4.016380600000001,
+          "interval": 27,
+          "retrievability": 0.9030622091783326
         }
       ],
       "fsrs_version": 6
