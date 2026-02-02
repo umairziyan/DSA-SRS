@@ -4900,6 +4900,22 @@
       "last_rating": null,
       "history": [],
       "fsrs_version": 6
+    },
+    {
+      "id": "4e428b12",
+      "name": "62. Unique Paths",
+      "url": "https://leetcode.com/problems/unique-paths/description/",
+      "added_date": "2026-02-02",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-02-03",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -4939,7 +4955,7 @@
     "2026-01-27": 2,
     "2026-01-28": 2,
     "2026-01-30": 2,
-    "2026-02-02": 1
+    "2026-02-02": 2
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
