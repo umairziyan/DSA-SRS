@@ -1096,14 +1096,14 @@
       "name": "981. Time Based Key-Value Store",
       "url": "https://leetcode.com/problems/time-based-key-value-store/",
       "added_date": "2025-12-25",
-      "stability": 23.208927199903556,
-      "difficulty": 6.734744425480938,
-      "state": "review",
-      "last_review_date": "2026-01-08",
-      "next_review": "2026-01-31",
-      "reps": 4,
-      "review_count": 4,
-      "last_rating": 3,
+      "stability": 2.062392432196695,
+      "difficulty": 8.917732696393491,
+      "state": "relearning",
+      "last_review_date": "2026-02-02",
+      "next_review": "2026-02-04",
+      "reps": 0,
+      "review_count": 5,
+      "last_rating": 1,
       "history": [
         {
           "date": "2025-12-26",
@@ -1136,6 +1136,14 @@
           "difficulty": 6.734744425480938,
           "interval": 23,
           "retrievability": 0.8987995784659477
+        },
+        {
+          "date": "2026-02-02",
+          "rating": 1,
+          "stability": 2.062392432196695,
+          "difficulty": 8.917732696393491,
+          "interval": 2,
+          "retrievability": 0.8934735026900411
         }
       ],
       "fsrs_version": 6
@@ -4710,13 +4718,13 @@
       "name": "322. Coin Change",
       "url": "https://leetcode.com/problems/coin-change/",
       "added_date": "2026-01-28",
-      "stability": 3.168008457377537,
-      "difficulty": 6.746231141532862,
+      "stability": 6.600279222944633,
+      "difficulty": 7.830996606120709,
       "state": "review",
-      "last_review_date": "2026-01-30",
-      "next_review": "2026-02-02",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-02-02",
+      "next_review": "2026-02-09",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 2,
       "history": [
         {
@@ -4734,6 +4742,14 @@
           "difficulty": 6.746231141532862,
           "interval": 3,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-02-02",
+          "rating": 2,
+          "stability": 6.600279222944633,
+          "difficulty": 7.830996606120709,
+          "interval": 7,
+          "retrievability": 0.9045688639165586
         }
       ],
       "fsrs_version": 6
