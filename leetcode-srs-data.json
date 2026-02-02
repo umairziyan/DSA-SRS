@@ -4669,14 +4669,14 @@
       "name": "91. Decode Ways",
       "url": "https://leetcode.com/problems/decode-ways/description/",
       "added_date": "2026-01-27",
-      "stability": 4.410673091748482,
-      "difficulty": 5.108058534895454,
+      "stability": 10.43634225182621,
+      "difficulty": 6.743501290991329,
       "state": "review",
-      "last_review_date": "2026-01-29",
-      "next_review": "2026-02-02",
-      "reps": 2,
-      "review_count": 2,
-      "last_rating": 3,
+      "last_review_date": "2026-02-02",
+      "next_review": "2026-02-12",
+      "reps": 3,
+      "review_count": 3,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-01-28",
@@ -4693,6 +4693,14 @@
           "difficulty": 5.108058534895454,
           "interval": 4,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-02-02",
+          "rating": 2,
+          "stability": 10.43634225182621,
+          "difficulty": 6.743501290991329,
+          "interval": 10,
+          "retrievability": 0.908068020188883
         }
       ],
       "fsrs_version": 6
@@ -4768,15 +4776,24 @@
       "name": "139. Word Break",
       "url": "https://leetcode.com/problems/word-break/submissions/",
       "added_date": "2026-01-30",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-01-31",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-02-02",
+      "next_review": "2026-02-03",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
+      "history": [
+        {
+          "date": "2026-02-02",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     },
     {
