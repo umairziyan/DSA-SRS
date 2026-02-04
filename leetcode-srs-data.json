@@ -3791,13 +3791,13 @@
       "name": "323. Number of Connected Components in an Undirected Graph",
       "url": "https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/",
       "added_date": "2026-01-15",
-      "stability": 14.430076417451385,
-      "difficulty": 5.103950476360559,
+      "stability": 43.03148238969244,
+      "difficulty": 5.099846525884199,
       "state": "review",
-      "last_review_date": "2026-01-21",
-      "next_review": "2026-02-04",
-      "reps": 3,
-      "review_count": 3,
+      "last_review_date": "2026-02-04",
+      "next_review": "2026-03-19",
+      "reps": 4,
+      "review_count": 4,
       "last_rating": 3,
       "history": [
         {
@@ -3823,6 +3823,14 @@
           "difficulty": 5.103950476360559,
           "interval": 14,
           "retrievability": 0.908068020188883
+        },
+        {
+          "date": "2026-02-04",
+          "rating": 3,
+          "stability": 43.03148238969244,
+          "difficulty": 5.099846525884199,
+          "interval": 43,
+          "retrievability": 0.9025591303487132
         }
       ],
       "fsrs_version": 6
@@ -3832,14 +3840,14 @@
       "name": "684. Redundant Connection",
       "url": "https://leetcode.com/problems/redundant-connection/",
       "added_date": "2026-01-15",
-      "stability": 14.430076417451385,
-      "difficulty": 5.103950476360559,
-      "state": "review",
-      "last_review_date": "2026-01-21",
-      "next_review": "2026-02-04",
-      "reps": 3,
-      "review_count": 3,
-      "last_rating": 3,
+      "stability": 1.6598454402564171,
+      "difficulty": 8.381701814716477,
+      "state": "relearning",
+      "last_review_date": "2026-02-04",
+      "next_review": "2026-02-06",
+      "reps": 0,
+      "review_count": 4,
+      "last_rating": 1,
       "history": [
         {
           "date": "2026-01-16",
@@ -3864,6 +3872,14 @@
           "difficulty": 5.103950476360559,
           "interval": 14,
           "retrievability": 0.908068020188883
+        },
+        {
+          "date": "2026-02-04",
+          "rating": 1,
+          "stability": 1.6598454402564171,
+          "difficulty": 8.381701814716477,
+          "interval": 2,
+          "retrievability": 0.9025591303487132
         }
       ],
       "fsrs_version": 6
@@ -4857,13 +4873,13 @@
       "name": "416. Partition Equal Subset Sum",
       "url": "https://leetcode.com/problems/partition-equal-subset-sum/description/",
       "added_date": "2026-01-30",
-      "stability": 3.168008457377537,
-      "difficulty": 6.746231141532862,
+      "stability": 6.600279222944633,
+      "difficulty": 7.830996606120709,
       "state": "review",
-      "last_review_date": "2026-02-01",
-      "next_review": "2026-02-04",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-02-04",
+      "next_review": "2026-02-11",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 2,
       "history": [
         {
@@ -4881,6 +4897,14 @@
           "difficulty": 6.746231141532862,
           "interval": 3,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-02-04",
+          "rating": 2,
+          "stability": 6.600279222944633,
+          "difficulty": 7.830996606120709,
+          "interval": 7,
+          "retrievability": 0.9045688639165586
         }
       ],
       "fsrs_version": 6
@@ -4922,15 +4946,24 @@
       "name": "1143. Longest Common Subsequence",
       "url": "https://leetcode.com/problems/longest-common-subsequence/",
       "added_date": "2026-02-02",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-02-03",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-02-04",
+      "next_review": "2026-02-06",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
+      "history": [
+        {
+          "date": "2026-02-04",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     }
   ],
