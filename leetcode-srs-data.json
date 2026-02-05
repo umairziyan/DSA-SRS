@@ -2115,14 +2115,14 @@
       "name": "572. Subtree of Another Tree",
       "url": "https://leetcode.com/problems/subtree-of-another-tree/",
       "added_date": "2026-01-01",
-      "stability": 24.355992660392033,
-      "difficulty": 4.754871489116483,
-      "state": "review",
-      "last_review_date": "2026-01-12",
-      "next_review": "2026-02-05",
-      "reps": 3,
-      "review_count": 3,
-      "last_rating": 3,
+      "stability": 2.125001657596367,
+      "difficulty": 8.266961925346461,
+      "state": "relearning",
+      "last_review_date": "2026-02-05",
+      "next_review": "2026-02-07",
+      "reps": 0,
+      "review_count": 4,
+      "last_rating": 1,
       "history": [
         {
           "date": "2026-01-03",
@@ -2147,6 +2147,14 @@
           "difficulty": 4.754871489116483,
           "interval": 24,
           "retrievability": 0.9045342701683687
+        },
+        {
+          "date": "2026-02-05",
+          "rating": 1,
+          "stability": 2.125001657596367,
+          "difficulty": 8.266961925346461,
+          "interval": 2,
+          "retrievability": 0.9012522961097474
         }
       ],
       "fsrs_version": 6
@@ -4616,13 +4624,13 @@
       "name": "746. Min Cost Climbing Stairs",
       "url": "https://leetcode.com/problems/min-cost-climbing-stairs/",
       "added_date": "2026-01-24",
-      "stability": 3.849888405494021,
-      "difficulty": 8.905673206754688,
+      "stability": 7.439944735837507,
+      "difficulty": 8.897767533547933,
       "state": "review",
-      "last_review_date": "2026-02-01",
-      "next_review": "2026-02-05",
-      "reps": 2,
-      "review_count": 5,
+      "last_review_date": "2026-02-05",
+      "next_review": "2026-02-12",
+      "reps": 3,
+      "review_count": 6,
       "last_rating": 3,
       "history": [
         {
@@ -4664,6 +4672,14 @@
           "difficulty": 8.905673206754688,
           "interval": 4,
           "retrievability": 0.8925619673623673
+        },
+        {
+          "date": "2026-02-05",
+          "rating": 3,
+          "stability": 7.439944735837507,
+          "difficulty": 8.897767533547933,
+          "interval": 7,
+          "retrievability": 0.8966846657317659
         }
       ],
       "fsrs_version": 6
