@@ -2368,14 +2368,14 @@
       "name": "230. Kth Smallest Element in a BST",
       "url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
       "added_date": "2026-01-02",
-      "stability": 2.121709482947926,
-      "difficulty": 7.842792610892882,
-      "state": "relearning",
-      "last_review_date": "2026-02-02",
-      "next_review": "2026-02-04",
-      "reps": 0,
-      "review_count": 4,
-      "last_rating": 1,
+      "stability": 4.711461069029293,
+      "difficulty": 8.558945209246362,
+      "state": "review",
+      "last_review_date": "2026-02-05",
+      "next_review": "2026-02-10",
+      "reps": 1,
+      "review_count": 5,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-01-05",
@@ -2408,6 +2408,14 @@
           "difficulty": 7.842792610892882,
           "interval": 2,
           "retrievability": 0.9006500456794446
+        },
+        {
+          "date": "2026-02-05",
+          "rating": 2,
+          "stability": 4.711461069029293,
+          "difficulty": 8.558945209246362,
+          "interval": 5,
+          "retrievability": 0.8665666574781666
         }
       ],
       "fsrs_version": 6
