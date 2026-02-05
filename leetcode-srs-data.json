@@ -1112,14 +1112,14 @@
       "name": "981. Time Based Key-Value Store",
       "url": "https://leetcode.com/problems/time-based-key-value-store/",
       "added_date": "2025-12-25",
-      "stability": 2.062392432196695,
-      "difficulty": 8.917732696393491,
-      "state": "relearning",
-      "last_review_date": "2026-02-02",
-      "next_review": "2026-02-04",
-      "reps": 0,
-      "review_count": 5,
-      "last_rating": 1,
+      "stability": 3.7712475329011594,
+      "difficulty": 9.272540530209652,
+      "state": "review",
+      "last_review_date": "2026-02-05",
+      "next_review": "2026-02-09",
+      "reps": 1,
+      "review_count": 6,
+      "last_rating": 2,
       "history": [
         {
           "date": "2025-12-26",
@@ -1160,6 +1160,14 @@
           "difficulty": 8.917732696393491,
           "interval": 2,
           "retrievability": 0.8934735026900411
+        },
+        {
+          "date": "2026-02-05",
+          "rating": 2,
+          "stability": 3.7712475329011594,
+          "difficulty": 9.272540530209652,
+          "interval": 4,
+          "retrievability": 0.8634794738307217
         }
       ],
       "fsrs_version": 6
@@ -1756,14 +1764,14 @@
       "name": "226. Invert Binary Tree",
       "url": "https://leetcode.com/problems/invert-binary-tree/",
       "added_date": "2025-12-29",
-      "stability": 27.645649815294234,
-      "difficulty": 3.4674160423297873,
-      "state": "review",
-      "last_review_date": "2026-01-08",
-      "next_review": "2026-02-05",
-      "reps": 3,
-      "review_count": 3,
-      "last_rating": 3,
+      "stability": 2.298796327335266,
+      "difficulty": 7.843784074684714,
+      "state": "relearning",
+      "last_review_date": "2026-02-05",
+      "next_review": "2026-02-07",
+      "reps": 0,
+      "review_count": 4,
+      "last_rating": 1,
       "history": [
         {
           "date": "2025-12-31",
@@ -1788,6 +1796,14 @@
           "difficulty": 3.4674160423297873,
           "interval": 28,
           "retrievability": 0.9015866624098813
+        },
+        {
+          "date": "2026-02-05",
+          "rating": 1,
+          "stability": 2.298796327335266,
+          "difficulty": 7.843784074684714,
+          "interval": 2,
+          "retrievability": 0.8989060949710256
         }
       ],
       "fsrs_version": 6
@@ -2214,14 +2230,14 @@
       "name": "1448. Count Good Nodes in Binary Tree",
       "url": "https://leetcode.com/problems/count-good-nodes-in-binary-tree/",
       "added_date": "2026-01-01",
-      "stability": 6.889218376507484,
-      "difficulty": 8.911797934261449,
+      "stability": 12.589013880263547,
+      "difficulty": 8.903886136327186,
       "state": "review",
-      "last_review_date": "2026-01-29",
-      "next_review": "2026-02-05",
-      "reps": 2,
-      "review_count": 6,
-      "last_rating": 2,
+      "last_review_date": "2026-02-05",
+      "next_review": "2026-02-18",
+      "reps": 3,
+      "review_count": 7,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-04",
@@ -2270,6 +2286,14 @@
           "difficulty": 8.911797934261449,
           "interval": 7,
           "retrievability": 0.904010728164711
+        },
+        {
+          "date": "2026-02-05",
+          "rating": 3,
+          "stability": 12.589013880263547,
+          "difficulty": 8.903886136327186,
+          "interval": 13,
+          "retrievability": 0.8986282653458174
         }
       ],
       "fsrs_version": 6
@@ -2507,14 +2531,14 @@
       "name": "297. Serialize and Deserialize Binary Tree",
       "url": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/",
       "added_date": "2026-01-02",
-      "stability": 17.495480852044302,
-      "difficulty": 7.827181990114589,
+      "stability": 35.59151878959798,
+      "difficulty": 7.820354808124475,
       "state": "review",
-      "last_review_date": "2026-01-19",
-      "next_review": "2026-02-05",
-      "reps": 4,
-      "review_count": 4,
-      "last_rating": 2,
+      "last_review_date": "2026-02-05",
+      "next_review": "2026-03-13",
+      "reps": 5,
+      "review_count": 5,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-06",
@@ -2547,6 +2571,14 @@
           "difficulty": 7.827181990114589,
           "interval": 17,
           "retrievability": 0.8987995784659477
+        },
+        {
+          "date": "2026-02-05",
+          "rating": 3,
+          "stability": 35.59151878959798,
+          "difficulty": 7.820354808124475,
+          "interval": 36,
+          "retrievability": 0.9024312191876556
         }
       ],
       "fsrs_version": 6
@@ -2948,14 +2980,14 @@
       "name": "79. Word Search",
       "url": "https://leetcode.com/problems/word-search/",
       "added_date": "2026-01-08",
-      "stability": 17.592913565389527,
-      "difficulty": 6.511534425312227,
+      "stability": 44.519859653388494,
+      "difficulty": 6.506022890886915,
       "state": "review",
-      "last_review_date": "2026-01-18",
-      "next_review": "2026-02-05",
-      "reps": 3,
-      "review_count": 3,
-      "last_rating": 2,
+      "last_review_date": "2026-02-05",
+      "next_review": "2026-03-22",
+      "reps": 4,
+      "review_count": 4,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-09",
@@ -2980,6 +3012,14 @@
           "difficulty": 6.511534425312227,
           "interval": 18,
           "retrievability": 0.9045342701683687
+        },
+        {
+          "date": "2026-02-05",
+          "rating": 3,
+          "stability": 44.519859653388494,
+          "difficulty": 6.506022890886915,
+          "interval": 45,
+          "retrievability": 0.8980280956852771
         }
       ],
       "fsrs_version": 6
@@ -3774,13 +3814,13 @@
       "name": "261. Graph Valid Tree",
       "url": "https://leetcode.com/problems/graph-valid-tree/",
       "added_date": "2026-01-15",
-      "stability": 14.430076417451385,
-      "difficulty": 5.103950476360559,
+      "stability": 44.840791845607136,
+      "difficulty": 5.099846525884199,
       "state": "review",
-      "last_review_date": "2026-01-21",
-      "next_review": "2026-02-04",
-      "reps": 3,
-      "review_count": 3,
+      "last_review_date": "2026-02-05",
+      "next_review": "2026-03-22",
+      "reps": 4,
+      "review_count": 4,
       "last_rating": 3,
       "history": [
         {
@@ -3806,6 +3846,14 @@
           "difficulty": 5.103950476360559,
           "interval": 14,
           "retrievability": 0.908068020188883
+        },
+        {
+          "date": "2026-02-05",
+          "rating": 3,
+          "stability": 44.840791845607136,
+          "difficulty": 5.099846525884199,
+          "interval": 45,
+          "retrievability": 0.8966420191147991
         }
       ],
       "fsrs_version": 6
@@ -4462,13 +4510,13 @@
       "name": "424. Longest Repeating Character Replacement",
       "url": "https://leetcode.com/problems/longest-repeating-character-replacement/",
       "added_date": "2026-01-23",
-      "stability": 6.600279222944633,
-      "difficulty": 7.830996606120709,
+      "stability": 12.461775278062433,
+      "difficulty": 8.551114471584771,
       "state": "review",
-      "last_review_date": "2026-01-28",
-      "next_review": "2026-02-04",
-      "reps": 3,
-      "review_count": 3,
+      "last_review_date": "2026-02-05",
+      "next_review": "2026-02-17",
+      "reps": 4,
+      "review_count": 4,
       "last_rating": 2,
       "history": [
         {
@@ -4494,6 +4542,14 @@
           "difficulty": 7.830996606120709,
           "interval": 7,
           "retrievability": 0.9045688639165586
+        },
+        {
+          "date": "2026-02-05",
+          "rating": 2,
+          "stability": 12.461775278062433,
+          "difficulty": 8.551114471584771,
+          "interval": 12,
+          "retrievability": 0.8823981956082635
         }
       ],
       "fsrs_version": 6
@@ -4503,13 +4559,13 @@
       "name": "70. Climbing Stairs",
       "url": "https://leetcode.com/problems/climbing-stairs/",
       "added_date": "2026-01-24",
-      "stability": 6.600279222944633,
-      "difficulty": 7.830996606120709,
+      "stability": 11.814021856034556,
+      "difficulty": 8.551114471584771,
       "state": "review",
-      "last_review_date": "2026-01-29",
-      "next_review": "2026-02-05",
-      "reps": 3,
-      "review_count": 3,
+      "last_review_date": "2026-02-05",
+      "next_review": "2026-02-17",
+      "reps": 4,
+      "review_count": 4,
       "last_rating": 2,
       "history": [
         {
@@ -4535,6 +4591,14 @@
           "difficulty": 7.830996606120709,
           "interval": 7,
           "retrievability": 0.9045688639165586
+        },
+        {
+          "date": "2026-02-05",
+          "rating": 2,
+          "stability": 11.814021856034556,
+          "difficulty": 8.551114471584771,
+          "interval": 12,
+          "retrievability": 0.894866279698631
         }
       ],
       "fsrs_version": 6
@@ -4946,13 +5010,13 @@
       "name": "743. Network Delay Time",
       "url": "https://leetcode.com/problems/network-delay-time/",
       "added_date": "2026-02-02",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 3.168008457377537,
+      "difficulty": 6.746231141532862,
       "state": "review",
-      "last_review_date": "2026-02-04",
-      "next_review": "2026-02-05",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-02-05",
+      "next_review": "2026-02-08",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 2,
       "history": [
         {
@@ -4962,6 +5026,14 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-02-05",
+          "rating": 2,
+          "stability": 3.168008457377537,
+          "difficulty": 6.746231141532862,
+          "interval": 3,
+          "retrievability": 0.920029131893056
         }
       ],
       "fsrs_version": 6
