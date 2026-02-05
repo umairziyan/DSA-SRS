@@ -3143,13 +3143,13 @@
       "name": "51. N-Queens",
       "url": "https://leetcode.com/problems/n-queens/",
       "added_date": "2026-01-09",
-      "stability": 15.26962181205327,
-      "difficulty": 7.824165609514589,
+      "stability": 31.599038782712604,
+      "difficulty": 7.817341443905074,
       "state": "review",
-      "last_review_date": "2026-01-21",
-      "next_review": "2026-02-05",
-      "reps": 4,
-      "review_count": 4,
+      "last_review_date": "2026-02-05",
+      "next_review": "2026-03-09",
+      "reps": 5,
+      "review_count": 5,
       "last_rating": 3,
       "history": [
         {
@@ -3183,6 +3183,14 @@
           "difficulty": 7.824165609514589,
           "interval": 15,
           "retrievability": 0.894866279698631
+        },
+        {
+          "date": "2026-02-05",
+          "rating": 3,
+          "stability": 31.599038782712604,
+          "difficulty": 7.817341443905074,
+          "interval": 32,
+          "retrievability": 0.9015135170013007
         }
       ],
       "fsrs_version": 6
