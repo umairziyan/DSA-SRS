@@ -748,7 +748,8 @@ def cmd_review(args):
             print(f"    {Colors.YELLOW}3{Colors.RESET} - Good (explained with some effort)")
             print(f"    {Colors.GREEN}4{Colors.RESET} - Easy (clear mental model)")
             print(f"    {Colors.DIM}s{Colors.RESET} - Skip for now")
-            print(f"    {Colors.DIM}q{Colors.RESET} - Quit review session")
+            print(f"    {Colors.DIM}q{Colors.RESET} - Quit and save progress")
+            print(f"    {Colors.DIM}c{Colors.RESET} - Cancel session (discard all progress)")
 
             choice = input(f"\n  Your choice: ").strip().lower()
 
@@ -756,6 +757,13 @@ def cmd_review(args):
                 print(f"\n{Colors.YELLOW}Review session ended.{Colors.RESET}")
                 save_data(data)
                 return
+            elif choice == 'c':
+                confirm = input(f"\n  {Colors.YELLOW}Cancel and discard all progress from this session? (y/N): {Colors.RESET}").strip().lower()
+                if confirm == 'y':
+                    print(f"\n{Colors.YELLOW}Review session cancelled. No changes were saved.{Colors.RESET}")
+                    return
+                print()
+                continue
             elif choice == 's':
                 print(f"{Colors.DIM}Skipped.{Colors.RESET}\n")
                 break
@@ -798,7 +806,7 @@ def cmd_review(args):
                 print()
                 break
             else:
-                print(f"  {Colors.RED}Invalid choice. Enter 1, 2, 3, 4, s, or q.{Colors.RESET}\n")
+                print(f"  {Colors.RED}Invalid choice. Enter 1, 2, 3, 4, s, q, or c.{Colors.RESET}\n")
 
     save_data(data)
     if reviews_done > 0:
