@@ -4410,13 +4410,13 @@
       "name": "846. Hand of Straights",
       "url": "https://leetcode.com/problems/hand-of-straights/",
       "added_date": "2026-01-18",
-      "stability": 10.02758104368822,
-      "difficulty": 7.830996606120709,
+      "stability": 17.023063272587958,
+      "difficulty": 8.551114471584771,
       "state": "review",
-      "last_review_date": "2026-01-27",
-      "next_review": "2026-02-06",
-      "reps": 3,
-      "review_count": 3,
+      "last_review_date": "2026-02-06",
+      "next_review": "2026-02-23",
+      "reps": 4,
+      "review_count": 4,
       "last_rating": 2,
       "history": [
         {
@@ -4442,6 +4442,14 @@
           "difficulty": 7.830996606120709,
           "interval": 10,
           "retrievability": 0.8953846865365694
+        },
+        {
+          "date": "2026-02-06",
+          "rating": 2,
+          "stability": 17.023063272587958,
+          "difficulty": 8.551114471584771,
+          "interval": 17,
+          "retrievability": 0.9002352615165494
         }
       ],
       "fsrs_version": 6
@@ -5190,15 +5198,24 @@
       "name": "518. Coin Change II",
       "url": "https://leetcode.com/problems/coin-change-ii/",
       "added_date": "2026-02-05",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-02-06",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-02-06",
+      "next_review": "2026-02-07",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
+      "history": [
+        {
+          "date": "2026-02-06",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     }
   ],
