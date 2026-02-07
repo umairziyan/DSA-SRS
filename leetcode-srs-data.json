@@ -2938,13 +2938,13 @@
       "name": "46. Permutations",
       "url": "https://leetcode.com/problems/permutations/",
       "added_date": "2026-01-06",
-      "stability": 15.634339485761819,
-      "difficulty": 7.817069451678764,
+      "stability": 32.94411949944903,
+      "difficulty": 7.810252382227086,
       "state": "review",
-      "last_review_date": "2026-01-22",
-      "next_review": "2026-02-07",
-      "reps": 3,
-      "review_count": 6,
+      "last_review_date": "2026-02-07",
+      "next_review": "2026-03-12",
+      "reps": 4,
+      "review_count": 7,
       "last_rating": 3,
       "history": [
         {
@@ -2994,6 +2994,14 @@
           "difficulty": 7.817069451678764,
           "interval": 16,
           "retrievability": 0.8996408383879292
+        },
+        {
+          "date": "2026-02-07",
+          "rating": 3,
+          "stability": 32.94411949944903,
+          "difficulty": 7.810252382227086,
+          "interval": 33,
+          "retrievability": 0.8980069410163025
         }
       ],
       "fsrs_version": 6
@@ -5295,15 +5303,24 @@
       "name": "329. Longest Increasing Path in a Matrix",
       "url": "https://leetcode.com/problems/longest-increasing-path-in-a-matrix/",
       "added_date": "2026-02-06",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-02-07",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-02-07",
+      "next_review": "2026-02-09",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
+      "history": [
+        {
+          "date": "2026-02-07",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     }
   ],
