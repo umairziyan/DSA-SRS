@@ -3387,14 +3387,14 @@
       "name": "621. Task Scheduler",
       "url": "https://leetcode.com/problems/task-scheduler/",
       "added_date": "2026-01-10",
-      "stability": 6.40887157200264,
-      "difficulty": 7.831941973890158,
+      "stability": 10.960565340749858,
+      "difficulty": 8.55174205076427,
       "state": "review",
-      "last_review_date": "2026-02-01",
-      "next_review": "2026-02-07",
-      "reps": 1,
-      "review_count": 5,
-      "last_rating": 4,
+      "last_review_date": "2026-02-07",
+      "next_review": "2026-02-18",
+      "reps": 2,
+      "review_count": 6,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-01-11",
@@ -3435,6 +3435,14 @@
           "difficulty": 7.831941973890158,
           "interval": 6,
           "retrievability": 0.8829739832327107
+        },
+        {
+          "date": "2026-02-07",
+          "rating": 2,
+          "stability": 10.960565340749858,
+          "difficulty": 8.55174205076427,
+          "interval": 11,
+          "retrievability": 0.9055048034485332
         }
       ],
       "fsrs_version": 6
@@ -5295,15 +5303,24 @@
       "name": "97. Interleaving String",
       "url": "https://leetcode.com/problems/interleaving-string/",
       "added_date": "2026-02-06",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-02-07",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-02-07",
+      "next_review": "2026-02-08",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
+      "history": [
+        {
+          "date": "2026-02-07",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     },
     {
