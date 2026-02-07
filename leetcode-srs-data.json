@@ -1496,14 +1496,14 @@
       "name": "146. LRU Cache",
       "url": "https://leetcode.com/problems/lru-cache/",
       "added_date": "2025-12-27",
-      "stability": 5.578817649669506,
-      "difficulty": 9.449249630972552,
+      "stability": 9.31229714742221,
+      "difficulty": 9.44080038134158,
       "state": "review",
-      "last_review_date": "2026-02-01",
-      "next_review": "2026-02-07",
-      "reps": 3,
-      "review_count": 8,
-      "last_rating": 4,
+      "last_review_date": "2026-02-07",
+      "next_review": "2026-02-16",
+      "reps": 4,
+      "review_count": 9,
+      "last_rating": 3,
       "history": [
         {
           "date": "2025-12-29",
@@ -1568,6 +1568,14 @@
           "difficulty": 9.449249630972552,
           "interval": 6,
           "retrievability": 0.8591379687452226
+        },
+        {
+          "date": "2026-02-07",
+          "rating": 3,
+          "stability": 9.31229714742221,
+          "difficulty": 9.44080038134158,
+          "interval": 9,
+          "retrievability": 0.8936136562548829
         }
       ],
       "fsrs_version": 6
