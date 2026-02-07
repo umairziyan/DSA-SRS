@@ -5347,6 +5347,22 @@
         }
       ],
       "fsrs_version": 6
+    },
+    {
+      "id": "c1f785a3",
+      "name": "115. Distinct Subsequences",
+      "url": "https://leetcode.com/problems/distinct-subsequences/",
+      "added_date": "2026-02-07",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-02-08",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -5388,7 +5404,8 @@
     "2026-01-30": 2,
     "2026-02-02": 3,
     "2026-02-05": 2,
-    "2026-02-06": 2
+    "2026-02-06": 2,
+    "2026-02-07": 1
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
