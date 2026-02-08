@@ -5454,6 +5454,22 @@
       "last_rating": null,
       "history": [],
       "fsrs_version": 6
+    },
+    {
+      "id": "33728194",
+      "name": "332. Reconstruct Itinerary",
+      "url": "https://leetcode.com/problems/reconstruct-itinerary/",
+      "added_date": "2026-02-08",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-02-09",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -5497,7 +5513,7 @@
     "2026-02-05": 2,
     "2026-02-06": 2,
     "2026-02-07": 3,
-    "2026-02-08": 1
+    "2026-02-08": 2
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
