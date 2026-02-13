@@ -3213,14 +3213,14 @@
       "name": "131. Palindrome Partitioning",
       "url": "https://leetcode.com/problems/palindrome-partitioning/",
       "added_date": "2026-01-08",
-      "stability": 19.810610719553736,
-      "difficulty": 7.8291844041202046,
+      "stability": 40.56347368197427,
+      "difficulty": 7.822355219716084,
       "state": "review",
-      "last_review_date": "2026-01-24",
-      "next_review": "2026-02-13",
-      "reps": 4,
-      "review_count": 4,
-      "last_rating": 2,
+      "last_review_date": "2026-02-13",
+      "next_review": "2026-03-26",
+      "reps": 5,
+      "review_count": 5,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-09",
@@ -3253,6 +3253,14 @@
           "difficulty": 7.8291844041202046,
           "interval": 20,
           "retrievability": 0.9035961850047668
+        },
+        {
+          "date": "2026-02-13",
+          "rating": 3,
+          "stability": 40.56347368197427,
+          "difficulty": 7.822355219716084,
+          "interval": 41,
+          "retrievability": 0.8991837325141495
         }
       ],
       "fsrs_version": 6
