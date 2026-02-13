@@ -5873,6 +5873,22 @@
       "last_rating": null,
       "history": [],
       "fsrs_version": 6
+    },
+    {
+      "id": "01f33b37",
+      "name": "787. Cheapest Flights Within K Stops",
+      "url": "https://leetcode.com/problems/cheapest-flights-within-k-stops/",
+      "added_date": "2026-02-13",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-02-14",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -5917,7 +5933,7 @@
     "2026-02-06": 2,
     "2026-02-07": 3,
     "2026-02-08": 3,
-    "2026-02-13": 2
+    "2026-02-13": 3
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
