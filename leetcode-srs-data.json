@@ -4267,14 +4267,14 @@
       "name": "56. Merge Intervals",
       "url": "https://leetcode.com/problems/merge-intervals/",
       "added_date": "2026-01-16",
-      "stability": 2.2627573799697216,
-      "difficulty": 9.506246418052276,
+      "stability": 4.928144391796537,
+      "difficulty": 9.332256979882265,
       "state": "review",
-      "last_review_date": "2026-02-11",
-      "next_review": "2026-02-13",
-      "reps": 1,
-      "review_count": 6,
-      "last_rating": 3,
+      "last_review_date": "2026-02-13",
+      "next_review": "2026-02-18",
+      "reps": 2,
+      "review_count": 7,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-17",
@@ -4323,6 +4323,14 @@
           "difficulty": 9.506246418052276,
           "interval": 2,
           "retrievability": 0.9293111453949376
+        },
+        {
+          "date": "2026-02-13",
+          "rating": 4,
+          "stability": 4.928144391796537,
+          "difficulty": 9.332256979882265,
+          "interval": 5,
+          "retrievability": 0.9100958580287661
         }
       ],
       "fsrs_version": 6
@@ -5305,14 +5313,14 @@
       "name": "416. Partition Equal Subset Sum",
       "url": "https://leetcode.com/problems/partition-equal-subset-sum/description/",
       "added_date": "2026-01-30",
-      "stability": 1.095173117120918,
-      "difficulty": 9.278063333654956,
-      "state": "relearning",
-      "last_review_date": "2026-02-11",
-      "next_review": "2026-02-12",
-      "reps": 0,
-      "review_count": 4,
-      "last_rating": 1,
+      "stability": 2.7715933297434234,
+      "difficulty": 9.2697852703213,
+      "state": "review",
+      "last_review_date": "2026-02-13",
+      "next_review": "2026-02-16",
+      "reps": 1,
+      "review_count": 5,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-31",
@@ -5345,6 +5353,14 @@
           "difficulty": 9.278063333654956,
           "interval": 1,
           "retrievability": 0.894866279698631
+        },
+        {
+          "date": "2026-02-13",
+          "rating": 3,
+          "stability": 2.7715933297434234,
+          "difficulty": 9.2697852703213,
+          "interval": 3,
+          "retrievability": 0.8367199548730112
         }
       ],
       "fsrs_version": 6
