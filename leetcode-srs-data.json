@@ -261,16 +261,16 @@
       "name": "4. Median of Two Sorted Arrays",
       "url": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
       "added_date": "2025-12-14",
-      "next_review": "2026-02-14",
-      "review_count": 8,
+      "next_review": "2026-03-11",
+      "review_count": 9,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
-      "difficulty": 9.516941206097814,
-      "stability": 19.271956254814544,
+      "difficulty": 9.670323062067933,
+      "stability": 24.857732486533536,
       "state": "review",
       "last_rating": 2,
-      "last_review_date": "2026-01-26",
-      "reps": 5,
+      "last_review_date": "2026-02-14",
+      "reps": 6,
       "history": [
         {
           "date": "2025-12-16",
@@ -335,6 +335,14 @@
           "difficulty": 9.516941206097814,
           "interval": 19,
           "retrievability": 0.9016102112155052
+        },
+        {
+          "date": "2026-02-14",
+          "rating": 2,
+          "stability": 24.857732486533536,
+          "difficulty": 9.670323062067933,
+          "interval": 25,
+          "retrievability": 0.901208965084355
         }
       ]
     },
@@ -5911,15 +5919,24 @@
       "name": "269. Alien Dictionary",
       "url": "https://leetcode.com/problems/alien-dictionary/",
       "added_date": "2026-02-13",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-02-14",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-02-14",
+      "next_review": "2026-02-15",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
+      "history": [
+        {
+          "date": "2026-02-14",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     },
     {
