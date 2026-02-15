@@ -5731,13 +5731,13 @@
       "name": "115. Distinct Subsequences",
       "url": "https://leetcode.com/problems/distinct-subsequences/",
       "added_date": "2026-02-07",
-      "stability": 4.74204076714111,
-      "difficulty": 6.746231141532862,
+      "stability": 10.02758104368822,
+      "difficulty": 7.830996606120709,
       "state": "review",
-      "last_review_date": "2026-02-10",
-      "next_review": "2026-02-15",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-02-15",
+      "next_review": "2026-02-25",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 2,
       "history": [
         {
@@ -5755,9 +5755,18 @@
           "difficulty": 6.746231141532862,
           "interval": 5,
           "retrievability": 0.8566117863666073
+        },
+        {
+          "date": "2026-02-15",
+          "rating": 2,
+          "stability": 10.02758104368822,
+          "difficulty": 7.830996606120709,
+          "interval": 10,
+          "retrievability": 0.8953846865365694
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "how many ways can I form the first 0 characters of t (the empty string) using the first i characters of s? PICK NOTHING which is 1 option."
     },
     {
       "id": "84ba5999",
@@ -5953,16 +5962,26 @@
       "name": "778. Swim in Rising Water",
       "url": "https://leetcode.com/problems/swim-in-rising-water/",
       "added_date": "2026-02-13",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-02-14",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
-      "fsrs_version": 6
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-02-15",
+      "next_review": "2026-02-16",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
+      "history": [
+        {
+          "date": "2026-02-15",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
+        }
+      ],
+      "fsrs_version": 6,
+      "note": "remember to have maximum height as we're trying to minimise."
     },
     {
       "id": "7fa550bb",
