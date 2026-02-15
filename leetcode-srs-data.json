@@ -6059,6 +6059,22 @@
         }
       ],
       "fsrs_version": 6
+    },
+    {
+      "id": "0c3e206c",
+      "name": "242. Valid Anagram",
+      "url": "https://leetcode.com/problems/valid-anagram/",
+      "added_date": "2026-02-15",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-02-16",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -6103,7 +6119,8 @@
     "2026-02-06": 2,
     "2026-02-07": 3,
     "2026-02-08": 3,
-    "2026-02-13": 3
+    "2026-02-13": 3,
+    "2026-02-15": 1
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
