@@ -550,6 +550,56 @@ def format_last_review(date_str):
         return f"{Colors.DIM}{delta}d ago{Colors.RESET}"
 
 
+def prompt_for_note(question):
+    """Prompt user to add or edit a question note after a rating."""
+    existing_note = question.get("note", "").strip()
+
+    if existing_note:
+        while True:
+            note_input = input(
+                f"  Note {Colors.DIM}[Enter keep | v view | +text append | text replace | /clear remove]{Colors.RESET}\n  > "
+            ).strip()
+
+            if not note_input:
+                return "kept"
+            if note_input in ["v", "/view"]:
+                print(f"  {Colors.DIM}Current note:{Colors.RESET} {existing_note}")
+                continue
+            if note_input == "/clear":
+                question.pop("note", None)
+                return "cleared"
+            if note_input.startswith("+"):
+                addition = note_input[1:].strip()
+                if not addition:
+                    return "kept"
+                question["note"] = f"{existing_note}\n{addition}"
+                return "appended"
+
+            question["note"] = note_input
+            return "updated"
+
+    note_input = input(
+        f"  Add note {Colors.DIM}(optional, Enter to skip){Colors.RESET}: "
+    ).strip()
+    if not note_input:
+        return "skipped"
+
+    question["note"] = note_input
+    return "added"
+
+
+def print_note_result(note_action):
+    """Print note update status."""
+    if note_action == "added":
+        print(f"  {Colors.CYAN}Note saved.{Colors.RESET}")
+    elif note_action == "updated":
+        print(f"  {Colors.CYAN}Note updated.{Colors.RESET}")
+    elif note_action == "appended":
+        print(f"  {Colors.CYAN}Note appended.{Colors.RESET}")
+    elif note_action == "cleared":
+        print(f"  {Colors.CYAN}Note cleared.{Colors.RESET}")
+
+
 def cmd_add(args):
     """Add a new system design question to track."""
     if not args:
@@ -793,6 +843,8 @@ def cmd_review(args):
                     "interval": new_interval,
                     "retrievability": retrievability
                 })
+                note_action = prompt_for_note(q)
+                print_note_result(note_action)
 
                 # Increment daily review count
                 increment_today_reviews(data)
@@ -1142,6 +1194,8 @@ def cmd_random(args):
                         "interval": new_interval,
                         "retrievability": retrievability
                     })
+                    note_action = prompt_for_note(question)
+                    print_note_result(note_action)
 
                     # Increment daily review count
                     increment_today_reviews(data)

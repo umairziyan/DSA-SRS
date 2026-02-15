@@ -629,6 +629,46 @@ def extract_problem_number(name):
     return int(match.group(1)) if match else None
 
 
+def prompt_for_note(problem):
+    """Prompt user to add or edit a problem note after a rating."""
+    existing_note = problem.get("note", "").strip()
+
+    if existing_note:
+        print(f"  {Colors.DIM}Current note:{Colors.RESET} {existing_note}")
+        note_input = input(
+            f"  Edit note {Colors.DIM}(Enter keep | /clear remove){Colors.RESET}: "
+        ).strip()
+        if not note_input:
+            return "kept"
+        if note_input == "/clear":
+            problem.pop("note", None)
+            return "cleared"
+
+        problem["note"] = note_input
+        return "updated"
+
+    note_input = input(
+        f"  Add note {Colors.DIM}(optional, Enter to skip){Colors.RESET}: "
+    ).strip()
+    if not note_input:
+        return "skipped"
+
+    problem["note"] = note_input
+    return "added"
+
+
+def print_note_result(note_action):
+    """Print note update status."""
+    if note_action == "added":
+        print(f"  {Colors.CYAN}Note saved.{Colors.RESET}")
+    elif note_action == "updated":
+        print(f"  {Colors.CYAN}Note updated.{Colors.RESET}")
+    elif note_action == "appended":
+        print(f"  {Colors.CYAN}Note appended.{Colors.RESET}")
+    elif note_action == "cleared":
+        print(f"  {Colors.CYAN}Note cleared.{Colors.RESET}")
+
+
 def cmd_add(args):
     """Add a new problem to track."""
     if not args:
@@ -852,6 +892,7 @@ def cmd_review(args):
             print(f"    {Colors.RED}2{Colors.RESET} - Hard (struggled significantly)")
             print(f"    {Colors.YELLOW}3{Colors.RESET} - Good (some effort)")
             print(f"    {Colors.GREEN}4{Colors.RESET} - Easy (knew it quickly)")
+            print(f"    {Colors.DIM}v{Colors.RESET} - View note")
             print(f"    {Colors.DIM}s{Colors.RESET} - Skip for now")
             print(f"    {Colors.DIM}q{Colors.RESET} - Quit and save progress")
             print(f"    {Colors.DIM}c{Colors.RESET} - Cancel session (discard all progress)")
@@ -872,6 +913,13 @@ def cmd_review(args):
             elif choice == 's':
                 print(f"{Colors.DIM}Skipped.{Colors.RESET}\n")
                 break
+            elif choice == 'v':
+                note = p.get("note", "").strip()
+                if note:
+                    print(f"\n  {Colors.DIM}Note:{Colors.RESET} {note}\n")
+                else:
+                    print(f"\n  {Colors.DIM}No note yet for this problem.{Colors.RESET}\n")
+                continue
             elif choice in ['1', '2', '3', '4']:
                 rating = int(choice)
 
@@ -910,6 +958,8 @@ def cmd_review(args):
                     "interval": new_interval,
                     "retrievability": retrievability
                 })
+                note_action = prompt_for_note(p)
+                print_note_result(note_action)
 
                 if rating == RATING_AGAIN:
                     print(f"\n  {Colors.MAGENTA}Again!{Colors.RESET} Stability: {Colors.CYAN}{new_s:.1f}d{Colors.RESET} | Next: {next_date}")
@@ -918,7 +968,7 @@ def cmd_review(args):
                 print()
                 break
             else:
-                print(f"  {Colors.RED}Invalid choice. Enter 1, 2, 3, 4, s, q, or c.{Colors.RESET}\n")
+                print(f"  {Colors.RED}Invalid choice. Enter 1, 2, 3, 4, v, s, q, or c.{Colors.RESET}\n")
 
     save_data(data)
     print(f"{Colors.GREEN}Review session complete!{Colors.RESET}")
@@ -1202,6 +1252,7 @@ def cmd_random(args):
                 print(f"    {Colors.RED}2{Colors.RESET} - Hard (struggled significantly)")
                 print(f"    {Colors.YELLOW}3{Colors.RESET} - Good (some effort)")
                 print(f"    {Colors.GREEN}4{Colors.RESET} - Easy (knew it quickly)")
+                print(f"    {Colors.DIM}v{Colors.RESET} - View note")
                 print(f"    {Colors.DIM}s{Colors.RESET} - Skip this review")
 
                 choice = input(f"\n  Your choice: ").strip().lower()
@@ -1209,6 +1260,13 @@ def cmd_random(args):
                 if choice == 's':
                     print(f"{Colors.DIM}Skipped.{Colors.RESET}\n")
                     break
+                elif choice == 'v':
+                    note = problem.get("note", "").strip()
+                    if note:
+                        print(f"\n  {Colors.DIM}Note:{Colors.RESET} {note}\n")
+                    else:
+                        print(f"\n  {Colors.DIM}No note yet for this problem.{Colors.RESET}\n")
+                    continue
                 elif choice in ['1', '2', '3', '4']:
                     rating = int(choice)
 
@@ -1247,6 +1305,8 @@ def cmd_random(args):
                         "interval": new_interval,
                         "retrievability": retrievability
                     })
+                    note_action = prompt_for_note(problem)
+                    print_note_result(note_action)
 
                     # Save data
                     save_data(data)
@@ -1258,7 +1318,7 @@ def cmd_random(args):
                     print()
                     break
                 else:
-                    print(f"  {Colors.RED}Invalid choice. Enter 1, 2, 3, 4, or s.{Colors.RESET}\n")
+                    print(f"  {Colors.RED}Invalid choice. Enter 1, 2, 3, 4, v, or s.{Colors.RESET}\n")
     else:
         print(f"\n{Colors.BOLD}=== {count} Random Problems Selected ==={Colors.RESET}\n")
         for i, (problem, r) in enumerate(zip(selected_problems, selected_retrievabilities), 1):
