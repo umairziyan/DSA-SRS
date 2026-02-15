@@ -1771,14 +1771,14 @@
       "name": "215. Kth Largest Element in an Array",
       "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
       "added_date": "2025-12-28",
-      "stability": 7.784231476013147,
-      "difficulty": 9.760429002819931,
+      "stability": 10.05995363671407,
+      "difficulty": 9.8319616080634,
       "state": "review",
-      "last_review_date": "2026-02-07",
-      "next_review": "2026-02-15",
-      "reps": 4,
-      "review_count": 9,
-      "last_rating": 3,
+      "last_review_date": "2026-02-15",
+      "next_review": "2026-02-25",
+      "reps": 5,
+      "review_count": 10,
+      "last_rating": 2,
       "history": [
         {
           "date": "2025-12-29",
@@ -1851,6 +1851,14 @@
           "difficulty": 9.760429002819931,
           "interval": 8,
           "retrievability": 0.9041911692145775
+        },
+        {
+          "date": "2026-02-15",
+          "rating": 2,
+          "stability": 10.05995363671407,
+          "difficulty": 9.8319616080634,
+          "interval": 10,
+          "retrievability": 0.897639374107803
         }
       ],
       "fsrs_version": 6
@@ -1860,14 +1868,14 @@
       "name": "226. Invert Binary Tree",
       "url": "https://leetcode.com/problems/invert-binary-tree/",
       "added_date": "2025-12-29",
-      "stability": 7.9245640903384515,
-      "difficulty": 7.114277192106465,
+      "stability": 15.051422039418691,
+      "difficulty": 8.075322725437424,
       "state": "review",
-      "last_review_date": "2026-02-07",
-      "next_review": "2026-02-15",
-      "reps": 1,
-      "review_count": 5,
-      "last_rating": 4,
+      "last_review_date": "2026-02-15",
+      "next_review": "2026-03-02",
+      "reps": 2,
+      "review_count": 6,
+      "last_rating": 2,
       "history": [
         {
           "date": "2025-12-31",
@@ -1908,6 +1916,14 @@
           "difficulty": 7.114277192106465,
           "interval": 8,
           "retrievability": 0.9113234148285895
+        },
+        {
+          "date": "2026-02-15",
+          "rating": 2,
+          "stability": 15.051422039418691,
+          "difficulty": 8.075322725437424,
+          "interval": 15,
+          "retrievability": 0.8991872064760726
         }
       ],
       "fsrs_version": 6
@@ -5320,13 +5336,13 @@
       "name": "139. Word Break",
       "url": "https://leetcode.com/problems/word-break/submissions/",
       "added_date": "2026-01-30",
-      "stability": 2.550655032642796,
-      "difficulty": 8.375669053516475,
+      "stability": 6.110570663883277,
+      "difficulty": 8.368293384462959,
       "state": "review",
-      "last_review_date": "2026-02-12",
-      "next_review": "2026-02-15",
-      "reps": 1,
-      "review_count": 4,
+      "last_review_date": "2026-02-15",
+      "next_review": "2026-02-21",
+      "reps": 2,
+      "review_count": 5,
       "last_rating": 3,
       "history": [
         {
@@ -5360,6 +5376,14 @@
           "difficulty": 8.375669053516475,
           "interval": 3,
           "retrievability": 0.9115826498881844
+        },
+        {
+          "date": "2026-02-15",
+          "rating": 3,
+          "stability": 6.110570663883277,
+          "difficulty": 8.368293384462959,
+          "interval": 6,
+          "retrievability": 0.8853054760449959
         }
       ],
       "fsrs_version": 6
@@ -5722,13 +5746,13 @@
       "name": "312. Burst Balloons",
       "url": "https://leetcode.com/problems/burst-balloons/",
       "added_date": "2026-02-07",
-      "stability": 4.74204076714111,
-      "difficulty": 6.746231141532862,
+      "stability": 10.02758104368822,
+      "difficulty": 7.830996606120709,
       "state": "review",
-      "last_review_date": "2026-02-10",
-      "next_review": "2026-02-15",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-02-15",
+      "next_review": "2026-02-25",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 2,
       "history": [
         {
@@ -5746,6 +5770,14 @@
           "difficulty": 6.746231141532862,
           "interval": 5,
           "retrievability": 0.8566117863666073
+        },
+        {
+          "date": "2026-02-15",
+          "rating": 2,
+          "stability": 10.02758104368822,
+          "difficulty": 7.830996606120709,
+          "interval": 10,
+          "retrievability": 0.8953846865365694
         }
       ],
       "fsrs_version": 6
@@ -5944,15 +5976,24 @@
       "name": "787. Cheapest Flights Within K Stops",
       "url": "https://leetcode.com/problems/cheapest-flights-within-k-stops/",
       "added_date": "2026-02-13",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-02-14",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-02-15",
+      "next_review": "2026-02-16",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
+      "history": [
+        {
+          "date": "2026-02-15",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     }
   ],
