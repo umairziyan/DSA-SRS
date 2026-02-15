@@ -5215,13 +5215,13 @@
       "name": "91. Decode Ways",
       "url": "https://leetcode.com/problems/decode-ways/description/",
       "added_date": "2026-01-27",
-      "stability": 2.4831413642734246,
-      "difficulty": 8.912690407521529,
+      "stability": 4.458656285525617,
+      "difficulty": 8.904777717114007,
       "state": "review",
-      "last_review_date": "2026-02-13",
-      "next_review": "2026-02-15",
-      "reps": 1,
-      "review_count": 5,
+      "last_review_date": "2026-02-15",
+      "next_review": "2026-02-19",
+      "reps": 2,
+      "review_count": 6,
       "last_rating": 3,
       "history": [
         {
@@ -5263,9 +5263,18 @@
           "difficulty": 8.912690407521529,
           "interval": 2,
           "retrievability": 0.9249180760641107
+        },
+        {
+          "date": "2026-02-15",
+          "rating": 3,
+          "stability": 4.458656285525617,
+          "difficulty": 8.904777717114007,
+          "interval": 4,
+          "retrievability": 0.9171115404412624
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "remember to inialise with dp = {len(s):1}"
     },
     {
       "id": "4179303a",
@@ -5997,14 +6006,14 @@
       "name": "269. Alien Dictionary",
       "url": "https://leetcode.com/problems/alien-dictionary/",
       "added_date": "2026-02-13",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
-      "state": "review",
-      "last_review_date": "2026-02-14",
-      "next_review": "2026-02-15",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 2,
+      "stability": 0.3733219912220141,
+      "difficulty": 8.384403748170268,
+      "state": "relearning",
+      "last_review_date": "2026-02-15",
+      "next_review": "2026-02-16",
+      "reps": 0,
+      "review_count": 2,
+      "last_rating": 1,
       "history": [
         {
           "date": "2026-02-14",
@@ -6013,9 +6022,18 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-02-15",
+          "rating": 1,
+          "stability": 0.3733219912220141,
+          "difficulty": 8.384403748170268,
+          "interval": 1,
+          "retrievability": 0.920029131893056
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "Remember about how to do adj properly."
     },
     {
       "id": "01f33b37",
