@@ -865,14 +865,14 @@
       "name": "300. Longest Increasing Subsequence",
       "url": "https://leetcode.com/problems/longest-increasing-subsequence/",
       "added_date": "2025-12-21",
-      "stability": 6.110885183846609,
-      "difficulty": 8.260685435749155,
+      "stability": 10.057843018847429,
+      "difficulty": 8.836361940191594,
       "state": "review",
-      "last_review_date": "2026-02-10",
-      "next_review": "2026-02-16",
-      "reps": 1,
-      "review_count": 5,
-      "last_rating": 3,
+      "last_review_date": "2026-02-16",
+      "next_review": "2026-02-26",
+      "reps": 2,
+      "review_count": 6,
+      "last_rating": 2,
       "history": [
         {
           "date": "2025-12-24",
@@ -913,9 +913,18 @@
           "difficulty": 8.260685435749155,
           "interval": 6,
           "retrievability": 0.87920845733637
+        },
+        {
+          "date": "2026-02-16",
+          "rating": 2,
+          "stability": 10.057843018847429,
+          "difficulty": 8.836361940191594,
+          "interval": 10,
+          "retrievability": 0.9015554650636891
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "the length of the longest increasing subsequence that ends exactly at index"
     },
     {
       "id": "65c00b53",
@@ -4668,14 +4677,14 @@
       "name": "134. Gas Station",
       "url": "https://leetcode.com/problems/gas-station/",
       "added_date": "2026-01-18",
-      "stability": 23.17601358045745,
-      "difficulty": 3.4643996617297885,
-      "state": "review",
-      "last_review_date": "2026-01-24",
-      "next_review": "2026-02-16",
-      "reps": 3,
-      "review_count": 3,
-      "last_rating": 4,
+      "stability": 2.121709482947926,
+      "difficulty": 7.842792610892882,
+      "state": "relearning",
+      "last_review_date": "2026-02-16",
+      "next_review": "2026-02-18",
+      "reps": 0,
+      "review_count": 4,
+      "last_rating": 1,
       "history": [
         {
           "date": "2026-01-19",
@@ -4700,9 +4709,18 @@
           "difficulty": 3.4643996617297885,
           "interval": 23,
           "retrievability": 0.908068020188883
+        },
+        {
+          "date": "2026-02-16",
+          "rating": 1,
+          "stability": 2.121709482947926,
+          "difficulty": 7.842792610892882,
+          "interval": 2,
+          "retrievability": 0.9006500456794446
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "gas - cost"
     },
     {
       "id": "b3e500ab",
@@ -5915,13 +5933,13 @@
       "name": "332. Reconstruct Itinerary",
       "url": "https://leetcode.com/problems/reconstruct-itinerary/",
       "added_date": "2026-02-08",
-      "stability": 4.410673091748482,
-      "difficulty": 5.108058534895454,
+      "stability": 14.430076417451385,
+      "difficulty": 5.103950476360559,
       "state": "review",
-      "last_review_date": "2026-02-12",
-      "next_review": "2026-02-16",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-02-16",
+      "next_review": "2026-03-02",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 3,
       "history": [
         {
@@ -5939,9 +5957,18 @@
           "difficulty": 5.108058534895454,
           "interval": 4,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-02-16",
+          "rating": 3,
+          "stability": 14.430076417451385,
+          "difficulty": 5.103950476360559,
+          "interval": 14,
+          "retrievability": 0.908068020188883
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "Hierholzer"
     },
     {
       "id": "ddeb9cfb",
@@ -5989,14 +6016,14 @@
       "name": "778. Swim in Rising Water",
       "url": "https://leetcode.com/problems/swim-in-rising-water/",
       "added_date": "2026-02-13",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 4.410673091748482,
+      "difficulty": 5.108058534895454,
       "state": "review",
-      "last_review_date": "2026-02-15",
-      "next_review": "2026-02-16",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 2,
+      "last_review_date": "2026-02-16",
+      "next_review": "2026-02-20",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-02-15",
@@ -6005,6 +6032,14 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-02-16",
+          "rating": 3,
+          "stability": 4.410673091748482,
+          "difficulty": 5.108058534895454,
+          "interval": 4,
+          "retrievability": 0.920029131893056
         }
       ],
       "fsrs_version": 6,
