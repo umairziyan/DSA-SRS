@@ -1560,14 +1560,14 @@
       "name": "146. LRU Cache",
       "url": "https://leetcode.com/problems/lru-cache/",
       "added_date": "2025-12-27",
-      "stability": 9.31229714742221,
-      "difficulty": 9.44080038134158,
+      "stability": 19.112301492427992,
+      "difficulty": 9.244941927488165,
       "state": "review",
-      "last_review_date": "2026-02-07",
-      "next_review": "2026-02-16",
-      "reps": 4,
-      "review_count": 9,
-      "last_rating": 3,
+      "last_review_date": "2026-02-16",
+      "next_review": "2026-03-07",
+      "reps": 5,
+      "review_count": 10,
+      "last_rating": 4,
       "history": [
         {
           "date": "2025-12-29",
@@ -1640,9 +1640,18 @@
           "difficulty": 9.44080038134158,
           "interval": 9,
           "retrievability": 0.8936136562548829
+        },
+        {
+          "date": "2026-02-16",
+          "rating": 4,
+          "stability": 19.112301492427992,
+          "difficulty": 9.244941927488165,
+          "interval": 19,
+          "retrievability": 0.9028811033226571
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "always check in"
     },
     {
       "id": "5c783a10",
@@ -6065,15 +6074,24 @@
       "name": "242. Valid Anagram",
       "url": "https://leetcode.com/problems/valid-anagram/",
       "added_date": "2026-02-15",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-02-16",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 8.2956,
+      "difficulty": 1.0,
+      "state": "review",
+      "last_review_date": "2026-02-16",
+      "next_review": "2026-02-24",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 4,
+      "history": [
+        {
+          "date": "2026-02-16",
+          "rating": 4,
+          "stability": 8.2956,
+          "difficulty": 1.0,
+          "interval": 8,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     }
   ],
