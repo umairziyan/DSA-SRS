@@ -3321,14 +3321,14 @@
       "name": "17. Letter Combinations of a Phone Number",
       "url": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
       "added_date": "2026-01-08",
-      "stability": 2.037734756003758,
-      "difficulty": 8.917732696393491,
-      "state": "relearning",
-      "last_review_date": "2026-02-14",
-      "next_review": "2026-02-16",
-      "reps": 0,
-      "review_count": 5,
-      "last_rating": 1,
+      "stability": 4.034611480162514,
+      "difficulty": 8.909814963697098,
+      "state": "review",
+      "last_review_date": "2026-02-16",
+      "next_review": "2026-02-20",
+      "reps": 1,
+      "review_count": 6,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-09",
@@ -3369,9 +3369,18 @@
           "difficulty": 8.917732696393491,
           "interval": 2,
           "retrievability": 0.9007706613467089
+        },
+        {
+          "date": "2026-02-16",
+          "rating": 3,
+          "stability": 4.034611480162514,
+          "difficulty": 8.909814963697098,
+          "interval": 4,
+          "retrievability": 0.9015874786109183
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "remember to return"
     },
     {
       "id": "40bc661e",
