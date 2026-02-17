@@ -6284,6 +6284,22 @@
       "last_rating": null,
       "history": [],
       "fsrs_version": 6
+    },
+    {
+      "id": "2712aac7",
+      "name": "238. Product of Array Except Self",
+      "url": "https://leetcode.com/problems/product-of-array-except-self/",
+      "added_date": "2026-02-17",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-02-18",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -6330,7 +6346,7 @@
     "2026-02-08": 3,
     "2026-02-13": 3,
     "2026-02-15": 1,
-    "2026-02-17": 2
+    "2026-02-17": 3
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
