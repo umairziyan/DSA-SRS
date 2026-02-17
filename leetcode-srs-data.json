@@ -5501,13 +5501,13 @@
       "name": "416. Partition Equal Subset Sum",
       "url": "https://leetcode.com/problems/partition-equal-subset-sum/description/",
       "added_date": "2026-01-30",
-      "stability": 2.7715933297434234,
-      "difficulty": 9.2697852703213,
+      "stability": 5.771958764804881,
+      "difficulty": 9.261515485050978,
       "state": "review",
-      "last_review_date": "2026-02-13",
-      "next_review": "2026-02-16",
-      "reps": 1,
-      "review_count": 5,
+      "last_review_date": "2026-02-17",
+      "next_review": "2026-02-23",
+      "reps": 2,
+      "review_count": 6,
       "last_rating": 3,
       "history": [
         {
@@ -5549,22 +5549,31 @@
           "difficulty": 9.2697852703213,
           "interval": 3,
           "retrievability": 0.8367199548730112
+        },
+        {
+          "date": "2026-02-17",
+          "rating": 3,
+          "stability": 5.771958764804881,
+          "difficulty": 9.261515485050978,
+          "interval": 6,
+          "retrievability": 0.864342174703058
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "check if below target"
     },
     {
       "id": "48f7af77",
       "name": "743. Network Delay Time",
       "url": "https://leetcode.com/problems/network-delay-time/",
       "added_date": "2026-02-02",
-      "stability": 8.875143085856246,
-      "difficulty": 6.740484910391329,
+      "stability": 23.208927199903556,
+      "difficulty": 6.734744425480938,
       "state": "review",
-      "last_review_date": "2026-02-08",
-      "next_review": "2026-02-17",
-      "reps": 3,
-      "review_count": 3,
+      "last_review_date": "2026-02-17",
+      "next_review": "2026-03-12",
+      "reps": 4,
+      "review_count": 4,
       "last_rating": 3,
       "history": [
         {
@@ -5590,9 +5599,18 @@
           "difficulty": 6.740484910391329,
           "interval": 9,
           "retrievability": 0.9045688639165586
+        },
+        {
+          "date": "2026-02-17",
+          "rating": 3,
+          "stability": 23.208927199903556,
+          "difficulty": 6.734744425480938,
+          "interval": 23,
+          "retrievability": 0.8987995784659477
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "remember the time is the max of the weight"
     },
     {
       "id": "4e428b12",
@@ -5980,13 +5998,13 @@
       "name": "10. Regular Expression Matching",
       "url": "https://leetcode.com/problems/regular-expression-matching/",
       "added_date": "2026-02-08",
-      "stability": 4.74204076714111,
-      "difficulty": 6.746231141532862,
+      "stability": 10.94179806305124,
+      "difficulty": 7.830996606120709,
       "state": "review",
-      "last_review_date": "2026-02-11",
-      "next_review": "2026-02-16",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-02-17",
+      "next_review": "2026-02-28",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 2,
       "history": [
         {
@@ -6004,9 +6022,18 @@
           "difficulty": 6.746231141532862,
           "interval": 5,
           "retrievability": 0.8566117863666073
+        },
+        {
+          "date": "2026-02-17",
+          "rating": 2,
+          "stability": 10.94179806305124,
+          "difficulty": 7.830996606120709,
+          "interval": 11,
+          "retrievability": 0.8781416351312666
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "match and (i+1, j) means you consume on character. That is the important difference"
     },
     {
       "id": "33728194",
@@ -6130,13 +6157,13 @@
       "name": "269. Alien Dictionary",
       "url": "https://leetcode.com/problems/alien-dictionary/",
       "added_date": "2026-02-13",
-      "stability": 0.3733219912220141,
-      "difficulty": 8.384403748170268,
+      "stability": 0.19647647910391186,
+      "difficulty": 9.45996449807808,
       "state": "relearning",
-      "last_review_date": "2026-02-15",
-      "next_review": "2026-02-16",
+      "last_review_date": "2026-02-17",
+      "next_review": "2026-02-18",
       "reps": 0,
-      "review_count": 2,
+      "review_count": 3,
       "last_rating": 1,
       "history": [
         {
@@ -6154,6 +6181,14 @@
           "difficulty": 8.384403748170268,
           "interval": 1,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-02-17",
+          "rating": 1,
+          "stability": 0.19647647910391186,
+          "difficulty": 9.45996449807808,
+          "interval": 1,
+          "retrievability": 0.6656833746139054
         }
       ],
       "fsrs_version": 6,
