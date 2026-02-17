@@ -2465,14 +2465,14 @@
       "name": "98. Validate Binary Search Tree",
       "url": "https://leetcode.com/problems/validate-binary-search-tree/",
       "added_date": "2026-01-01",
-      "stability": 3.9169968636918804,
-      "difficulty": 9.025726151053195,
+      "stability": 10.249554842168347,
+      "difficulty": 8.691169231896534,
       "state": "review",
-      "last_review_date": "2026-02-13",
-      "next_review": "2026-02-17",
-      "reps": 1,
-      "review_count": 8,
-      "last_rating": 3,
+      "last_review_date": "2026-02-17",
+      "next_review": "2026-02-27",
+      "reps": 2,
+      "review_count": 9,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-04",
@@ -2537,9 +2537,18 @@
           "difficulty": 9.025726151053195,
           "interval": 4,
           "retrievability": 0.9013091495140868
+        },
+        {
+          "date": "2026-02-17",
+          "rating": 4,
+          "stability": 10.249554842168347,
+          "difficulty": 8.691169231896534,
+          "interval": 10,
+          "retrievability": 0.8981936646069939
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "minn, maxx"
     },
     {
       "id": "27df7180",
@@ -5218,13 +5227,13 @@
       "name": "647. Palindromic Substrings",
       "url": "https://leetcode.com/problems/palindromic-substrings/description/",
       "added_date": "2026-01-27",
-      "stability": 18.134311672846923,
+      "stability": 130.30393709732957,
       "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-01-30",
-      "next_review": "2026-02-17",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-02-17",
+      "next_review": "2026-06-27",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 4,
       "history": [
         {
@@ -5242,9 +5251,18 @@
           "difficulty": 1.0,
           "interval": 18,
           "retrievability": 0.9115814711321364
+        },
+        {
+          "date": "2026-02-17",
+          "rating": 4,
+          "stability": 130.30393709732957,
+          "difficulty": 1.0,
+          "interval": 130,
+          "retrievability": 0.9006339243860205
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "do it for i and i+1"
     },
     {
       "id": "eeaf765c",
@@ -5554,14 +5572,14 @@
       "name": "62. Unique Paths",
       "url": "https://leetcode.com/problems/unique-paths/description/",
       "added_date": "2026-02-02",
-      "stability": 10.757464639247651,
-      "difficulty": 2.1169858664885557,
-      "state": "review",
-      "last_review_date": "2026-02-06",
-      "next_review": "2026-02-17",
-      "reps": 2,
-      "review_count": 2,
-      "last_rating": 3,
+      "stability": 1.527667392225149,
+      "difficulty": 7.399906858810896,
+      "state": "relearning",
+      "last_review_date": "2026-02-17",
+      "next_review": "2026-02-19",
+      "reps": 0,
+      "review_count": 3,
+      "last_rating": 1,
       "history": [
         {
           "date": "2026-02-04",
@@ -5578,23 +5596,32 @@
           "difficulty": 2.1169858664885557,
           "interval": 11,
           "retrievability": 0.9115814711321364
+        },
+        {
+          "date": "2026-02-17",
+          "rating": 1,
+          "stability": 1.527667392225149,
+          "difficulty": 7.399906858810896,
+          "interval": 2,
+          "retrievability": 0.8980785074889401
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "Add down and then right."
     },
     {
       "id": "c8733747",
       "name": "1143. Longest Common Subsequence",
       "url": "https://leetcode.com/problems/longest-common-subsequence/",
       "added_date": "2026-02-02",
-      "stability": 10.757464639247651,
-      "difficulty": 2.1169858664885557,
-      "state": "review",
-      "last_review_date": "2026-02-06",
-      "next_review": "2026-02-17",
-      "reps": 2,
-      "review_count": 2,
-      "last_rating": 3,
+      "stability": 1.527667392225149,
+      "difficulty": 7.399906858810896,
+      "state": "relearning",
+      "last_review_date": "2026-02-17",
+      "next_review": "2026-02-19",
+      "reps": 0,
+      "review_count": 3,
+      "last_rating": 1,
       "history": [
         {
           "date": "2026-02-04",
@@ -5611,9 +5638,18 @@
           "difficulty": 2.1169858664885557,
           "interval": 11,
           "retrievability": 0.9115814711321364
+        },
+        {
+          "date": "2026-02-17",
+          "rating": 1,
+          "stability": 1.527667392225149,
+          "difficulty": 7.399906858810896,
+          "interval": 2,
+          "retrievability": 0.8980785074889401
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "Its an if/else condition because choice not counting"
     },
     {
       "id": "fc0767e2",
@@ -5661,14 +5697,14 @@
       "name": "518. Coin Change II",
       "url": "https://leetcode.com/problems/coin-change-ii/",
       "added_date": "2026-02-05",
-      "stability": 0.33271392526672217,
-      "difficulty": 9.459520222363665,
-      "state": "relearning",
-      "last_review_date": "2026-02-15",
-      "next_review": "2026-02-16",
-      "reps": 0,
-      "review_count": 4,
-      "last_rating": 1,
+      "stability": 1.121092344022572,
+      "difficulty": 9.632204337247362,
+      "state": "review",
+      "last_review_date": "2026-02-17",
+      "next_review": "2026-02-18",
+      "reps": 1,
+      "review_count": 5,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-02-06",
@@ -5701,10 +5737,18 @@
           "difficulty": 9.459520222363665,
           "interval": 1,
           "retrievability": 0.8150022967200766
+        },
+        {
+          "date": "2026-02-17",
+          "rating": 2,
+          "stability": 1.121092344022572,
+          "difficulty": 9.632204337247362,
+          "interval": 1,
+          "retrievability": 0.6441529439504096
         }
       ],
       "fsrs_version": 6,
-      "note": "need to get two dp more understood"
+      "note": "-- ways to make coin iwthout using the coin, then way to make coins whilst using the coins."
     },
     {
       "id": "605ff72a",
@@ -6093,13 +6137,13 @@
       "name": "787. Cheapest Flights Within K Stops",
       "url": "https://leetcode.com/problems/cheapest-flights-within-k-stops/",
       "added_date": "2026-02-13",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 4.74204076714111,
+      "difficulty": 6.746231141532862,
       "state": "review",
-      "last_review_date": "2026-02-15",
-      "next_review": "2026-02-16",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-02-17",
+      "next_review": "2026-02-22",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 2,
       "history": [
         {
@@ -6109,9 +6153,18 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-02-17",
+          "rating": 2,
+          "stability": 4.74204076714111,
+          "difficulty": 6.746231141532862,
+          "interval": 5,
+          "retrievability": 0.8566117863666073
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "bellman ford"
     },
     {
       "id": "0c3e206c",
