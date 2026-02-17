@@ -1951,14 +1951,14 @@
       "name": "104. Maximum Depth of Binary Tree",
       "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
       "added_date": "2025-12-29",
-      "stability": 38.71309396206148,
+      "stability": 252.55130509866814,
       "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-01-09",
-      "next_review": "2026-02-17",
-      "reps": 2,
-      "review_count": 2,
-      "last_rating": 3,
+      "last_review_date": "2026-02-17",
+      "next_review": "2026-10-28",
+      "reps": 3,
+      "review_count": 3,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-01",
@@ -1975,9 +1975,18 @@
           "difficulty": 1.0,
           "interval": 39,
           "retrievability": 0.9030622091783326
+        },
+        {
+          "date": "2026-02-17",
+          "rating": 4,
+          "stability": 252.55130509866814,
+          "difficulty": 1.0,
+          "interval": 253,
+          "retrievability": 0.8993670206131507
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "its 3 lines of code"
     },
     {
       "id": "87f5e2ac",
@@ -4909,13 +4918,13 @@
       "name": "424. Longest Repeating Character Replacement",
       "url": "https://leetcode.com/problems/longest-repeating-character-replacement/",
       "added_date": "2026-01-23",
-      "stability": 12.461775278062433,
-      "difficulty": 8.551114471584771,
+      "stability": 18.74194873202981,
+      "difficulty": 9.029162268172346,
       "state": "review",
-      "last_review_date": "2026-02-05",
-      "next_review": "2026-02-17",
-      "reps": 4,
-      "review_count": 4,
+      "last_review_date": "2026-02-17",
+      "next_review": "2026-03-08",
+      "reps": 5,
+      "review_count": 5,
       "last_rating": 2,
       "history": [
         {
@@ -4949,23 +4958,32 @@
           "difficulty": 8.551114471584771,
           "interval": 12,
           "retrievability": 0.8823981956082635
+        },
+        {
+          "date": "2026-02-17",
+          "rating": 2,
+          "stability": 18.74194873202981,
+          "difficulty": 9.029162268172346,
+          "interval": 19,
+          "retrievability": 0.9031850595271551
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "charMap.values (max)"
     },
     {
       "id": "5da9345d",
       "name": "70. Climbing Stairs",
       "url": "https://leetcode.com/problems/climbing-stairs/",
       "added_date": "2026-01-24",
-      "stability": 11.814021856034556,
-      "difficulty": 8.551114471584771,
+      "stability": 31.431667208243166,
+      "difficulty": 8.057964446054026,
       "state": "review",
-      "last_review_date": "2026-02-05",
-      "next_review": "2026-02-17",
-      "reps": 4,
-      "review_count": 4,
-      "last_rating": 2,
+      "last_review_date": "2026-02-17",
+      "next_review": "2026-03-20",
+      "reps": 5,
+      "review_count": 5,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-25",
@@ -4998,9 +5016,18 @@
           "difficulty": 8.551114471584771,
           "interval": 12,
           "retrievability": 0.894866279698631
+        },
+        {
+          "date": "2026-02-17",
+          "rating": 4,
+          "stability": 31.431667208243166,
+          "difficulty": 8.057964446054026,
+          "interval": 31,
+          "retrievability": 0.8986570577016821
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "n-1"
     },
     {
       "id": "ea46430a",
