@@ -4386,14 +4386,14 @@
       "name": "56. Merge Intervals",
       "url": "https://leetcode.com/problems/merge-intervals/",
       "added_date": "2026-01-16",
-      "stability": 4.928144391796537,
-      "difficulty": 9.332256979882265,
+      "stability": 8.366871664161401,
+      "difficulty": 9.323924722902383,
       "state": "review",
-      "last_review_date": "2026-02-13",
-      "next_review": "2026-02-18",
-      "reps": 2,
-      "review_count": 7,
-      "last_rating": 4,
+      "last_review_date": "2026-02-18",
+      "next_review": "2026-02-26",
+      "reps": 3,
+      "review_count": 8,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-17",
@@ -4450,9 +4450,18 @@
           "difficulty": 9.332256979882265,
           "interval": 5,
           "retrievability": 0.9100958580287661
+        },
+        {
+          "date": "2026-02-18",
+          "rating": 3,
+          "stability": 8.366871664161401,
+          "difficulty": 9.323924722902383,
+          "interval": 8,
+          "retrievability": 0.8987559376372732
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "remember to continue after setting res."
     },
     {
       "id": "cd86df70",
@@ -4672,13 +4681,13 @@
       "name": "45. Jump Game II",
       "url": "https://leetcode.com/problems/jump-game-ii/",
       "added_date": "2026-01-18",
-      "stability": 17.495480852044302,
-      "difficulty": 7.827181990114589,
+      "stability": 28.378438067689082,
+      "difficulty": 8.548582151718803,
       "state": "review",
-      "last_review_date": "2026-02-01",
-      "next_review": "2026-02-18",
-      "reps": 4,
-      "review_count": 4,
+      "last_review_date": "2026-02-18",
+      "next_review": "2026-03-18",
+      "reps": 5,
+      "review_count": 5,
       "last_rating": 2,
       "history": [
         {
@@ -4712,9 +4721,18 @@
           "difficulty": 7.827181990114589,
           "interval": 17,
           "retrievability": 0.8987995784659477
+        },
+        {
+          "date": "2026-02-18",
+          "rating": 2,
+          "stability": 28.378438067689082,
+          "difficulty": 8.548582151718803,
+          "interval": 28,
+          "retrievability": 0.9024312191876556
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "think about when you should set the furthest"
     },
     {
       "id": "f644420a",
@@ -5436,14 +5454,14 @@
       "name": "152. Maximum Product Subarray",
       "url": "https://leetcode.com/problems/maximum-product-subarray/description/",
       "added_date": "2026-01-28",
-      "stability": 18.134311672846923,
-      "difficulty": 1.0,
-      "state": "review",
-      "last_review_date": "2026-01-31",
-      "next_review": "2026-02-18",
-      "reps": 2,
-      "review_count": 2,
-      "last_rating": 4,
+      "stability": 2.049201905085048,
+      "difficulty": 7.0327612,
+      "state": "relearning",
+      "last_review_date": "2026-02-18",
+      "next_review": "2026-02-20",
+      "reps": 0,
+      "review_count": 3,
+      "last_rating": 1,
       "history": [
         {
           "date": "2026-01-29",
@@ -5460,9 +5478,18 @@
           "difficulty": 1.0,
           "interval": 18,
           "retrievability": 0.9115814711321364
+        },
+        {
+          "date": "2026-02-18",
+          "rating": 1,
+          "stability": 2.049201905085048,
+          "difficulty": 7.0327612,
+          "interval": 2,
+          "retrievability": 0.9006339243860205
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "think about switching them"
     },
     {
       "id": "559dd36f",
@@ -5833,13 +5860,13 @@
       "name": "97. Interleaving String",
       "url": "https://leetcode.com/problems/interleaving-string/",
       "added_date": "2026-02-06",
-      "stability": 6.600279222944633,
-      "difficulty": 7.830996606120709,
+      "stability": 11.814021856034556,
+      "difficulty": 8.551114471584771,
       "state": "review",
-      "last_review_date": "2026-02-11",
-      "next_review": "2026-02-18",
-      "reps": 3,
-      "review_count": 3,
+      "last_review_date": "2026-02-18",
+      "next_review": "2026-03-02",
+      "reps": 4,
+      "review_count": 4,
       "last_rating": 2,
       "history": [
         {
@@ -5865,9 +5892,18 @@
           "difficulty": 7.830996606120709,
           "interval": 7,
           "retrievability": 0.9045688639165586
+        },
+        {
+          "date": "2026-02-18",
+          "rating": 2,
+          "stability": 11.814021856034556,
+          "difficulty": 8.551114471584771,
+          "interval": 12,
+          "retrievability": 0.894866279698631
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "True and False. Start and the end."
     },
     {
       "id": "cd707cf6",
@@ -6351,15 +6387,24 @@
       "name": "238. Product of Array Except Self",
       "url": "https://leetcode.com/problems/product-of-array-except-self/",
       "added_date": "2026-02-17",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-02-18",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-02-18",
+      "next_review": "2026-02-19",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
+      "history": [
+        {
+          "date": "2026-02-18",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     }
   ],
