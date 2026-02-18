@@ -2572,14 +2572,14 @@
       "name": "230. Kth Smallest Element in a BST",
       "url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
       "added_date": "2026-01-02",
-      "stability": 7.74559915814697,
-      "difficulty": 9.034360676744486,
+      "stability": 18.986932793709652,
+      "difficulty": 8.702689013704957,
       "state": "review",
-      "last_review_date": "2026-02-10",
-      "next_review": "2026-02-18",
-      "reps": 2,
-      "review_count": 6,
-      "last_rating": 2,
+      "last_review_date": "2026-02-18",
+      "next_review": "2026-03-09",
+      "reps": 3,
+      "review_count": 7,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-05",
@@ -2628,9 +2628,18 @@
           "difficulty": 9.034360676744486,
           "interval": 8,
           "retrievability": 0.8948090730853693
+        },
+        {
+          "date": "2026-02-18",
+          "rating": 4,
+          "stability": 18.986932793709652,
+          "difficulty": 8.702689013704957,
+          "interval": 19,
+          "retrievability": 0.8972048650465531
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "need an n"
     },
     {
       "id": "b1729cd8",
@@ -5758,14 +5767,14 @@
       "name": "518. Coin Change II",
       "url": "https://leetcode.com/problems/coin-change-ii/",
       "added_date": "2026-02-05",
-      "stability": 1.121092344022572,
-      "difficulty": 9.632204337247362,
+      "stability": 1.85286261839994,
+      "difficulty": 9.623572132910114,
       "state": "review",
-      "last_review_date": "2026-02-17",
-      "next_review": "2026-02-18",
-      "reps": 1,
-      "review_count": 5,
-      "last_rating": 2,
+      "last_review_date": "2026-02-18",
+      "next_review": "2026-02-20",
+      "reps": 2,
+      "review_count": 6,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-02-06",
@@ -5806,6 +5815,14 @@
           "difficulty": 9.632204337247362,
           "interval": 1,
           "retrievability": 0.6441529439504096
+        },
+        {
+          "date": "2026-02-18",
+          "rating": 3,
+          "stability": 1.85286261839994,
+          "difficulty": 9.623572132910114,
+          "interval": 2,
+          "retrievability": 0.9093797164324403
         }
       ],
       "fsrs_version": 6,
@@ -6173,13 +6190,13 @@
       "name": "269. Alien Dictionary",
       "url": "https://leetcode.com/problems/alien-dictionary/",
       "added_date": "2026-02-13",
-      "stability": 0.19647647910391186,
-      "difficulty": 9.45996449807808,
+      "stability": 0.1066020077112155,
+      "difficulty": 9.813494002759677,
       "state": "relearning",
-      "last_review_date": "2026-02-17",
-      "next_review": "2026-02-18",
+      "last_review_date": "2026-02-18",
+      "next_review": "2026-02-19",
       "reps": 0,
-      "review_count": 3,
+      "review_count": 4,
       "last_rating": 1,
       "history": [
         {
@@ -6205,10 +6222,18 @@
           "difficulty": 9.45996449807808,
           "interval": 1,
           "retrievability": 0.6656833746139054
+        },
+        {
+          "date": "2026-02-18",
+          "rating": 1,
+          "stability": 0.1066020077112155,
+          "difficulty": 9.813494002759677,
+          "interval": 1,
+          "retrievability": 0.6751407000931271
         }
       ],
       "fsrs_version": 6,
-      "note": "Remember about how to do adj properly."
+      "note": "visit and res. Just are bools."
     },
     {
       "id": "01f33b37",
@@ -6274,16 +6299,26 @@
       "name": "49. Group Anagrams",
       "url": "https://leetcode.com/problems/group-anagrams/",
       "added_date": "2026-02-17",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-02-18",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
-      "fsrs_version": 6
+      "stability": 8.2956,
+      "difficulty": 1.0,
+      "state": "review",
+      "last_review_date": "2026-02-18",
+      "next_review": "2026-02-26",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 4,
+      "history": [
+        {
+          "date": "2026-02-18",
+          "rating": 4,
+          "stability": 8.2956,
+          "difficulty": 1.0,
+          "interval": 8,
+          "retrievability": 0.9
+        }
+      ],
+      "fsrs_version": 6,
+      "note": "list(res.values)"
     },
     {
       "id": "b4331151",
