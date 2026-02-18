@@ -1185,13 +1185,13 @@
       "name": "981. Time Based Key-Value Store",
       "url": "https://leetcode.com/problems/time-based-key-value-store/",
       "added_date": "2025-12-25",
-      "stability": 9.323126426666176,
-      "difficulty": 9.020457475017007,
+      "stability": 21.76424532441624,
+      "difficulty": 8.684140009849354,
       "state": "review",
-      "last_review_date": "2026-02-09",
-      "next_review": "2026-02-18",
-      "reps": 2,
-      "review_count": 7,
+      "last_review_date": "2026-02-18",
+      "next_review": "2026-03-12",
+      "reps": 3,
+      "review_count": 8,
       "last_rating": 4,
       "history": [
         {
@@ -1249,9 +1249,18 @@
           "difficulty": 9.020457475017007,
           "interval": 9,
           "retrievability": 0.8948582297061695
+        },
+        {
+          "date": "2026-02-18",
+          "rating": 4,
+          "stability": 21.76424532441624,
+          "difficulty": 8.684140009849354,
+          "interval": 22,
+          "retrievability": 0.9029780256573046
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "remember to get the values"
     },
     {
       "id": "70abc8cc",
@@ -3602,14 +3611,14 @@
       "name": "621. Task Scheduler",
       "url": "https://leetcode.com/problems/task-scheduler/",
       "added_date": "2026-01-10",
-      "stability": 10.960565340749858,
-      "difficulty": 8.55174205076427,
+      "stability": 20.69341040008474,
+      "difficulty": 8.544190308713505,
       "state": "review",
-      "last_review_date": "2026-02-07",
-      "next_review": "2026-02-18",
-      "reps": 2,
-      "review_count": 6,
-      "last_rating": 2,
+      "last_review_date": "2026-02-18",
+      "next_review": "2026-03-11",
+      "reps": 3,
+      "review_count": 7,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-11",
@@ -3658,9 +3667,18 @@
           "difficulty": 8.55174205076427,
           "interval": 11,
           "retrievability": 0.9055048034485332
+        },
+        {
+          "date": "2026-02-18",
+          "rating": 3,
+          "stability": 20.69341040008474,
+          "difficulty": 8.544190308713505,
+          "interval": 21,
+          "retrievability": 0.8996925399733806
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "maxHeap"
     },
     {
       "id": "9e9708b6",
