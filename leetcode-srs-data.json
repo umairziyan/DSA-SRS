@@ -2401,14 +2401,14 @@
       "name": "1448. Count Good Nodes in Binary Tree",
       "url": "https://leetcode.com/problems/count-good-nodes-in-binary-tree/",
       "added_date": "2026-01-01",
-      "stability": 12.589013880263547,
-      "difficulty": 8.903886136327186,
+      "stability": 18.35798664909862,
+      "difficulty": 9.263348538387937,
       "state": "review",
-      "last_review_date": "2026-02-05",
-      "next_review": "2026-02-18",
-      "reps": 3,
-      "review_count": 7,
-      "last_rating": 3,
+      "last_review_date": "2026-02-18",
+      "next_review": "2026-03-08",
+      "reps": 4,
+      "review_count": 8,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-01-04",
@@ -2465,6 +2465,14 @@
           "difficulty": 8.903886136327186,
           "interval": 13,
           "retrievability": 0.8986282653458174
+        },
+        {
+          "date": "2026-02-18",
+          "rating": 2,
+          "stability": 18.35798664909862,
+          "difficulty": 9.263348538387937,
+          "interval": 18,
+          "retrievability": 0.8972216504069512
         }
       ],
       "fsrs_version": 6
@@ -4704,14 +4712,14 @@
       "name": "134. Gas Station",
       "url": "https://leetcode.com/problems/gas-station/",
       "added_date": "2026-01-18",
-      "stability": 2.121709482947926,
-      "difficulty": 7.842792610892882,
-      "state": "relearning",
-      "last_review_date": "2026-02-16",
-      "next_review": "2026-02-18",
-      "reps": 0,
-      "review_count": 4,
-      "last_rating": 1,
+      "stability": 5.142153237749646,
+      "difficulty": 7.83594981828199,
+      "state": "review",
+      "last_review_date": "2026-02-18",
+      "next_review": "2026-02-23",
+      "reps": 1,
+      "review_count": 5,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-19",
@@ -4744,10 +4752,18 @@
           "difficulty": 7.842792610892882,
           "interval": 2,
           "retrievability": 0.9006500456794446
+        },
+        {
+          "date": "2026-02-18",
+          "rating": 3,
+          "stability": 5.142153237749646,
+          "difficulty": 7.83594981828199,
+          "interval": 5,
+          "retrievability": 0.9049450712006266
         }
       ],
       "fsrs_version": 6,
-      "note": "gas - cost"
+      "note": "gas is how much you fill up, cost is the cost to the next station"
     },
     {
       "id": "b3e500ab",
@@ -6274,16 +6290,26 @@
       "name": "347. Top K Frequent Elements",
       "url": "https://leetcode.com/problems/top-k-frequent-elements/",
       "added_date": "2026-02-17",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-02-18",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
-      "fsrs_version": 6
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-02-18",
+      "next_review": "2026-02-20",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
+      "history": [
+        {
+          "date": "2026-02-18",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
+        }
+      ],
+      "fsrs_version": 6,
+      "note": "bucket sort"
     },
     {
       "id": "2712aac7",
