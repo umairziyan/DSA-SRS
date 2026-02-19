@@ -5357,13 +5357,13 @@
       "name": "91. Decode Ways",
       "url": "https://leetcode.com/problems/decode-ways/description/",
       "added_date": "2026-01-27",
-      "stability": 4.458656285525617,
-      "difficulty": 8.904777717114007,
+      "stability": 8.019113762971115,
+      "difficulty": 8.896872939396893,
       "state": "review",
-      "last_review_date": "2026-02-15",
-      "next_review": "2026-02-19",
-      "reps": 2,
-      "review_count": 6,
+      "last_review_date": "2026-02-19",
+      "next_review": "2026-02-27",
+      "reps": 3,
+      "review_count": 7,
       "last_rating": 3,
       "history": [
         {
@@ -5413,6 +5413,14 @@
           "difficulty": 8.904777717114007,
           "interval": 4,
           "retrievability": 0.9171115404412624
+        },
+        {
+          "date": "2026-02-19",
+          "rating": 3,
+          "stability": 8.019113762971115,
+          "difficulty": 8.896872939396893,
+          "interval": 8,
+          "retrievability": 0.9089263405643249
         }
       ],
       "fsrs_version": 6,
@@ -6405,14 +6413,14 @@
       "name": "238. Product of Array Except Self",
       "url": "https://leetcode.com/problems/product-of-array-except-self/",
       "added_date": "2026-02-17",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 4.410673091748482,
+      "difficulty": 5.108058534895454,
       "state": "review",
-      "last_review_date": "2026-02-18",
-      "next_review": "2026-02-19",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 2,
+      "last_review_date": "2026-02-19",
+      "next_review": "2026-02-23",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-02-18",
@@ -6421,57 +6429,96 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-02-19",
+          "rating": 3,
+          "stability": 4.410673091748482,
+          "difficulty": 5.108058534895454,
+          "interval": 4,
+          "retrievability": 0.920029131893056
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "remember to go backwards"
     },
     {
       "id": "44296e6a",
       "name": "128. Longest Consecutive Sequence",
       "url": "https://leetcode.com/problems/longest-consecutive-sequence/",
       "added_date": "2026-02-18",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-02-19",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
-      "fsrs_version": 6
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-02-19",
+      "next_review": "2026-02-20",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
+      "history": [
+        {
+          "date": "2026-02-19",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
+        }
+      ],
+      "fsrs_version": 6,
+      "note": "rembmer to add it to a set"
     },
     {
       "id": "a90f25f9",
       "name": "36. Valid Sudoku",
       "url": "https://leetcode.com/problems/valid-sudoku/",
       "added_date": "2026-02-18",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-02-19",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
-      "fsrs_version": 6
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-02-19",
+      "next_review": "2026-02-20",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
+      "history": [
+        {
+          "date": "2026-02-19",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
+        }
+      ],
+      "fsrs_version": 6,
+      "note": "remember to check the value in that row or column or that square."
     },
     {
       "id": "bf5bb154",
       "name": "155. Min Stack",
       "url": "https://leetcode.com/problems/min-stack/",
       "added_date": "2026-02-18",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-02-19",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
-      "fsrs_version": 6
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-02-19",
+      "next_review": "2026-02-21",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
+      "history": [
+        {
+          "date": "2026-02-19",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
+        }
+      ],
+      "fsrs_version": 6,
+      "note": "use min(minstack if minstack, val)"
     }
   ],
   "daily_adds": {
