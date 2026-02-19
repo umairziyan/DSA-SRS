@@ -6285,14 +6285,14 @@
       "name": "269. Alien Dictionary",
       "url": "https://leetcode.com/problems/alien-dictionary/",
       "added_date": "2026-02-13",
-      "stability": 0.1066020077112155,
-      "difficulty": 9.813494002759677,
-      "state": "relearning",
-      "last_review_date": "2026-02-18",
-      "next_review": "2026-02-19",
-      "reps": 0,
-      "review_count": 4,
-      "last_rating": 1,
+      "stability": 0.40865743460447124,
+      "difficulty": 9.867188627852402,
+      "state": "review",
+      "last_review_date": "2026-02-19",
+      "next_review": "2026-02-20",
+      "reps": 1,
+      "review_count": 5,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-02-14",
@@ -6325,6 +6325,14 @@
           "difficulty": 9.813494002759677,
           "interval": 1,
           "retrievability": 0.6751407000931271
+        },
+        {
+          "date": "2026-02-19",
+          "rating": 2,
+          "stability": 0.40865743460447124,
+          "difficulty": 9.867188627852402,
+          "interval": 1,
+          "retrievability": 0.5589813681080391
         }
       ],
       "fsrs_version": 6,
