@@ -3373,13 +3373,13 @@
       "name": "17. Letter Combinations of a Phone Number",
       "url": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
       "added_date": "2026-01-08",
-      "stability": 4.034611480162514,
-      "difficulty": 8.909814963697098,
+      "stability": 7.608400732815143,
+      "difficulty": 8.9019051487334,
       "state": "review",
-      "last_review_date": "2026-02-16",
-      "next_review": "2026-02-20",
-      "reps": 1,
-      "review_count": 6,
+      "last_review_date": "2026-02-20",
+      "next_review": "2026-02-28",
+      "reps": 2,
+      "review_count": 7,
       "last_rating": 3,
       "history": [
         {
@@ -3429,6 +3429,14 @@
           "difficulty": 8.909814963697098,
           "interval": 4,
           "retrievability": 0.9015874786109183
+        },
+        {
+          "date": "2026-02-20",
+          "rating": 3,
+          "stability": 7.608400732815143,
+          "difficulty": 8.9019051487334,
+          "interval": 8,
+          "retrievability": 0.9007343715947276
         }
       ],
       "fsrs_version": 6,
@@ -3693,14 +3701,14 @@
       "name": "295. Find Median from Data Stream",
       "url": "https://leetcode.com/problems/find-median-from-data-stream/",
       "added_date": "2026-01-11",
-      "stability": 18.93608595639014,
-      "difficulty": 6.513538437870512,
+      "stability": 47.06142740921868,
+      "difficulty": 6.508024899432642,
       "state": "review",
-      "last_review_date": "2026-02-01",
-      "next_review": "2026-02-20",
-      "reps": 2,
-      "review_count": 5,
-      "last_rating": 4,
+      "last_review_date": "2026-02-20",
+      "next_review": "2026-04-08",
+      "reps": 3,
+      "review_count": 6,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-12",
@@ -3741,9 +3749,18 @@
           "difficulty": 6.513538437870512,
           "interval": 19,
           "retrievability": 0.9004018191783473
+        },
+        {
+          "date": "2026-02-20",
+          "rating": 3,
+          "stability": 47.06142740921868,
+          "difficulty": 6.508024899432642,
+          "interval": 47,
+          "retrievability": 0.8997115547640561
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "check max and then only too many values"
     },
     {
       "id": "a6f06961",
@@ -5497,14 +5514,14 @@
       "name": "152. Maximum Product Subarray",
       "url": "https://leetcode.com/problems/maximum-product-subarray/description/",
       "added_date": "2026-01-28",
-      "stability": 2.049201905085048,
-      "difficulty": 7.0327612,
-      "state": "relearning",
-      "last_review_date": "2026-02-18",
-      "next_review": "2026-02-20",
-      "reps": 0,
-      "review_count": 3,
-      "last_rating": 1,
+      "stability": 5.8525101356707285,
+      "difficulty": 7.026728438800001,
+      "state": "review",
+      "last_review_date": "2026-02-20",
+      "next_review": "2026-02-26",
+      "reps": 1,
+      "review_count": 4,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-29",
@@ -5529,6 +5546,14 @@
           "difficulty": 7.0327612,
           "interval": 2,
           "retrievability": 0.9006339243860205
+        },
+        {
+          "date": "2026-02-20",
+          "rating": 3,
+          "stability": 5.8525101356707285,
+          "difficulty": 7.026728438800001,
+          "interval": 6,
+          "retrievability": 0.9020599293321011
         }
       ],
       "fsrs_version": 6,
@@ -5853,13 +5878,13 @@
       "name": "518. Coin Change II",
       "url": "https://leetcode.com/problems/coin-change-ii/",
       "added_date": "2026-02-05",
-      "stability": 1.85286261839994,
-      "difficulty": 9.623572132910114,
+      "stability": 3.179552805280191,
+      "difficulty": 9.614948560777204,
       "state": "review",
-      "last_review_date": "2026-02-18",
-      "next_review": "2026-02-20",
-      "reps": 2,
-      "review_count": 6,
+      "last_review_date": "2026-02-20",
+      "next_review": "2026-02-23",
+      "reps": 3,
+      "review_count": 7,
       "last_rating": 3,
       "history": [
         {
@@ -5909,6 +5934,14 @@
           "difficulty": 9.623572132910114,
           "interval": 2,
           "retrievability": 0.9093797164324403
+        },
+        {
+          "date": "2026-02-20",
+          "rating": 3,
+          "stability": 3.179552805280191,
+          "difficulty": 9.614948560777204,
+          "interval": 3,
+          "retrievability": 0.8932862512381252
         }
       ],
       "fsrs_version": 6,
@@ -5969,13 +6002,13 @@
       "name": "329. Longest Increasing Path in a Matrix",
       "url": "https://leetcode.com/problems/longest-increasing-path-in-a-matrix/",
       "added_date": "2026-02-06",
-      "stability": 9.577456486296843,
-      "difficulty": 4.758630119235718,
+      "stability": 23.3894033751879,
+      "difficulty": 6.511534425312227,
       "state": "review",
-      "last_review_date": "2026-02-10",
-      "next_review": "2026-02-20",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-02-20",
+      "next_review": "2026-03-15",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 2,
       "history": [
         {
@@ -5993,9 +6026,18 @@
           "difficulty": 4.758630119235718,
           "interval": 10,
           "retrievability": 0.8753440551253784
+        },
+        {
+          "date": "2026-02-20",
+          "rating": 2,
+          "stability": 23.3894033751879,
+          "difficulty": 6.511534425312227,
+          "interval": 23,
+          "retrievability": 0.8962514143544703
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "remember to start with a res of 1 and then add 1 each time"
     },
     {
       "id": "c1f785a3",
@@ -6251,13 +6293,13 @@
       "name": "778. Swim in Rising Water",
       "url": "https://leetcode.com/problems/swim-in-rising-water/",
       "added_date": "2026-02-13",
-      "stability": 4.410673091748482,
-      "difficulty": 5.108058534895454,
+      "stability": 14.430076417451385,
+      "difficulty": 5.103950476360559,
       "state": "review",
-      "last_review_date": "2026-02-16",
-      "next_review": "2026-02-20",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-02-20",
+      "next_review": "2026-03-06",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 3,
       "history": [
         {
@@ -6275,6 +6317,14 @@
           "difficulty": 5.108058534895454,
           "interval": 4,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-02-20",
+          "rating": 3,
+          "stability": 14.430076417451385,
+          "difficulty": 5.103950476360559,
+          "interval": 14,
+          "retrievability": 0.908068020188883
         }
       ],
       "fsrs_version": 6,
@@ -6285,14 +6335,14 @@
       "name": "269. Alien Dictionary",
       "url": "https://leetcode.com/problems/alien-dictionary/",
       "added_date": "2026-02-13",
-      "stability": 0.40865743460447124,
-      "difficulty": 9.867188627852402,
+      "stability": 1.0212211049180306,
+      "difficulty": 9.858321439224548,
       "state": "review",
-      "last_review_date": "2026-02-19",
-      "next_review": "2026-02-20",
-      "reps": 1,
-      "review_count": 5,
-      "last_rating": 2,
+      "last_review_date": "2026-02-20",
+      "next_review": "2026-02-21",
+      "reps": 2,
+      "review_count": 6,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-02-14",
@@ -6333,10 +6383,18 @@
           "difficulty": 9.867188627852402,
           "interval": 1,
           "retrievability": 0.5589813681080391
+        },
+        {
+          "date": "2026-02-20",
+          "rating": 3,
+          "stability": 1.0212211049180306,
+          "difficulty": 9.858321439224548,
+          "interval": 1,
+          "retrievability": 0.7970730603057419
         }
       ],
       "fsrs_version": 6,
-      "note": "visit and res. Just are bools."
+      "note": "remember indegree, remember you need to do a check too if its already in there"
     },
     {
       "id": "01f33b37",
@@ -6428,14 +6486,14 @@
       "name": "347. Top K Frequent Elements",
       "url": "https://leetcode.com/problems/top-k-frequent-elements/",
       "added_date": "2026-02-17",
-      "stability": 2.3065,
-      "difficulty": 2.118103970459015,
+      "stability": 7.388910134043537,
+      "difficulty": 4.758630119235718,
       "state": "review",
-      "last_review_date": "2026-02-18",
-      "next_review": "2026-02-20",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 3,
+      "last_review_date": "2026-02-20",
+      "next_review": "2026-02-27",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-02-18",
@@ -6444,6 +6502,14 @@
           "difficulty": 2.118103970459015,
           "interval": 2,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-02-20",
+          "rating": 2,
+          "stability": 7.388910134043537,
+          "difficulty": 4.758630119235718,
+          "interval": 7,
+          "retrievability": 0.9115814711321364
         }
       ],
       "fsrs_version": 6,
@@ -6488,14 +6554,14 @@
       "name": "128. Longest Consecutive Sequence",
       "url": "https://leetcode.com/problems/longest-consecutive-sequence/",
       "added_date": "2026-02-18",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 4.410673091748482,
+      "difficulty": 5.108058534895454,
       "state": "review",
-      "last_review_date": "2026-02-19",
-      "next_review": "2026-02-20",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 2,
+      "last_review_date": "2026-02-20",
+      "next_review": "2026-02-24",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-02-19",
@@ -6504,6 +6570,14 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-02-20",
+          "rating": 3,
+          "stability": 4.410673091748482,
+          "difficulty": 5.108058534895454,
+          "interval": 4,
+          "retrievability": 0.920029131893056
         }
       ],
       "fsrs_version": 6,
@@ -6514,14 +6588,14 @@
       "name": "36. Valid Sudoku",
       "url": "https://leetcode.com/problems/valid-sudoku/",
       "added_date": "2026-02-18",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 7.132002643535731,
+      "difficulty": 3.4698859282580456,
       "state": "review",
-      "last_review_date": "2026-02-19",
-      "next_review": "2026-02-20",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 2,
+      "last_review_date": "2026-02-20",
+      "next_review": "2026-02-27",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-02-19",
@@ -6530,6 +6604,14 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-02-20",
+          "rating": 4,
+          "stability": 7.132002643535731,
+          "difficulty": 3.4698859282580456,
+          "interval": 7,
+          "retrievability": 0.920029131893056
         }
       ],
       "fsrs_version": 6,
