@@ -6658,6 +6658,22 @@
       "last_rating": null,
       "history": [],
       "fsrs_version": 6
+    },
+    {
+      "id": "05c12ea0",
+      "name": "239. Sliding Window Maximum",
+      "url": "https://leetcode.com/problems/sliding-window-maximum/",
+      "added_date": "2026-02-20",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-02-21",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -6706,7 +6722,7 @@
     "2026-02-15": 1,
     "2026-02-17": 3,
     "2026-02-18": 3,
-    "2026-02-20": 1
+    "2026-02-20": 2
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
