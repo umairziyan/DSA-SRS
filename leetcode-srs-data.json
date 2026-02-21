@@ -1685,13 +1685,13 @@
       "name": "23. Merge k Sorted Lists",
       "url": "https://leetcode.com/problems/merge-k-sorted-lists/",
       "added_date": "2025-12-28",
-      "stability": 21.717603427518142,
-      "difficulty": 8.256444144277625,
+      "stability": 33.41158145688052,
+      "difficulty": 8.83354637326861,
       "state": "review",
-      "last_review_date": "2026-01-30",
-      "next_review": "2026-02-21",
-      "reps": 3,
-      "review_count": 6,
+      "last_review_date": "2026-02-21",
+      "next_review": "2026-03-26",
+      "reps": 4,
+      "review_count": 7,
       "last_rating": 2,
       "history": [
         {
@@ -1741,9 +1741,18 @@
           "difficulty": 8.256444144277625,
           "interval": 22,
           "retrievability": 0.9031191366381538
+        },
+        {
+          "date": "2026-02-21",
+          "rating": 2,
+          "stability": 33.41158145688052,
+          "difficulty": 8.83354637326861,
+          "interval": 33,
+          "retrievability": 0.8988902891716789
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "for i in range(0, len(lists), 2)"
     },
     {
       "id": "399bb7ff",
@@ -2011,14 +2020,14 @@
       "name": "543. Diameter of Binary Tree",
       "url": "https://leetcode.com/problems/diameter-of-binary-tree/",
       "added_date": "2025-12-29",
-      "stability": 25.09013317820779,
-      "difficulty": 8.546579737713188,
-      "state": "review",
-      "last_review_date": "2026-01-27",
-      "next_review": "2026-02-21",
-      "reps": 5,
-      "review_count": 5,
-      "last_rating": 2,
+      "stability": 2.080059535877469,
+      "difficulty": 9.513270643044107,
+      "state": "relearning",
+      "last_review_date": "2026-02-21",
+      "next_review": "2026-02-23",
+      "reps": 0,
+      "review_count": 6,
+      "last_rating": 1,
       "history": [
         {
           "date": "2026-01-01",
@@ -2059,9 +2068,18 @@
           "difficulty": 8.546579737713188,
           "interval": 25,
           "retrievability": 0.9015135170013006
+        },
+        {
+          "date": "2026-02-21",
+          "rating": 1,
+          "stability": 2.080059535877469,
+          "difficulty": 9.513270643044107,
+          "interval": 2,
+          "retrievability": 0.9003073054228385
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "neet to add"
     },
     {
       "id": "5c3fd18c",
@@ -4981,14 +4999,14 @@
       "name": "678. Valid Parenthesis String",
       "url": "https://leetcode.com/problems/valid-parenthesis-string/",
       "added_date": "2026-01-23",
-      "stability": 23.17601358045745,
-      "difficulty": 3.4643996617297885,
+      "stability": 78.53571435713346,
+      "difficulty": 3.461935262068059,
       "state": "review",
-      "last_review_date": "2026-01-29",
-      "next_review": "2026-02-21",
-      "reps": 3,
-      "review_count": 3,
-      "last_rating": 4,
+      "last_review_date": "2026-02-21",
+      "next_review": "2026-05-11",
+      "reps": 4,
+      "review_count": 4,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-24",
@@ -5013,9 +5031,18 @@
           "difficulty": 3.4643996617297885,
           "interval": 23,
           "retrievability": 0.908068020188883
+        },
+        {
+          "date": "2026-02-21",
+          "rating": 3,
+          "stability": 78.53571435713346,
+          "difficulty": 3.461935262068059,
+          "interval": 79,
+          "retrievability": 0.9006500456794446
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "need to remember to reset leftMin"
     },
     {
       "id": "4d31a753",
@@ -6371,14 +6398,14 @@
       "name": "269. Alien Dictionary",
       "url": "https://leetcode.com/problems/alien-dictionary/",
       "added_date": "2026-02-13",
-      "stability": 1.0212211049180306,
-      "difficulty": 9.858321439224548,
+      "stability": 1.3906965469259136,
+      "difficulty": 9.896947169136324,
       "state": "review",
-      "last_review_date": "2026-02-20",
-      "next_review": "2026-02-21",
-      "reps": 2,
-      "review_count": 6,
-      "last_rating": 3,
+      "last_review_date": "2026-02-21",
+      "next_review": "2026-02-22",
+      "reps": 3,
+      "review_count": 7,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-02-14",
@@ -6427,6 +6454,14 @@
           "difficulty": 9.858321439224548,
           "interval": 1,
           "retrievability": 0.7970730603057419
+        },
+        {
+          "date": "2026-02-21",
+          "rating": 2,
+          "stability": 1.3906965469259136,
+          "difficulty": 9.896947169136324,
+          "interval": 1,
+          "retrievability": 0.9017819793942675
         }
       ],
       "fsrs_version": 6,
@@ -6658,13 +6693,13 @@
       "name": "155. Min Stack",
       "url": "https://leetcode.com/problems/min-stack/",
       "added_date": "2026-02-18",
-      "stability": 2.3065,
-      "difficulty": 2.118103970459015,
+      "stability": 10.757464639247651,
+      "difficulty": 2.1169858664885557,
       "state": "review",
-      "last_review_date": "2026-02-19",
-      "next_review": "2026-02-21",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-02-21",
+      "next_review": "2026-03-04",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 3,
       "history": [
         {
@@ -6674,10 +6709,18 @@
           "difficulty": 2.118103970459015,
           "interval": 2,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-02-21",
+          "rating": 3,
+          "stability": 10.757464639247651,
+          "difficulty": 2.1169858664885557,
+          "interval": 11,
+          "retrievability": 0.9115814711321364
         }
       ],
       "fsrs_version": 6,
-      "note": "use min(minstack if minstack, val)"
+      "note": "remember that it shoudl be val elf.minstack[-1]"
     },
     {
       "id": "3357ed6d",
@@ -6710,15 +6753,24 @@
       "name": "239. Sliding Window Maximum",
       "url": "https://leetcode.com/problems/sliding-window-maximum/",
       "added_date": "2026-02-20",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-02-21",
+      "stability": 0.212,
+      "difficulty": 6.4133,
+      "state": "learning",
+      "last_review_date": "2026-02-21",
+      "next_review": "2026-02-22",
       "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "review_count": 1,
+      "last_rating": 1,
+      "history": [
+        {
+          "date": "2026-02-21",
+          "rating": 1,
+          "stability": 0.212,
+          "difficulty": 6.4133,
+          "interval": 1,
+          "retrievability": 0.9
+        }
+      ],
       "fsrs_version": 6
     }
   ],
