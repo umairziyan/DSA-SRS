@@ -451,16 +451,16 @@
       "name": "14. Longest Common Prefix",
       "url": "https://leetcode.com/problems/longest-common-prefix/",
       "added_date": "2025-12-16",
-      "next_review": "2026-02-21",
-      "review_count": 4,
+      "next_review": "2026-06-06",
+      "review_count": 5,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
-      "difficulty": 5.771864359,
-      "stability": 41.88479780153095,
+      "difficulty": 5.767092494641001,
+      "stability": 105.36354020273627,
       "state": "review",
-      "last_rating": 2,
-      "last_review_date": "2026-01-10",
-      "reps": 4,
+      "last_rating": 3,
+      "last_review_date": "2026-02-21",
+      "reps": 5,
       "history": [
         {
           "date": "2025-12-18",
@@ -493,8 +493,17 @@
           "difficulty": 5.771864359,
           "interval": 42,
           "retrievability": 0.8978321947987581
+        },
+        {
+          "date": "2026-02-21",
+          "rating": 3,
+          "stability": 105.36354020273627,
+          "difficulty": 5.767092494641001,
+          "interval": 105,
+          "retrievability": 0.8997649283357249
         }
-      ]
+      ],
+      "note": "rember to include the length"
     },
     {
       "id": "d2f54029",
@@ -6127,13 +6136,13 @@
       "name": "72. Edit Distance",
       "url": "https://leetcode.com/problems/edit-distance/",
       "added_date": "2026-02-07",
-      "stability": 7.589726479625615,
-      "difficulty": 7.830996606120709,
+      "stability": 13.415379510967673,
+      "difficulty": 8.551114471584771,
       "state": "review",
-      "last_review_date": "2026-02-13",
-      "next_review": "2026-02-21",
-      "reps": 3,
-      "review_count": 3,
+      "last_review_date": "2026-02-21",
+      "next_review": "2026-03-06",
+      "reps": 4,
+      "review_count": 4,
       "last_rating": 2,
       "history": [
         {
@@ -6159,9 +6168,18 @@
           "difficulty": 7.830996606120709,
           "interval": 8,
           "retrievability": 0.8783525833562931
+        },
+        {
+          "date": "2026-02-21",
+          "rating": 2,
+          "stability": 13.415379510967673,
+          "difficulty": 8.551114471584771,
+          "interval": 13,
+          "retrievability": 0.8954134753146805
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "You need an ans to detemine which is the best one, add oneas you now have a combination"
     },
     {
       "id": "68a9dc2e",
