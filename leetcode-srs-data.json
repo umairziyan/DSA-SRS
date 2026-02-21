@@ -5573,14 +5573,14 @@
       "name": "139. Word Break",
       "url": "https://leetcode.com/problems/word-break/submissions/",
       "added_date": "2026-01-30",
-      "stability": 6.110570663883277,
-      "difficulty": 8.368293384462959,
+      "stability": 9.902492220839932,
+      "difficulty": 8.907797111078226,
       "state": "review",
-      "last_review_date": "2026-02-15",
-      "next_review": "2026-02-21",
-      "reps": 2,
-      "review_count": 5,
-      "last_rating": 3,
+      "last_review_date": "2026-02-21",
+      "next_review": "2026-03-03",
+      "reps": 3,
+      "review_count": 6,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-02-02",
@@ -5621,9 +5621,18 @@
           "difficulty": 8.368293384462959,
           "interval": 6,
           "retrievability": 0.8853054760449959
+        },
+        {
+          "date": "2026-02-21",
+          "rating": 2,
+          "stability": 9.902492220839932,
+          "difficulty": 8.907797111078226,
+          "interval": 10,
+          "retrievability": 0.9015511216982518
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "tracking prefix lenmgths"
     },
     {
       "id": "aa2bdb5c",
@@ -6270,13 +6279,13 @@
       "name": "1584. Min Cost to Connect All Points",
       "url": "https://leetcode.com/problems/min-cost-to-connect-all-points/",
       "added_date": "2026-02-08",
-      "stability": 6.600279222944633,
-      "difficulty": 7.830996606120709,
+      "stability": 11.814021856034556,
+      "difficulty": 8.551114471584771,
       "state": "review",
-      "last_review_date": "2026-02-14",
-      "next_review": "2026-02-21",
-      "reps": 3,
-      "review_count": 3,
+      "last_review_date": "2026-02-21",
+      "next_review": "2026-03-05",
+      "reps": 4,
+      "review_count": 4,
       "last_rating": 2,
       "history": [
         {
@@ -6302,9 +6311,18 @@
           "difficulty": 7.830996606120709,
           "interval": 7,
           "retrievability": 0.9045688639165586
+        },
+        {
+          "date": "2026-02-21",
+          "rating": 2,
+          "stability": 11.814021856034556,
+          "difficulty": 8.551114471584771,
+          "interval": 12,
+          "retrievability": 0.894866279698631
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "totalcost += cost"
     },
     {
       "id": "511cf3d8",
@@ -6666,16 +6684,26 @@
       "name": "567. Permutation in String",
       "url": "https://leetcode.com/problems/permutation-in-string/",
       "added_date": "2026-02-20",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-02-21",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
-      "fsrs_version": 6
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-02-21",
+      "next_review": "2026-02-22",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
+      "history": [
+        {
+          "date": "2026-02-21",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
+        }
+      ],
+      "fsrs_version": 6,
+      "note": "think about it breaking a match"
     },
     {
       "id": "05c12ea0",
