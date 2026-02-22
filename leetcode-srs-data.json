@@ -2127,14 +2127,14 @@
       "name": "110. Balanced Binary Tree",
       "url": "https://leetcode.com/problems/balanced-binary-tree/",
       "added_date": "2025-12-30",
-      "stability": 25.09013317820779,
-      "difficulty": 8.546579737713188,
-      "state": "review",
-      "last_review_date": "2026-01-28",
-      "next_review": "2026-02-22",
-      "reps": 5,
-      "review_count": 5,
-      "last_rating": 2,
+      "stability": 2.080059535877469,
+      "difficulty": 9.513270643044107,
+      "state": "relearning",
+      "last_review_date": "2026-02-22",
+      "next_review": "2026-02-24",
+      "reps": 0,
+      "review_count": 6,
+      "last_rating": 1,
       "history": [
         {
           "date": "2026-01-02",
@@ -2175,9 +2175,18 @@
           "difficulty": 8.546579737713188,
           "interval": 25,
           "retrievability": 0.9015135170013006
+        },
+        {
+          "date": "2026-02-22",
+          "rating": 1,
+          "stability": 2.080059535877469,
+          "difficulty": 9.513270643044107,
+          "interval": 2,
+          "retrievability": 0.9003073054228385
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "use -1"
     },
     {
       "id": "23890af0",
@@ -2225,14 +2234,14 @@
       "name": "236. Lowest Common Ancestor of a Binary Tree",
       "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
       "added_date": "2025-12-30",
-      "stability": 21.73107010719199,
-      "difficulty": 8.668540126527255,
+      "stability": 38.254424351612016,
+      "difficulty": 8.660871586400727,
       "state": "review",
-      "last_review_date": "2026-01-31",
-      "next_review": "2026-02-22",
-      "reps": 4,
-      "review_count": 8,
-      "last_rating": 4,
+      "last_review_date": "2026-02-22",
+      "next_review": "2026-04-01",
+      "reps": 5,
+      "review_count": 9,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-03",
@@ -2297,22 +2306,31 @@
           "difficulty": 8.668540126527255,
           "interval": 22,
           "retrievability": 0.9019308299572221
+        },
+        {
+          "date": "2026-02-22",
+          "rating": 3,
+          "stability": 38.254424351612016,
+          "difficulty": 8.660871586400727,
+          "interval": 38,
+          "retrievability": 0.8989437687049115
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "remember to do dfs on each and ccheck if, its tos both, then we return the root"
     },
     {
       "id": "6ad60806",
       "name": "572. Subtree of Another Tree",
       "url": "https://leetcode.com/problems/subtree-of-another-tree/",
       "added_date": "2026-01-01",
-      "stability": 10.644415969145431,
-      "difficulty": 8.444087244754012,
+      "stability": 29.70490292590474,
+      "difficulty": 7.915173707485198,
       "state": "review",
-      "last_review_date": "2026-02-11",
-      "next_review": "2026-02-22",
-      "reps": 2,
-      "review_count": 6,
+      "last_review_date": "2026-02-22",
+      "next_review": "2026-03-24",
+      "reps": 3,
+      "review_count": 7,
       "last_rating": 4,
       "history": [
         {
@@ -2362,9 +2380,18 @@
           "difficulty": 8.444087244754012,
           "interval": 11,
           "retrievability": 0.8930807144788119
+        },
+        {
+          "date": "2026-02-22",
+          "rating": 4,
+          "stability": 29.70490292590474,
+          "difficulty": 7.915173707485198,
+          "interval": 30,
+          "retrievability": 0.8971573385560707
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "write another isSameTree ufnciton"
     },
     {
       "id": "cefca07d",
@@ -4727,14 +4754,14 @@
       "name": "55. Jump Game",
       "url": "https://leetcode.com/problems/jump-game/",
       "added_date": "2026-01-17",
-      "stability": 26.588680868783776,
-      "difficulty": 4.016380600000001,
-      "state": "review",
-      "last_review_date": "2026-01-26",
-      "next_review": "2026-02-22",
-      "reps": 2,
-      "review_count": 2,
-      "last_rating": 2,
+      "stability": 2.2407470495495803,
+      "difficulty": 8.02422499183192,
+      "state": "relearning",
+      "last_review_date": "2026-02-22",
+      "next_review": "2026-02-24",
+      "reps": 0,
+      "review_count": 3,
+      "last_rating": 1,
       "history": [
         {
           "date": "2026-01-18",
@@ -4751,9 +4778,18 @@
           "difficulty": 4.016380600000001,
           "interval": 27,
           "retrievability": 0.9030622091783326
+        },
+        {
+          "date": "2026-02-22",
+          "rating": 1,
+          "stability": 2.2407470495495803,
+          "difficulty": 8.02422499183192,
+          "interval": 2,
+          "retrievability": 0.8986802485519627
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "Think about if you can reach the goal. Set a goal and change it if it can be reached."
     },
     {
       "id": "5d0d3e96",
@@ -5501,13 +5537,13 @@
       "name": "322. Coin Change",
       "url": "https://leetcode.com/problems/coin-change/",
       "added_date": "2026-01-28",
-      "stability": 12.461775278062433,
-      "difficulty": 8.551114471584771,
+      "stability": 18.74194873202981,
+      "difficulty": 9.029162268172346,
       "state": "review",
-      "last_review_date": "2026-02-10",
-      "next_review": "2026-02-22",
-      "reps": 4,
-      "review_count": 4,
+      "last_review_date": "2026-02-22",
+      "next_review": "2026-03-13",
+      "reps": 5,
+      "review_count": 5,
       "last_rating": 2,
       "history": [
         {
@@ -5541,9 +5577,18 @@
           "difficulty": 8.551114471584771,
           "interval": 12,
           "retrievability": 0.8823981956082635
+        },
+        {
+          "date": "2026-02-22",
+          "rating": 2,
+          "stability": 18.74194873202981,
+          "difficulty": 9.029162268172346,
+          "interval": 19,
+          "retrievability": 0.9031850595271551
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "Think about setting a max value and seeing if you can reach it"
     },
     {
       "id": "180d058b",
@@ -6398,14 +6443,14 @@
       "name": "269. Alien Dictionary",
       "url": "https://leetcode.com/problems/alien-dictionary/",
       "added_date": "2026-02-13",
-      "stability": 1.3906965469259136,
-      "difficulty": 9.896947169136324,
+      "stability": 1.9713229315993166,
+      "difficulty": 9.888050221967188,
       "state": "review",
-      "last_review_date": "2026-02-21",
-      "next_review": "2026-02-22",
-      "reps": 3,
-      "review_count": 7,
-      "last_rating": 2,
+      "last_review_date": "2026-02-22",
+      "next_review": "2026-02-24",
+      "reps": 4,
+      "review_count": 8,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-02-14",
@@ -6462,6 +6507,14 @@
           "difficulty": 9.896947169136324,
           "interval": 1,
           "retrievability": 0.9017819793942675
+        },
+        {
+          "date": "2026-02-22",
+          "rating": 3,
+          "stability": 1.9713229315993166,
+          "difficulty": 9.888050221967188,
+          "interval": 2,
+          "retrievability": 0.9250264912657676
         }
       ],
       "fsrs_version": 6,
@@ -6472,13 +6525,13 @@
       "name": "787. Cheapest Flights Within K Stops",
       "url": "https://leetcode.com/problems/cheapest-flights-within-k-stops/",
       "added_date": "2026-02-13",
-      "stability": 4.74204076714111,
-      "difficulty": 6.746231141532862,
+      "stability": 10.02758104368822,
+      "difficulty": 7.830996606120709,
       "state": "review",
-      "last_review_date": "2026-02-17",
-      "next_review": "2026-02-22",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-02-22",
+      "next_review": "2026-03-04",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 2,
       "history": [
         {
@@ -6496,10 +6549,18 @@
           "difficulty": 6.746231141532862,
           "interval": 5,
           "retrievability": 0.8566117863666073
+        },
+        {
+          "date": "2026-02-22",
+          "rating": 2,
+          "stability": 10.02758104368822,
+          "difficulty": 7.830996606120709,
+          "interval": 10,
+          "retrievability": 0.8953846865365694
         }
       ],
       "fsrs_version": 6,
-      "note": "bellman ford"
+      "note": "prices = float(\"inf\") * n"
     },
     {
       "id": "0c3e206c",
@@ -6727,13 +6788,13 @@
       "name": "567. Permutation in String",
       "url": "https://leetcode.com/problems/permutation-in-string/",
       "added_date": "2026-02-20",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 3.168008457377537,
+      "difficulty": 6.746231141532862,
       "state": "review",
-      "last_review_date": "2026-02-21",
-      "next_review": "2026-02-22",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-02-22",
+      "next_review": "2026-02-25",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 2,
       "history": [
         {
@@ -6743,24 +6804,32 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-02-22",
+          "rating": 2,
+          "stability": 3.168008457377537,
+          "difficulty": 6.746231141532862,
+          "interval": 3,
+          "retrievability": 0.920029131893056
         }
       ],
       "fsrs_version": 6,
-      "note": "think about it breaking a match"
+      "note": "- Also think about the sliding window is the len of the window."
     },
     {
       "id": "05c12ea0",
       "name": "239. Sliding Window Maximum",
       "url": "https://leetcode.com/problems/sliding-window-maximum/",
       "added_date": "2026-02-20",
-      "stability": 0.212,
-      "difficulty": 6.4133,
-      "state": "learning",
-      "last_review_date": "2026-02-21",
-      "next_review": "2026-02-22",
-      "reps": 0,
-      "review_count": 1,
-      "last_rating": 1,
+      "stability": 1.5950687262769252,
+      "difficulty": 7.60998139978,
+      "state": "review",
+      "last_review_date": "2026-02-22",
+      "next_review": "2026-02-24",
+      "reps": 1,
+      "review_count": 2,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-02-21",
@@ -6769,9 +6838,18 @@
           "difficulty": 6.4133,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-02-22",
+          "rating": 2,
+          "stability": 1.5950687262769252,
+          "difficulty": 7.60998139978,
+          "interval": 2,
+          "retrievability": 0.6890078640914266
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "r-k+1"
     }
   ],
   "daily_adds": {
