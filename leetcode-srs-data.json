@@ -6850,6 +6850,22 @@
       ],
       "fsrs_version": 6,
       "note": "r-k+1"
+    },
+    {
+      "id": "ea336433",
+      "name": "314. Binary Tree Vertical Order Traversal",
+      "url": "https://leetcode.com/problems/binary-tree-vertical-order-traversal/",
+      "added_date": "2026-02-22",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-02-23",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -6898,7 +6914,8 @@
     "2026-02-15": 1,
     "2026-02-17": 3,
     "2026-02-18": 3,
-    "2026-02-20": 2
+    "2026-02-20": 2,
+    "2026-02-22": 1
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
