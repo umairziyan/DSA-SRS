@@ -6866,7 +6866,10 @@
       "review_count": 0,
       "last_rating": null,
       "history": [],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "tags": [
+        "Meta"
+      ]
     }
   ],
   "daily_adds": {
