@@ -826,7 +826,10 @@
           "retrievability": 0.9037270055365523
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "tags": [
+        "Meta"
+      ]
     },
     {
       "id": "203ed919",
