@@ -45,12 +45,14 @@ Requires Python 3.6+
 
 | Command | Description |
 |---------|-------------|
-| `add <name> [url]` | Add a new problem (auto-scheduled to balance load) |
+| `add <name> [url] [company]` | Add a new problem (optional company tag) |
 | `today` | Show problems due for review today |
 | `review` | Interactive review session |
 | `list` | List all problems with status |
 | `stats` | Show learning statistics |
 | `delete <name\|id>` | Remove a problem |
+| `tag <name\|id> <company> [--remove]` | Tag a problem with a company name |
+| `reset <name\|id>` | Reset a problem's schedule to start fresh |
 | `sync` | Manually sync to git |
 | `help` | Show help message |
 
@@ -121,10 +123,41 @@ Data is stored in `leetcode-srs-data.json` in the same directory as the script. 
 }
 ```
 
+## Company Tags
+
+Label problems with company names for targeted interview prep:
+
+```bash
+# Add with tag inline
+./leetcode-srs add "1. Two Sum" "https://leetcode.com/problems/two-sum" Meta
+
+# Tag an existing problem
+./leetcode-srs tag "two sum" Google
+
+# Remove a tag
+./leetcode-srs tag "two sum" Google --remove
+
+# Duplicate add: prompts to tag + reset in one step
+./leetcode-srs add "1. Two Sum" "url"
+# → Enter "Amazon" at prompt → resets interval, adds tag
+```
+
+Tags are normalized globally: `meta`, `META`, and `Meta` all resolve to `Meta`. Major companies (Meta, Google, Amazon, Microsoft, etc.) get distinct colors in the terminal. Tags appear inline in `list`, `today`, and `review` output.
+
+## Reset
+
+Restart a problem's SRS schedule without losing its history:
+
+```bash
+./leetcode-srs reset "two sum"
+```
+
+Useful when you want to re-learn a problem from scratch for a new job search cycle. History and tags are preserved.
+
 ## Recommended Workflow
 
 1. **Solve a problem** on LeetCode
-2. **Add it**: `./leetcode-srs add "Problem Name" "url"`
+2. **Add it**: `./leetcode-srs add "1. Problem Name" "url" Meta`
 3. **Review daily**: Run `./leetcode-srs review` each day
 4. **Rate honestly**: Be truthful about difficulty—it optimizes your schedule
 5. **Trust the system**: Even if intervals feel long, that's the point

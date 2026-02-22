@@ -33,6 +33,7 @@ GIT_SYNC_ENABLED = True  # Set to False to disable auto-sync
 # Daily limits
 MAX_PRIORITY_PER_DAY = 5  # Number of problems to highlight as priority
 MIN_ADDS_PER_DAY = 3      # Minimum new problems to add daily
+PROMPT_FOR_TAG_ON_ADD = True  # Prompt for company tag when adding a new problem
 
 # Warning threshold for "Hard" rating resulting in long intervals
 HARD_LONG_INTERVAL_WARNING = 30  # Warn if Hard results in > 30 days
@@ -85,6 +86,9 @@ class Colors:
     BOLD = "\033[1m"
     DIM = "\033[2m"
     RESET = "\033[0m"
+
+
+COLOR_CYCLE = [Colors.CYAN, Colors.GREEN, Colors.YELLOW, Colors.BLUE, Colors.MAGENTA, Colors.RED]
 
 
 # ============================================================================
@@ -476,7 +480,6 @@ def load_data():
                 json.dump(data, f, indent=2)
             print(f"{Colors.GREEN}Migration complete! {len(data['problems'])} problems migrated.{Colors.RESET}\n")
 
-        # Ensure daily_adds exists
         if "daily_adds" not in data:
             data["daily_adds"] = {}
         return data
@@ -538,7 +541,6 @@ def save_data(data):
 def git_sync():
     """Auto-commit and push changes to git if in a git repo."""
     try:
-        # Check if we're in a git repo
         result = subprocess.run(
             ["git", "rev-parse", "--is-inside-work-tree"],
             cwd=SCRIPT_DIR,
@@ -546,9 +548,8 @@ def git_sync():
             text=True
         )
         if result.returncode != 0:
-            return  # Not a git repo, skip silently
+            return
 
-        # Check if there are changes to commit
         result = subprocess.run(
             ["git", "status", "--porcelain", DATA_FILE.name],
             cwd=SCRIPT_DIR,
@@ -556,16 +557,14 @@ def git_sync():
             text=True
         )
         if not result.stdout.strip():
-            return  # No changes to commit
+            return
 
-        # Stage the data file
         subprocess.run(
             ["git", "add", DATA_FILE.name],
             cwd=SCRIPT_DIR,
             capture_output=True
         )
 
-        # Commit with timestamp
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
         subprocess.run(
             ["git", "commit", "-m", f"leetcode-srs: auto-sync {timestamp}"],
@@ -669,16 +668,52 @@ def print_note_result(note_action):
         print(f"  {Colors.CYAN}Note cleared.{Colors.RESET}")
 
 
+def normalize_tag(raw_tag, data):
+    """Normalize a company tag, reusing existing canonical form if found."""
+    normalized = raw_tag.strip().title()
+    existing_tags = {}
+    for p in data.get("problems", []):
+        for tag in p.get("tags", []):
+            existing_tags[tag.lower()] = tag
+    return existing_tags.get(normalized.lower(), normalized)
+
+
+def get_tag_color(tag):
+    """Get terminal color for a tag, derived from its name."""
+    return COLOR_CYCLE[hash(tag.lower()) % len(COLOR_CYCLE)]
+
+
+def format_tags(tags):
+    """Format tags as colored inline string like [Meta] [Google]."""
+    if not tags:
+        return ""
+    parts = [f"{get_tag_color(tag)}[{tag}]{Colors.RESET}" for tag in tags]
+    return " ".join(parts)
+
+
+def reset_problem_schedule(problem):
+    """Reset FSRS schedule fields to fresh state, preserving history and tags."""
+    tomorrow = (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%d")
+    problem["stability"] = 0
+    problem["difficulty"] = 5.0
+    problem["state"] = "new"
+    problem["last_review_date"] = None
+    problem["next_review"] = tomorrow
+    problem["reps"] = 0
+    problem["review_count"] = 0
+    problem["last_rating"] = None
+
+
 def cmd_add(args):
     """Add a new problem to track."""
     if not args:
-        print(f"{Colors.RED}Usage: leetcode-srs add <problem-name> [url]{Colors.RESET}")
+        print(f"{Colors.RED}Usage: leetcode-srs add <problem-name> [url] [company]{Colors.RESET}")
         return
 
     name = args[0]
     url = args[1] if len(args) > 1 else ""
+    company_tag = args[2] if len(args) > 2 else None
 
-    # Validate problem name format
     problem_num = extract_problem_number(name)
     if problem_num is None:
         print(f"{Colors.RED}Error: Problem name must start with a number and dot (e.g., '171. Problem Name'){Colors.RESET}")
@@ -686,57 +721,70 @@ def cmd_add(args):
 
     data = load_data()
 
-    # Check for duplicate by problem number
     for existing in data["problems"]:
         existing_num = extract_problem_number(existing["name"])
         if existing_num == problem_num:
-            print(f"{Colors.RED}Duplicate found:{Colors.RESET} '{existing['name']}' (#{existing_num})")
-            print(f"  Next review: {format_date(existing['next_review'])}")
-            print(f"  Reviews: {existing['review_count']}")
+            interval = calculate_interval(existing.get("stability", 0))
+            review_count = existing.get("review_count", 0)
+            print(f"{Colors.RED}Duplicate found:{Colors.RESET} '{existing['name']}' (interval: {interval}d, {review_count} reviews)")
+            tag_input = input(f"  Tag with company and reset? Enter company name (or Enter to skip): ").strip()
+            if tag_input:
+                tag = normalize_tag(tag_input, data)
+                tags = existing.setdefault("tags", [])
+                if tag not in tags:
+                    tags.append(tag)
+                reset_problem_schedule(existing)
+                save_data(data)
+                print(f"  Tagged as {format_tags([tag])} and reset. First review: {Colors.YELLOW}Tomorrow{Colors.RESET}")
+            else:
+                print(f"  Next review: {format_date(existing['next_review'])}")
+                print(f"  Reviews: {existing['review_count']}")
             return
 
     today = datetime.now()
 
-    # New problems always review tomorrow (1 day) for optimal FSRS learning
-    # FSRS research shows first review should happen 1-2 days after learning
+    # New problems always review tomorrow for optimal FSRS learning
     next_review = (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%d")
     days_ahead = 1
 
-    # FSRS problem structure
     problem = {
         "id": str(uuid.uuid4())[:8],
         "name": name,
         "url": url,
         "added_date": today.strftime("%Y-%m-%d"),
-
-        # FSRS fields
-        "stability": 0,           # Will be set on first review
-        "difficulty": 5.0,        # Default mid-range difficulty
+        "stability": 0,
+        "difficulty": 5.0,
         "state": "new",
         "last_review_date": None,
         "next_review": next_review,
         "reps": 0,
-
-        # Tracking
         "review_count": 0,
         "last_rating": None,
         "history": [],
-
-        # Metadata
+        "tags": [],
         "fsrs_version": 6,
     }
+
+    if company_tag:
+        tag = normalize_tag(company_tag, data)
+        problem["tags"] = [tag]
+    elif PROMPT_FOR_TAG_ON_ADD:
+        tag_input = input(f"  Company tag? {Colors.DIM}(Enter to skip){Colors.RESET}: ").strip()
+        if tag_input:
+            problem["tags"] = [normalize_tag(tag_input, data)]
 
     data["problems"].append(problem)
     increment_today_adds(data)
     save_data(data)
 
-    print(f"{Colors.GREEN}Added:{Colors.RESET} {name}")
+    tags_str = format_tags(problem["tags"])
+    tags_display = f"  {tags_str}" if tags_str else ""
+    print(f"{Colors.GREEN}Added:{Colors.RESET} {name}{tags_display}")
     if days_ahead == 1:
         print(f"  First review: {Colors.YELLOW}Tomorrow{Colors.RESET}")
     else:
         print(f"  First review: {Colors.BLUE}In {days_ahead} days{Colors.RESET} ({next_review})")
 
-    # Show progress toward daily goal
     adds_today = get_today_adds(data)
     if adds_today >= MIN_ADDS_PER_DAY:
         print(f"  {Colors.GREEN}Daily goal reached! ({adds_today}/{MIN_ADDS_PER_DAY}){Colors.RESET}")
@@ -792,7 +840,9 @@ def cmd_today(args):
         else:
             priority_marker = f"{Colors.DIM}[ ]{Colors.RESET} "
 
-        print(f"  {priority_marker}{Colors.CYAN}{p['name']}{Colors.RESET}")
+        tags_str = format_tags(p.get("tags", []))
+        tags_display = f"  {tags_str}" if tags_str else ""
+        print(f"  {priority_marker}{Colors.CYAN}{p['name']}{Colors.RESET}{tags_display}")
         print(f"      {status} | {review_info} | Last: {format_last_review(p.get('last_review_date'))}")
         if p["url"]:
             print(f"      {Colors.DIM}{p['url']}{Colors.RESET}")
@@ -831,7 +881,9 @@ def cmd_tomorrow(args):
         if p.get("last_rating") is not None:
             review_info += f" | Last: {rating_display(p['last_rating'])}"
 
-        print(f"  {Colors.CYAN}{p['name']}{Colors.RESET}")
+        tags_str = format_tags(p.get("tags", []))
+        tags_display = f"  {tags_str}" if tags_str else ""
+        print(f"  {Colors.CYAN}{p['name']}{Colors.RESET}{tags_display}")
         print(f"      {status} | {review_info} | Last: {format_last_review(p.get('last_review_date'))}")
         if p["url"]:
             print(f"      {Colors.DIM}{p['url']}{Colors.RESET}")
@@ -880,7 +932,9 @@ def cmd_review(args):
         else:
             r_display = "New"
 
-        print(f"{Colors.BOLD}[{i+1}/{len(due)}] {priority_tag}{p['name']}{Colors.RESET}")
+        tags_str = format_tags(p.get("tags", []))
+        tags_display = f"  {tags_str}" if tags_str else ""
+        print(f"{Colors.BOLD}[{i+1}/{len(due)}] {priority_tag}{p['name']}{Colors.RESET}{tags_display}")
         if p["url"]:
             print(f"  {Colors.DIM}{p['url']}{Colors.RESET}")
         print(f"  Review #{p['review_count'] + 1} | S:{stability:.1f}d | {r_display} | {format_date(p['next_review'])} | Last: {format_last_review(last_review)}")
@@ -1004,7 +1058,9 @@ def cmd_list(args):
         else:
             r_display = "New"
 
-        print(f"  {Colors.CYAN}{p['name']}{Colors.RESET}")
+        tags_str = format_tags(p.get("tags", []))
+        tags_display = f"  {tags_str}" if tags_str else ""
+        print(f"  {Colors.CYAN}{p['name']}{Colors.RESET}{tags_display}")
         print(f"    {status} | S:{s:.1f}d | D:{d:.1f} | {r_display} | Reviews: {p['review_count']} | Last: {format_last_review(last_review)}")
         if p["url"]:
             print(f"    {Colors.DIM}{p['url']}{Colors.RESET}")
@@ -1329,6 +1385,87 @@ def cmd_random(args):
             print()
 
 
+def cmd_tag(args):
+    """Tag a problem with a company name."""
+    if len(args) < 2:
+        print(f"{Colors.RED}Usage: leetcode-srs tag <name|id> <company> [--remove]{Colors.RESET}")
+        return
+
+    search = args[0].lower()
+    company_raw = args[1]
+    remove = "--remove" in args
+
+    data = load_data()
+    matches = [p for p in data["problems"]
+               if search in p["name"].lower() or search == p["id"]]
+
+    if not matches:
+        print(f"{Colors.RED}No problem found matching '{args[0]}'{Colors.RESET}")
+        return
+
+    if len(matches) > 1:
+        print(f"{Colors.YELLOW}Multiple matches found:{Colors.RESET}")
+        for p in matches:
+            print(f"  [{p['id']}] {p['name']}")
+        print(f"\nUse the ID to tag a specific problem.")
+        return
+
+    problem = matches[0]
+    tag = normalize_tag(company_raw, data)
+    tags = problem.setdefault("tags", [])
+
+    if remove:
+        if tag in tags:
+            tags.remove(tag)
+            save_data(data)
+            print(f"Removed {format_tags([tag])} from '{problem['name']}'")
+        else:
+            print(f"{Colors.YELLOW}Tag '{tag}' not found on '{problem['name']}'{Colors.RESET}")
+    else:
+        if tag not in tags:
+            tags.append(tag)
+            save_data(data)
+        print(f"Tagged '{problem['name']}' as {format_tags([tag])}")
+
+
+def cmd_reset(args):
+    """Reset a problem's schedule to start fresh."""
+    if not args:
+        print(f"{Colors.RED}Usage: leetcode-srs reset <name|id>{Colors.RESET}")
+        return
+
+    search = args[0].lower()
+    data = load_data()
+    matches = [p for p in data["problems"]
+               if search in p["name"].lower() or search == p["id"]]
+
+    if not matches:
+        print(f"{Colors.RED}No problem found matching '{args[0]}'{Colors.RESET}")
+        return
+
+    if len(matches) > 1:
+        print(f"{Colors.YELLOW}Multiple matches found:{Colors.RESET}")
+        for p in matches:
+            print(f"  [{p['id']}] {p['name']}")
+        print(f"\nUse the ID to reset a specific problem.")
+        return
+
+    problem = matches[0]
+    interval = calculate_interval(problem.get("stability", 0))
+    review_count = problem.get("review_count", 0)
+    tags_str = format_tags(problem.get("tags", []))
+    tags_display = f"  {tags_str}" if tags_str else ""
+    print(f"'{problem['name']}'{tags_display} (interval: {interval}d, {review_count} reviews)")
+    confirm = input(f"Reset? (y/N): ").strip().lower()
+
+    if confirm == 'y':
+        reset_problem_schedule(problem)
+        save_data(data)
+        print(f"{Colors.GREEN}Reset '{problem['name']}'. First review: {Colors.YELLOW}Tomorrow{Colors.RESET}")
+    else:
+        print(f"{Colors.DIM}Cancelled.{Colors.RESET}")
+
+
 def cmd_help(args):
     """Show help message."""
     sync_status = f"{Colors.GREEN}ON{Colors.RESET}" if GIT_SYNC_ENABLED else f"{Colors.RED}OFF{Colors.RESET}"
@@ -1339,16 +1476,18 @@ def cmd_help(args):
   leetcode-srs <command> [arguments]
 
 {Colors.BOLD}Commands:{Colors.RESET}
-  {Colors.CYAN}add{Colors.RESET} <name> [url]   Add a new problem to track
-  {Colors.CYAN}today{Colors.RESET}              Show problems due for review today
-  {Colors.CYAN}tomorrow{Colors.RESET}           Show problems due for review tomorrow
-  {Colors.CYAN}review{Colors.RESET}             Start interactive review session
-  {Colors.CYAN}list{Colors.RESET}               List all problems with status
-  {Colors.CYAN}stats{Colors.RESET}              Show learning statistics
-  {Colors.CYAN}delete{Colors.RESET} <name|id>   Delete a problem
-  {Colors.CYAN}random{Colors.RESET} [count]     Select problem(s) by memory weakness
-  {Colors.CYAN}sync{Colors.RESET}               Manually sync to git
-  {Colors.CYAN}help{Colors.RESET}               Show this help message
+  {Colors.CYAN}add{Colors.RESET} <name> [url] [company]          Add a new problem to track
+  {Colors.CYAN}today{Colors.RESET}                               Show problems due for review today
+  {Colors.CYAN}tomorrow{Colors.RESET}                            Show problems due for review tomorrow
+  {Colors.CYAN}review{Colors.RESET}                              Start interactive review session
+  {Colors.CYAN}list{Colors.RESET}                                List all problems with status
+  {Colors.CYAN}stats{Colors.RESET}                               Show learning statistics
+  {Colors.CYAN}delete{Colors.RESET} <name|id>                    Delete a problem
+  {Colors.CYAN}tag{Colors.RESET} <name|id> <company> [--remove]  Tag a problem with a company name
+  {Colors.CYAN}reset{Colors.RESET} <name|id>                     Reset a problem's schedule to start fresh
+  {Colors.CYAN}random{Colors.RESET} [count]                      Select problem(s) by memory weakness
+  {Colors.CYAN}sync{Colors.RESET}                                Manually sync to git
+  {Colors.CYAN}help{Colors.RESET}                                Show this help message
 
 {Colors.BOLD}Algorithm (FSRS-6):{Colors.RESET}
   Uses the Free Spaced Repetition Scheduler with:
@@ -1381,8 +1520,15 @@ def cmd_help(args):
   Auto-sync: {sync_status} (edit GIT_SYNC_ENABLED in script to change)
   Data auto-commits and pushes after each change when in a git repo.
 
+{Colors.BOLD}Company Tags:{Colors.RESET}
+  Tags are stored in Title Case and normalized globally (meta/META → Meta).
+  Adding a tag when one exists for that company on a problem is a no-op.
+  Colors are predefined for major companies; others get consistent assigned colors.
+
 {Colors.BOLD}Example Workflow:{Colors.RESET}
-  leetcode-srs add "Two Sum" "https://leetcode.com/problems/two-sum"
+  leetcode-srs add "1. Two Sum" "https://leetcode.com/problems/two-sum" Meta
+  leetcode-srs tag "two sum" Google
+  leetcode-srs reset "two sum"
   leetcode-srs today
   leetcode-srs review
 
@@ -1401,6 +1547,8 @@ def main():
         "list": cmd_list,
         "stats": cmd_stats,
         "delete": cmd_delete,
+        "tag": cmd_tag,
+        "reset": cmd_reset,
         "random": cmd_random,
         "sync": cmd_sync,
         "help": cmd_help,
