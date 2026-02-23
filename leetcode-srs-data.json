@@ -2021,14 +2021,14 @@
       "name": "543. Diameter of Binary Tree",
       "url": "https://leetcode.com/problems/diameter-of-binary-tree/",
       "added_date": "2025-12-29",
-      "stability": 2.080059535877469,
-      "difficulty": 9.513270643044107,
-      "state": "relearning",
-      "last_review_date": "2026-02-21",
-      "next_review": "2026-02-23",
-      "reps": 0,
-      "review_count": 6,
-      "last_rating": 1,
+      "stability": 3.5040981947228715,
+      "difficulty": 9.504757372401063,
+      "state": "review",
+      "last_review_date": "2026-02-23",
+      "next_review": "2026-02-27",
+      "reps": 1,
+      "review_count": 7,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-01",
@@ -2077,10 +2077,18 @@
           "difficulty": 9.513270643044107,
           "interval": 2,
           "retrievability": 0.9003073054228385
+        },
+        {
+          "date": "2026-02-23",
+          "rating": 3,
+          "stability": 3.5040981947228715,
+          "difficulty": 9.504757372401063,
+          "interval": 4,
+          "retrievability": 0.9033089744163596
         }
       ],
       "fsrs_version": 6,
-      "note": "neet to add"
+      "note": "need to add, also need to find the max based on self.res"
     },
     {
       "id": "5c3fd18c",
@@ -4329,14 +4337,14 @@
       "name": "684. Redundant Connection",
       "url": "https://leetcode.com/problems/redundant-connection/",
       "added_date": "2026-01-15",
-      "stability": 12.584369347031126,
-      "difficulty": 7.822093651316267,
+      "stability": 27.127897663369996,
+      "difficulty": 7.815271557664952,
       "state": "review",
-      "last_review_date": "2026-02-10",
-      "next_review": "2026-02-23",
-      "reps": 2,
-      "review_count": 6,
-      "last_rating": 4,
+      "last_review_date": "2026-02-23",
+      "next_review": "2026-03-22",
+      "reps": 3,
+      "review_count": 7,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-16",
@@ -4385,9 +4393,18 @@
           "difficulty": 7.822093651316267,
           "interval": 13,
           "retrievability": 0.904010728164711
+        },
+        {
+          "date": "2026-02-23",
+          "rating": 3,
+          "stability": 27.127897663369996,
+          "difficulty": 7.815271557664952,
+          "interval": 27,
+          "retrievability": 0.8971893672023216
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "dfs union find"
     },
     {
       "id": "2de98827",
@@ -6653,14 +6670,14 @@
       "name": "238. Product of Array Except Self",
       "url": "https://leetcode.com/problems/product-of-array-except-self/",
       "added_date": "2026-02-17",
-      "stability": 4.410673091748482,
-      "difficulty": 5.108058534895454,
+      "stability": 23.17601358045745,
+      "difficulty": 3.4643996617297885,
       "state": "review",
-      "last_review_date": "2026-02-19",
-      "next_review": "2026-02-23",
-      "reps": 2,
-      "review_count": 2,
-      "last_rating": 3,
+      "last_review_date": "2026-02-23",
+      "next_review": "2026-03-18",
+      "reps": 3,
+      "review_count": 3,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-02-18",
@@ -6677,6 +6694,14 @@
           "difficulty": 5.108058534895454,
           "interval": 4,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-02-23",
+          "rating": 4,
+          "stability": 23.17601358045745,
+          "difficulty": 3.4643996617297885,
+          "interval": 23,
+          "retrievability": 0.908068020188883
         }
       ],
       "fsrs_version": 6,
