@@ -768,14 +768,14 @@
       "name": "121. Best Time to Buy and Sell Stock",
       "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
       "added_date": "2025-12-21",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-02-23",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-02-23",
+      "next_review": "2026-02-25",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
       "history": [
         {
           "date": "2025-12-22",
@@ -824,10 +824,19 @@
           "difficulty": 7.341621371443558,
           "interval": 28,
           "retrievability": 0.9037270055365523
+        },
+        {
+          "date": "2026-02-23",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
-      "tags": []
+      "tags": [],
+      "note": "buy low, sell high"
     },
     {
       "id": "203ed919",
@@ -4881,13 +4890,13 @@
       "name": "134. Gas Station",
       "url": "https://leetcode.com/problems/gas-station/",
       "added_date": "2026-01-18",
-      "stability": 5.142153237749646,
-      "difficulty": 7.83594981828199,
+      "stability": 11.650413410996038,
+      "difficulty": 7.8291138684637085,
       "state": "review",
-      "last_review_date": "2026-02-18",
-      "next_review": "2026-02-23",
-      "reps": 1,
-      "review_count": 5,
+      "last_review_date": "2026-02-23",
+      "next_review": "2026-03-07",
+      "reps": 2,
+      "review_count": 6,
       "last_rating": 3,
       "history": [
         {
@@ -4929,6 +4938,14 @@
           "difficulty": 7.83594981828199,
           "interval": 5,
           "retrievability": 0.9049450712006266
+        },
+        {
+          "date": "2026-02-23",
+          "rating": 3,
+          "stability": 11.650413410996038,
+          "difficulty": 7.8291138684637085,
+          "interval": 12,
+          "retrievability": 0.9023729732057677
         }
       ],
       "fsrs_version": 6,
@@ -6918,19 +6935,29 @@
       "name": "1249. Minimum Remove to Make Valid Parentheses",
       "url": "https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/",
       "added_date": "2026-02-22",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-02-23",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-02-23",
+      "next_review": "2026-02-24",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
+      "history": [
+        {
+          "date": "2026-02-23",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
+        }
+      ],
       "tags": [
         "Meta"
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "remember to check if cnt > 0"
     }
   ],
   "daily_adds": {
