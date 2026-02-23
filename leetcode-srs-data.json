@@ -4411,14 +4411,14 @@
       "name": "127. Word Ladder",
       "url": "https://leetcode.com/problems/word-ladder/",
       "added_date": "2026-01-15",
-      "stability": 21.45149401111939,
-      "difficulty": 7.8291844041202046,
+      "stability": 43.02794319721222,
+      "difficulty": 7.822355219716084,
       "state": "review",
-      "last_review_date": "2026-02-02",
-      "next_review": "2026-02-23",
-      "reps": 4,
-      "review_count": 4,
-      "last_rating": 2,
+      "last_review_date": "2026-02-23",
+      "next_review": "2026-04-07",
+      "reps": 5,
+      "review_count": 5,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-16",
@@ -4451,9 +4451,18 @@
           "difficulty": 7.8291844041202046,
           "interval": 21,
           "retrievability": 0.8874568698372673
+        },
+        {
+          "date": "2026-02-23",
+          "rating": 3,
+          "stability": 43.02794319721222,
+          "difficulty": 7.822355219716084,
+          "interval": 43,
+          "retrievability": 0.9018049513699016
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "remember the pattern"
     },
     {
       "id": "3399f6eb",
@@ -5986,13 +5995,13 @@
       "name": "518. Coin Change II",
       "url": "https://leetcode.com/problems/coin-change-ii/",
       "added_date": "2026-02-05",
-      "stability": 3.179552805280191,
-      "difficulty": 9.614948560777204,
+      "stability": 5.037414114047407,
+      "difficulty": 9.606333612216426,
       "state": "review",
-      "last_review_date": "2026-02-20",
-      "next_review": "2026-02-23",
-      "reps": 3,
-      "review_count": 7,
+      "last_review_date": "2026-02-23",
+      "next_review": "2026-02-28",
+      "reps": 4,
+      "review_count": 8,
       "last_rating": 3,
       "history": [
         {
@@ -6050,6 +6059,14 @@
           "difficulty": 9.614948560777204,
           "interval": 3,
           "retrievability": 0.8932862512381252
+        },
+        {
+          "date": "2026-02-23",
+          "rating": 3,
+          "stability": 5.037414114047407,
+          "difficulty": 9.606333612216426,
+          "interval": 5,
+          "retrievability": 0.9048674824730553
         }
       ],
       "fsrs_version": 6,
