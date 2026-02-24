@@ -4956,13 +4956,13 @@
       "name": "846. Hand of Straights",
       "url": "https://leetcode.com/problems/hand-of-straights/",
       "added_date": "2026-01-18",
-      "stability": 17.023063272587958,
-      "difficulty": 8.551114471584771,
+      "stability": 25.873587880740704,
+      "difficulty": 9.029162268172346,
       "state": "review",
-      "last_review_date": "2026-02-06",
-      "next_review": "2026-02-23",
-      "reps": 4,
-      "review_count": 4,
+      "last_review_date": "2026-02-24",
+      "next_review": "2026-03-22",
+      "reps": 5,
+      "review_count": 5,
       "last_rating": 2,
       "history": [
         {
@@ -4996,9 +4996,18 @@
           "difficulty": 8.551114471584771,
           "interval": 17,
           "retrievability": 0.9002352615165494
+        },
+        {
+          "date": "2026-02-24",
+          "rating": 2,
+          "stability": 25.873587880740704,
+          "difficulty": 9.029162268172346,
+          "interval": 26,
+          "retrievability": 0.8951330057363922
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "check if the top of the value is, then only we can pop it."
     },
     {
       "id": "353e5f06",
@@ -6924,13 +6933,13 @@
       "name": "314. Binary Tree Vertical Order Traversal",
       "url": "https://leetcode.com/problems/binary-tree-vertical-order-traversal/",
       "added_date": "2026-02-22",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 3.168008457377537,
+      "difficulty": 6.746231141532862,
       "state": "review",
-      "last_review_date": "2026-02-23",
-      "next_review": "2026-02-24",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-02-24",
+      "next_review": "2026-02-27",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 2,
       "history": [
         {
@@ -6940,6 +6949,14 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-02-24",
+          "rating": 2,
+          "stability": 3.168008457377537,
+          "difficulty": 6.746231141532862,
+          "interval": 3,
+          "retrievability": 0.920029131893056
         }
       ],
       "fsrs_version": 6,
@@ -6953,14 +6970,14 @@
       "name": "1249. Minimum Remove to Make Valid Parentheses",
       "url": "https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/",
       "added_date": "2026-02-22",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 4.410673091748482,
+      "difficulty": 5.108058534895454,
       "state": "review",
-      "last_review_date": "2026-02-23",
-      "next_review": "2026-02-24",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 2,
+      "last_review_date": "2026-02-24",
+      "next_review": "2026-02-28",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-02-23",
@@ -6969,13 +6986,21 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-02-24",
+          "rating": 3,
+          "stability": 4.410673091748482,
+          "difficulty": 5.108058534895454,
+          "interval": 4,
+          "retrievability": 0.920029131893056
         }
       ],
       "tags": [
         "Meta"
       ],
       "fsrs_version": 6,
-      "note": "remember to check if cnt > 0"
+      "note": "also remewmber that you need to take away from count"
     }
   ],
   "daily_adds": {
