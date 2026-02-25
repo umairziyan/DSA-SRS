@@ -5971,14 +5971,14 @@
       "name": "1143. Longest Common Subsequence",
       "url": "https://leetcode.com/problems/longest-common-subsequence/",
       "added_date": "2026-02-02",
-      "stability": 5.023593275895783,
-      "difficulty": 7.3935069519520855,
+      "stability": 10.269348342754274,
+      "difficulty": 8.260688452129754,
       "state": "review",
-      "last_review_date": "2026-02-19",
-      "next_review": "2026-02-24",
-      "reps": 1,
-      "review_count": 4,
-      "last_rating": 3,
+      "last_review_date": "2026-02-25",
+      "next_review": "2026-03-07",
+      "reps": 2,
+      "review_count": 5,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-02-04",
@@ -6011,10 +6011,18 @@
           "difficulty": 7.3935069519520855,
           "interval": 5,
           "retrievability": 0.8746751194328928
+        },
+        {
+          "date": "2026-02-25",
+          "rating": 2,
+          "stability": 10.269348342754274,
+          "difficulty": 8.260688452129754,
+          "interval": 10,
+          "retrievability": 0.8838284096882109
         }
       ],
       "fsrs_version": 6,
-      "note": "Its an if/else condition because choice not counting"
+      "note": "think about prefix length"
     },
     {
       "id": "fc0767e2",
@@ -6236,13 +6244,13 @@
       "name": "115. Distinct Subsequences",
       "url": "https://leetcode.com/problems/distinct-subsequences/",
       "added_date": "2026-02-07",
-      "stability": 10.02758104368822,
-      "difficulty": 7.830996606120709,
+      "stability": 17.023063272587958,
+      "difficulty": 8.551114471584771,
       "state": "review",
-      "last_review_date": "2026-02-15",
-      "next_review": "2026-02-25",
-      "reps": 3,
-      "review_count": 3,
+      "last_review_date": "2026-02-25",
+      "next_review": "2026-03-14",
+      "reps": 4,
+      "review_count": 4,
       "last_rating": 2,
       "history": [
         {
@@ -6268,10 +6276,18 @@
           "difficulty": 7.830996606120709,
           "interval": 10,
           "retrievability": 0.8953846865365694
+        },
+        {
+          "date": "2026-02-25",
+          "rating": 2,
+          "stability": 17.023063272587958,
+          "difficulty": 8.551114471584771,
+          "interval": 17,
+          "retrievability": 0.9002352615165494
         }
       ],
       "fsrs_version": 6,
-      "note": "how many ways can I form the first 0 characters of t (the empty string) using the first i characters of s? PICK NOTHING which is 1 option."
+      "note": "dont use the current value so bring the most you can which is the previous value"
     },
     {
       "id": "84ba5999",
