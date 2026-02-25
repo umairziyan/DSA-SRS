@@ -6278,13 +6278,13 @@
       "name": "312. Burst Balloons",
       "url": "https://leetcode.com/problems/burst-balloons/",
       "added_date": "2026-02-07",
-      "stability": 10.02758104368822,
-      "difficulty": 7.830996606120709,
+      "stability": 17.023063272587958,
+      "difficulty": 8.551114471584771,
       "state": "review",
-      "last_review_date": "2026-02-15",
-      "next_review": "2026-02-25",
-      "reps": 3,
-      "review_count": 3,
+      "last_review_date": "2026-02-25",
+      "next_review": "2026-03-14",
+      "reps": 4,
+      "review_count": 4,
       "last_rating": 2,
       "history": [
         {
@@ -6310,9 +6310,18 @@
           "difficulty": 7.830996606120709,
           "interval": 10,
           "retrievability": 0.8953846865365694
+        },
+        {
+          "date": "2026-02-25",
+          "rating": 2,
+          "stability": 17.023063272587958,
+          "difficulty": 8.551114471584771,
+          "interval": 17,
+          "retrievability": 0.9002352615165494
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "we need to check the price of popping that baloon last, then around it. We need to do it for all the baloons in the range."
     },
     {
       "id": "c9d80805",
