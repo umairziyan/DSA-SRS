@@ -5730,13 +5730,13 @@
       "name": "152. Maximum Product Subarray",
       "url": "https://leetcode.com/problems/maximum-product-subarray/description/",
       "added_date": "2026-01-28",
-      "stability": 5.8525101356707285,
-      "difficulty": 7.026728438800001,
+      "stability": 18.116526467046093,
+      "difficulty": 7.020701710361202,
       "state": "review",
-      "last_review_date": "2026-02-20",
-      "next_review": "2026-02-26",
-      "reps": 1,
-      "review_count": 4,
+      "last_review_date": "2026-02-28",
+      "next_review": "2026-03-18",
+      "reps": 2,
+      "review_count": 5,
       "last_rating": 3,
       "history": [
         {
@@ -5770,6 +5770,14 @@
           "difficulty": 7.026728438800001,
           "interval": 6,
           "retrievability": 0.9020599293321011
+        },
+        {
+          "date": "2026-02-28",
+          "rating": 3,
+          "stability": 18.116526467046093,
+          "difficulty": 7.020701710361202,
+          "interval": 18,
+          "retrievability": 0.8701776707483357
         }
       ],
       "fsrs_version": 6,
