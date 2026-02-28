@@ -7110,14 +7110,14 @@
       "name": "1249. Minimum Remove to Make Valid Parentheses",
       "url": "https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/",
       "added_date": "2026-02-22",
-      "stability": 4.410673091748482,
-      "difficulty": 5.108058534895454,
+      "stability": 23.17601358045745,
+      "difficulty": 3.4643996617297885,
       "state": "review",
-      "last_review_date": "2026-02-24",
-      "next_review": "2026-02-28",
-      "reps": 2,
-      "review_count": 2,
-      "last_rating": 3,
+      "last_review_date": "2026-02-28",
+      "next_review": "2026-03-23",
+      "reps": 3,
+      "review_count": 3,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-02-23",
@@ -7134,6 +7134,14 @@
           "difficulty": 5.108058534895454,
           "interval": 4,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-02-28",
+          "rating": 4,
+          "stability": 23.17601358045745,
+          "difficulty": 3.4643996617297885,
+          "interval": 23,
+          "retrievability": 0.908068020188883
         }
       ],
       "tags": [
