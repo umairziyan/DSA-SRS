@@ -4585,14 +4585,14 @@
       "name": "56. Merge Intervals",
       "url": "https://leetcode.com/problems/merge-intervals/",
       "added_date": "2026-01-16",
-      "stability": 8.366871664161401,
-      "difficulty": 9.323924722902383,
+      "stability": 19.988521583560253,
+      "difficulty": 9.08901187040427,
       "state": "review",
-      "last_review_date": "2026-02-18",
-      "next_review": "2026-02-26",
-      "reps": 3,
-      "review_count": 8,
-      "last_rating": 3,
+      "last_review_date": "2026-02-28",
+      "next_review": "2026-03-20",
+      "reps": 4,
+      "review_count": 9,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-17",
@@ -4657,10 +4657,18 @@
           "difficulty": 9.323924722902383,
           "interval": 8,
           "retrievability": 0.8987559376372732
+        },
+        {
+          "date": "2026-02-28",
+          "rating": 4,
+          "stability": 19.988521583560253,
+          "difficulty": 9.08901187040427,
+          "interval": 20,
+          "retrievability": 0.8837615630148244
         }
       ],
       "fsrs_version": 6,
-      "note": "remember to continue after setting res."
+      "note": "you need to think about the same values"
     },
     {
       "id": "cd86df70",
