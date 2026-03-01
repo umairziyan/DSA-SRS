@@ -6029,14 +6029,14 @@
       "name": "62. Unique Paths",
       "url": "https://leetcode.com/problems/unique-paths/description/",
       "added_date": "2026-02-02",
-      "stability": 8.075186979751878,
-      "difficulty": 6.522076895365877,
+      "stability": 24.674646242171494,
+      "difficulty": 6.516554818470511,
       "state": "review",
-      "last_review_date": "2026-02-19",
-      "next_review": "2026-02-27",
-      "reps": 1,
-      "review_count": 4,
-      "last_rating": 4,
+      "last_review_date": "2026-03-01",
+      "next_review": "2026-03-26",
+      "reps": 2,
+      "review_count": 5,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-02-04",
@@ -6069,6 +6069,14 @@
           "difficulty": 6.522076895365877,
           "interval": 8,
           "retrievability": 0.8746751194328928
+        },
+        {
+          "date": "2026-03-01",
+          "rating": 3,
+          "stability": 24.674646242171494,
+          "difficulty": 6.516554818470511,
+          "interval": 25,
+          "retrievability": 0.8802872021771604
         }
       ],
       "fsrs_version": 6,
@@ -7012,13 +7020,13 @@
       "name": "36. Valid Sudoku",
       "url": "https://leetcode.com/problems/valid-sudoku/",
       "added_date": "2026-02-18",
-      "stability": 7.132002643535731,
-      "difficulty": 3.4698859282580456,
+      "stability": 55.04694705582044,
+      "difficulty": 1.2788261087976278,
       "state": "review",
-      "last_review_date": "2026-02-20",
-      "next_review": "2026-02-27",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-03-01",
+      "next_review": "2026-04-25",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 4,
       "history": [
         {
@@ -7036,6 +7044,14 @@
           "difficulty": 3.4698859282580456,
           "interval": 7,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-03-01",
+          "rating": 4,
+          "stability": 55.04694705582044,
+          "difficulty": 1.2788261087976278,
+          "interval": 55,
+          "retrievability": 0.8784086398939374
         }
       ],
       "fsrs_version": 6,
@@ -7164,14 +7180,14 @@
       "name": "314. Binary Tree Vertical Order Traversal",
       "url": "https://leetcode.com/problems/binary-tree-vertical-order-traversal/",
       "added_date": "2026-02-22",
-      "stability": 3.168008457377537,
-      "difficulty": 6.746231141532862,
+      "stability": 12.060912010577384,
+      "difficulty": 6.740484910391329,
       "state": "review",
-      "last_review_date": "2026-02-24",
-      "next_review": "2026-02-27",
-      "reps": 2,
-      "review_count": 2,
-      "last_rating": 2,
+      "last_review_date": "2026-03-01",
+      "next_review": "2026-03-13",
+      "reps": 3,
+      "review_count": 3,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-02-23",
@@ -7188,6 +7204,14 @@
           "difficulty": 6.746231141532862,
           "interval": 3,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-03-01",
+          "rating": 3,
+          "stability": 12.060912010577384,
+          "difficulty": 6.740484910391329,
+          "interval": 12,
+          "retrievability": 0.854291093494993
         }
       ],
       "fsrs_version": 6,
