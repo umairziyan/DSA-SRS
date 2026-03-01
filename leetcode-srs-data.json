@@ -196,16 +196,16 @@
       "name": "3. Longest Substring Without Repeating Characters",
       "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/description/",
       "added_date": "2025-12-14",
-      "next_review": "2026-02-28",
-      "review_count": 7,
+      "next_review": "2026-03-03",
+      "review_count": 8,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
-      "difficulty": 7.173487279693369,
-      "stability": 34.36072046284746,
-      "state": "review",
-      "last_rating": 4,
-      "last_review_date": "2026-01-25",
-      "reps": 3,
+      "difficulty": 9.061944489121707,
+      "stability": 2.413952227956054,
+      "state": "relearning",
+      "last_rating": 1,
+      "last_review_date": "2026-03-01",
+      "reps": 0,
       "history": [
         {
           "date": "2025-12-15",
@@ -262,8 +262,17 @@
           "difficulty": 7.173487279693369,
           "interval": 34,
           "retrievability": 0.9016995898168003
+        },
+        {
+          "date": "2026-03-01",
+          "rating": 1,
+          "stability": 2.413952227956054,
+          "difficulty": 9.061944489121707,
+          "interval": 2,
+          "retrievability": 0.8984134815977375
         }
-      ]
+      ],
+      "note": "need to remember to remove."
     },
     {
       "id": "17b4d0ae",
@@ -6169,13 +6178,13 @@
       "name": "518. Coin Change II",
       "url": "https://leetcode.com/problems/coin-change-ii/",
       "added_date": "2026-02-05",
-      "stability": 5.037414114047407,
-      "difficulty": 9.606333612216426,
+      "stability": 8.407745357786515,
+      "difficulty": 9.597727278604209,
       "state": "review",
-      "last_review_date": "2026-02-23",
-      "next_review": "2026-02-28",
-      "reps": 4,
-      "review_count": 8,
+      "last_review_date": "2026-03-01",
+      "next_review": "2026-03-09",
+      "reps": 5,
+      "review_count": 9,
       "last_rating": 3,
       "history": [
         {
@@ -6241,6 +6250,14 @@
           "difficulty": 9.606333612216426,
           "interval": 5,
           "retrievability": 0.9048674824730553
+        },
+        {
+          "date": "2026-03-01",
+          "rating": 3,
+          "stability": 8.407745357786515,
+          "difficulty": 9.597727278604209,
+          "interval": 8,
+          "retrievability": 0.8840938712186978
         }
       ],
       "fsrs_version": 6,
