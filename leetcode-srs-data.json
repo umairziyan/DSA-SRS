@@ -910,14 +910,14 @@
       "name": "300. Longest Increasing Subsequence",
       "url": "https://leetcode.com/problems/longest-increasing-subsequence/",
       "added_date": "2025-12-21",
-      "stability": 1.3658033528935727,
-      "difficulty": 9.608520082479783,
-      "state": "relearning",
-      "last_review_date": "2026-02-27",
-      "next_review": "2026-02-28",
-      "reps": 0,
-      "review_count": 7,
-      "last_rating": 1,
+      "stability": 2.7839664935808077,
+      "difficulty": 9.731117387785924,
+      "state": "review",
+      "last_review_date": "2026-03-03",
+      "next_review": "2026-03-06",
+      "reps": 1,
+      "review_count": 8,
+      "last_rating": 2,
       "history": [
         {
           "date": "2025-12-24",
@@ -974,6 +974,14 @@
           "difficulty": 9.608520082479783,
           "interval": 1,
           "retrievability": 0.8920962334736081
+        },
+        {
+          "date": "2026-03-03",
+          "rating": 2,
+          "stability": 2.7839664935808077,
+          "difficulty": 9.731117387785924,
+          "interval": 3,
+          "retrievability": 0.7699203263004422
         }
       ],
       "fsrs_version": 6,
@@ -1991,13 +1999,13 @@
       "name": "226. Invert Binary Tree",
       "url": "https://leetcode.com/problems/invert-binary-tree/",
       "added_date": "2025-12-29",
-      "stability": 15.051422039418691,
-      "difficulty": 8.075322725437424,
+      "stability": 24.63580905844082,
+      "difficulty": 8.713309535184367,
       "state": "review",
-      "last_review_date": "2026-02-15",
-      "next_review": "2026-03-02",
-      "reps": 2,
-      "review_count": 6,
+      "last_review_date": "2026-03-03",
+      "next_review": "2026-03-28",
+      "reps": 3,
+      "review_count": 7,
       "last_rating": 2,
       "history": [
         {
@@ -2047,9 +2055,18 @@
           "difficulty": 8.075322725437424,
           "interval": 15,
           "retrievability": 0.8991872064760726
+        },
+        {
+          "date": "2026-03-03",
+          "rating": 2,
+          "stability": 24.63580905844082,
+          "difficulty": 8.713309535184367,
+          "interval": 25,
+          "retrievability": 0.8946594918149223
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "remebmer to invert after chanign it"
     },
     {
       "id": "8ed80a80",
@@ -2221,14 +2238,14 @@
       "name": "110. Balanced Binary Tree",
       "url": "https://leetcode.com/problems/balanced-binary-tree/",
       "added_date": "2025-12-30",
-      "stability": 4.1085705989923,
-      "difficulty": 9.504757372401063,
+      "stability": 10.91840175324707,
+      "difficulty": 9.330270364563942,
       "state": "review",
-      "last_review_date": "2026-02-25",
-      "next_review": "2026-03-01",
-      "reps": 1,
-      "review_count": 7,
-      "last_rating": 3,
+      "last_review_date": "2026-03-03",
+      "next_review": "2026-03-14",
+      "reps": 2,
+      "review_count": 8,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-02",
@@ -2285,6 +2302,14 @@
           "difficulty": 9.504757372401063,
           "interval": 4,
           "retrievability": 0.8644138864462251
+        },
+        {
+          "date": "2026-03-03",
+          "rating": 4,
+          "stability": 10.91840175324707,
+          "difficulty": 9.330270364563942,
+          "interval": 11,
+          "retrievability": 0.8630463378692228
         }
       ],
       "fsrs_version": 6,
@@ -5379,14 +5404,14 @@
       "name": "746. Min Cost Climbing Stairs",
       "url": "https://leetcode.com/problems/min-cost-climbing-stairs/",
       "added_date": "2026-01-24",
-      "stability": 18.13884148245382,
-      "difficulty": 8.520452807292587,
+      "stability": 27.508694817478318,
+      "difficulty": 9.008807626581639,
       "state": "review",
-      "last_review_date": "2026-02-12",
-      "next_review": "2026-03-02",
-      "reps": 4,
-      "review_count": 7,
-      "last_rating": 4,
+      "last_review_date": "2026-03-03",
+      "next_review": "2026-03-31",
+      "reps": 5,
+      "review_count": 8,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-01-25",
@@ -5443,6 +5468,14 @@
           "difficulty": 8.520452807292587,
           "interval": 18,
           "retrievability": 0.9050988596808495
+        },
+        {
+          "date": "2026-03-03",
+          "rating": 2,
+          "stability": 27.508694817478318,
+          "difficulty": 9.008807626581639,
+          "interval": 28,
+          "retrievability": 0.8959680642106359
         }
       ],
       "fsrs_version": 6
@@ -6276,14 +6309,14 @@
       "name": "97. Interleaving String",
       "url": "https://leetcode.com/problems/interleaving-string/",
       "added_date": "2026-02-06",
-      "stability": 11.814021856034556,
-      "difficulty": 8.551114471584771,
-      "state": "review",
-      "last_review_date": "2026-02-18",
-      "next_review": "2026-03-02",
-      "reps": 4,
-      "review_count": 4,
-      "last_rating": 2,
+      "stability": 1.4853802861740888,
+      "difficulty": 9.514761179231508,
+      "state": "relearning",
+      "last_review_date": "2026-03-03",
+      "next_review": "2026-03-04",
+      "reps": 0,
+      "review_count": 5,
+      "last_rating": 1,
       "history": [
         {
           "date": "2026-02-07",
@@ -6316,6 +6349,14 @@
           "difficulty": 8.551114471584771,
           "interval": 12,
           "retrievability": 0.894866279698631
+        },
+        {
+          "date": "2026-03-03",
+          "rating": 1,
+          "stability": 1.4853802861740888,
+          "difficulty": 9.514761179231508,
+          "interval": 1,
+          "retrievability": 0.891537746630027
         }
       ],
       "fsrs_version": 6,
