@@ -6186,14 +6186,14 @@
       "name": "309. Best Time to Buy and Sell Stock with Cooldown",
       "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/",
       "added_date": "2026-02-05",
-      "stability": 14.430076417451385,
-      "difficulty": 5.103950476360559,
-      "state": "review",
-      "last_review_date": "2026-02-11",
-      "next_review": "2026-02-25",
-      "reps": 3,
-      "review_count": 3,
-      "last_rating": 3,
+      "stability": 1.7704312677361789,
+      "difficulty": 8.381701814716477,
+      "state": "relearning",
+      "last_review_date": "2026-03-04",
+      "next_review": "2026-03-06",
+      "reps": 0,
+      "review_count": 4,
+      "last_rating": 1,
       "history": [
         {
           "date": "2026-02-06",
@@ -6218,9 +6218,18 @@
           "difficulty": 5.103950476360559,
           "interval": 14,
           "retrievability": 0.908068020188883
+        },
+        {
+          "date": "2026-03-04",
+          "rating": 1,
+          "stability": 1.7704312677361789,
+          "difficulty": 8.381701814716477,
+          "interval": 2,
+          "retrievability": 0.86342870430928
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "remember to add or remove prices."
     },
     {
       "id": "56ec3b20",
