@@ -5880,14 +5880,14 @@
       "name": "139. Word Break",
       "url": "https://leetcode.com/problems/word-break/submissions/",
       "added_date": "2026-01-30",
-      "stability": 9.902492220839932,
-      "difficulty": 8.907797111078226,
+      "stability": 18.262878642365756,
+      "difficulty": 8.899889313967147,
       "state": "review",
-      "last_review_date": "2026-02-21",
-      "next_review": "2026-03-03",
-      "reps": 3,
-      "review_count": 6,
-      "last_rating": 2,
+      "last_review_date": "2026-03-04",
+      "next_review": "2026-03-22",
+      "reps": 4,
+      "review_count": 7,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-02-02",
@@ -5936,6 +5936,14 @@
           "difficulty": 8.907797111078226,
           "interval": 10,
           "retrievability": 0.9015511216982518
+        },
+        {
+          "date": "2026-03-04",
+          "rating": 3,
+          "stability": 18.262878642365756,
+          "difficulty": 8.899889313967147,
+          "interval": 18,
+          "retrievability": 0.8906709909272188
         }
       ],
       "fsrs_version": 6,
