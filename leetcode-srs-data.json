@@ -196,16 +196,16 @@
       "name": "3. Longest Substring Without Repeating Characters",
       "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/description/",
       "added_date": "2025-12-14",
-      "next_review": "2026-03-03",
-      "review_count": 8,
+      "next_review": "2026-03-11",
+      "review_count": 9,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
-      "difficulty": 9.061944489121707,
-      "stability": 2.413952227956054,
-      "state": "relearning",
-      "last_rating": 1,
-      "last_review_date": "2026-03-01",
-      "reps": 0,
+      "difficulty": 9.053882544632584,
+      "stability": 5.778451415365088,
+      "state": "review",
+      "last_rating": 3,
+      "last_review_date": "2026-03-05",
+      "reps": 1,
       "history": [
         {
           "date": "2025-12-15",
@@ -270,6 +270,14 @@
           "difficulty": 9.061944489121707,
           "interval": 2,
           "retrievability": 0.8984134815977375
+        },
+        {
+          "date": "2026-03-05",
+          "rating": 3,
+          "stability": 5.778451415365088,
+          "difficulty": 9.053882544632584,
+          "interval": 6,
+          "retrievability": 0.848589846143684
         }
       ],
       "note": "need to remember to remove."
@@ -5962,14 +5970,14 @@
       "name": "416. Partition Equal Subset Sum",
       "url": "https://leetcode.com/problems/partition-equal-subset-sum/description/",
       "added_date": "2026-01-30",
-      "stability": 9.950199134965118,
-      "difficulty": 9.253253969565927,
+      "stability": 21.96355119186307,
+      "difficulty": 8.994726244559878,
       "state": "review",
-      "last_review_date": "2026-02-23",
-      "next_review": "2026-03-05",
-      "reps": 3,
-      "review_count": 7,
-      "last_rating": 3,
+      "last_review_date": "2026-03-05",
+      "next_review": "2026-03-27",
+      "reps": 4,
+      "review_count": 8,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-31",
@@ -6026,6 +6034,14 @@
           "difficulty": 9.253253969565927,
           "interval": 10,
           "retrievability": 0.8966409258331309
+        },
+        {
+          "date": "2026-03-05",
+          "rating": 4,
+          "stability": 21.96355119186307,
+          "difficulty": 8.994726244559878,
+          "interval": 22,
+          "retrievability": 0.8995723764459508
         }
       ],
       "fsrs_version": 6,
