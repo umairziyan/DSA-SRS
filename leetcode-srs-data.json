@@ -5,14 +5,14 @@
       "name": "141. Linked List Cycle",
       "url": "https://leetcode.com/problems/linked-list-cycle/",
       "added_date": "2025-12-25",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-08",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 8.2956,
+      "difficulty": 1.0,
+      "state": "review",
+      "last_review_date": "2026-03-08",
+      "next_review": "2026-03-16",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 4,
       "history": [
         {
           "date": "2025-12-27",
@@ -29,23 +29,32 @@
           "difficulty": 1.0,
           "interval": 65,
           "retrievability": 0.9030622091783326
+        },
+        {
+          "date": "2026-03-08",
+          "rating": 4,
+          "stability": 8.2956,
+          "difficulty": 1.0,
+          "interval": 8,
+          "retrievability": 0.9
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "fast and fast.next"
     },
     {
       "id": "180d058b",
       "name": "152. Maximum Product Subarray",
       "url": "https://leetcode.com/problems/maximum-product-subarray/description/",
       "added_date": "2026-01-28",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-08",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-03-08",
+      "next_review": "2026-03-10",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-29",
@@ -86,6 +95,14 @@
           "difficulty": 7.020701710361202,
           "interval": 18,
           "retrievability": 0.8701776707483357
+        },
+        {
+          "date": "2026-03-08",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
@@ -96,14 +113,14 @@
       "name": "208. Implement Trie (Prefix Tree)",
       "url": "https://leetcode.com/problems/implement-trie-prefix-tree/",
       "added_date": "2026-01-03",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-08",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 8.2956,
+      "difficulty": 1.0,
+      "state": "review",
+      "last_review_date": "2026-03-08",
+      "next_review": "2026-03-16",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-07",
@@ -120,23 +137,32 @@
           "difficulty": 1.0,
           "interval": 65,
           "retrievability": 0.9030622091783326
+        },
+        {
+          "date": "2026-03-08",
+          "rating": 4,
+          "stability": 8.2956,
+          "difficulty": 1.0,
+          "interval": 8,
+          "retrievability": 0.9
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "Remember the trieNode"
     },
     {
       "id": "56ec3b20",
       "name": "518. Coin Change II",
       "url": "https://leetcode.com/problems/coin-change-ii/",
       "added_date": "2026-02-05",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-08",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-03-08",
+      "next_review": "2026-03-10",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-02-06",
@@ -209,6 +235,14 @@
           "difficulty": 9.597727278604209,
           "interval": 8,
           "retrievability": 0.8840938712186978
+        },
+        {
+          "date": "2026-03-08",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
@@ -219,14 +253,14 @@
       "name": "199. Binary Tree Right Side View",
       "url": "https://leetcode.com/problems/binary-tree-right-side-view/",
       "added_date": "2025-12-29",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-08",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-03-08",
+      "next_review": "2026-03-09",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-01-02",
@@ -251,9 +285,18 @@
           "difficulty": 1.0,
           "interval": 78,
           "retrievability": 0.9006339243860205
+        },
+        {
+          "date": "2026-03-08",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "Need to check if right side and if node too. BFS is a level order traversal."
     },
     {
       "id": "fc0767e2",
