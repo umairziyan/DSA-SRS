@@ -303,14 +303,14 @@
       "name": "309. Best Time to Buy and Sell Stock with Cooldown",
       "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/",
       "added_date": "2026-02-05",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-09",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-03-09",
+      "next_review": "2026-03-11",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-02-06",
@@ -343,6 +343,14 @@
           "difficulty": 8.381701814716477,
           "interval": 2,
           "retrievability": 0.86342870430928
+        },
+        {
+          "date": "2026-03-09",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
@@ -503,14 +511,14 @@
       "name": "198. House Robber",
       "url": "https://leetcode.com/problems/house-robber/",
       "added_date": "2026-01-25",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-09",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 8.2956,
+      "difficulty": 1.0,
+      "state": "review",
+      "last_review_date": "2026-03-09",
+      "next_review": "2026-03-17",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-26",
@@ -543,9 +551,18 @@
           "difficulty": 3.458918881468059,
           "interval": 68,
           "retrievability": 0.9025591303487132
+        },
+        {
+          "date": "2026-03-09",
+          "rating": 4,
+          "stability": 8.2956,
+          "difficulty": 1.0,
+          "interval": 8,
+          "retrievability": 0.9
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "Remember to think about dfs"
     },
     {
       "id": "08bfe2d9",
