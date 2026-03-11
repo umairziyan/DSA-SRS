@@ -973,14 +973,14 @@
       "name": "139. Word Break",
       "url": "https://leetcode.com/problems/word-break/submissions/",
       "added_date": "2026-01-30",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-11",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-03-11",
+      "next_review": "2026-03-13",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-02-02",
@@ -1037,6 +1037,14 @@
           "difficulty": 8.899889313967147,
           "interval": 18,
           "retrievability": 0.8906709909272188
+        },
+        {
+          "date": "2026-03-11",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
