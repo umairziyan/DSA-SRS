@@ -435,14 +435,14 @@
       "name": "778. Swim in Rising Water",
       "url": "https://leetcode.com/problems/swim-in-rising-water/",
       "added_date": "2026-02-13",
-      "stability": 2.3065,
-      "difficulty": 2.118103970459015,
+      "stability": 18.134311672846923,
+      "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-03-09",
-      "next_review": "2026-03-11",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 3,
+      "last_review_date": "2026-03-11",
+      "next_review": "2026-03-29",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-02-15",
@@ -483,6 +483,14 @@
           "difficulty": 2.118103970459015,
           "interval": 2,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-03-11",
+          "rating": 4,
+          "stability": 18.134311672846923,
+          "difficulty": 1.0,
+          "interval": 18,
+          "retrievability": 0.9115814711321364
         }
       ],
       "fsrs_version": 6,
@@ -1112,14 +1120,14 @@
       "name": "131. Palindrome Partitioning",
       "url": "https://leetcode.com/problems/palindrome-partitioning/",
       "added_date": "2026-01-08",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-11",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-03-11",
+      "next_review": "2026-03-13",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-09",
@@ -1160,9 +1168,18 @@
           "difficulty": 7.822355219716084,
           "interval": 41,
           "retrievability": 0.8991837325141495
+        },
+        {
+          "date": "2026-03-11",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "You need to go through the rest of the string"
     },
     {
       "id": "cecfdce6",
