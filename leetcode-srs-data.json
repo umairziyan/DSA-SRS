@@ -1360,14 +1360,14 @@
       "name": "78. Subsets",
       "url": "https://leetcode.com/problems/subsets/",
       "added_date": "2026-01-04",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-12",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 8.2956,
+      "difficulty": 1.0,
+      "state": "review",
+      "last_review_date": "2026-03-12",
+      "next_review": "2026-03-20",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-08",
@@ -1416,6 +1416,14 @@
           "difficulty": 5.346566147948815,
           "interval": 91,
           "retrievability": 0.89904916184696
+        },
+        {
+          "date": "2026-03-12",
+          "rating": 4,
+          "stability": 8.2956,
+          "difficulty": 1.0,
+          "interval": 8,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
@@ -1426,14 +1434,14 @@
       "name": "10. Regular Expression Matching",
       "url": "https://leetcode.com/problems/regular-expression-matching/",
       "added_date": "2026-02-08",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-12",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-03-12",
+      "next_review": "2026-03-13",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-02-09",
@@ -1466,24 +1474,32 @@
           "difficulty": 8.551114471584771,
           "interval": 19,
           "retrievability": 0.8918433731962987
+        },
+        {
+          "date": "2026-03-12",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
-      "note": "match and (i+1, j) means you consume on character. That is the important difference"
+      "note": "2"
     },
     {
       "id": "e7ba8ba5",
       "name": "1046. Last Stone Weight",
       "url": "https://leetcode.com/problems/last-stone-weight/description/",
       "added_date": "2026-01-10",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-12",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 8.2956,
+      "difficulty": 1.0,
+      "state": "review",
+      "last_review_date": "2026-03-12",
+      "next_review": "2026-03-20",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-11",
@@ -1508,23 +1524,32 @@
           "difficulty": 1.0,
           "interval": 78,
           "retrievability": 0.9006339243860205
+        },
+        {
+          "date": "2026-03-12",
+          "rating": 4,
+          "stability": 8.2956,
+          "difficulty": 1.0,
+          "interval": 8,
+          "retrievability": 0.9
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "maxHeap"
     },
     {
       "id": "9a31bb56",
       "name": "40. Combination Sum II",
       "url": "https://leetcode.com/problems/combination-sum-ii/",
       "added_date": "2026-01-06",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-12",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-03-12",
+      "next_review": "2026-03-13",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-01-07",
@@ -1549,9 +1574,18 @@
           "difficulty": 1.0,
           "interval": 77,
           "retrievability": 0.8980785074889401
+        },
+        {
+          "date": "2026-03-12",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "sort and remove duplicates."
     },
     {
       "id": "5da9345d",
