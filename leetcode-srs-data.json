@@ -1648,14 +1648,14 @@
       "name": "70. Climbing Stairs",
       "url": "https://leetcode.com/problems/climbing-stairs/",
       "added_date": "2026-01-24",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-13",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-03-13",
+      "next_review": "2026-03-14",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-01-25",
@@ -1696,6 +1696,14 @@
           "difficulty": 8.057964446054026,
           "interval": 31,
           "retrievability": 0.8986570577016821
+        },
+        {
+          "date": "2026-03-13",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
@@ -1849,14 +1857,14 @@
       "name": "200. Number of Islands",
       "url": "https://leetcode.com/problems/number-of-islands/",
       "added_date": "2026-01-11",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-13",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-03-13",
+      "next_review": "2026-03-15",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-12",
@@ -1881,9 +1889,18 @@
           "difficulty": 2.115868880622067,
           "interval": 46,
           "retrievability": 0.8980785074889401
+        },
+        {
+          "date": "2026-03-13",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "no idea"
     },
     {
       "id": "fd89c7ce",
