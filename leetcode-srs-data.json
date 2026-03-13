@@ -642,14 +642,14 @@
       "name": "703. Kth Largest Element in a Stream",
       "url": "https://leetcode.com/problems/kth-largest-element-in-a-stream/",
       "added_date": "2026-01-10",
-      "stability": 2.3065,
-      "difficulty": 2.118103970459015,
+      "stability": 18.134311672846923,
+      "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-03-11",
-      "next_review": "2026-03-13",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 3,
+      "last_review_date": "2026-03-13",
+      "next_review": "2026-03-31",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-11",
@@ -682,6 +682,14 @@
           "difficulty": 2.118103970459015,
           "interval": 2,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-03-13",
+          "rating": 4,
+          "stability": 18.134311672846923,
+          "difficulty": 1.0,
+          "interval": 18,
+          "retrievability": 0.9115814711321364
         }
       ],
       "fsrs_version": 6,
@@ -1458,14 +1466,14 @@
       "name": "10. Regular Expression Matching",
       "url": "https://leetcode.com/problems/regular-expression-matching/",
       "added_date": "2026-02-08",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 4.410673091748482,
+      "difficulty": 5.108058534895454,
       "state": "review",
-      "last_review_date": "2026-03-12",
-      "next_review": "2026-03-13",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 2,
+      "last_review_date": "2026-03-13",
+      "next_review": "2026-03-17",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-02-09",
@@ -1506,10 +1514,18 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-03-13",
+          "rating": 3,
+          "stability": 4.410673091748482,
+          "difficulty": 5.108058534895454,
+          "interval": 4,
+          "retrievability": 0.920029131893056
         }
       ],
       "fsrs_version": 6,
-      "note": "2"
+      "note": "Remember to check match when moving on."
     },
     {
       "id": "e7ba8ba5",
@@ -1727,14 +1743,14 @@
       "name": "110. Balanced Binary Tree",
       "url": "https://leetcode.com/problems/balanced-binary-tree/",
       "added_date": "2025-12-30",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-13",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-03-13",
+      "next_review": "2026-03-15",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-02",
@@ -1799,6 +1815,14 @@
           "difficulty": 9.330270364563942,
           "interval": 11,
           "retrievability": 0.8630463378692228
+        },
+        {
+          "date": "2026-03-13",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
