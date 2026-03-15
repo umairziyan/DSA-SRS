@@ -2310,14 +2310,14 @@
       "name": "312. Burst Balloons",
       "url": "https://leetcode.com/problems/burst-balloons/",
       "added_date": "2026-02-07",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-14",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-03-15",
+      "next_review": "2026-03-16",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-02-08",
@@ -2350,6 +2350,14 @@
           "difficulty": 8.551114471584771,
           "interval": 17,
           "retrievability": 0.9002352615165494
+        },
+        {
+          "date": "2026-03-15",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
@@ -2360,14 +2368,14 @@
       "name": "322. Coin Change",
       "url": "https://leetcode.com/problems/coin-change/",
       "added_date": "2026-01-28",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-15",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-03-15",
+      "next_review": "2026-03-16",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-01-29",
@@ -2408,6 +2416,14 @@
           "difficulty": 9.029162268172346,
           "interval": 19,
           "retrievability": 0.9031850595271551
+        },
+        {
+          "date": "2026-03-15",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
@@ -2542,14 +2558,14 @@
       "name": "143. Reorder List",
       "url": "https://leetcode.com/problems/reorder-list/",
       "added_date": "2025-12-26",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-15",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 8.2956,
+      "difficulty": 1.0,
+      "state": "review",
+      "last_review_date": "2026-03-15",
+      "next_review": "2026-03-23",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 4,
       "history": [
         {
           "date": "2025-12-28",
@@ -2598,9 +2614,18 @@
           "difficulty": 6.016159057264213,
           "interval": 54,
           "retrievability": 0.9022005790723473
+        },
+        {
+          "date": "2026-03-15",
+          "rating": 4,
+          "stability": 8.2956,
+          "difficulty": 1.0,
+          "interval": 8,
+          "retrievability": 0.9
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "reiniatlise first and second after doing the reversal."
     },
     {
       "id": "9e9708b6",
