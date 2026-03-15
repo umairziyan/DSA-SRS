@@ -2607,14 +2607,14 @@
       "name": "295. Find Median from Data Stream",
       "url": "https://leetcode.com/problems/find-median-from-data-stream/",
       "added_date": "2026-01-11",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-15",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 8.2956,
+      "difficulty": 1.0,
+      "state": "review",
+      "last_review_date": "2026-03-15",
+      "next_review": "2026-03-23",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-12",
@@ -2663,6 +2663,14 @@
           "difficulty": 6.508024899432642,
           "interval": 47,
           "retrievability": 0.8997115547640561
+        },
+        {
+          "date": "2026-03-15",
+          "rating": 4,
+          "stability": 8.2956,
+          "difficulty": 1.0,
+          "interval": 8,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
