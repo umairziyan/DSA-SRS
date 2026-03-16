@@ -5,13 +5,13 @@
       "name": "141. Linked List Cycle",
       "url": "https://leetcode.com/problems/linked-list-cycle/",
       "added_date": "2025-12-25",
-      "stability": 8.2956,
+      "stability": 65.26452444154494,
       "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-03-08",
-      "next_review": "2026-03-16",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-03-16",
+      "next_review": "2026-05-20",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 4,
       "history": [
         {
@@ -37,6 +37,14 @@
           "difficulty": 1.0,
           "interval": 8,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-03-16",
+          "rating": 4,
+          "stability": 65.26452444154494,
+          "difficulty": 1.0,
+          "interval": 65,
+          "retrievability": 0.9030622091783326
         }
       ],
       "fsrs_version": 6,
@@ -2006,14 +2014,14 @@
       "name": "56. Merge Intervals",
       "url": "https://leetcode.com/problems/merge-intervals/",
       "added_date": "2026-01-16",
-      "stability": 2.3065,
-      "difficulty": 2.118103970459015,
+      "stability": 18.134311672846923,
+      "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-03-14",
-      "next_review": "2026-03-16",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 3,
+      "last_review_date": "2026-03-16",
+      "next_review": "2026-04-03",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-17",
@@ -2094,6 +2102,14 @@
           "difficulty": 2.118103970459015,
           "interval": 2,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-03-16",
+          "rating": 4,
+          "stability": 18.134311672846923,
+          "difficulty": 1.0,
+          "interval": 18,
+          "retrievability": 0.9115814711321364
         }
       ],
       "fsrs_version": 6,
@@ -2202,14 +2218,14 @@
       "name": "680. Valid Palindrome II",
       "url": "https://leetcode.com/problems/valid-palindrome-ii/",
       "added_date": "2025-12-28",
-      "stability": 2.3065,
-      "difficulty": 2.118103970459015,
+      "stability": 18.134311672846923,
+      "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-03-14",
-      "next_review": "2026-03-16",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 3,
+      "last_review_date": "2026-03-16",
+      "next_review": "2026-04-03",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 4,
       "history": [
         {
           "date": "2025-12-29",
@@ -2266,6 +2282,14 @@
           "difficulty": 2.118103970459015,
           "interval": 2,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-03-16",
+          "rating": 4,
+          "stability": 18.134311672846923,
+          "difficulty": 1.0,
+          "interval": 18,
+          "retrievability": 0.9115814711321364
         }
       ],
       "fsrs_version": 6,
@@ -2276,14 +2300,14 @@
       "name": "36. Valid Sudoku",
       "url": "https://leetcode.com/problems/valid-sudoku/",
       "added_date": "2026-02-18",
-      "stability": 2.3065,
-      "difficulty": 2.118103970459015,
+      "stability": 18.134311672846923,
+      "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-03-14",
-      "next_review": "2026-03-16",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 3,
+      "last_review_date": "2026-03-16",
+      "next_review": "2026-04-03",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-02-19",
@@ -2316,6 +2340,14 @@
           "difficulty": 2.118103970459015,
           "interval": 2,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-03-16",
+          "rating": 4,
+          "stability": 18.134311672846923,
+          "difficulty": 1.0,
+          "interval": 18,
+          "retrievability": 0.9115814711321364
         }
       ],
       "fsrs_version": 6,
@@ -2532,14 +2564,14 @@
       "name": "53. Maximum Subarray",
       "url": "https://leetcode.com/problems/maximum-subarray/",
       "added_date": "2026-01-17",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 7.132002643535731,
+      "difficulty": 3.4698859282580456,
       "state": "review",
-      "last_review_date": "2026-03-15",
-      "next_review": "2026-03-16",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 2,
+      "last_review_date": "2026-03-16",
+      "next_review": "2026-03-23",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-18",
@@ -2580,6 +2612,14 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-03-16",
+          "rating": 4,
+          "stability": 7.132002643535731,
+          "difficulty": 3.4698859282580456,
+          "interval": 7,
+          "retrievability": 0.920029131893056
         }
       ],
       "fsrs_version": 6,
@@ -2738,14 +2778,14 @@
       "name": "230. Kth Smallest Element in a BST",
       "url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
       "added_date": "2026-01-02",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-16",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-03-16",
+      "next_review": "2026-03-18",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-05",
@@ -2802,6 +2842,14 @@
           "difficulty": 8.702689013704957,
           "interval": 19,
           "retrievability": 0.8972048650465531
+        },
+        {
+          "date": "2026-03-16",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
@@ -2862,14 +2910,14 @@
       "name": "128. Longest Consecutive Sequence",
       "url": "https://leetcode.com/problems/longest-consecutive-sequence/",
       "added_date": "2026-02-18",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-16",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-03-16",
+      "next_review": "2026-03-18",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-02-19",
@@ -2894,6 +2942,14 @@
           "difficulty": 5.103950476360559,
           "interval": 17,
           "retrievability": 0.8887890284814779
+        },
+        {
+          "date": "2026-03-16",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
@@ -2904,14 +2960,14 @@
       "name": "206. Reverse Linked List",
       "url": "https://leetcode.com/problems/reverse-linked-list/",
       "added_date": "2025-12-21",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-16",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 8.2956,
+      "difficulty": 1.0,
+      "state": "review",
+      "last_review_date": "2026-03-16",
+      "next_review": "2026-03-24",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 4,
       "history": [
         {
           "date": "2025-12-24",
@@ -2936,9 +2992,18 @@
           "difficulty": 1.0,
           "interval": 130,
           "retrievability": 0.9006339243860205
+        },
+        {
+          "date": "2026-03-16",
+          "rating": 4,
+          "stability": 8.2956,
+          "difficulty": 1.0,
+          "interval": 8,
+          "retrievability": 0.9
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "curr = tmp"
     },
     {
       "id": "622b27dc",
