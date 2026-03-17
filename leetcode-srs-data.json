@@ -600,13 +600,13 @@
       "name": "198. House Robber",
       "url": "https://leetcode.com/problems/house-robber/",
       "added_date": "2026-01-25",
-      "stability": 8.2956,
+      "stability": 65.26452444154494,
       "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-03-09",
-      "next_review": "2026-03-17",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-03-17",
+      "next_review": "2026-05-21",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 4,
       "history": [
         {
@@ -648,6 +648,14 @@
           "difficulty": 1.0,
           "interval": 8,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-03-17",
+          "rating": 4,
+          "stability": 65.26452444154494,
+          "difficulty": 1.0,
+          "interval": 65,
+          "retrievability": 0.9030622091783326
         }
       ],
       "fsrs_version": 6,
@@ -3126,16 +3134,16 @@
       "name": "2. Add Two Numbers",
       "url": "https://leetcode.com/problems/add-two-numbers/",
       "added_date": "2025-12-18",
-      "next_review": "2026-03-17",
-      "review_count": 0,
+      "next_review": "2026-03-19",
+      "review_count": 1,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
-      "difficulty": 5.0,
-      "stability": 0,
-      "state": "new",
-      "last_rating": null,
-      "last_review_date": null,
-      "reps": 0,
+      "difficulty": 2.118103970459015,
+      "stability": 2.3065,
+      "state": "review",
+      "last_rating": 3,
+      "last_review_date": "2026-03-17",
+      "reps": 1,
       "history": [
         {
           "date": "2025-12-19",
@@ -3160,22 +3168,31 @@
           "difficulty": 1.5146867274823521,
           "interval": 64,
           "retrievability": 0.9012420454072443
+        },
+        {
+          "date": "2026-03-17",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
         }
-      ]
+      ],
+      "note": "Remember to move them next"
     },
     {
       "id": "eaebcaca",
       "name": "146. LRU Cache",
       "url": "https://leetcode.com/problems/lru-cache/",
       "added_date": "2025-12-27",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-17",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-03-17",
+      "next_review": "2026-03-19",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
       "history": [
         {
           "date": "2025-12-29",
@@ -3256,6 +3273,14 @@
           "difficulty": 9.244941927488165,
           "interval": 19,
           "retrievability": 0.9028811033226571
+        },
+        {
+          "date": "2026-03-17",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
