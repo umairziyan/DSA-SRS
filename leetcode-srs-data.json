@@ -724,13 +724,13 @@
       "name": "1143. Longest Common Subsequence",
       "url": "https://leetcode.com/problems/longest-common-subsequence/",
       "added_date": "2026-02-02",
-      "stability": 4.410673091748482,
-      "difficulty": 5.108058534895454,
+      "stability": 16.62586061157773,
+      "difficulty": 5.103950476360559,
       "state": "review",
-      "last_review_date": "2026-03-12",
-      "next_review": "2026-03-16",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-03-17",
+      "next_review": "2026-04-03",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 3,
       "history": [
         {
@@ -788,6 +788,14 @@
           "difficulty": 5.108058534895454,
           "interval": 4,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-03-17",
+          "rating": 3,
+          "stability": 16.62586061157773,
+          "difficulty": 5.103950476360559,
+          "interval": 17,
+          "retrievability": 0.8887890284814779
         }
       ],
       "fsrs_version": 6,
@@ -2868,14 +2876,14 @@
       "name": "72. Edit Distance",
       "url": "https://leetcode.com/problems/edit-distance/",
       "added_date": "2026-02-07",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-16",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-03-17",
+      "next_review": "2026-03-18",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-02-08",
@@ -2908,6 +2916,14 @@
           "difficulty": 8.551114471584771,
           "interval": 13,
           "retrievability": 0.8954134753146805
+        },
+        {
+          "date": "2026-03-17",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
@@ -3291,14 +3307,14 @@
       "name": "104. Maximum Depth of Binary Tree",
       "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
       "added_date": "2025-12-29",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-17",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-03-17",
+      "next_review": "2026-03-19",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-01",
@@ -3323,6 +3339,14 @@
           "difficulty": 1.0,
           "interval": 253,
           "retrievability": 0.8993670206131507
+        },
+        {
+          "date": "2026-03-17",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
