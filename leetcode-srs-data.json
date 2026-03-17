@@ -2374,13 +2374,13 @@
       "name": "312. Burst Balloons",
       "url": "https://leetcode.com/problems/burst-balloons/",
       "added_date": "2026-02-07",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 4.74204076714111,
+      "difficulty": 6.746231141532862,
       "state": "review",
-      "last_review_date": "2026-03-15",
-      "next_review": "2026-03-16",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-03-17",
+      "next_review": "2026-03-22",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 2,
       "history": [
         {
@@ -2422,6 +2422,14 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-03-17",
+          "rating": 2,
+          "stability": 4.74204076714111,
+          "difficulty": 6.746231141532862,
+          "interval": 5,
+          "retrievability": 0.8566117863666073
         }
       ],
       "fsrs_version": 6,
@@ -3092,14 +3100,14 @@
       "name": "55. Jump Game",
       "url": "https://leetcode.com/problems/jump-game/",
       "added_date": "2026-01-17",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-17",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 8.2956,
+      "difficulty": 1.0,
+      "state": "review",
+      "last_review_date": "2026-03-17",
+      "next_review": "2026-03-25",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-18",
@@ -3140,6 +3148,14 @@
           "difficulty": 7.34564166156231,
           "interval": 20,
           "retrievability": 0.9040278882860238
+        },
+        {
+          "date": "2026-03-17",
+          "rating": 4,
+          "stability": 8.2956,
+          "difficulty": 1.0,
+          "interval": 8,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
@@ -3357,14 +3373,14 @@
       "name": "127. Word Ladder",
       "url": "https://leetcode.com/problems/word-ladder/",
       "added_date": "2026-01-15",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-17",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-03-17",
+      "next_review": "2026-03-18",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-01-16",
@@ -3405,6 +3421,14 @@
           "difficulty": 7.822355219716084,
           "interval": 43,
           "retrievability": 0.9018049513699016
+        },
+        {
+          "date": "2026-03-17",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
