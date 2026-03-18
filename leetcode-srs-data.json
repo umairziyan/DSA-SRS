@@ -2802,14 +2802,14 @@
       "name": "230. Kth Smallest Element in a BST",
       "url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
       "added_date": "2026-01-02",
-      "stability": 2.3065,
-      "difficulty": 2.118103970459015,
+      "stability": 7.388910134043537,
+      "difficulty": 4.758630119235718,
       "state": "review",
-      "last_review_date": "2026-03-16",
-      "next_review": "2026-03-18",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 3,
+      "last_review_date": "2026-03-18",
+      "next_review": "2026-03-25",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-01-05",
@@ -2874,10 +2874,18 @@
           "difficulty": 2.118103970459015,
           "interval": 2,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-03-18",
+          "rating": 2,
+          "stability": 7.388910134043537,
+          "difficulty": 4.758630119235718,
+          "interval": 7,
+          "retrievability": 0.9115814711321364
         }
       ],
       "fsrs_version": 6,
-      "note": "need an n"
+      "note": "remeber we're only worrying about curr"
     },
     {
       "id": "c9d80805",
@@ -3480,16 +3488,16 @@
       "name": "253. Meeting Rooms II",
       "url": "https://leetcode.com/problems/meeting-rooms-ii/",
       "added_date": "2025-12-18",
-      "next_review": "2026-03-18",
-      "review_count": 0,
+      "next_review": "2026-03-20",
+      "review_count": 1,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
-      "difficulty": 5.0,
-      "stability": 0,
-      "state": "new",
-      "last_rating": null,
-      "last_review_date": null,
-      "reps": 0,
+      "difficulty": 2.118103970459015,
+      "stability": 2.3065,
+      "state": "review",
+      "last_rating": 3,
+      "last_review_date": "2026-03-18",
+      "reps": 1,
       "history": [
         {
           "date": "2025-12-20",
@@ -3562,6 +3570,14 @@
           "difficulty": 8.566057966691043,
           "interval": 40,
           "retrievability": 0.8976781130830536
+        },
+        {
+          "date": "2026-03-18",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
         }
       ],
       "note": "whil s < len"
