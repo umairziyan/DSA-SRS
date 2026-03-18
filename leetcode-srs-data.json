@@ -806,13 +806,13 @@
       "name": "226. Invert Binary Tree",
       "url": "https://leetcode.com/problems/invert-binary-tree/",
       "added_date": "2025-12-29",
-      "stability": 8.2956,
+      "stability": 65.26452444154494,
       "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-03-10",
-      "next_review": "2026-03-18",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-03-18",
+      "next_review": "2026-05-22",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 4,
       "history": [
         {
@@ -878,6 +878,14 @@
           "difficulty": 1.0,
           "interval": 8,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-03-18",
+          "rating": 4,
+          "stability": 65.26452444154494,
+          "difficulty": 1.0,
+          "interval": 65,
+          "retrievability": 0.9030622091783326
         }
       ],
       "fsrs_version": 6,
@@ -2974,14 +2982,14 @@
       "name": "128. Longest Consecutive Sequence",
       "url": "https://leetcode.com/problems/longest-consecutive-sequence/",
       "added_date": "2026-02-18",
-      "stability": 2.3065,
-      "difficulty": 2.118103970459015,
+      "stability": 18.134311672846923,
+      "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-03-16",
-      "next_review": "2026-03-18",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 3,
+      "last_review_date": "2026-03-18",
+      "next_review": "2026-04-05",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-02-19",
@@ -3014,6 +3022,14 @@
           "difficulty": 2.118103970459015,
           "interval": 2,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-03-18",
+          "rating": 4,
+          "stability": 18.134311672846923,
+          "difficulty": 1.0,
+          "interval": 18,
+          "retrievability": 0.9115814711321364
         }
       ],
       "fsrs_version": 6,
@@ -3074,14 +3090,14 @@
       "name": "153. Find Minimum in Rotated Sorted Array",
       "url": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
       "added_date": "2025-12-24",
-      "stability": 2.3065,
-      "difficulty": 2.118103970459015,
+      "stability": 18.134311672846923,
+      "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-03-16",
-      "next_review": "2026-03-18",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 3,
+      "last_review_date": "2026-03-18",
+      "next_review": "2026-04-05",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 4,
       "history": [
         {
           "date": "2025-12-25",
@@ -3122,6 +3138,14 @@
           "difficulty": 2.118103970459015,
           "interval": 2,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-03-18",
+          "rating": 4,
+          "stability": 18.134311672846923,
+          "difficulty": 1.0,
+          "interval": 18,
+          "retrievability": 0.9115814711321364
         }
       ],
       "fsrs_version": 6,
@@ -3628,14 +3652,14 @@
       "name": "994. Rotting Oranges",
       "url": "https://leetcode.com/problems/rotting-oranges/description/",
       "added_date": "2026-01-12",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-18",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-03-18",
+      "next_review": "2026-03-20",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-13",
@@ -3660,9 +3684,18 @@
           "difficulty": 1.0,
           "interval": 77,
           "retrievability": 0.8980785074889401
+        },
+        {
+          "date": "2026-03-18",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "q and fresh > 0"
     },
     {
       "id": "5c783a10",
