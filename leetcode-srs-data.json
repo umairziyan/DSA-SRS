@@ -8309,6 +8309,25 @@
         }
       ],
       "fsrs_version": 6
+    },
+    {
+      "id": "3a8a95bc",
+      "name": "359. Logger Rate Limiter",
+      "url": "https://leetcode.com/problems/logger-rate-limiter/",
+      "added_date": "2026-03-23",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-03-24",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "tags": [
+        "Google"
+      ],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -8358,7 +8377,8 @@
     "2026-02-17": 3,
     "2026-02-18": 3,
     "2026-02-20": 2,
-    "2026-02-22": 2
+    "2026-02-22": 2,
+    "2026-03-23": 1
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
