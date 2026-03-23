@@ -8328,6 +8328,25 @@
         "Google"
       ],
       "fsrs_version": 6
+    },
+    {
+      "id": "14041feb",
+      "name": "528. Random Pick with Weight",
+      "url": "https://leetcode.com/problems/random-pick-with-weight/",
+      "added_date": "2026-03-23",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-03-24",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "tags": [
+        "Google"
+      ],
+      "fsrs_version": 6
     }
   ],
   "daily_adds": {
@@ -8378,7 +8397,7 @@
     "2026-02-18": 3,
     "2026-02-20": 2,
     "2026-02-22": 2,
-    "2026-03-23": 1
+    "2026-03-23": 2
   },
   "fsrs_version": 6,
   "desired_retention": 0.9
