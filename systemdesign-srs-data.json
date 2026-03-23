@@ -1,0 +1,26 @@
+{
+  "questions": [
+    {
+      "id": "0bcfb2f1",
+      "name": "News Aggregator",
+      "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/google-news",
+      "added_date": "2026-03-23",
+      "stability": 0,
+      "difficulty": 5.0,
+      "state": "new",
+      "last_review_date": null,
+      "next_review": "2026-03-24",
+      "reps": 0,
+      "review_count": 0,
+      "last_rating": null,
+      "history": [],
+      "fsrs_version": 6
+    }
+  ],
+  "daily_adds": {
+    "2026-03-23": 1
+  },
+  "daily_reviews": {},
+  "fsrs_version": 6,
+  "desired_retention": 0.9
+}
