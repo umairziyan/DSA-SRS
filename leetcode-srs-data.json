@@ -5470,14 +5470,14 @@
       "name": "286. Walls and Gates",
       "url": "https://leetcode.com/problems/walls-and-gates",
       "added_date": "2026-01-12",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-24",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-03-24",
+      "next_review": "2026-03-26",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-13",
@@ -5502,9 +5502,18 @@
           "difficulty": 2.115868880622067,
           "interval": 46,
           "retrievability": 0.8980785074889401
+        },
+        {
+          "date": "2026-03-24",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "rooms[r][c] < 0"
     },
     {
       "id": "5df5e073",
