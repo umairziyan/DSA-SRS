@@ -1119,13 +1119,13 @@
       "name": "139. Word Break",
       "url": "https://leetcode.com/problems/word-break/submissions/",
       "added_date": "2026-01-30",
-      "stability": 10.757464639247651,
-      "difficulty": 2.1169858664885557,
+      "stability": 46.10739197561708,
+      "difficulty": 2.115868880622067,
       "state": "review",
-      "last_review_date": "2026-03-13",
-      "next_review": "2026-03-24",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-03-24",
+      "next_review": "2026-05-09",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 3,
       "history": [
         {
@@ -1199,6 +1199,14 @@
           "difficulty": 2.1169858664885557,
           "interval": 11,
           "retrievability": 0.9115814711321364
+        },
+        {
+          "date": "2026-03-24",
+          "rating": 3,
+          "stability": 46.10739197561708,
+          "difficulty": 2.115868880622067,
+          "interval": 46,
+          "retrievability": 0.8980785074889401
         }
       ],
       "fsrs_version": 6,
@@ -1258,13 +1266,13 @@
       "name": "131. Palindrome Partitioning",
       "url": "https://leetcode.com/problems/palindrome-partitioning/",
       "added_date": "2026-01-08",
-      "stability": 10.757464639247651,
-      "difficulty": 2.1169858664885557,
+      "stability": 46.10739197561708,
+      "difficulty": 2.115868880622067,
       "state": "review",
-      "last_review_date": "2026-03-13",
-      "next_review": "2026-03-24",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-03-24",
+      "next_review": "2026-05-09",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 3,
       "history": [
         {
@@ -1322,6 +1330,14 @@
           "difficulty": 2.1169858664885557,
           "interval": 11,
           "retrievability": 0.9115814711321364
+        },
+        {
+          "date": "2026-03-24",
+          "rating": 3,
+          "stability": 46.10739197561708,
+          "difficulty": 2.115868880622067,
+          "interval": 46,
+          "retrievability": 0.8980785074889401
         }
       ],
       "fsrs_version": 6,
@@ -3057,13 +3073,13 @@
       "name": "206. Reverse Linked List",
       "url": "https://leetcode.com/problems/reverse-linked-list/",
       "added_date": "2025-12-21",
-      "stability": 8.2956,
+      "stability": 65.26452444154494,
       "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-03-16",
-      "next_review": "2026-03-24",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-03-24",
+      "next_review": "2026-05-28",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 4,
       "history": [
         {
@@ -3097,6 +3113,14 @@
           "difficulty": 1.0,
           "interval": 8,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-03-24",
+          "rating": 4,
+          "stability": 65.26452444154494,
+          "difficulty": 1.0,
+          "interval": 65,
+          "retrievability": 0.9030622091783326
         }
       ],
       "fsrs_version": 6,
@@ -5305,16 +5329,16 @@
       "name": "14. Longest Common Prefix",
       "url": "https://leetcode.com/problems/longest-common-prefix/",
       "added_date": "2025-12-16",
-      "next_review": "2026-03-24",
-      "review_count": 0,
+      "next_review": "2026-03-26",
+      "review_count": 1,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
-      "difficulty": 5.0,
-      "stability": 0,
-      "state": "new",
-      "last_rating": null,
-      "last_review_date": null,
-      "reps": 0,
+      "difficulty": 2.118103970459015,
+      "stability": 2.3065,
+      "state": "review",
+      "last_rating": 3,
+      "last_review_date": "2026-03-24",
+      "reps": 1,
       "history": [
         {
           "date": "2025-12-18",
@@ -5355,6 +5379,14 @@
           "difficulty": 5.767092494641001,
           "interval": 105,
           "retrievability": 0.8997649283357249
+        },
+        {
+          "date": "2026-03-24",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
         }
       ],
       "note": "rember to include the length"
@@ -5471,14 +5503,14 @@
       "name": "704. Binary Search",
       "url": "https://leetcode.com/problems/binary-search/",
       "added_date": "2025-12-23",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-24",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 8.2956,
+      "difficulty": 1.0,
+      "state": "review",
+      "last_review_date": "2026-03-24",
+      "next_review": "2026-04-01",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 4,
       "history": [
         {
           "date": "2025-12-24",
@@ -5503,23 +5535,32 @@
           "difficulty": 1.0,
           "interval": 253,
           "retrievability": 0.8993670206131507
+        },
+        {
+          "date": "2026-03-24",
+          "rating": 4,
+          "stability": 8.2956,
+          "difficulty": 1.0,
+          "interval": 8,
+          "retrievability": 0.9
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "l <  r"
     },
     {
       "id": "774025af",
       "name": "678. Valid Parenthesis String",
       "url": "https://leetcode.com/problems/valid-parenthesis-string/",
       "added_date": "2026-01-23",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-24",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-03-24",
+      "next_review": "2026-03-26",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-24",
@@ -5552,10 +5593,18 @@
           "difficulty": 3.461935262068059,
           "interval": 79,
           "retrievability": 0.9006500456794446
+        },
+        {
+          "date": "2026-03-24",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
-      "note": "need to remember to reset leftMin"
+      "note": "Its because star can be an empty string, so we can reset it as we choose to use it as an empty string"
     },
     {
       "id": "0cc69937",
@@ -8315,38 +8364,58 @@
       "name": "359. Logger Rate Limiter",
       "url": "https://leetcode.com/problems/logger-rate-limiter/",
       "added_date": "2026-03-23",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-24",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-03-24",
+      "next_review": "2026-03-26",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
+      "history": [
+        {
+          "date": "2026-03-24",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
+        }
+      ],
       "tags": [
         "Google"
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "if 10+ seconds have passed since last print, update and print."
     },
     {
       "id": "14041feb",
       "name": "528. Random Pick with Weight",
       "url": "https://leetcode.com/problems/random-pick-with-weight/",
       "added_date": "2026-03-23",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-24",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
-      "history": [],
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-03-24",
+      "next_review": "2026-03-26",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
+      "history": [
+        {
+          "date": "2026-03-24",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
+        }
+      ],
       "tags": [
         "Google"
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "random.randint"
     }
   ],
   "daily_adds": {
