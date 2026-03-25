@@ -5636,14 +5636,14 @@
       "name": "763. Partition Labels",
       "url": "https://leetcode.com/problems/partition-labels/",
       "added_date": "2026-01-23",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-25",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-03-25",
+      "next_review": "2026-03-27",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-24",
@@ -5668,6 +5668,14 @@
           "difficulty": 4.0133642194000005,
           "interval": 87,
           "retrievability": 0.8954957270698177
+        },
+        {
+          "date": "2026-03-25",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
@@ -5678,16 +5686,16 @@
       "name": "3. Longest Substring Without Repeating Characters",
       "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/description/",
       "added_date": "2025-12-14",
-      "next_review": "2026-03-25",
-      "review_count": 0,
+      "next_review": "2026-03-26",
+      "review_count": 1,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
-      "difficulty": 5.0,
-      "stability": 0,
-      "state": "new",
-      "last_rating": null,
-      "last_review_date": null,
-      "reps": 0,
+      "difficulty": 5.112170705601055,
+      "stability": 1.2931,
+      "state": "review",
+      "last_rating": 2,
+      "last_review_date": "2026-03-25",
+      "reps": 1,
       "history": [
         {
           "date": "2025-12-15",
@@ -5760,6 +5768,14 @@
           "difficulty": 9.053882544632584,
           "interval": 6,
           "retrievability": 0.848589846143684
+        },
+        {
+          "date": "2026-03-25",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
         }
       ],
       "note": "need to remember to remove."
@@ -5769,14 +5785,14 @@
       "name": "215. Kth Largest Element in an Array",
       "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
       "added_date": "2025-12-28",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-25",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-03-25",
+      "next_review": "2026-03-26",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
       "history": [
         {
           "date": "2025-12-29",
@@ -5865,24 +5881,32 @@
           "difficulty": 9.823129646455337,
           "interval": 15,
           "retrievability": 0.892115340324709
+        },
+        {
+          "date": "2026-03-25",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
-      "note": "pivot = l"
+      "note": "think about condtions"
     },
     {
       "id": "4e428b12",
       "name": "62. Unique Paths",
       "url": "https://leetcode.com/problems/unique-paths/description/",
       "added_date": "2026-02-02",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-25",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-03-25",
+      "next_review": "2026-03-27",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-02-04",
@@ -5923,6 +5947,14 @@
           "difficulty": 6.516554818470511,
           "interval": 25,
           "retrievability": 0.8802872021771604
+        },
+        {
+          "date": "2026-03-25",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
@@ -5933,14 +5965,14 @@
       "name": "297. Serialize and Deserialize Binary Tree",
       "url": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/",
       "added_date": "2026-01-02",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-25",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-03-25",
+      "next_review": "2026-03-26",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-01-06",
@@ -5981,9 +6013,18 @@
           "difficulty": 7.820354808124475,
           "interval": 36,
           "retrievability": 0.9024312191876556
+        },
+        {
+          "date": "2026-03-25",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "need a self.i to track where we are. We are just doing dfs"
     },
     {
       "id": "eeaf765c",
