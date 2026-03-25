@@ -3494,13 +3494,13 @@
       "name": "127. Word Ladder",
       "url": "https://leetcode.com/problems/word-ladder/",
       "added_date": "2026-01-15",
-      "stability": 7.132002643535731,
-      "difficulty": 3.4698859282580456,
+      "stability": 45.552012431522236,
+      "difficulty": 1.2788261087976278,
       "state": "review",
-      "last_review_date": "2026-03-18",
-      "next_review": "2026-03-25",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-03-25",
+      "next_review": "2026-05-10",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 4,
       "history": [
         {
@@ -3558,6 +3558,14 @@
           "difficulty": 3.4698859282580456,
           "interval": 7,
           "retrievability": 0.920029131893056
+        },
+        {
+          "date": "2026-03-25",
+          "rating": 4,
+          "stability": 45.552012431522236,
+          "difficulty": 1.2788261087976278,
+          "interval": 46,
+          "retrievability": 0.9015866624098813
         }
       ],
       "fsrs_version": 6,
