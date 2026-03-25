@@ -704,6 +704,59 @@ def reset_problem_schedule(problem):
     problem["last_rating"] = None
 
 
+def get_move_three_today_candidates(data, today):
+    """Get due-today problems eligible for manual deferral."""
+    candidates = [
+        p for p in data["problems"]
+        if p["next_review"] <= today
+        and p.get("state") == "new"
+        and p.get("review_count", 0) == 0
+    ]
+    return sorted(
+        candidates,
+        key=lambda p: (
+            p.get("next_review", ""),
+            p.get("added_date", ""),
+            p["name"].lower(),
+        ),
+        reverse=True,
+    )
+
+
+def move_three_today(data, limit=3):
+    """Spread up to `limit` unreviewed new problems across the next days."""
+    today = datetime.now().date()
+    today_str = today.strftime("%Y-%m-%d")
+    candidates = get_move_three_today_candidates(data, today_str)[:limit]
+    moved = []
+
+    for day_offset, problem in enumerate(candidates, start=1):
+        target_date = (today + timedelta(days=day_offset)).strftime("%Y-%m-%d")
+        problem["next_review"] = target_date
+        moved.append((problem, target_date))
+
+    if moved:
+        save_data(data)
+
+    return moved
+
+
+def print_move_three_today_result(moved):
+    """Show the result of a move-3-today action."""
+    if not moved:
+        print(f"\n{Colors.YELLOW}No unreviewed new problems are due today to move.{Colors.RESET}\n")
+        return
+
+    print(
+        f"\n{Colors.GREEN}Moved {len(moved)} unreviewed new problem"
+        f"{'s' if len(moved) != 1 else ''} across the next {len(moved)} day"
+        f"{'s' if len(moved) != 1 else ''}:{Colors.RESET}"
+    )
+    for problem, target_date in moved:
+        print(f"  {Colors.CYAN}{problem['name']}{Colors.RESET} -> {format_date(target_date)}")
+    print()
+
+
 def cmd_add(args):
     """Add a new problem to track."""
     if not args:
@@ -796,6 +849,18 @@ def cmd_today(args):
     """Show problems due for review today."""
     data = load_data()
     today = datetime.now().strftime("%Y-%m-%d")
+    move_three_requested = False
+
+    for arg in args:
+        if arg == "--move-3":
+            move_three_requested = True
+        else:
+            print(f"{Colors.RED}Unknown argument: {arg}{Colors.RESET}")
+            print(f"Usage: leetcode-srs today [--move-3]")
+            return
+
+    if move_three_requested:
+        print_move_three_today_result(move_three_today(data))
 
     # Show add reminder first
     show_add_reminder(data)
@@ -847,6 +912,32 @@ def cmd_today(args):
         if p["url"]:
             print(f"      {Colors.DIM}{p['url']}{Colors.RESET}")
         print()
+
+    if move_three_requested or not sys.stdin.isatty():
+        return
+
+    move_candidates = get_move_three_today_candidates(data, today)
+    if not move_candidates:
+        return
+
+    move_count = min(3, len(move_candidates))
+    action = input(
+        f"  {Colors.DIM}Action:{Colors.RESET} "
+        f"{Colors.CYAN}m{Colors.RESET} move {move_count} unreviewed new problem"
+        f"{'s' if move_count != 1 else ''} across the next {move_count} day"
+        f"{'s' if move_count != 1 else ''}, or Enter to keep today's queue: "
+    ).strip().lower()
+
+    if not action:
+        print()
+        return
+
+    if action == 'm':
+        print_move_three_today_result(move_three_today(data))
+        cmd_today([])
+        return
+
+    print(f"\n{Colors.RED}Unknown action: {action}{Colors.RESET}\n")
 
 
 def cmd_tomorrow(args):
@@ -1477,7 +1568,7 @@ def cmd_help(args):
 
 {Colors.BOLD}Commands:{Colors.RESET}
   {Colors.CYAN}add{Colors.RESET} <name> [url] [company]          Add a new problem to track
-  {Colors.CYAN}today{Colors.RESET}                               Show problems due for review today
+  {Colors.CYAN}today{Colors.RESET} [--move-3]                    Show problems due for review today
   {Colors.CYAN}tomorrow{Colors.RESET}                            Show problems due for review tomorrow
   {Colors.CYAN}review{Colors.RESET}                              Start interactive review session
   {Colors.CYAN}list{Colors.RESET}                                List all problems with status
@@ -1514,6 +1605,7 @@ def cmd_help(args):
 {Colors.BOLD}Daily Goals:{Colors.RESET}
   - Add at least {MIN_ADDS_PER_DAY} new problems per day
   - Top {MAX_PRIORITY_PER_DAY} most urgent problems marked as [!] priority
+  - Use {Colors.CYAN}today --move-3{Colors.RESET} to spread up to 3 due-new problems across the next days
   - Smart scheduling spreads new problems to prevent clustering
 
 {Colors.BOLD}Git Sync:{Colors.RESET}

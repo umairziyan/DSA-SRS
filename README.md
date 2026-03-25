@@ -31,6 +31,9 @@ Requires Python 3.6+
 # Check what's due today
 ./leetcode-srs today
 
+# Push up to 3 due-new problems across the next few days
+./leetcode-srs today --move-3
+
 # Start a review session
 ./leetcode-srs review
 
@@ -46,7 +49,7 @@ Requires Python 3.6+
 | Command | Description |
 |---------|-------------|
 | `add <name> [url] [company]` | Add a new problem (optional company tag) |
-| `today` | Show problems due for review today |
+| `today [--move-3]` | Show problems due for review today, optionally spreading up to 3 unreviewed new problems across the next days |
 | `review` | Interactive review session |
 | `list` | List all problems with status |
 | `stats` | Show learning statistics |
@@ -62,6 +65,7 @@ The tool helps you maintain consistent practice:
 
 - **Daily add goal**: Reminder to add at least 2 new problems per day
 - **Priority system**: Top 4 most urgent problems are marked as `[!]` priority
+- **Move 3 today**: Use `./leetcode-srs today --move-3` or press `m` from the `today` screen to spread up to 3 due-new problems across the next few days
 - **Smart scheduling**: New problems are auto-spread across days to prevent clustering
 - **Overdue first**: Most overdue problems appear first in reviews
 
