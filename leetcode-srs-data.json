@@ -285,13 +285,13 @@
       "name": "199. Binary Tree Right Side View",
       "url": "https://leetcode.com/problems/binary-tree-right-side-view/",
       "added_date": "2025-12-29",
-      "stability": 16.232604786637747,
-      "difficulty": 3.4698859282580456,
+      "stability": 97.00290789646874,
+      "difficulty": 1.2788261087976278,
       "state": "review",
-      "last_review_date": "2026-03-11",
-      "next_review": "2026-03-27",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-03-28",
+      "next_review": "2026-07-03",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 4,
       "history": [
         {
@@ -333,10 +333,18 @@
           "difficulty": 3.4698859282580456,
           "interval": 16,
           "retrievability": 0.8047266223179792
+        },
+        {
+          "date": "2026-03-28",
+          "rating": 4,
+          "stability": 97.00290789646874,
+          "difficulty": 1.2788261087976278,
+          "interval": 97,
+          "retrievability": 0.8959850211653013
         }
       ],
       "fsrs_version": 6,
-      "note": "Need to check if right side and if node too. BFS is a level order traversal."
+      "note": "you don't need to check if node, just return empty if root is empty."
     },
     {
       "id": "fc0767e2",
@@ -3807,13 +3815,13 @@
       "name": "23. Merge k Sorted Lists",
       "url": "https://leetcode.com/problems/merge-k-sorted-lists/",
       "added_date": "2025-12-28",
-      "stability": 2.3065,
-      "difficulty": 2.118103970459015,
+      "stability": 33.08496163164379,
+      "difficulty": 2.1169858664885557,
       "state": "review",
-      "last_review_date": "2026-03-18",
-      "next_review": "2026-03-26",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-03-28",
+      "next_review": "2026-04-30",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 3,
       "history": [
         {
@@ -3879,6 +3887,14 @@
           "difficulty": 2.118103970459015,
           "interval": 2,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-03-28",
+          "rating": 3,
+          "stability": 33.08496163164379,
+          "difficulty": 2.1169858664885557,
+          "interval": 33,
+          "retrievability": 0.7041229837080006
         }
       ],
       "fsrs_version": 6,
@@ -5602,14 +5618,14 @@
       "name": "678. Valid Parenthesis String",
       "url": "https://leetcode.com/problems/valid-parenthesis-string/",
       "added_date": "2026-01-23",
-      "stability": 2.3065,
-      "difficulty": 2.118103970459015,
+      "stability": 31.179919942001888,
+      "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-03-24",
-      "next_review": "2026-03-26",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 3,
+      "last_review_date": "2026-03-28",
+      "next_review": "2026-04-28",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-01-24",
@@ -5650,6 +5666,14 @@
           "difficulty": 2.118103970459015,
           "interval": 2,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-03-28",
+          "rating": 4,
+          "stability": 31.179919942001888,
+          "difficulty": 1.0,
+          "interval": 31,
+          "retrievability": 0.8431108204696155
         }
       ],
       "fsrs_version": 6,
@@ -8483,14 +8507,14 @@
       "name": "528. Random Pick with Weight",
       "url": "https://leetcode.com/problems/random-pick-with-weight/",
       "added_date": "2026-03-23",
-      "stability": 2.3065,
-      "difficulty": 2.118103970459015,
+      "stability": 31.179919942001888,
+      "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-03-24",
-      "next_review": "2026-03-26",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 3,
+      "last_review_date": "2026-03-28",
+      "next_review": "2026-04-28",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 4,
       "history": [
         {
           "date": "2026-03-24",
@@ -8499,13 +8523,21 @@
           "difficulty": 2.118103970459015,
           "interval": 2,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-03-28",
+          "rating": 4,
+          "stability": 31.179919942001888,
+          "difficulty": 1.0,
+          "interval": 31,
+          "retrievability": 0.8431108204696155
         }
       ],
       "tags": [
         "Google"
       ],
       "fsrs_version": 6,
-      "note": "random.randint"
+      "note": "we need to keep m as it could be in it, we're llooking at a range."
     }
   ],
   "daily_adds": {
