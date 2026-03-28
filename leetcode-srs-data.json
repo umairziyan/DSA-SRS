@@ -1225,13 +1225,13 @@
       "name": "235. Lowest Common Ancestor of a Binary Search Tree",
       "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
       "added_date": "2026-01-01",
-      "stability": 8.2956,
+      "stability": 116.5261461117922,
       "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-03-11",
-      "next_review": "2026-03-27",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-03-28",
+      "next_review": "2026-07-23",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 4,
       "history": [
         {
@@ -1265,9 +1265,18 @@
           "difficulty": 1.0,
           "interval": 8,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-03-28",
+          "rating": 4,
+          "stability": 116.5261461117922,
+          "difficulty": 1.0,
+          "interval": 117,
+          "retrievability": 0.8218019728812888
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "left and right, root, - or left or right"
     },
     {
       "id": "3e29edb3",
@@ -1679,13 +1688,13 @@
       "name": "40. Combination Sum II",
       "url": "https://leetcode.com/problems/combination-sum-ii/",
       "added_date": "2026-01-06",
-      "stability": 12.03390672227899,
-      "difficulty": 3.4698859282580456,
+      "stability": 81.07310357318333,
+      "difficulty": 1.2788261087976278,
       "state": "review",
-      "last_review_date": "2026-03-14",
-      "next_review": "2026-03-26",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-03-28",
+      "next_review": "2026-06-17",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 4,
       "history": [
         {
@@ -1727,6 +1736,14 @@
           "difficulty": 3.4698859282580456,
           "interval": 12,
           "retrievability": 0.8566117863666073
+        },
+        {
+          "date": "2026-03-28",
+          "rating": 4,
+          "stability": 81.07310357318333,
+          "difficulty": 1.2788261087976278,
+          "interval": 81,
+          "retrievability": 0.8863480839091836
         }
       ],
       "fsrs_version": 6,
