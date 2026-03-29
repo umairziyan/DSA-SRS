@@ -6576,14 +6576,14 @@
       "name": "287. Find the Duplicate Number",
       "url": "https://leetcode.com/problems/find-the-duplicate-number/",
       "added_date": "2025-12-26",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-03-29",
       "next_review": "2026-03-30",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
       "history": [
         {
           "date": "2025-12-28",
@@ -6608,9 +6608,18 @@
           "difficulty": 4.016380600000001,
           "interval": 54,
           "retrievability": 0.9006339243860205
+        },
+        {
+          "date": "2026-03-29",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
         }
       ],
-      "fsrs_version": 6
+      "fsrs_version": 6,
+      "note": "Floyds cycle detection"
     },
     {
       "id": "05c12ea0",
