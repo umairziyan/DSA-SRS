@@ -31,6 +31,9 @@ Requires Python 3.6+
 # Check what's due today
 ./leetcode-srs today
 
+# Pull one of tomorrow's problems into today and review it now
+./leetcode-srs pull "1. Two Sum"
+
 # Push up to 3 due-new problems across the next few days
 ./leetcode-srs today --move-3
 
@@ -50,6 +53,7 @@ Requires Python 3.6+
 |---------|-------------|
 | `add <name> [url] [company]` | Add a new problem (optional company tag) |
 | `today [--move-3]` | Show problems due for review today, optionally spreading up to 3 unreviewed new problems across the next days |
+| `pull <name\|id>` | Review a specific problem from tomorrow early and reschedule it from today |
 | `review` | Interactive review session |
 | `list` | List all problems with status |
 | `stats` | Show learning statistics |
@@ -63,9 +67,10 @@ Requires Python 3.6+
 
 The tool helps you maintain consistent practice:
 
-- **Daily add goal**: Reminder to add at least 2 new problems per day
-- **Priority system**: Top 4 most urgent problems are marked as `[!]` priority
+- **Daily add goal**: Reminder to add at least 3 new problems per day
+- **Priority system**: Top 5 most urgent problems are marked as `[!]` priority
 - **Move 3 today**: Use `./leetcode-srs today --move-3` or press `m` from the `today` screen to spread up to 3 due-new problems across the next few days
+- **Pull from tomorrow**: Use `./leetcode-srs pull "1. Two Sum"` to review one specific tomorrow problem early when the next day is overloaded
 - **Smart scheduling**: New problems are auto-spread across days to prevent clustering
 - **Overdue first**: Most overdue problems appear first in reviews
 
@@ -163,8 +168,9 @@ Useful when you want to re-learn a problem from scratch for a new job search cyc
 1. **Solve a problem** on LeetCode
 2. **Add it**: `./leetcode-srs add "1. Problem Name" "url" Meta`
 3. **Review daily**: Run `./leetcode-srs review` each day
-4. **Rate honestly**: Be truthful about difficulty—it optimizes your schedule
-5. **Trust the system**: Even if intervals feel long, that's the point
+4. **Pull ahead when needed**: Use `./leetcode-srs pull "1. Problem Name"` if tomorrow is too crowded and you have time now
+5. **Rate honestly**: Be truthful about difficulty—it optimizes your schedule
+6. **Trust the system**: Even if intervals feel long, that's the point
 
 ## Research Behind This
 
