@@ -573,16 +573,16 @@
       "name": "13. Roman to Integer",
       "url": "https://leetcode.com/problems/roman-to-integer/?envType=company&envId=google&favoriteSlug=google-thirty-days",
       "added_date": "2025-12-16",
-      "next_review": "2026-03-30",
-      "review_count": 2,
+      "next_review": "2026-06-12",
+      "review_count": 3,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
       "difficulty": 1.0,
-      "stability": 18.134311672846923,
+      "stability": 75.04545045860029,
       "state": "review",
-      "last_rating": 4,
-      "last_review_date": "2026-03-12",
-      "reps": 2,
+      "last_rating": 3,
+      "last_review_date": "2026-03-29",
+      "reps": 3,
       "history": [
         {
           "date": "2025-12-18",
@@ -631,6 +631,14 @@
           "difficulty": 1.0,
           "interval": 18,
           "retrievability": 0.9115814711321364
+        },
+        {
+          "date": "2026-03-29",
+          "rating": 3,
+          "stability": 75.04545045860029,
+          "difficulty": 1.0,
+          "interval": 75,
+          "retrievability": 0.9053962213105936
         }
       ],
       "note": "If the next value is bigger, we need to make it negative"
