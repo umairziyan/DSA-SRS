@@ -7082,14 +7082,14 @@
       "name": "134. Gas Station",
       "url": "https://leetcode.com/problems/gas-station/",
       "added_date": "2026-01-18",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-30",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459015,
+      "state": "review",
+      "last_review_date": "2026-03-29",
+      "next_review": "2026-03-31",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 3,
       "history": [
         {
           "date": "2026-01-19",
@@ -7138,6 +7138,14 @@
           "difficulty": 7.8291138684637085,
           "interval": 12,
           "retrievability": 0.9023729732057677
+        },
+        {
+          "date": "2026-03-29",
+          "rating": 3,
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
