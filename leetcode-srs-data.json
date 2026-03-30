@@ -1050,16 +1050,16 @@
       "name": "20. Valid Parantheses",
       "url": "https://leetcode.com/problems/valid-parentheses/",
       "added_date": "2025-12-17",
-      "next_review": "2026-03-30",
-      "review_count": 2,
+      "next_review": "2026-06-16",
+      "review_count": 3,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
       "difficulty": 1.0,
-      "stability": 18.134311672846923,
+      "stability": 78.0251896826086,
       "state": "review",
-      "last_rating": 4,
-      "last_review_date": "2026-03-12",
-      "reps": 2,
+      "last_rating": 3,
+      "last_review_date": "2026-03-30",
+      "reps": 3,
       "history": [
         {
           "date": "2025-12-19",
@@ -1108,6 +1108,14 @@
           "difficulty": 1.0,
           "interval": 18,
           "retrievability": 0.9115814711321364
+        },
+        {
+          "date": "2026-03-30",
+          "rating": 3,
+          "stability": 78.0251896826086,
+          "difficulty": 1.0,
+          "interval": 78,
+          "retrievability": 0.9006339243860205
         }
       ],
       "note": "Use a stack."
@@ -6642,14 +6650,14 @@
       "name": "239. Sliding Window Maximum",
       "url": "https://leetcode.com/problems/sliding-window-maximum/",
       "added_date": "2026-02-20",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-30",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-03-30",
+      "next_review": "2026-03-31",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-02-21",
@@ -6682,6 +6690,14 @@
           "difficulty": 8.931762566713685,
           "interval": 9,
           "retrievability": 0.8850991291399681
+        },
+        {
+          "date": "2026-03-30",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
@@ -7387,14 +7403,14 @@
       "name": "424. Longest Repeating Character Replacement",
       "url": "https://leetcode.com/problems/longest-repeating-character-replacement/",
       "added_date": "2026-01-23",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-30",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-03-30",
+      "next_review": "2026-03-31",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
       "history": [
         {
           "date": "2026-01-24",
@@ -7435,10 +7451,18 @@
           "difficulty": 9.029162268172346,
           "interval": 19,
           "retrievability": 0.9031850595271551
+        },
+        {
+          "date": "2026-03-30",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
-      "note": "charMap.values (max)"
+      "note": "need to check if length - max of charmap > k, then yu'd remove l"
     },
     {
       "id": "353e5f06",
@@ -7709,14 +7733,14 @@
       "name": "300. Longest Increasing Subsequence",
       "url": "https://leetcode.com/problems/longest-increasing-subsequence/",
       "added_date": "2025-12-21",
-      "stability": 0,
-      "difficulty": 5.0,
-      "state": "new",
-      "last_review_date": null,
-      "next_review": "2026-03-30",
-      "reps": 0,
-      "review_count": 0,
-      "last_rating": null,
+      "stability": 1.2931,
+      "difficulty": 5.112170705601055,
+      "state": "review",
+      "last_review_date": "2026-03-30",
+      "next_review": "2026-03-31",
+      "reps": 1,
+      "review_count": 1,
+      "last_rating": 2,
       "history": [
         {
           "date": "2025-12-24",
@@ -7781,6 +7805,14 @@
           "difficulty": 9.731117387785924,
           "interval": 3,
           "retrievability": 0.7699203263004422
+        },
+        {
+          "date": "2026-03-30",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
         }
       ],
       "fsrs_version": 6,
