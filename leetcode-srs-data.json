@@ -2922,13 +2922,13 @@
       "name": "295. Find Median from Data Stream",
       "url": "https://leetcode.com/problems/find-median-from-data-stream/",
       "added_date": "2026-01-11",
-      "stability": 8.2956,
+      "stability": 136.10242282736763,
       "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-03-15",
-      "next_review": "2026-04-04",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-04-05",
+      "next_review": "2026-08-19",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 4,
       "history": [
         {
@@ -2986,6 +2986,14 @@
           "difficulty": 1.0,
           "interval": 8,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-04-05",
+          "rating": 4,
+          "stability": 136.10242282736763,
+          "difficulty": 1.0,
+          "interval": 136,
+          "retrievability": 0.7921056498542545
         }
       ],
       "fsrs_version": 6,
@@ -7492,13 +7500,13 @@
       "name": "424. Longest Repeating Character Replacement",
       "url": "https://leetcode.com/problems/longest-repeating-character-replacement/",
       "added_date": "2026-01-23",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 9.219202321302589,
+      "difficulty": 6.746231141532862,
       "state": "review",
-      "last_review_date": "2026-03-30",
-      "next_review": "2026-04-03",
-      "reps": 1,
-      "review_count": 1,
+      "last_review_date": "2026-04-05",
+      "next_review": "2026-04-14",
+      "reps": 2,
+      "review_count": 2,
       "last_rating": 2,
       "history": [
         {
@@ -7548,6 +7556,14 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-04-05",
+          "rating": 2,
+          "stability": 9.219202321302589,
+          "difficulty": 6.746231141532862,
+          "interval": 9,
+          "retrievability": 0.691979724359795
         }
       ],
       "fsrs_version": 6,
@@ -7838,14 +7854,14 @@
       "name": "300. Longest Increasing Subsequence",
       "url": "https://leetcode.com/problems/longest-increasing-subsequence/",
       "added_date": "2025-12-21",
-      "stability": 1.2931,
-      "difficulty": 5.112170705601055,
+      "stability": 14.472518558866959,
+      "difficulty": 5.108058534895454,
       "state": "review",
-      "last_review_date": "2026-03-30",
-      "next_review": "2026-04-03",
-      "reps": 1,
-      "review_count": 1,
-      "last_rating": 2,
+      "last_review_date": "2026-04-05",
+      "next_review": "2026-04-19",
+      "reps": 2,
+      "review_count": 2,
+      "last_rating": 3,
       "history": [
         {
           "date": "2025-12-24",
@@ -7918,6 +7934,14 @@
           "difficulty": 5.112170705601055,
           "interval": 1,
           "retrievability": 0.9
+        },
+        {
+          "date": "2026-04-05",
+          "rating": 3,
+          "stability": 14.472518558866959,
+          "difficulty": 5.108058534895454,
+          "interval": 14,
+          "retrievability": 0.691979724359795
         }
       ],
       "fsrs_version": 6,
