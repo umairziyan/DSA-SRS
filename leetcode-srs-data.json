@@ -3324,13 +3324,13 @@
       "name": "153. Find Minimum in Rotated Sorted Array",
       "url": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
       "added_date": "2025-12-24",
-      "stability": 18.134311672846923,
+      "stability": 130.30393709732957,
       "difficulty": 1.0,
       "state": "review",
-      "last_review_date": "2026-03-18",
-      "next_review": "2026-04-05",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-04-05",
+      "next_review": "2026-08-13",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 4,
       "history": [
         {
@@ -3380,6 +3380,14 @@
           "difficulty": 1.0,
           "interval": 18,
           "retrievability": 0.9115814711321364
+        },
+        {
+          "date": "2026-04-05",
+          "rating": 4,
+          "stability": 130.30393709732957,
+          "difficulty": 1.0,
+          "interval": 130,
+          "retrievability": 0.9006339243860205
         }
       ],
       "fsrs_version": 6,
@@ -4098,13 +4106,13 @@
       "name": "787. Cheapest Flights Within K Stops",
       "url": "https://leetcode.com/problems/cheapest-flights-within-k-stops/",
       "added_date": "2026-02-13",
-      "stability": 8.297781081126994,
-      "difficulty": 6.746231141532862,
+      "stability": 20.156199304290972,
+      "difficulty": 7.830996606120709,
       "state": "review",
-      "last_review_date": "2026-03-23",
-      "next_review": "2026-04-03",
-      "reps": 2,
-      "review_count": 2,
+      "last_review_date": "2026-04-05",
+      "next_review": "2026-04-25",
+      "reps": 3,
+      "review_count": 3,
       "last_rating": 2,
       "history": [
         {
@@ -4154,6 +4162,14 @@
           "difficulty": 6.746231141532862,
           "interval": 8,
           "retrievability": 0.7241438500024772
+        },
+        {
+          "date": "2026-04-05",
+          "rating": 2,
+          "stability": 20.156199304290972,
+          "difficulty": 7.830996606120709,
+          "interval": 20,
+          "retrievability": 0.8551402026543624
         }
       ],
       "fsrs_version": 6,
