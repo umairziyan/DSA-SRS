@@ -31,7 +31,7 @@ DATA_FILE = SCRIPT_DIR / "leetcode-srs-data.json"
 GIT_SYNC_ENABLED = True  # Set to False to disable auto-sync
 
 # Daily limits
-MAX_PRIORITY_PER_DAY = 5  # Number of problems to highlight as priority
+MAX_PRIORITY_PER_DAY = 10  # Preferred max daily review load
 MIN_ADDS_PER_DAY = 3      # Minimum new problems to add daily
 PROMPT_FOR_TAG_ON_ADD = True  # Prompt for company tag when adding a new problem
 
@@ -511,13 +511,31 @@ def get_due_count_by_date(data, date_str):
     return len([p for p in data["problems"] if p["next_review"] == date_str])
 
 
-def find_next_available_slot(data, start_days=1, max_days=7):
-    """Find the next day with fewer than MAX_PRIORITY_PER_DAY problems due."""
+def is_unreviewed_problem(problem):
+    """Return True when a problem has not been reviewed yet."""
+    return (
+        problem.get("state") == "new"
+        or problem.get("review_count", 0) == 0
+        or not problem.get("history")
+    )
+
+
+def find_next_available_slot(data, start_days=1, max_days=365, target_per_day=MAX_PRIORITY_PER_DAY):
+    """Find the next day with room, falling back to the least-loaded day in range."""
+    best_slot = None
+
     for days_ahead in range(start_days, start_days + max_days):
         check_date = (datetime.now() + timedelta(days=days_ahead)).strftime("%Y-%m-%d")
-        if get_due_count_by_date(data, check_date) < MAX_PRIORITY_PER_DAY:
+        due_count = get_due_count_by_date(data, check_date)
+        if due_count < target_per_day:
             return check_date, days_ahead
-    # If all days are full, just use start_days
+
+        if best_slot is None or due_count < best_slot[2]:
+            best_slot = (check_date, days_ahead, due_count)
+
+    if best_slot:
+        return best_slot[0], best_slot[1]
+
     return (datetime.now() + timedelta(days=start_days)).strftime("%Y-%m-%d"), start_days
 
 
@@ -728,8 +746,7 @@ def get_move_three_today_candidates(data, today):
     candidates = [
         p for p in data["problems"]
         if p["next_review"] <= today
-        and p.get("state") == "new"
-        and p.get("review_count", 0) == 0
+        and is_unreviewed_problem(p)
     ]
     return sorted(
         candidates,
@@ -773,6 +790,245 @@ def print_move_three_today_result(moved):
     )
     for problem, target_date in moved:
         print(f"  {Colors.CYAN}{problem['name']}{Colors.RESET} -> {format_date(target_date)}")
+    print()
+
+
+def get_rebalance_candidate_key(problem):
+    """Sort problems by how safe they are to defer."""
+    if is_unreviewed_problem(problem):
+        added_date = problem.get("added_date")
+        added_ordinal = (
+            datetime.strptime(added_date, "%Y-%m-%d").toordinal()
+            if added_date else 0
+        )
+        return (0, -added_ordinal, problem["name"].lower())
+
+    last_review = problem.get("last_review_date")
+    last_review_ordinal = (
+        datetime.strptime(last_review, "%Y-%m-%d").toordinal()
+        if last_review else 0
+    )
+    return (
+        1,
+        -problem.get("stability", 0),
+        -problem.get("review_count", 0),
+        -last_review_ordinal,
+        problem["name"].lower(),
+    )
+
+
+def get_rebalance_fill_candidate_key(problem):
+    """Sort deferred problems by how suitable they are to pull earlier."""
+    if is_unreviewed_problem(problem):
+        added_date = problem.get("added_date")
+        added_ordinal = (
+            datetime.strptime(added_date, "%Y-%m-%d").toordinal()
+            if added_date else 0
+        )
+        return (0, added_ordinal, problem["name"].lower())
+
+    last_review = problem.get("last_review_date")
+    last_review_ordinal = (
+        datetime.strptime(last_review, "%Y-%m-%d").toordinal()
+        if last_review else 0
+    )
+    return (
+        1,
+        last_review_ordinal,
+        problem.get("review_count", 0),
+        problem["name"].lower(),
+    )
+
+
+def find_next_rebalance_slot(due_counts, source_date, target_per_day, max_days=365):
+    """Find the next future day with capacity, preferring the least-loaded fallback."""
+    best_slot = None
+
+    for days_ahead in range(1, max_days + 1):
+        check_date = source_date + timedelta(days=days_ahead)
+        check_date_str = check_date.strftime("%Y-%m-%d")
+        due_count = due_counts.get(check_date_str, 0)
+
+        if due_count < target_per_day:
+            return check_date_str, days_ahead
+
+        if best_slot is None or due_count < best_slot[2]:
+            best_slot = (check_date_str, days_ahead, due_count)
+
+    if best_slot:
+        return best_slot[0], best_slot[1]
+
+    return None, None
+
+
+def find_rebalance_fill_candidate(problems, scheduled_dates, target_date, max_days=365):
+    """Find a deferred unreviewed problem to pull into an earlier open day."""
+    for days_ahead in range(1, max_days + 1):
+        source_date = target_date + timedelta(days=days_ahead)
+        source_date_str = source_date.strftime("%Y-%m-%d")
+        candidates = sorted(
+            [
+                problem for problem in problems
+                if scheduled_dates.get(problem["id"]) == source_date_str
+                and is_unreviewed_problem(problem)
+            ],
+            key=get_rebalance_fill_candidate_key,
+        )
+        if candidates:
+            return candidates[0], source_date_str, days_ahead
+
+    return None, None, None
+
+
+def rebalance_schedule(data, start_date, target_per_day=MAX_PRIORITY_PER_DAY, max_days=365, new_only=False, dry_run=False):
+    """
+    Rebalance future due problems around a daily target.
+
+    Deferred unreviewed problems are pulled earlier into underfilled days first.
+    If a day still exceeds the target, unreviewed problems are pushed later
+    first, with reviewed problems moved only when necessary.
+    """
+    problems = data["problems"]
+    due_counts = {}
+    scheduled_dates = {}
+    moved = []
+
+    for problem in problems:
+        next_review = problem.get("next_review")
+        if not next_review:
+            continue
+        scheduled_dates[problem["id"]] = next_review
+        due_counts[next_review] = due_counts.get(next_review, 0) + 1
+
+    for day_offset in range(max_days):
+        current_date = start_date + timedelta(days=day_offset)
+        current_date_str = current_date.strftime("%Y-%m-%d")
+
+        # First fill earlier open days by pulling deferred new problems back.
+        while due_counts.get(current_date_str, 0) < target_per_day:
+            fill_problem, source_date, days_moved = find_rebalance_fill_candidate(
+                problems,
+                scheduled_dates,
+                current_date,
+                max_days=max_days,
+            )
+            if not fill_problem:
+                break
+
+            due_counts[source_date] -= 1
+            if due_counts[source_date] <= 0:
+                due_counts.pop(source_date, None)
+
+            due_counts[current_date_str] = due_counts.get(current_date_str, 0) + 1
+            scheduled_dates[fill_problem["id"]] = current_date_str
+
+            if not dry_run:
+                fill_problem["next_review"] = current_date_str
+
+            moved.append({
+                "problem": fill_problem,
+                "from": source_date,
+                "to": current_date_str,
+                "days_moved": days_moved,
+                "unreviewed": True,
+                "direction": "earlier",
+            })
+
+        day_problems = [
+            problem for problem in problems
+            if scheduled_dates.get(problem["id"]) == current_date_str
+        ]
+        overflow = len(day_problems) - target_per_day
+        if overflow <= 0:
+            continue
+
+        movable = sorted(
+            [
+                problem for problem in day_problems
+                if (not new_only) or is_unreviewed_problem(problem)
+            ],
+            key=get_rebalance_candidate_key,
+        )
+
+        if not movable:
+            continue
+
+        for problem in movable[:min(overflow, len(movable))]:
+            source_date = scheduled_dates[problem["id"]]
+            target_date, days_moved = find_next_rebalance_slot(
+                due_counts,
+                current_date,
+                target_per_day,
+                max_days=max_days,
+            )
+            if not target_date:
+                break
+
+            due_counts[source_date] -= 1
+            if due_counts[source_date] <= 0:
+                due_counts.pop(source_date, None)
+
+            due_counts[target_date] = due_counts.get(target_date, 0) + 1
+            scheduled_dates[problem["id"]] = target_date
+
+            if not dry_run:
+                problem["next_review"] = target_date
+
+            moved.append({
+                "problem": problem,
+                "from": source_date,
+                "to": target_date,
+                "days_moved": days_moved,
+                "unreviewed": is_unreviewed_problem(problem),
+                "direction": "later",
+            })
+
+    return moved
+
+
+def print_rebalance_result(moved, target_per_day, start_date, new_only=False, dry_run=False):
+    """Show the result of a rebalance action."""
+    if not moved:
+        scope = "unreviewed problems" if new_only else "problems"
+        print(
+            f"\n{Colors.GREEN}No schedule changes needed from {start_date.strftime('%Y-%m-%d')} onward "
+            f"for {scope} at a {target_per_day}/day target.{Colors.RESET}\n"
+        )
+        return
+
+    moved_unreviewed = sum(1 for move in moved if move["unreviewed"])
+    moved_reviewed = len(moved) - moved_unreviewed
+    moved_earlier = sum(1 for move in moved if move["direction"] == "earlier")
+    moved_later = len(moved) - moved_earlier
+    max_days_moved = max(move["days_moved"] for move in moved)
+    action = "Would move" if dry_run else "Moved"
+
+    print(
+        f"\n{Colors.GREEN}{action} {len(moved)} problem"
+        f"{'s' if len(moved) != 1 else ''} around a {target_per_day}/day target.{Colors.RESET}"
+    )
+    print(
+        f"  {Colors.DIM}Unreviewed first:{Colors.RESET} {moved_unreviewed} unreviewed, {moved_reviewed} reviewed"
+    )
+    print(
+        f"  {Colors.DIM}Direction:{Colors.RESET} {moved_earlier} earlier, {moved_later} later"
+    )
+    print(
+        f"  {Colors.DIM}Window:{Colors.RESET} starting {start_date.strftime('%Y-%m-%d')} | "
+        f"largest shift {max_days_moved} day{'s' if max_days_moved != 1 else ''}"
+    )
+
+    preview_count = min(12, len(moved))
+    for move in moved[:preview_count]:
+        move_kind = "new" if move["unreviewed"] else "review"
+        print(
+            f"  [{move_kind}] {Colors.CYAN}{move['problem']['name']}{Colors.RESET} "
+            f"{move['from']} -> {move['to']}"
+        )
+
+    remaining = len(moved) - preview_count
+    if remaining > 0:
+        print(f"  {Colors.DIM}... and {remaining} more{Colors.RESET}")
     print()
 
 
@@ -932,9 +1188,8 @@ def cmd_add(args):
 
     today = datetime.now()
 
-    # New problems always review tomorrow for optimal FSRS learning
-    next_review = (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%d")
-    days_ahead = 1
+    # Keep first reviews close while avoiding overloaded near-term days.
+    next_review, days_ahead = find_next_available_slot(data)
 
     problem = {
         "id": str(uuid.uuid4())[:8],
@@ -1115,6 +1370,70 @@ def cmd_tomorrow(args):
         if p["url"]:
             print(f"      {Colors.DIM}{p['url']}{Colors.RESET}")
         print()
+
+
+def cmd_rebalance(args):
+    """Rebalance future reviews across upcoming days."""
+    target_per_day = MAX_PRIORITY_PER_DAY
+    max_days = 365
+    new_only = False
+    dry_run = False
+    start_date = datetime.now().date() + timedelta(days=1)
+
+    i = 0
+    while i < len(args):
+        arg = args[i]
+        if arg == "--target":
+            if i + 1 >= len(args) or not args[i + 1].isdigit():
+                print(f"{Colors.RED}Usage: leetcode-srs rebalance [--from YYYY-MM-DD] [--target N] [--new-only] [--dry-run]{Colors.RESET}")
+                return
+            target_per_day = int(args[i + 1])
+            i += 2
+        elif arg == "--from":
+            if i + 1 >= len(args):
+                print(f"{Colors.RED}Usage: leetcode-srs rebalance [--from YYYY-MM-DD] [--target N] [--new-only] [--dry-run]{Colors.RESET}")
+                return
+            try:
+                start_date = datetime.strptime(args[i + 1], "%Y-%m-%d").date()
+            except ValueError:
+                print(f"{Colors.RED}Invalid date: {args[i + 1]} (expected YYYY-MM-DD){Colors.RESET}")
+                return
+            i += 2
+        elif arg == "--new-only":
+            new_only = True
+            i += 1
+        elif arg == "--dry-run":
+            dry_run = True
+            i += 1
+        else:
+            print(f"{Colors.RED}Unknown argument: {arg}{Colors.RESET}")
+            print(f"Usage: leetcode-srs rebalance [--from YYYY-MM-DD] [--target N] [--new-only] [--dry-run]")
+            return
+
+    if target_per_day < 1:
+        print(f"{Colors.RED}Target must be at least 1.{Colors.RESET}")
+        return
+
+    data = load_data()
+    moved = rebalance_schedule(
+        data,
+        start_date=start_date,
+        target_per_day=target_per_day,
+        max_days=max_days,
+        new_only=new_only,
+        dry_run=dry_run,
+    )
+
+    if not dry_run and moved:
+        save_data(data)
+
+    print_rebalance_result(
+        moved,
+        target_per_day=target_per_day,
+        start_date=start_date,
+        new_only=new_only,
+        dry_run=dry_run,
+    )
 
 
 def cmd_review(args):
@@ -1646,6 +1965,7 @@ def cmd_help(args):
   {Colors.CYAN}add{Colors.RESET} <name> [url] [company]          Add a new problem to track
   {Colors.CYAN}today{Colors.RESET} [--move-3]                    Show problems due for review today
   {Colors.CYAN}tomorrow{Colors.RESET}                            Show problems due for review tomorrow
+  {Colors.CYAN}rebalance{Colors.RESET} [options]                 Rebalance future reviews across upcoming days
   {Colors.CYAN}pull{Colors.RESET} <name|id>                      Review tomorrow's problem early from today
   {Colors.CYAN}review{Colors.RESET}                              Start interactive review session
   {Colors.CYAN}list{Colors.RESET}                                List all problems with status
@@ -1683,6 +2003,7 @@ def cmd_help(args):
   - Add at least {MIN_ADDS_PER_DAY} new problems per day
   - Top {MAX_PRIORITY_PER_DAY} most urgent problems marked as [!] priority
   - Use {Colors.CYAN}today --move-3{Colors.RESET} to spread up to 3 due-new problems across the next days
+  - Use {Colors.CYAN}rebalance --target {MAX_PRIORITY_PER_DAY}{Colors.RESET} to flatten an overloaded future queue
   - Use {Colors.CYAN}pull <name|id>{Colors.RESET} to review one tomorrow problem early
   - Smart scheduling spreads new problems to prevent clustering
 
@@ -1697,6 +2018,7 @@ def cmd_help(args):
 
 {Colors.BOLD}Example Workflow:{Colors.RESET}
   leetcode-srs add "1. Two Sum" "https://leetcode.com/problems/two-sum" Meta
+  leetcode-srs rebalance --target {MAX_PRIORITY_PER_DAY}
   leetcode-srs pull "1. Two Sum"
   leetcode-srs tag "two sum" Google
   leetcode-srs reset "two sum"
@@ -1714,6 +2036,7 @@ def main():
         "add": cmd_add,
         "today": cmd_today,
         "tomorrow": cmd_tomorrow,
+        "rebalance": cmd_rebalance,
         "pull": cmd_pull,
         "review": cmd_review,
         "list": cmd_list,
