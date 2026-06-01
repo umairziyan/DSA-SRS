@@ -692,16 +692,16 @@
       "name": "14. Longest Common Prefix",
       "url": "https://leetcode.com/problems/longest-common-prefix/",
       "added_date": "2025-12-16",
-      "next_review": "2026-06-01",
-      "review_count": 0,
+      "next_review": "2026-06-02",
+      "review_count": 1,
       "fsrs_version": 6,
       "migrated_from_sm2": true,
-      "difficulty": 5.0,
-      "stability": 0,
-      "state": "new",
-      "last_rating": null,
-      "last_review_date": null,
-      "reps": 0,
+      "difficulty": 5.112170705601055,
+      "stability": 1.2931,
+      "state": "review",
+      "last_rating": 2,
+      "last_review_date": "2026-06-01",
+      "reps": 1,
       "history": [
         {
           "date": "2025-12-18",
@@ -758,6 +758,14 @@
           "difficulty": 2.1169858664885557,
           "interval": 21,
           "retrievability": 0.8141948018162879
+        },
+        {
+          "date": "2026-06-01",
+          "rating": 2,
+          "stability": 1.2931,
+          "difficulty": 5.112170705601055,
+          "interval": 1,
+          "retrievability": 0.9
         }
       ],
       "note": "rember to include the length"
